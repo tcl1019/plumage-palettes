@@ -163,7 +163,7 @@ export default function Discover() {
           onClick={() => navigate('explore')}
           className="inline-flex items-center gap-2 px-6 py-3 bg-white text-plumage-primary border border-plumage-primary rounded-xl font-medium hover:bg-emerald-50 transition-colors"
         >
-          <Search className="w-4 h-4" /> Explore All 33 Palettes
+          <Search className="w-4 h-4" /> Explore All {birds.length} Palettes
         </button>
       </div>
     </div>
