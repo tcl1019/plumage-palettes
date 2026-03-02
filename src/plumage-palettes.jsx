@@ -1,9 +1,10 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import {
   ChevronDown, ChevronUp, Copy, Check, Heart,
   Sun, Snowflake, Palette, Home, Paintbrush,
   Lightbulb, Layers, Sparkles, BookOpen, Star,
-  Leaf, Info, ArrowRight, Eye
+  Leaf, Info, ArrowRight, Eye, MessageCircle, X,
+  Send, Settings, Loader2
 } from 'lucide-react';
 
 // ============================================================
@@ -536,6 +537,546 @@ const birds = [
     season: 'fall-winter',
     seasonNote: 'This moody, dramatic palette thrives in the low light of shorter days. The warm amber and blue accents glow against dark walls.',
   },
+  {
+    id: 14,
+    name: 'Atlantic Puffin',
+    scientific: 'Fratercula arctica',
+    description: 'With its striking black-and-white plumage and colorful beak, the Atlantic Puffin is one of the most beloved seabirds. These expert divers nest in coastal burrows across the North Atlantic.',
+    status: 'Vulnerable',
+    conservation: 'Climate change is shifting fish populations away from puffin colonies, causing breeding failures. North Atlantic warming is the primary long-term threat.',
+    colors: [
+      { hex: '#2F3133', name: 'Puffin Charcoal', role: 'highlight', finish: 'Semi-Gloss', application: 'Interior doors, a bold accent wall, or sleek built-in shelving', lightingNote: 'A warm charcoal that reads softer than true black; shows subtle warmth under incandescent' },
+      { hex: '#F2EDE6', name: 'Arctic Breast', role: 'neutral', finish: 'Semi-Gloss', application: 'Trim, ceilings, and wainscoting for clean contrast against the darks', lightingNote: 'A warm cream-white that glows gently under warm bulbs' },
+      { hex: '#C47A3A', name: 'Beak Orange', role: 'accent', finish: 'Semi-Gloss', application: 'Decorative throw pillows, a painted stool, or ceramic accessories', lightingNote: 'A rich burnt orange that warms any space; most vivid under natural daylight' },
+      { hex: '#4A5C6B', name: 'North Sea Slate', role: 'dominant', finish: 'Eggshell', application: 'A sophisticated cool gray-blue wall color that anchors the room', lightingNote: 'Shifts between blue and gray depending on light — always interesting' },
+      { hex: '#D4CBC0', name: 'Pebble Shore', role: 'secondary', finish: 'Satin', application: 'Linen curtains, a large woven rug, or upholstered headboard', lightingNote: 'A warm greige that bridges the cool slate and warm orange beautifully' },
+    ],
+    harmony: { type: 'complementary', explanation: 'Cool slate-blue walls oppose the warm burnt orange accents for a crisp, nautical contrast. The greige and cream keep everything livable.' },
+    neutrals: { trim: { hex: '#F2EDE6', name: 'Coastal Cream' }, ceiling: { hex: '#F7F5F2', name: 'Sea Mist' }, floor: { hex: '#6B5E50', name: 'Driftwood' } },
+    rooms: [
+      { room: 'Bedroom', rating: 4, reason: 'North Sea Slate makes a calm, collected bedroom. Add orange accents sparingly for warmth.' },
+      { room: 'Living Room', rating: 5, reason: 'The quintessential modern coastal living room — slate walls, cream trim, orange pops.' },
+      { room: 'Dining Room', rating: 3, reason: 'Works for casual dining. The cool tones need warm lighting to feel inviting.' },
+      { room: 'Kitchen', rating: 4, reason: 'Slate lower cabinets with cream uppers and orange hardware is striking.' },
+      { room: 'Bathroom', rating: 4, reason: 'A spa bathroom with coastal character. Pair with white subway tile and brass fixtures.' },
+    ],
+    styles: ['coastal', 'scandinavian', 'contemporary'],
+    season: 'year-round',
+    seasonNote: 'Cool grays and warm orange work in every season — breezy in summer, cozy in winter with added textiles.',
+  },
+  {
+    id: 15,
+    name: 'Lilac-breasted Roller',
+    scientific: 'Coracias caudatus',
+    description: 'Africa\'s most photographed bird, the Lilac-breasted Roller displays an extraordinary palette of pastel blues, lilacs, and warm earth tones. Found across sub-Saharan Africa.',
+    status: 'Least Concern',
+    conservation: 'While currently stable, habitat conversion for agriculture threatens savanna species across Africa. Protected areas remain essential.',
+    colors: [
+      { hex: '#9CAAB8', name: 'Roller Sky', role: 'dominant', finish: 'Eggshell', application: 'A serene, dusty blue-gray wall color that opens up any room', lightingNote: 'Reads bluer in daylight and grayer under warm bulbs — always soft and livable' },
+      { hex: '#8E7BA0', name: 'Lilac Wing', role: 'secondary', finish: 'Satin', application: 'Velvet curtains, accent pillows, or an upholstered armchair', lightingNote: 'A muted lavender that shows more warmth under incandescent and more blue under cool LED' },
+      { hex: '#5A8F7A', name: 'Savanna Jade', role: 'accent', finish: 'Semi-Gloss', application: 'A painted plant shelf, ceramic vases, or a feature bookcase', lightingNote: 'A sophisticated sage-teal that feels fresh and grounding in any light' },
+      { hex: '#B67D5E', name: 'Cinnamon Breast', role: 'highlight', finish: 'Semi-Gloss', application: 'Interior doors, a painted console, or decorative wood accents', lightingNote: 'A warm terracotta-tan that adds essential warmth to the cool palette' },
+      { hex: '#EDE8E0', name: 'Dust Cloud', role: 'neutral', finish: 'Semi-Gloss', application: 'Trim, ceilings, and built-in details for a warm, clean foundation', lightingNote: 'A barely-warm white that lets the pastels sing without competing' },
+    ],
+    harmony: { type: 'analogous', explanation: 'Soft blue, lilac, and jade sit in a gentle arc of cool pastels, while cinnamon adds an essential warm counterpoint that keeps the palette from feeling cold.' },
+    neutrals: { trim: { hex: '#EDE8E0', name: 'African Dust' }, ceiling: { hex: '#F5F3F0', name: 'Open Savanna' }, floor: { hex: '#8A7868', name: 'Acacia Wood' } },
+    rooms: [
+      { room: 'Bedroom', rating: 5, reason: 'A dreamy pastel bedroom — Roller Sky walls with lilac bedding and jade accents.' },
+      { room: 'Living Room', rating: 4, reason: 'Soft and sophisticated. Layer the pastels with warm wood and cinnamon textiles.' },
+      { room: 'Dining Room', rating: 3, reason: 'Better for brunch than formal dinner — the pastels feel light and casual.' },
+      { room: 'Kitchen', rating: 3, reason: 'Roller Sky on cabinets with brass hardware and sage accents feels fresh.' },
+      { room: 'Bathroom', rating: 5, reason: 'The ultimate feminine spa bathroom — soft pastels with warm metallic fixtures.' },
+    ],
+    styles: ['bohemian', 'contemporary', 'scandinavian'],
+    season: 'spring-summer',
+    seasonNote: 'These soft pastels feel most alive in spring light. Layer warm textiles in winter to keep the palette cozy.',
+  },
+  {
+    id: 16,
+    name: 'Golden Pheasant',
+    scientific: 'Chrysolophus pictus',
+    description: 'One of the most ornate birds in the world, the male Golden Pheasant boasts a golden crest, crimson body, and multi-colored tail. Native to Chinese mountain forests.',
+    status: 'Least Concern',
+    conservation: 'While stable in captivity, wild populations in China face pressure from habitat loss and hunting. Mountain forest conservation is key.',
+    colors: [
+      { hex: '#C49A3E', name: 'Pheasant Gold', role: 'dominant', finish: 'Eggshell', application: 'A rich, warm golden wall color that envelops a room in luxury', lightingNote: 'Glows beautifully under warm light; reads more neutral and sophisticated under daylight' },
+      { hex: '#8E3A3A', name: 'Crimson Cape', role: 'accent', finish: 'Semi-Gloss', application: 'A tufted velvet armchair, lacquered tray, or statement art frame', lightingNote: 'Deep wine-red that feels rich without being aggressive; warmer under incandescent' },
+      { hex: '#2E5A7A', name: 'Tail Sapphire', role: 'secondary', finish: 'Satin', application: 'Rich blue curtains, a large patterned rug, or upholstered sofa', lightingNote: 'A muted navy-teal that deepens under warm light and reads more vibrant under daylight' },
+      { hex: '#5A7A3E', name: 'Forest Mantle', role: 'highlight', finish: 'Semi-Gloss', application: 'Painted interior doors, a garden room accent, or a feature cabinet', lightingNote: 'A muted olive that reads greener under daylight and more golden under incandescent' },
+      { hex: '#F0EADE', name: 'Plume Ivory', role: 'neutral', finish: 'Semi-Gloss', application: 'Warm trim and ceiling to give these rich colors breathing room', lightingNote: 'A warm cream that glows golden under incandescent and reads clean under daylight' },
+    ],
+    harmony: { type: 'triadic', explanation: 'Gold, sapphire blue, and crimson red form a rich triadic scheme — each muted enough to coexist luxuriously. Olive green adds earthiness.' },
+    neutrals: { trim: { hex: '#F0EADE', name: 'Silk Ivory' }, ceiling: { hex: '#F5F2EB', name: 'Lantern Light' }, floor: { hex: '#5C4033', name: 'Mountain Teak' } },
+    rooms: [
+      { room: 'Bedroom', rating: 3, reason: 'Golden walls can feel cozy for bold sleepers. Pair with sapphire bedding and cream linens.' },
+      { room: 'Living Room', rating: 5, reason: 'A showstopping living room — golden walls, blue sofa, crimson accents. Opulent and warm.' },
+      { room: 'Dining Room', rating: 5, reason: 'Born for dining rooms. Warm gold walls with candlelight create an unforgettable atmosphere.' },
+      { room: 'Kitchen', rating: 3, reason: 'Use gold on an island or backsplash. Full walls may overwhelm a small kitchen.' },
+      { room: 'Bathroom', rating: 2, reason: 'Too warm and ornate for most bathrooms. Reserve for a dramatic powder room.' },
+    ],
+    styles: ['art-deco', 'traditional', 'eclectic'],
+    season: 'fall-winter',
+    seasonNote: 'Warm golds and deep reds feel most regal during autumn and the holiday season. This palette glows by firelight.',
+  },
+  {
+    id: 17,
+    name: 'Blue Jay',
+    scientific: 'Cyanocitta cristata',
+    description: 'Bold, intelligent, and unmistakable, the Blue Jay is a backyard icon across eastern North America. Known for its striking blue crest and loud calls.',
+    status: 'Least Concern',
+    conservation: 'Blue Jays are adaptable and thriving, though they benefit from mature oak forests. Backyard feeding and native plantings support local populations.',
+    colors: [
+      { hex: '#7A9BB5', name: 'Jay Wing', role: 'dominant', finish: 'Eggshell', application: 'A comfortable mid-blue wall color — confident but not overwhelming', lightingNote: 'Reads as a true mid-blue in daylight; takes on a softer gray-blue under warm bulbs' },
+      { hex: '#4A6080', name: 'Crest Blue', role: 'secondary', finish: 'Satin', application: 'A rich blue upholstered sofa, heavy curtains, or a painted accent cabinet', lightingNote: 'A deeper blue that provides layered depth to the lighter wall color' },
+      { hex: '#F0EDE8', name: 'Belly White', role: 'neutral', finish: 'Semi-Gloss', application: 'Clean trim, ceiling, and window casings for sharp blue-white contrast', lightingNote: 'A warm white that prevents the blues from feeling clinical' },
+      { hex: '#2D3640', name: 'Necklace Band', role: 'highlight', finish: 'Semi-Gloss', application: 'Interior door frames, a fireplace surround, or picture rail', lightingNote: 'A dramatic dark blue-charcoal that anchors the palette with gravitas' },
+      { hex: '#C4BAB0', name: 'Branch Gray', role: 'secondary', finish: 'Satin', application: 'A warm gray area rug, linen throw blankets, or a woven bench', lightingNote: 'A warm gray that bridges the cool blues and warm white' },
+    ],
+    harmony: { type: 'monochromatic', explanation: 'A graduated spectrum from soft blue to deep blue-black, with warm gray and white providing essential tonal breaks. Clean and confident.' },
+    neutrals: { trim: { hex: '#F0EDE8', name: 'Snow White' }, ceiling: { hex: '#F5F3F0', name: 'Winter Sky' }, floor: { hex: '#7A6B5E', name: 'Oak Branch' } },
+    rooms: [
+      { room: 'Bedroom', rating: 4, reason: 'Jay Wing is a calming bedroom blue. Layer the deeper blues through bedding and curtains.' },
+      { room: 'Living Room', rating: 5, reason: 'Classic blue living room — layered blues with warm white and gray create timeless appeal.' },
+      { room: 'Dining Room', rating: 3, reason: 'Needs warm lighting and metallic accents to keep the blues from feeling too cool.' },
+      { room: 'Kitchen', rating: 4, reason: 'Blue cabinets with white countertops and warm wood island is a perennial favorite.' },
+      { room: 'Bathroom', rating: 4, reason: 'A crisp, nautical bathroom with layered blues and white fixtures.' },
+    ],
+    styles: ['coastal', 'contemporary', 'traditional'],
+    season: 'year-round',
+    seasonNote: 'True blues are seasonless — fresh in summer, layered and cozy in winter. Add warm textiles in cold months.',
+  },
+  {
+    id: 18,
+    name: 'Northern Cardinal',
+    scientific: 'Cardinalis cardinalis',
+    description: 'Perhaps North America\'s most beloved backyard bird, the male Northern Cardinal\'s vibrant red plumage against winter snow is an iconic image. They sing year-round.',
+    status: 'Least Concern',
+    conservation: 'Cardinals are thriving and expanding their range northward. Backyard feeders and native berry bushes support healthy populations.',
+    colors: [
+      { hex: '#A84848', name: 'Cardinal Red', role: 'accent', finish: 'Semi-Gloss', application: 'A statement accent wall, velvet throw pillows, or a painted front door', lightingNote: 'A sophisticated brick-red that glows warmly under incandescent and reads slightly cooler in daylight' },
+      { hex: '#8A7568', name: 'Winter Perch', role: 'secondary', finish: 'Satin', application: 'A warm taupe sofa, linen curtains, or a large woven rug', lightingNote: 'A grounding warm taupe that supports the red without competing' },
+      { hex: '#C4823A', name: 'Beak Amber', role: 'highlight', finish: 'Semi-Gloss', application: 'Interior doors, lamp bases, or a painted bookshelf interior', lightingNote: 'A warm amber-orange that energizes the earthy palette' },
+      { hex: '#3D3538', name: 'Mask Black', role: 'highlight', finish: 'Semi-Gloss', application: 'Window frames, iron hardware, or sleek furniture legs', lightingNote: 'A warm near-black that adds drama without the starkness of pure black' },
+      { hex: '#EDE5DA', name: 'Snow Drift', role: 'dominant', finish: 'Eggshell', application: 'Warm off-white walls that provide a serene backdrop for the rich red and taupe accents', lightingNote: 'A warm cream that reads inviting and lets the reds and taupes take center stage' },
+    ],
+    harmony: { type: 'complementary', explanation: 'Warm red against a soft neutral backdrop creates a classic, timeless look. The taupe and amber add warmth without competing with the star color.' },
+    neutrals: { trim: { hex: '#F5F2ED', name: 'First Snow' }, ceiling: { hex: '#FAF8F5', name: 'Winter Morning' }, floor: { hex: '#6B5848', name: 'Frozen Oak' } },
+    rooms: [
+      { room: 'Bedroom', rating: 3, reason: 'Use Cardinal Red sparingly — a headboard wall or rich bedding against warm cream walls.' },
+      { room: 'Living Room', rating: 5, reason: 'Warm white walls with a red accent and taupe textiles — welcoming and classic.' },
+      { room: 'Dining Room', rating: 5, reason: 'Red is the ultimate dining room accent. Warm and appetite-stimulating.' },
+      { room: 'Kitchen', rating: 3, reason: 'A red-painted island or red accessories against warm white cabinets adds personality.' },
+      { room: 'Bathroom', rating: 2, reason: 'Red can be overwhelming in small bathrooms. Use as towel and accessory accents only.' },
+    ],
+    styles: ['traditional', 'farmhouse', 'eclectic'],
+    season: 'fall-winter',
+    seasonNote: 'Rich reds against warm whites evoke the quintessential winter scene. This palette feels most magical during the holidays.',
+  },
+  {
+    id: 19,
+    name: 'Keel-billed Toucan',
+    scientific: 'Ramphastos sulfuratus',
+    description: 'Central America\'s national bird of Belize, the Keel-billed Toucan is famous for its oversized rainbow-colored bill. These social birds roost in tree cavities in small flocks.',
+    status: 'Least Concern',
+    conservation: 'Deforestation in Central America threatens toucan habitat. These birds need mature trees with large cavities for nesting.',
+    colors: [
+      { hex: '#2B3028', name: 'Jungle Plumage', role: 'highlight', finish: 'Semi-Gloss', application: 'A dramatic front door, bold fireplace wall, or stately built-in shelving', lightingNote: 'A warm near-black with green undertones that reveals depth in bright light' },
+      { hex: '#507A4A', name: 'Canopy Perch', role: 'dominant', finish: 'Eggshell', application: 'A lush forest-green wall color that makes a room feel like a tropical retreat', lightingNote: 'Rich green that deepens under warm light and feels vivid under daylight' },
+      { hex: '#D4A040', name: 'Beak Gold', role: 'accent', finish: 'Semi-Gloss', application: 'Metallic lamp bases, gilded frames, or a painted accent shelf', lightingNote: 'A warm goldenrod that catches light and adds tropical warmth' },
+      { hex: '#BF5A3A', name: 'Beak Ember', role: 'accent', finish: 'Semi-Gloss', application: 'Decorative ceramics, a single throw pillow, or a painted planter', lightingNote: 'A warm terra-orange that pops against the greens without overwhelming' },
+      { hex: '#F2EDE4', name: 'Belize Cream', role: 'neutral', finish: 'Semi-Gloss', application: 'Trim and ceiling to prevent the deep greens from becoming too heavy', lightingNote: 'A warm ivory that balances the bold palette with lightness' },
+    ],
+    harmony: { type: 'split-complementary', explanation: 'Forest green splits to warm gold and terra-orange complements, creating a vibrant tropical palette. The near-black adds drama and the cream provides relief.' },
+    neutrals: { trim: { hex: '#F2EDE4', name: 'Tropical White' }, ceiling: { hex: '#F8F5F0', name: 'Cloud Break' }, floor: { hex: '#4A3828', name: 'Hardwood Dark' } },
+    rooms: [
+      { room: 'Bedroom', rating: 2, reason: 'Too energizing for sleep. Reserve for a daring guest room or a tropical accent wall.' },
+      { room: 'Living Room', rating: 4, reason: 'Green walls with gold and orange accents make a stunning tropical living room.' },
+      { room: 'Dining Room', rating: 5, reason: 'Lush green with warm metallics creates an unforgettable dining experience.' },
+      { room: 'Kitchen', rating: 3, reason: 'Green lower cabinets with cream uppers and gold hardware is bold and beautiful.' },
+      { room: 'Bathroom', rating: 3, reason: 'A powder room in Canopy Perch with brass fixtures is a tropical escape.' },
+    ],
+    styles: ['tropical', 'eclectic', 'bohemian'],
+    season: 'year-round',
+    seasonNote: 'Tropical greens and warm metallics feel lush in summer and festive in winter. Confidence is the only requirement.',
+  },
+  {
+    id: 20,
+    name: 'Greater Flamingo',
+    scientific: 'Phoenicopterus roseus',
+    description: 'The iconic flamingo, famous for its pink plumage derived from carotenoid pigments in their diet. These graceful waders form massive colonies across Africa, Asia, and Southern Europe.',
+    status: 'Least Concern',
+    conservation: 'Wetland drainage and pollution threaten flamingo habitats worldwide. Saline lake conservation is critical for breeding colonies.',
+    colors: [
+      { hex: '#D4A0A0', name: 'Flamingo Blush', role: 'dominant', finish: 'Eggshell', application: 'A soft, warm pink wall color — sophisticated and far from bubblegum', lightingNote: 'Reads as a mature dusty rose in daylight; gains warmth under incandescent' },
+      { hex: '#E8C4B8', name: 'Coral Feather', role: 'secondary', finish: 'Satin', application: 'Linen curtains, a large area rug, or upholstered dining chairs', lightingNote: 'A warm peach-pink that feels natural and sun-kissed under all lighting' },
+      { hex: '#F5F0EA', name: 'Salt Flat', role: 'neutral', finish: 'Semi-Gloss', application: 'Trim, ceiling, and wainscoting for a clean, warm foundation', lightingNote: 'A warm white with the faintest blush undertone' },
+      { hex: '#6B7B7B', name: 'Wetland Slate', role: 'accent', finish: 'Semi-Gloss', application: 'A painted accent table, picture frames, or a feature bookshelf', lightingNote: 'A cool gray-green that grounds the warm pinks and prevents them from feeling saccharine' },
+      { hex: '#C48A7A', name: 'Wing Coral', role: 'highlight', finish: 'Semi-Gloss', application: 'Interior doors, a painted dresser, or decorative ceramic pieces', lightingNote: 'A warm terracotta-rose that bridges the pink walls and gray accents beautifully' },
+    ],
+    harmony: { type: 'analogous', explanation: 'Soft pinks and corals flow together in a warm, feminine palette. The gray-green accent provides the essential cool counterpoint that keeps it from feeling one-note.' },
+    neutrals: { trim: { hex: '#F5F0EA', name: 'Shell White' }, ceiling: { hex: '#FAF7F3', name: 'Dawn Pink' }, floor: { hex: '#A08878', name: 'Sandy Dune' } },
+    rooms: [
+      { room: 'Bedroom', rating: 5, reason: 'Flamingo Blush is the ideal grown-up pink bedroom — soft, warm, and deeply relaxing.' },
+      { room: 'Living Room', rating: 4, reason: 'Sophisticated and warm. Pair with gray accents and warm wood for a modern look.' },
+      { room: 'Dining Room', rating: 3, reason: 'A soft dining room that works best for brunch and casual entertaining.' },
+      { room: 'Kitchen', rating: 3, reason: 'Coral Feather on an island with warm white cabinets feels fresh and inviting.' },
+      { room: 'Bathroom', rating: 5, reason: 'The ultimate spa bathroom — blush walls, white marble, and brass fixtures.' },
+    ],
+    styles: ['contemporary', 'coastal', 'bohemian'],
+    season: 'spring-summer',
+    seasonNote: 'These warm pinks feel most alive in spring and summer light. Layer warm textiles and metallics for winter coziness.',
+  },
+  {
+    id: 21,
+    name: 'Indian Peafowl',
+    scientific: 'Pavo cristatus',
+    description: 'The peacock\'s iridescent blue-green train, adorned with "eye" feathers, is one of nature\'s most extravagant displays. Revered in South Asian culture for millennia.',
+    status: 'Least Concern',
+    conservation: 'While the national bird of India thrives in human-modified landscapes, wild populations benefit from protected temple groves and nature reserves.',
+    colors: [
+      { hex: '#2A6B6B', name: 'Peacock Teal', role: 'dominant', finish: 'Eggshell', application: 'A rich, jewel-like wall color that transforms any room into something extraordinary', lightingNote: 'Reads as a true teal in daylight; deepens to an almost emerald under warm light' },
+      { hex: '#C4A83E', name: 'Train Gold', role: 'accent', finish: 'Semi-Gloss', application: 'Gilded mirror frames, decorative hardware, or a painted accent detail', lightingNote: 'A warm antique gold that catches light and adds regal warmth' },
+      { hex: '#1E3A4A', name: 'Neck Sapphire', role: 'highlight', finish: 'Semi-Gloss', application: 'A dramatic ceiling treatment, a feature wall, or a painted mantel', lightingNote: 'A deep blue-teal that creates intimacy and drama' },
+      { hex: '#5E8060', name: 'Eye Spot Green', role: 'secondary', finish: 'Satin', application: 'Emerald velvet curtains, a patterned area rug, or dining chair upholstery', lightingNote: 'A muted forest green that reads richer under warm light' },
+      { hex: '#EDE5D8', name: 'Temple Stone', role: 'neutral', finish: 'Semi-Gloss', application: 'Warm trim and ceiling to let the jewel tones breathe', lightingNote: 'A warm sandstone white that complements the rich colors without yellowing' },
+    ],
+    harmony: { type: 'analogous', explanation: 'Teals, blues, and greens flow in a cool jewel-toned spectrum, with warm gold providing the essential spark. Temple Stone grounds the opulence.' },
+    neutrals: { trim: { hex: '#EDE5D8', name: 'Marble White' }, ceiling: { hex: '#F5F2EB', name: 'Palace Light' }, floor: { hex: '#5C4A38', name: 'Teak Palace' } },
+    rooms: [
+      { room: 'Bedroom', rating: 3, reason: 'Peacock Teal is bold for a bedroom but makes a stunning feature wall behind the bed.' },
+      { room: 'Living Room', rating: 5, reason: 'A jaw-dropping living room. Teal walls, gold accents, emerald velvet — pure luxury.' },
+      { room: 'Dining Room', rating: 5, reason: 'Teal and gold is the ultimate formal dining palette. Add candlelight for magic.' },
+      { room: 'Kitchen', rating: 2, reason: 'Too jewel-toned for most kitchens. Use teal on a single island or accent wall.' },
+      { room: 'Bathroom', rating: 4, reason: 'Peacock Teal with gold fixtures creates a decadent master bathroom.' },
+    ],
+    styles: ['art-deco', 'eclectic', 'traditional'],
+    season: 'fall-winter',
+    seasonNote: 'Deep jewel tones thrive in autumn and winter. The gold accents catch candlelight beautifully during shorter days.',
+  },
+  {
+    id: 22,
+    name: 'Barn Owl',
+    scientific: 'Tyto alba',
+    description: 'With its heart-shaped face and ghostly pale plumage, the Barn Owl is a beloved nocturnal hunter found on every continent except Antarctica. They are invaluable for natural rodent control.',
+    status: 'Least Concern',
+    conservation: 'Loss of old barns and nesting sites threatens local populations. Nest box programs and reduced pesticide use are key conservation strategies.',
+    colors: [
+      { hex: '#F0E8DA', name: 'Barn Owl White', role: 'dominant', finish: 'Eggshell', application: 'A warm, enveloping cream wall color that makes any room feel inviting', lightingNote: 'A warm cream that glows golden under incandescent and reads clean under daylight' },
+      { hex: '#C4A878', name: 'Tawny Wing', role: 'secondary', finish: 'Satin', application: 'A woven jute rug, linen curtains, or an upholstered bench', lightingNote: 'A warm golden-tan that feels like afternoon sunlight on wheat fields' },
+      { hex: '#8A7458', name: 'Feather Buff', role: 'highlight', finish: 'Semi-Gloss', application: 'Interior doors, exposed beam stain, or a painted vanity', lightingNote: 'A warm brown with golden undertones; most beautiful under natural light' },
+      { hex: '#3D3832', name: 'Midnight Hunt', role: 'accent', finish: 'Semi-Gloss', application: 'Iron hardware, picture frames, or a single dramatic accent piece', lightingNote: 'A warm charcoal-brown that anchors the airy palette with weight' },
+      { hex: '#D8CFC2', name: 'Downy Breast', role: 'neutral', finish: 'Satin', application: 'Soft warm gray for secondary walls, wainscoting panels, or a reading nook', lightingNote: 'A warm greige that adds subtle depth without introducing coolness' },
+    ],
+    harmony: { type: 'monochromatic', explanation: 'A graduated warm neutral palette from cream through golden-tan to warm charcoal. Every shade shares the same warm undertone, creating effortless cohesion.' },
+    neutrals: { trim: { hex: '#F5F0E8', name: 'Barn White' }, ceiling: { hex: '#FAF7F2', name: 'Moonlight' }, floor: { hex: '#6B5B48', name: 'Hay Loft' } },
+    rooms: [
+      { room: 'Bedroom', rating: 5, reason: 'The ultimate calming bedroom — warm creams and taupes that cocoon you in comfort.' },
+      { room: 'Living Room', rating: 5, reason: 'Warm and universally inviting. Layer textures to add interest within the tonal range.' },
+      { room: 'Dining Room', rating: 4, reason: 'A warm, intimate dining room that flatters everyone at the table.' },
+      { room: 'Kitchen', rating: 5, reason: 'Cream and warm wood is the quintessential farmhouse kitchen — timeless and welcoming.' },
+      { room: 'Bathroom', rating: 4, reason: 'A warm spa bathroom with natural stone and warm metal fixtures.' },
+    ],
+    styles: ['farmhouse', 'scandinavian', 'coastal'],
+    season: 'year-round',
+    seasonNote: 'Warm neutrals transcend seasons entirely. Add texture in winter, lighten textiles in summer — the palette does the rest.',
+  },
+  {
+    id: 23,
+    name: 'European Bee-eater',
+    scientific: 'Merops apiaster',
+    description: 'One of Europe\'s most colorful birds, the Bee-eater displays a kaleidoscope of warm yellows, greens, and blues. They nest in sandy bank colonies across Southern Europe and Africa.',
+    status: 'Least Concern',
+    conservation: 'Pesticide use reduces the insect prey base. Sandy riverbank conservation and reduced insecticide use benefit bee-eater colonies.',
+    colors: [
+      { hex: '#C4A048', name: 'Bee-eater Gold', role: 'dominant', finish: 'Eggshell', application: 'A warm, honeyed wall color that brings Mediterranean sunshine indoors', lightingNote: 'Glows warmly under incandescent; reads more neutral and sophisticated under daylight' },
+      { hex: '#3A7A6A', name: 'Throat Teal', role: 'secondary', finish: 'Satin', application: 'Rich teal curtains, a patterned area rug, or velvet accent pillows', lightingNote: 'A muted teal that provides beautiful cool contrast to the warm golds' },
+      { hex: '#6B8E4A', name: 'Wing Green', role: 'accent', finish: 'Semi-Gloss', application: 'A painted plant shelf, ceramic pieces, or a garden room accent wall', lightingNote: 'An olive-green that feels fresh under daylight and warm under incandescent' },
+      { hex: '#7A4A30', name: 'Chestnut Eye', role: 'highlight', finish: 'Semi-Gloss', application: 'Interior doors, leather furniture accents, or warm metallic hardware', lightingNote: 'A rich brown with red undertones that adds depth and earthiness' },
+      { hex: '#F0E8D8', name: 'Sandy Bank', role: 'neutral', finish: 'Semi-Gloss', application: 'Trim and ceiling for a warm, sandy foundation', lightingNote: 'A warm sand-white that enhances the Mediterranean warmth of the palette' },
+    ],
+    harmony: { type: 'split-complementary', explanation: 'Warm gold splits to cool teal and olive-green complements, creating a vibrant yet earthy Mediterranean palette. Rich chestnut anchors it all.' },
+    neutrals: { trim: { hex: '#F0E8D8', name: 'Limestone' }, ceiling: { hex: '#F5F2EA', name: 'Morning Sun' }, floor: { hex: '#6B5840', name: 'Terra Floor' } },
+    rooms: [
+      { room: 'Bedroom', rating: 3, reason: 'Golden walls make a warm cocoon. Pair with teal bedding for a Mediterranean escape.' },
+      { room: 'Living Room', rating: 5, reason: 'Warm, vibrant, and inviting — a living room that feels like a Mediterranean holiday.' },
+      { room: 'Dining Room', rating: 5, reason: 'Golden walls with teal accents create a warm, appetite-stimulating dining room.' },
+      { room: 'Kitchen', rating: 4, reason: 'A sunny kitchen with gold walls, green accents, and warm wood counters.' },
+      { room: 'Bathroom', rating: 3, reason: 'Use Throat Teal as an accent wall with warm brass fixtures for a fresh look.' },
+    ],
+    styles: ['bohemian', 'eclectic', 'tropical'],
+    season: 'spring-summer',
+    seasonNote: 'This Mediterranean palette feels most alive when the sun is high. The warm tones carry a sense of perpetual summer.',
+  },
+  {
+    id: 24,
+    name: 'Roseate Spoonbill',
+    scientific: 'Platalea ajaja',
+    description: 'North America\'s only native pink bird (besides flamingos), the Roseate Spoonbill sweeps its spoon-shaped bill through shallow waters. Found in coastal wetlands of the southern United States and Central America.',
+    status: 'Least Concern',
+    conservation: 'Nearly hunted to extinction for plume trade, spoonbills have recovered but remain sensitive to wetland loss and water quality changes in the Gulf Coast.',
+    colors: [
+      { hex: '#C88A8A', name: 'Spoonbill Rose', role: 'accent', finish: 'Semi-Gloss', application: 'Accent pillows, a painted accent chair, or decorative pottery', lightingNote: 'A mature dusty rose that reads warm under incandescent and slightly cooler under daylight' },
+      { hex: '#E8D4C8', name: 'Shrimp Pink', role: 'dominant', finish: 'Eggshell', application: 'A whisper-soft blush wall color that warms without overwhelming', lightingNote: 'A sophisticated warm blush that reads nearly neutral — never reads bubblegum' },
+      { hex: '#F5F0EA', name: 'Mangrove White', role: 'neutral', finish: 'Semi-Gloss', application: 'Trim and ceilings for a crisp, clean backdrop', lightingNote: 'A warm white that enhances the blush tones without yellowing' },
+      { hex: '#5A7A70', name: 'Marsh Sage', role: 'secondary', finish: 'Satin', application: 'Sage upholstery, eucalyptus-toned curtains, or a painted console', lightingNote: 'A muted sage that provides essential cool balance to all the warm pinks' },
+      { hex: '#A06050', name: 'Wing Crimson', role: 'highlight', finish: 'Semi-Gloss', application: 'Interior doors, a feature bookshelf, or decorative lamp bases', lightingNote: 'A deep dusty rose-brown that adds depth and richness to the soft palette' },
+    ],
+    harmony: { type: 'complementary', explanation: 'Soft pinks and sage greens sit opposite on the color wheel, creating gentle contrast. The deeper rose adds richness while the neutrals keep it serene.' },
+    neutrals: { trim: { hex: '#F5F0EA', name: 'Egret White' }, ceiling: { hex: '#FAF8F4', name: 'Gulf Breeze' }, floor: { hex: '#9A8878', name: 'Sand Flat' } },
+    rooms: [
+      { room: 'Bedroom', rating: 5, reason: 'Shrimp Pink walls with sage accents create the most calming, sophisticated bedroom.' },
+      { room: 'Living Room', rating: 4, reason: 'Soft and modern. Layer sage textiles and warm metals against the blush backdrop.' },
+      { room: 'Dining Room', rating: 3, reason: 'A gentle dining room for intimate gatherings. Add deeper rose accents for warmth.' },
+      { room: 'Kitchen', rating: 3, reason: 'Sage cabinets with blush walls is an unexpected and beautiful combination.' },
+      { room: 'Bathroom', rating: 5, reason: 'Blush and sage with white marble is the ultimate feminine spa bathroom.' },
+    ],
+    styles: ['contemporary', 'coastal', 'scandinavian'],
+    season: 'spring-summer',
+    seasonNote: 'Soft blush and sage feel most alive in spring light. Layer warm textiles and deeper rose in winter for coziness.',
+  },
+  {
+    id: 25,
+    name: 'Rainbow Lorikeet',
+    scientific: 'Trichoglossus moluccanus',
+    description: 'Australia\'s most colorful parrot, the Rainbow Lorikeet is a riot of blue, green, red, and orange. These noisy, social birds are a common sight in gardens across eastern Australia.',
+    status: 'Least Concern',
+    conservation: 'Thriving in urban environments, lorikeets benefit from native flowering trees. Avoiding feeding lorikeets bread and seed helps maintain healthy populations.',
+    colors: [
+      { hex: '#3A5A98', name: 'Lorikeet Cobalt', role: 'secondary', finish: 'Satin', application: 'Rich blue curtains, a statement sofa, or a patterned area rug', lightingNote: 'A confident mid-cobalt that reads true under daylight and deepens under warm light' },
+      { hex: '#4A8A4E', name: 'Breast Green', role: 'dominant', finish: 'Eggshell', application: 'A fresh, lively green wall color that brings the outdoors in', lightingNote: 'A vivid but livable green that reads most true under natural daylight' },
+      { hex: '#C45838', name: 'Beak Vermilion', role: 'accent', finish: 'Semi-Gloss', application: 'A single statement chair, lacquered tray, or decorative art frame', lightingNote: 'A warm red-orange that pops against the greens without being aggressive' },
+      { hex: '#D4A040', name: 'Breast Band Gold', role: 'highlight', finish: 'Semi-Gloss', application: 'Metallic accents, gilded frames, or a painted accent shelf', lightingNote: 'A warm gold that bridges the cool blue and warm red beautifully' },
+      { hex: '#F0EBE0', name: 'Eucalyptus Cream', role: 'neutral', finish: 'Semi-Gloss', application: 'Generous trim and ceiling to let bold colors breathe', lightingNote: 'A warm cream that balances the vibrancy without competing' },
+    ],
+    harmony: { type: 'triadic', explanation: 'Green, blue, and red-orange form a vibrant triadic scheme — each muted enough to coexist joyfully. Gold provides metallic warmth throughout.' },
+    neutrals: { trim: { hex: '#F0EBE0', name: 'Gum Blossom' }, ceiling: { hex: '#F5F2EB', name: 'Open Canopy' }, floor: { hex: '#5A4838', name: 'Eucalyptus Bark' } },
+    rooms: [
+      { room: 'Bedroom', rating: 2, reason: 'Too vibrant for sleep. Reserve for a playful kids room or bold guest room.' },
+      { room: 'Living Room', rating: 4, reason: 'A joyful living room — green walls, blue sofa, and warm red-orange pops.' },
+      { room: 'Dining Room', rating: 4, reason: 'Green walls with blue and gold create an energetic, social dining atmosphere.' },
+      { room: 'Kitchen', rating: 4, reason: 'Green cabinets with warm metal hardware and blue tile backsplash is stunning.' },
+      { room: 'Bathroom', rating: 2, reason: 'Too many bold colors for small bathrooms. Use as accent art and towels only.' },
+    ],
+    styles: ['tropical', 'eclectic', 'bohemian'],
+    season: 'spring-summer',
+    seasonNote: 'This palette radiates tropical energy — most vibrant in sun-drenched spaces and warm months.',
+  },
+  {
+    id: 26,
+    name: 'Snowy Owl',
+    scientific: 'Bubo scandiacus',
+    description: 'The magnificent Snowy Owl hunts across Arctic tundra, its white plumage camouflaging it against snow. These powerful raptors occasionally wander south in winter, delighting birdwatchers.',
+    status: 'Vulnerable',
+    conservation: 'Climate change is reducing Arctic prey availability. Lemming population cycles directly impact snowy owl breeding success.',
+    colors: [
+      { hex: '#F0ECE6', name: 'Snowy Plumage', role: 'dominant', finish: 'Eggshell', application: 'A luminous warm white wall color that maximizes light in any room', lightingNote: 'The warmest white in the palette — glows softly under all lighting conditions' },
+      { hex: '#D8D2C8', name: 'Barred Feather', role: 'secondary', finish: 'Satin', application: 'A warm gray for linen curtains, a large rug, or an upholstered bed frame', lightingNote: 'A sophisticated warm gray that reads lighter in bright rooms and cozier in dim ones' },
+      { hex: '#B8AFA4', name: 'Arctic Lichen', role: 'secondary', finish: 'Satin', application: 'A medium warm gray for an accent wall, wainscoting, or kitchen cabinets', lightingNote: 'A deeper warm gray with the faintest green undertone from lichen' },
+      { hex: '#C4A848', name: 'Tundra Gold', role: 'accent', finish: 'Semi-Gloss', application: 'Brass hardware, a gilded mirror, or a warm metallic light fixture', lightingNote: 'A warm gold that adds life and warmth to the cool monochrome' },
+      { hex: '#4A4A48', name: 'Talon Dark', role: 'highlight', finish: 'Semi-Gloss', application: 'Sleek iron hardware, picture frames, or a dramatic window frame', lightingNote: 'A warm charcoal that anchors the whites and grays with subtle drama' },
+    ],
+    harmony: { type: 'monochromatic', explanation: 'A sophisticated gradient from warm white through graduated grays to charcoal. The single gold accent injects warmth and prevents the monochrome from feeling flat.' },
+    neutrals: { trim: { hex: '#F5F2EC', name: 'Snow White' }, ceiling: { hex: '#FAFAF7', name: 'Arctic Light' }, floor: { hex: '#7A7068', name: 'Frozen Tundra' } },
+    rooms: [
+      { room: 'Bedroom', rating: 5, reason: 'Serene and enveloping. Layer whites and grays for a luxurious cocoon effect.' },
+      { room: 'Living Room', rating: 5, reason: 'Minimalist elegance. The gold accents and layered textures add all the interest needed.' },
+      { room: 'Dining Room', rating: 3, reason: 'Can feel stark. Add gold lighting and warm textiles to create warmth for dining.' },
+      { room: 'Kitchen', rating: 5, reason: 'The quintessential modern white kitchen with warm gray islands and gold hardware.' },
+      { room: 'Bathroom', rating: 5, reason: 'Spa-like minimalism — whites, warm grays, and gold fixtures for quiet luxury.' },
+    ],
+    styles: ['scandinavian', 'contemporary', 'mid-century'],
+    season: 'year-round',
+    seasonNote: 'This minimal palette works in every season. It\'s a blank canvas that adapts to seasonal decor changes.',
+  },
+  {
+    id: 27,
+    name: 'Common Kingfisher',
+    scientific: 'Alcedo atthis',
+    description: 'A flash of electric blue along a riverbank — the Common Kingfisher is a tiny, jewel-like bird found across Europe and Asia. Their diving skills are legendary.',
+    status: 'Least Concern',
+    conservation: 'Clean waterways are essential for kingfisher survival. River pollution and bank degradation are the primary threats to this beloved species.',
+    colors: [
+      { hex: '#2A7AA8', name: 'Kingfisher Blue', role: 'accent', finish: 'Semi-Gloss', application: 'A statement accent wall, decorative ceramics, or painted bookshelves', lightingNote: 'A vivid teal-blue that reads electric under daylight and deeper under warm bulbs' },
+      { hex: '#C47A3A', name: 'Breast Copper', role: 'highlight', finish: 'Semi-Gloss', application: 'Interior doors, a painted console, or warm metallic light fixtures', lightingNote: 'A rich burnt-orange copper that glows warmly under incandescent' },
+      { hex: '#4A8A7A', name: 'River Teal', role: 'dominant', finish: 'Eggshell', application: 'A sophisticated teal-green wall color that feels fresh and natural', lightingNote: 'Shifts between green and blue depending on light — endlessly interesting' },
+      { hex: '#E8E0D4', name: 'River Stone', role: 'neutral', finish: 'Semi-Gloss', application: 'Warm trim and ceiling that enhances the teal without yellowing', lightingNote: 'A warm stone-white that grounds the vibrant blues and oranges' },
+      { hex: '#6B5A48', name: 'Perch Branch', role: 'secondary', finish: 'Satin', application: 'Warm brown leather seating, woven baskets, or a wood-toned area rug', lightingNote: 'A warm bark-brown that adds essential earthiness to the cool teal' },
+    ],
+    harmony: { type: 'complementary', explanation: 'Teal blues and warm copper-orange sit opposite on the color wheel for vibrant, natural contrast. The brown and cream bridge the temperature gap.' },
+    neutrals: { trim: { hex: '#E8E0D4', name: 'Pebble White' }, ceiling: { hex: '#F2EFEA', name: 'Stream Light' }, floor: { hex: '#5A4A3A', name: 'River Walnut' } },
+    rooms: [
+      { room: 'Bedroom', rating: 3, reason: 'River Teal makes a bold bedroom feature wall. Pair with warm copper and cream textiles.' },
+      { room: 'Living Room', rating: 5, reason: 'Teal walls with copper and brown accents create a fresh, nature-inspired living room.' },
+      { room: 'Dining Room', rating: 4, reason: 'Teal and copper is a stunning dining combination — add warm candlelight.' },
+      { room: 'Kitchen', rating: 4, reason: 'Teal cabinets with copper hardware and warm wood counters is magazine-worthy.' },
+      { room: 'Bathroom', rating: 5, reason: 'A riverstone-inspired bathroom with teal accents and copper fixtures.' },
+    ],
+    styles: ['mid-century', 'contemporary', 'coastal'],
+    season: 'year-round',
+    seasonNote: 'Teal and copper feel fresh in summer and rich in winter. This palette adapts beautifully to seasonal styling.',
+  },
+  {
+    id: 28,
+    name: 'Anna\'s Hummingbird',
+    scientific: 'Calypte anna',
+    description: 'The only hummingbird to winter in the northern United States, Anna\'s Hummingbird displays a spectacular iridescent rose-pink gorget and emerald green body.',
+    status: 'Least Concern',
+    conservation: 'Urban gardens with native flowering plants support thriving populations. Avoiding pesticides and providing clean feeders are key conservation actions.',
+    colors: [
+      { hex: '#5A8A68', name: 'Iridescent Green', role: 'dominant', finish: 'Eggshell', application: 'A fresh, lively sage-emerald wall color that brings garden energy indoors', lightingNote: 'A sophisticated green that reads more emerald under warm light and more sage under daylight' },
+      { hex: '#A64860', name: 'Gorget Rose', role: 'accent', finish: 'Semi-Gloss', application: 'Velvet accent pillows, a painted side table, or decorative ceramics', lightingNote: 'A deep dusty rose that shimmers between pink and berry depending on light' },
+      { hex: '#8A7A68', name: 'Nest Bark', role: 'secondary', finish: 'Satin', application: 'Warm taupe linen curtains, a natural fiber rug, or an upholstered bench', lightingNote: 'A warm bark-taupe that grounds the green without adding coolness' },
+      { hex: '#C8B898', name: 'Lichen Gold', role: 'highlight', finish: 'Semi-Gloss', application: 'Warm gold hardware, a painted mirror frame, or decorative accents', lightingNote: 'A soft golden-tan that catches warm light beautifully' },
+      { hex: '#EDE8DE', name: 'Feeder Cream', role: 'neutral', finish: 'Semi-Gloss', application: 'Trim and ceiling for a clean, warm backdrop', lightingNote: 'A warm cream that enhances the garden-fresh feel of the palette' },
+    ],
+    harmony: { type: 'complementary', explanation: 'Green and rose sit opposite on the color wheel — a classic garden palette. The warm taupe and gold add earthiness that keeps it grounded.' },
+    neutrals: { trim: { hex: '#EDE8DE', name: 'Petal White' }, ceiling: { hex: '#F5F2EB', name: 'Garden Light' }, floor: { hex: '#6B5A4A', name: 'Garden Path' } },
+    rooms: [
+      { room: 'Bedroom', rating: 4, reason: 'Iridescent Green is calming and natural. Rose accents add romantic warmth.' },
+      { room: 'Living Room', rating: 5, reason: 'A garden-inspired living room — green walls, rose accents, and warm natural textures.' },
+      { room: 'Dining Room', rating: 4, reason: 'Green and rose create a fresh, feminine dining atmosphere perfect for spring gatherings.' },
+      { room: 'Kitchen', rating: 4, reason: 'Green cabinets with rose accents and warm brass is a contemporary garden kitchen.' },
+      { room: 'Bathroom', rating: 4, reason: 'A garden spa with green walls, rose towels, and warm metallic fixtures.' },
+    ],
+    styles: ['bohemian', 'contemporary', 'eclectic'],
+    season: 'spring-summer',
+    seasonNote: 'This garden palette blooms in spring and summer light. Add warm textiles and deeper rose in winter.',
+  },
+  {
+    id: 29,
+    name: 'Hoopoe',
+    scientific: 'Upupa epops',
+    description: 'With its spectacular crest and cinnamon-black-white pattern, the Hoopoe is one of the most distinctive birds in the Old World. Found across Europe, Asia, and Africa.',
+    status: 'Least Concern',
+    conservation: 'Hoopoes benefit from traditional farming practices. Intensive agriculture and pesticide use reduce the insect prey base they depend on.',
+    colors: [
+      { hex: '#C08A58', name: 'Hoopoe Cinnamon', role: 'dominant', finish: 'Eggshell', application: 'A warm, spiced wall color that feels like a Moroccan riad', lightingNote: 'Glows warmly under incandescent; reads more neutral and sandy under daylight' },
+      { hex: '#2E2A28', name: 'Wing Bar Black', role: 'highlight', finish: 'Semi-Gloss', application: 'A dramatic front door, sleek hardware, or bold picture frames', lightingNote: 'A warm near-black that reads softer than pure black and reveals brown undertones' },
+      { hex: '#F0E8DA', name: 'Crest Cream', role: 'neutral', finish: 'Semi-Gloss', application: 'Trim, ceiling, and wainscoting to give the warm tones room to breathe', lightingNote: 'A warm cream that complements the cinnamon beautifully under all lighting' },
+      { hex: '#A07848', name: 'Desert Gold', role: 'secondary', finish: 'Satin', application: 'A leather Chesterfield sofa, woven curtains, or a warm metallic rug', lightingNote: 'A warm camel that deepens the tonal palette without adding new hue' },
+      { hex: '#7A6A58', name: 'Sahel Stone', role: 'secondary', finish: 'Satin', application: 'A warm brown area rug, carved wood accents, or upholstered dining chairs', lightingNote: 'A warm mid-brown that adds earthiness and texture' },
+    ],
+    harmony: { type: 'monochromatic', explanation: 'A graduated warm palette from cream through cinnamon to near-black. All shades share warm brown undertones, creating a spiced, enveloping atmosphere.' },
+    neutrals: { trim: { hex: '#F0E8DA', name: 'Saharan Cream' }, ceiling: { hex: '#F5F2EA', name: 'Desert Dawn' }, floor: { hex: '#5A4A38', name: 'Hammam Stone' } },
+    rooms: [
+      { room: 'Bedroom', rating: 4, reason: 'Warm, cocooning, and deeply relaxing. Layer warm textiles for maximum coziness.' },
+      { room: 'Living Room', rating: 5, reason: 'A warm, world-traveled living room. Layer warm browns with textured textiles and brass.' },
+      { room: 'Dining Room', rating: 5, reason: 'Warm cinnamon walls with candlelight create the most inviting dining atmosphere.' },
+      { room: 'Kitchen', rating: 3, reason: 'Cinnamon on an island or backsplash with cream cabinets feels warm and inviting.' },
+      { room: 'Bathroom', rating: 3, reason: 'A warm powder room in cinnamon with brass fixtures and natural stone tile.' },
+    ],
+    styles: ['bohemian', 'eclectic', 'traditional'],
+    season: 'fall-winter',
+    seasonNote: 'Warm cinnamons and browns feel most at home during autumn and winter. This palette was made for cozy evenings.',
+  },
+  {
+    id: 30,
+    name: 'Gouldian Finch',
+    scientific: 'Chloebia gouldiae',
+    description: 'One of the most spectacular finches in the world, the Gouldian Finch displays a remarkable combination of purple, green, and yellow. Native to tropical northern Australia.',
+    status: 'Near Threatened',
+    conservation: 'Altered fire regimes and habitat degradation threaten wild populations. Captive breeding programs help maintain genetic diversity while wild habitats are restored.',
+    colors: [
+      { hex: '#6A5088', name: 'Gouldian Violet', role: 'accent', finish: 'Semi-Gloss', application: 'A velvet accent chair, decorative art prints, or a painted vanity', lightingNote: 'A muted grape-purple that shows more blue under cool LED and more warmth under incandescent' },
+      { hex: '#4A8A58', name: 'Breast Emerald', role: 'dominant', finish: 'Eggshell', application: 'A fresh, vivid green wall color with tropical personality', lightingNote: 'Reads as true emerald under daylight and deeper under warm incandescent' },
+      { hex: '#C8A840', name: 'Belly Gold', role: 'highlight', finish: 'Semi-Gloss', application: 'Gilded frames, metallic lamp bases, or a painted interior door', lightingNote: 'A warm antique gold that adds metallic warmth to the cool greens and purples' },
+      { hex: '#C45050', name: 'Head Scarlet', role: 'accent', finish: 'Semi-Gloss', application: 'A single bold pillow, a lacquered tray, or decorative ceramics', lightingNote: 'A confident brick-red that reads warm under all lighting conditions' },
+      { hex: '#F0EBE0', name: 'Outback Cream', role: 'neutral', finish: 'Semi-Gloss', application: 'Trim and ceiling to provide essential breathing room for the bold palette', lightingNote: 'A warm cream that lets the vivid colors shine without competing' },
+    ],
+    harmony: { type: 'triadic', explanation: 'Purple, green, and gold form a vibrant triadic harmony at muted intensities. The scarlet accent adds a fourth dimension of warmth.' },
+    neutrals: { trim: { hex: '#F0EBE0', name: 'Outback White' }, ceiling: { hex: '#F5F2EA', name: 'Tropical Mist' }, floor: { hex: '#5A4A38', name: 'Red Gum' } },
+    rooms: [
+      { room: 'Bedroom', rating: 2, reason: 'Too vibrant for sleep. Use emerald on a single feature wall and purple in bedding only.' },
+      { room: 'Living Room', rating: 4, reason: 'A bold, artistic living room. Green walls, purple textiles, gold accents — maximum personality.' },
+      { room: 'Dining Room', rating: 4, reason: 'Emerald walls with gold and purple create a festive, celebratory dining room.' },
+      { room: 'Kitchen', rating: 3, reason: 'Green lower cabinets with gold hardware make a bold statement.' },
+      { room: 'Bathroom', rating: 2, reason: 'Too bold for small bathrooms. Use as accent towels and art only.' },
+    ],
+    styles: ['tropical', 'eclectic', 'bohemian'],
+    season: 'year-round',
+    seasonNote: 'This bold palette transcends seasons. It feels tropical in summer and jewel-like and festive in winter.',
+  },
+  {
+    id: 31,
+    name: 'Wood Duck',
+    scientific: 'Aix sponsa',
+    description: 'Often called America\'s most beautiful duck, the male Wood Duck displays an iridescent head of green and purple with chestnut and white accents. They nest in tree cavities near waterways.',
+    status: 'Least Concern',
+    conservation: 'Once heavily hunted, nest box programs and hunting regulations have restored populations. Wetland and mature forest preservation remain essential.',
+    colors: [
+      { hex: '#2E5A48', name: 'Wood Duck Green', role: 'highlight', finish: 'Semi-Gloss', application: 'A dramatic front door, built-in shelving, or a freestanding cabinet', lightingNote: 'A deep forest green that reveals rich teal undertones in bright settings' },
+      { hex: '#5A3A60', name: 'Crest Purple', role: 'accent', finish: 'Semi-Gloss', application: 'Velvet accent pillows, a painted side table, or art mat boards', lightingNote: 'A muted plum that reads richer under incandescent and more blue under cool LED' },
+      { hex: '#8A5A3A', name: 'Chestnut Flank', role: 'secondary', finish: 'Satin', application: 'Rich leather seating, warm curtains, or a woven area rug', lightingNote: 'A warm cognac-brown that feels luxurious and inviting under warm light' },
+      { hex: '#B8A888', name: 'Pond Wheat', role: 'dominant', finish: 'Eggshell', application: 'A warm, sophisticated tan wall color that grounds the jewel accents', lightingNote: 'A warm golden-tan that glows under incandescent and reads neutral under daylight' },
+      { hex: '#F0EBE2', name: 'Breast Stripe', role: 'neutral', finish: 'Semi-Gloss', application: 'Trim and ceiling for crisp contrast with the warm, earthy palette', lightingNote: 'A clean warm white that enhances the warmth without yellowing' },
+    ],
+    harmony: { type: 'split-complementary', explanation: 'Warm golden-tan splits to deep green and plum complements for a rich, layered palette. Cognac brown adds warmth while cream provides crisp accents.' },
+    neutrals: { trim: { hex: '#F0EBE2', name: 'Nest White' }, ceiling: { hex: '#F5F2EB', name: 'Forest Light' }, floor: { hex: '#4A3828', name: 'Oak Hollow' } },
+    rooms: [
+      { room: 'Bedroom', rating: 4, reason: 'Pond Wheat walls with plum bedding and green accents create a cozy woodland retreat.' },
+      { room: 'Living Room', rating: 5, reason: 'A handsome, layered living room with warm tans, rich leather, and jewel-toned accents.' },
+      { room: 'Dining Room', rating: 5, reason: 'Warm and sophisticated — golden-tan walls with candlelight and purple touches.' },
+      { room: 'Kitchen', rating: 3, reason: 'Warm tan walls with green-painted lower cabinets and brass hardware is beautiful.' },
+      { room: 'Bathroom', rating: 3, reason: 'A warm spa bathroom with golden-tan walls and green accent tile.' },
+    ],
+    styles: ['traditional', 'mid-century', 'eclectic'],
+    season: 'fall-winter',
+    seasonNote: 'Warm tans and jewel accents evoke autumn foliage. This palette feels most at home during harvest season.',
+  },
+  {
+    id: 32,
+    name: 'Cedar Waxwing',
+    scientific: 'Bombycilla cedrorum',
+    description: 'Sleek and elegant, the Cedar Waxwing sports a silky fawn plumage with a black mask, yellow-tipped tail, and distinctive waxy red wing tips. They travel in social flocks feeding on berries.',
+    status: 'Least Concern',
+    conservation: 'Berry-producing native trees and shrubs support healthy waxwing populations. Reducing window strikes is an important conservation action for this species.',
+    colors: [
+      { hex: '#C4AA88', name: 'Waxwing Fawn', role: 'dominant', finish: 'Eggshell', application: 'A warm, sandy wall color that feels like cashmere — sophisticated and enveloping', lightingNote: 'Glows golden under incandescent and reads as a refined tan under daylight' },
+      { hex: '#C4A840', name: 'Tail Tip Yellow', role: 'accent', finish: 'Semi-Gloss', application: 'Decorative ceramics, a painted accent shelf, or metallic gold hardware', lightingNote: 'A warm gold-yellow that adds sunny energy to the muted palette' },
+      { hex: '#8A4038', name: 'Wing Wax Red', role: 'highlight', finish: 'Semi-Gloss', application: 'A painted interior door, lacquered tray, or decorative bookends', lightingNote: 'A deep, muted brick-red that adds unexpected depth to the soft palette' },
+      { hex: '#3A3838', name: 'Mask Charcoal', role: 'highlight', finish: 'Semi-Gloss', application: 'Iron hardware, sleek picture frames, or a dramatic window frame', lightingNote: 'A warm charcoal that grounds the palette with sophisticated darkness' },
+      { hex: '#E8E0D4', name: 'Berry Cream', role: 'neutral', finish: 'Semi-Gloss', application: 'Trim and ceiling for a clean foundation against the warm tones', lightingNote: 'A warm cream that ties the sandy and golden tones together' },
+    ],
+    harmony: { type: 'analogous', explanation: 'Sandy fawn, warm gold, and muted brick-red flow together in a warm analogous scheme. The charcoal mask provides essential contrast and drama.' },
+    neutrals: { trim: { hex: '#E8E0D4', name: 'Silky Cream' }, ceiling: { hex: '#F2EFEA', name: 'Dawn Light' }, floor: { hex: '#6B5A48', name: 'Cedar Wood' } },
+    rooms: [
+      { room: 'Bedroom', rating: 5, reason: 'Waxwing Fawn is the ultimate bedroom neutral — warm, calming, and endlessly sophisticated.' },
+      { room: 'Living Room', rating: 5, reason: 'Universally flattering. Layer gold, charcoal, and warm textures for quiet luxury.' },
+      { room: 'Dining Room', rating: 4, reason: 'Warm and intimate. Gold accents and candlelight make this palette glow at dinner.' },
+      { room: 'Kitchen', rating: 4, reason: 'A warm, timeless kitchen. Fawn walls with cream cabinets and gold hardware.' },
+      { room: 'Bathroom', rating: 4, reason: 'A warm spa bathroom with natural stone and gold fixtures.' },
+    ],
+    styles: ['farmhouse', 'scandinavian', 'contemporary'],
+    season: 'year-round',
+    seasonNote: 'These warm neutrals work beautifully in every season — a true foundation palette that adapts to any mood.',
+  },
+  {
+    id: 33,
+    name: 'Secretary Bird',
+    scientific: 'Sagittarius serpentarius',
+    description: 'Standing over 4 feet tall with dramatic black crest feathers and long legs, the Secretary Bird is a raptor that hunts snakes on foot across African grasslands.',
+    status: 'Endangered',
+    conservation: 'Habitat loss and collision with power lines are critical threats. Grassland conservation across sub-Saharan Africa is essential for this iconic species.',
+    colors: [
+      { hex: '#B0AAA0', name: 'Plumage Silver', role: 'dominant', finish: 'Eggshell', application: 'A refined warm gray wall color with just enough warmth to feel inviting', lightingNote: 'A sophisticated warm gray that shifts subtly depending on surrounding colors' },
+      { hex: '#2E2E30', name: 'Crest Black', role: 'highlight', finish: 'Semi-Gloss', application: 'A bold accent wall, interior doors, or sleek built-in shelving', lightingNote: 'A soft black that avoids harshness; shows subtle warm undertones in bright light' },
+      { hex: '#C48040', name: 'Face Blaze', role: 'accent', finish: 'Semi-Gloss', application: 'A painted accent piece, decorative vases, or warm metallic accessories', lightingNote: 'A warm burnt orange that energizes the cool gray palette' },
+      { hex: '#E8E2D8', name: 'Grassland White', role: 'neutral', finish: 'Semi-Gloss', application: 'Trim, ceiling, and wainscoting for a clean, professional backdrop', lightingNote: 'A warm off-white that softens the contrast between gray and black' },
+      { hex: '#6B6860', name: 'Savanna Shadow', role: 'secondary', finish: 'Satin', application: 'Charcoal linen curtains, a woven rug, or an upholstered sofa', lightingNote: 'A warm mid-gray that bridges the lighter walls and darker accents' },
+    ],
+    harmony: { type: 'complementary', explanation: 'Cool grays and warm burnt orange create sophisticated contrast. The monochrome gray foundation lets the warm accent sing without competing.' },
+    neutrals: { trim: { hex: '#E8E2D8', name: 'Savanna Cream' }, ceiling: { hex: '#F2F0EB', name: 'Open Plain' }, floor: { hex: '#5A5550', name: 'Dry Earth' } },
+    rooms: [
+      { room: 'Bedroom', rating: 4, reason: 'Plumage Silver makes a calm, sophisticated bedroom. Add orange accents sparingly.' },
+      { room: 'Living Room', rating: 5, reason: 'A polished, modern living room. Gray walls, charcoal textiles, and warm orange pops.' },
+      { room: 'Dining Room', rating: 4, reason: 'Modern and refined. The warm orange accent keeps the grays from feeling sterile.' },
+      { room: 'Kitchen', rating: 4, reason: 'Gray cabinets with warm orange hardware and accents is sleek and contemporary.' },
+      { room: 'Bathroom', rating: 4, reason: 'A modern spa bathroom with warm grays, white fixtures, and orange towel accents.' },
+    ],
+    styles: ['contemporary', 'mid-century', 'scandinavian'],
+    season: 'year-round',
+    seasonNote: 'Gray and orange is a timeless modern combination that works in any season or setting.',
+  },
 ];
 
 // ============================================================
@@ -639,6 +1180,102 @@ const FLOCK_PAIRINGS = [
       { fromBird: 7, hex: '#8B7BAD', toBird: 10, hex2: '#3E6FA0', note: 'Muted plum and dusty cobalt create a cool counterpoint to all the warm reds and greens' },
     ],
   },
+  {
+    id: 7,
+    name: 'Nordic Fireside',
+    birdIds: [14, 18],
+    description: 'Atlantic Puffin\'s cool coastal slates meet Northern Cardinal\'s warm berry tones for a cozy Nordic cabin palette — the warmth of a hearth against a winter sea.',
+    moodBoard: {
+      vibe: 'Cozy, Scandinavian, warm-cool contrast',
+      materials: 'Sheepskin throws, dark stained wood, wool textiles, iron fixtures, ceramic mugs',
+      rooms: ['Living Room', 'Study', 'Bedroom'],
+    },
+    pairedColors: [
+      { fromBird: 14, hex: '#4A5C6B', toBird: 18, hex2: '#A63B3B', note: 'Cool sea slate walls with warm cranberry accent pieces create striking Nordic warmth' },
+      { fromBird: 14, hex: '#2F3133', toBird: 18, hex2: '#5C3A2E', note: 'Puffin charcoal and cardinal bark — two rich darks that anchor without competing' },
+      { fromBird: 14, hex: '#D4CBC0', toBird: 18, hex2: '#D4BFA8', note: 'Pebble shore and birch beige blend as a seamless warm neutral foundation' },
+    ],
+  },
+  {
+    id: 8,
+    name: 'Safari Dawn',
+    birdIds: [22, 29],
+    description: 'Barn Owl\'s tawny desert palette pairs with Hoopoe\'s earthy cinnamon-and-cream stripes for an African savanna morning — warm, golden, and quietly dramatic.',
+    moodBoard: {
+      vibe: 'Earthy, warm, globally inspired',
+      materials: 'Woven rattan, raw linen, terracotta planters, bleached wood, sisal rugs',
+      rooms: ['Living Room', 'Sunroom', 'Dining Room'],
+    },
+    pairedColors: [
+      { fromBird: 22, hex: '#C4A67A', toBird: 29, hex2: '#C49A6A', note: 'Golden tawny and warm cinnamon create a sun-drenched tonal pairing' },
+      { fromBird: 22, hex: '#F0E6D4', toBird: 29, hex2: '#F0E4D0', note: 'Two warm creams that read as one continuous warm base — perfect for walls' },
+      { fromBird: 22, hex: '#8B7355', toBird: 29, hex2: '#2F2F2F', note: 'Warm sienna grounded by charcoal-black for a striking contrast moment' },
+    ],
+  },
+  {
+    id: 9,
+    name: 'Jewel Tropics',
+    birdIds: [15, 25],
+    description: 'Lilac-breasted Roller\'s soft pastels intertwine with Rainbow Lorikeet\'s vivid jewel tones for a layered tropical palette that moves from soft to bold.',
+    moodBoard: {
+      vibe: 'Tropical, eclectic, colorful yet livable',
+      materials: 'Printed textiles, rattan furniture, tropical plants, painted ceramics, woven baskets',
+      rooms: ['Living Room', 'Bedroom', 'Covered Patio'],
+    },
+    pairedColors: [
+      { fromBird: 15, hex: '#8A7BA8', toBird: 25, hex2: '#2B6E4F', note: 'Soft lilac and rich rainforest green — unexpected but harmonious cool tones' },
+      { fromBird: 15, hex: '#5E9EAD', toBird: 25, hex2: '#2E5FA0', note: 'Aqua teal and cobalt blue build a lush cool-toned depth' },
+      { fromBird: 15, hex: '#C4956A', toBird: 25, hex2: '#D4953A', note: 'Warm cinnamon and lorikeet gold tie the cool tones to earth' },
+    ],
+  },
+  {
+    id: 10,
+    name: 'Winter Palace',
+    birdIds: [26, 21],
+    description: 'Snowy Owl\'s pristine arctic whites and grays meet Indian Peafowl\'s regal blues and golds — an opulent winter wonderland palette fit for royalty.',
+    moodBoard: {
+      vibe: 'Regal, serene, luxurious',
+      materials: 'Velvet upholstery, mercury glass, white marble, gold leaf accents, crystal',
+      rooms: ['Master Bedroom', 'Formal Dining Room', 'Bathroom'],
+    },
+    pairedColors: [
+      { fromBird: 26, hex: '#F5F0E8', toBird: 21, hex2: '#1E5C6B', note: 'Snowy white walls make peacock teal furniture pieces absolutely sing' },
+      { fromBird: 26, hex: '#A8A49C', toBird: 21, hex2: '#B89E4A', note: 'Arctic silver-gray and burnished gold — the classic ice-and-metal luxury pairing' },
+      { fromBird: 26, hex: '#7A756E', toBird: 21, hex2: '#4A7A5E', note: 'Warm driftwood gray anchors peacock green for a sophisticated two-tone scheme' },
+    ],
+  },
+  {
+    id: 11,
+    name: 'Harvest Festival',
+    birdIds: [16, 32],
+    description: 'Golden Pheasant\'s fiery scarlet-and-gold meets Cedar Waxwing\'s soft autumn naturals for a rich harvest palette — think wine country in October.',
+    moodBoard: {
+      vibe: 'Warm, autumnal, convivial',
+      materials: 'Reclaimed barn wood, copper cookware, linen napkins, stoneware, dried botanicals',
+      rooms: ['Kitchen', 'Dining Room', 'Family Room'],
+    },
+    pairedColors: [
+      { fromBird: 16, hex: '#B5452A', toBird: 32, hex2: '#8C7A5E', note: 'Cinnabar red and warm khaki — earthy warmth that makes a kitchen feel alive' },
+      { fromBird: 16, hex: '#C49A2A', toBird: 32, hex2: '#C4A63A', note: 'Deep gold and waxwing gold sing in unison as a warm metallic accent thread' },
+      { fromBird: 16, hex: '#4A6B4A', toBird: 32, hex2: '#6B7B6B', note: 'Forest green and sage create natural depth like looking into an autumn wood' },
+    ],
+  },
+  {
+    id: 12,
+    name: 'Coral Reef',
+    birdIds: [20, 27],
+    description: 'Greater Flamingo\'s warm coral pinks blend with Common Kingfisher\'s electric blue-orange for an underwater fantasy palette — vivid, warm, and aquatic.',
+    moodBoard: {
+      vibe: 'Playful, vibrant, coastal-modern',
+      materials: 'Whitewashed wood, sea glass, terrazzo, colored tile, linen and cotton',
+      rooms: ['Bathroom', 'Kids Room', 'Beach House Living Room'],
+    },
+    pairedColors: [
+      { fromBird: 20, hex: '#D4917A', toBird: 27, hex2: '#1A6B8A', note: 'Warm coral and deep cerulean — the classic warm-cool complementary pair' },
+      { fromBird: 20, hex: '#F0DDD0', toBird: 27, hex2: '#C47A3A', note: 'Blush pink base with kingfisher orange accents for energetic warmth' },
+      { fromBird: 20, hex: '#C47A6A', toBird: 27, hex2: '#5E9E8A', note: 'Dusty rose and jade teal create a sophisticated underwater garden feel' },
+    ],
+  },
 ];
 
 // ============================================================
@@ -658,9 +1295,113 @@ const PlumagePalettes = () => {
   const [selectedPairing, setSelectedPairing] = useState(null);
   const [guideSection, setGuideSection] = useState(null);
 
+  // AI Chat state
+  const [chatOpen, setChatOpen] = useState(false);
+  const [chatMessages, setChatMessages] = useState([]);
+  const [chatInput, setChatInput] = useState('');
+  const [chatLoading, setChatLoading] = useState(false);
+  const [apiKey, setApiKey] = useState(() => typeof window !== 'undefined' ? localStorage.getItem('plumage_api_key') || '' : '');
+  const [showKeyInput, setShowKeyInput] = useState(false);
+  const chatEndRef = useRef(null);
+
   const toggleBird = (id) => {
     setExpandedBird(expandedBird === id ? null : id);
     setCardTab('colors');
+  };
+
+  // AI Chat functions
+  useEffect(() => {
+    if (chatEndRef.current) chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
+  }, [chatMessages, chatLoading]);
+
+  const saveApiKey = (key) => {
+    setApiKey(key);
+    localStorage.setItem('plumage_api_key', key);
+    setShowKeyInput(false);
+  };
+
+  const buildSystemPrompt = () => {
+    const paletteData = birds.map(b =>
+      `${b.name} (${b.scientific}): ${b.colors.map(c => `${c.name} ${c.hex} [${c.role}]`).join(', ')}. Harmony: ${b.harmony.type}. Styles: ${b.styles.join(', ')}. Season: ${b.season}. Rooms: ${b.rooms.filter(r => r.rating >= 4).map(r => r.room).join(', ') || 'versatile'}.`
+    ).join('\n');
+
+    const pairingData = FLOCK_PAIRINGS.map(p => {
+      const b1 = birds.find(b => b.id === p.birdIds[0]);
+      const b2 = birds.find(b => b.id === p.birdIds[1]);
+      return `${p.name}: ${b1?.name} + ${b2?.name} — ${p.moodBoard.vibe}. Best in: ${p.moodBoard.rooms.join(', ')}.`;
+    }).join('\n');
+
+    return `You are the Plumage Palettes AI Color Consultant — an expert interior designer who helps people use bird-inspired color palettes in their homes.
+
+CORE KNOWLEDGE — COLOR THEORY:
+- 60-30-10 Rule: 60% dominant (walls), 30% secondary (textiles/furniture), 10% accent (decor/art). This ratio creates visual balance.
+- Color Harmonies: Analogous (adjacent hues, serene), Complementary (opposite hues, energetic), Triadic (3 evenly spaced, rich), Split-Complementary (base + 2 adjacent to complement), Monochromatic (one hue, layered values).
+- Undertones: Warm (yellow/red base) advance and energize. Cool (blue/green base) recede and calm. Neutral (balanced) bridge both.
+- Value & Saturation: Muted/desaturated colors feel sophisticated and livable. High saturation overwhelms in large doses. Dark values create intimacy; light values create openness.
+- Lighting Effects: North-facing rooms make colors cooler/grayer. South-facing rooms warm everything. Incandescent light adds warmth. Cool LED shifts colors blue. Always test paint samples at morning, noon, and evening.
+
+CORE KNOWLEDGE — INTERIOR DESIGN:
+- Paint Finishes: Matte (walls, hides imperfections), Eggshell (living areas, slight sheen), Satin (kitchens/baths, wipeable), Semi-Gloss (trim/doors, durable), High-Gloss (accents, dramatic).
+- Room Psychology: Bedrooms want calming (blues, greens, soft neutrals). Dining rooms want warmth and appetite stimulation (reds, greens, golds). Kitchens want energy (warm whites, blues, greens). Bathrooms want spa-like (blues, greens, warm whites). Living rooms are versatile.
+- Small rooms: lighter colors, fewer contrasts. Large rooms: can handle dark/bold colors. Low ceilings: paint ceiling lighter than walls. Long narrow rooms: warm color on short walls to draw them in.
+
+AVAILABLE PALETTES:
+${paletteData}
+
+CURATED PAIRINGS (Flock Pairings):
+${pairingData}
+
+GUIDELINES:
+- Always recommend specific Plumage palette colors by name and hex code.
+- Explain WHY a palette works for the user's situation using color theory.
+- If mixing palettes, explain which colors from each bird work together and why.
+- Give practical advice: which walls, which textiles, which accents.
+- Consider the user's lighting, room size, existing furniture, and style preferences.
+- Be warm, encouraging, and specific. Avoid vague advice.
+- Keep responses concise but helpful — aim for 2-4 short paragraphs.
+- When suggesting colors, format hex codes so users can reference them.`;
+  };
+
+  const sendChatMessage = async () => {
+    if (!chatInput.trim() || chatLoading) return;
+    if (!apiKey) { setShowKeyInput(true); return; }
+
+    const userMsg = { role: 'user', content: chatInput.trim() };
+    const updatedMessages = [...chatMessages, userMsg];
+    setChatMessages(updatedMessages);
+    setChatInput('');
+    setChatLoading(true);
+
+    try {
+      const response = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-api-key': apiKey,
+          'anthropic-version': '2023-06-01',
+          'anthropic-dangerous-direct-browser-access': 'true',
+        },
+        body: JSON.stringify({
+          model: 'claude-sonnet-4-20250514',
+          max_tokens: 1024,
+          system: buildSystemPrompt(),
+          messages: updatedMessages.map(m => ({ role: m.role, content: m.content })),
+        }),
+      });
+
+      if (!response.ok) {
+        const err = await response.json().catch(() => ({}));
+        throw new Error(err.error?.message || `API error ${response.status}`);
+      }
+
+      const data = await response.json();
+      const assistantMsg = { role: 'assistant', content: data.content[0].text };
+      setChatMessages(prev => [...prev, assistantMsg]);
+    } catch (err) {
+      setChatMessages(prev => [...prev, { role: 'assistant', content: `Error: ${err.message}. Check your API key and try again.` }]);
+    } finally {
+      setChatLoading(false);
+    }
   };
 
   const copyToClipboard = (hex) => {
@@ -1563,6 +2304,121 @@ const PlumagePalettes = () => {
         {/* ---- DESIGN GUIDE TAB ---- */}
         {activeTab === 'guide' && renderDesignGuide()}
       </div>
+
+      {/* AI Chat Panel */}
+      {chatOpen && (
+        <div className="fixed inset-y-0 right-0 w-full sm:w-[420px] bg-white shadow-2xl z-50 flex flex-col border-l border-gray-200">
+          {/* Chat Header */}
+          <div className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-4 py-3 flex items-center justify-between flex-shrink-0">
+            <div className="flex items-center gap-2">
+              <MessageCircle className="w-5 h-5" />
+              <span className="font-bold">Color Consultant</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <button onClick={() => setShowKeyInput(!showKeyInput)} className="p-1.5 hover:bg-white/20 rounded-lg transition-colors" title="API Key Settings">
+                <Settings className="w-4 h-4" />
+              </button>
+              <button onClick={() => setChatOpen(false)} className="p-1.5 hover:bg-white/20 rounded-lg transition-colors">
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+
+          {/* API Key Input */}
+          {showKeyInput && (
+            <div className="p-3 bg-amber-50 border-b border-amber-200 flex-shrink-0">
+              <p className="text-xs text-amber-800 mb-2 font-medium">Enter your Claude API key (stored in your browser only):</p>
+              <div className="flex gap-2">
+                <input
+                  type="password"
+                  value={apiKey}
+                  onChange={e => setApiKey(e.target.value)}
+                  placeholder="sk-ant-..."
+                  className="flex-1 text-sm px-3 py-1.5 border border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                />
+                <button onClick={() => saveApiKey(apiKey)} className="px-3 py-1.5 bg-emerald-600 text-white text-sm rounded-lg hover:bg-emerald-700">Save</button>
+              </div>
+              <p className="text-[10px] text-amber-600 mt-1">Get a key at console.anthropic.com. Never shared with anyone.</p>
+            </div>
+          )}
+
+          {/* Chat Messages */}
+          <div className="flex-1 overflow-y-auto p-4 space-y-3">
+            {chatMessages.length === 0 && (
+              <div className="text-center py-8">
+                <Palette className="w-10 h-10 text-emerald-300 mx-auto mb-3" />
+                <p className="text-sm text-gray-500 mb-4">Ask me anything about color palettes, room styling, or which birds work best for your space.</p>
+                <div className="space-y-2">
+                  {[
+                    'Which palette works for a cozy north-facing bedroom?',
+                    'How would I use the Quetzal palette in a small kitchen?',
+                    'I have a gray couch — which bird palette matches?',
+                  ].map((q, i) => (
+                    <button
+                      key={i}
+                      onClick={() => { setChatInput(q); }}
+                      className="block w-full text-left text-xs px-3 py-2 bg-gray-50 hover:bg-emerald-50 rounded-lg text-gray-600 hover:text-emerald-700 transition-colors"
+                    >
+                      {q}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+            {chatMessages.map((msg, i) => (
+              <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                <div className={`max-w-[85%] px-3 py-2 rounded-xl text-sm leading-relaxed whitespace-pre-wrap ${
+                  msg.role === 'user'
+                    ? 'bg-emerald-600 text-white rounded-br-sm'
+                    : 'bg-gray-100 text-gray-800 rounded-bl-sm'
+                }`}>
+                  {msg.content}
+                </div>
+              </div>
+            ))}
+            {chatLoading && (
+              <div className="flex justify-start">
+                <div className="bg-gray-100 text-gray-500 px-3 py-2 rounded-xl rounded-bl-sm text-sm flex items-center gap-2">
+                  <Loader2 className="w-4 h-4 animate-spin" /> Thinking...
+                </div>
+              </div>
+            )}
+            <div ref={chatEndRef} />
+          </div>
+
+          {/* Chat Input */}
+          <div className="p-3 border-t border-gray-200 flex-shrink-0">
+            <div className="flex gap-2">
+              <input
+                value={chatInput}
+                onChange={e => setChatInput(e.target.value)}
+                onKeyDown={e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendChatMessage(); } }}
+                placeholder={apiKey ? 'Ask about colors, palettes, rooms...' : 'Set your API key first (gear icon)'}
+                disabled={chatLoading}
+                className="flex-1 text-sm px-3 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-400 disabled:opacity-50"
+              />
+              <button
+                onClick={sendChatMessage}
+                disabled={chatLoading || !chatInput.trim()}
+                className="p-2 bg-emerald-600 text-white rounded-xl hover:bg-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              >
+                <Send className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Floating Chat Button */}
+      {!chatOpen && (
+        <button
+          onClick={() => setChatOpen(true)}
+          className="fixed bottom-6 right-6 bg-emerald-600 hover:bg-emerald-700 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all z-50 flex items-center gap-2"
+        >
+          <MessageCircle className="w-6 h-6" />
+          <span className="text-sm font-semibold hidden sm:inline">Color Consultant</span>
+        </button>
+      )}
 
       {/* Footer */}
       <div className="bg-gradient-to-r from-slate-800 to-slate-900 text-white mt-16 py-12">
