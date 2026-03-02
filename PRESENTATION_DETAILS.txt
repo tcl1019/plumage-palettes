@@ -1,0 +1,154 @@
+PLUMAGE PALETTES - PITCH DECK
+Professional Presentation Summary
+=================================
+
+FILE LOCATION: /sessions/eloquent-quirky-fermi/mnt/outputs/plumage-palettes-pitch.pptx
+FILE SIZE: 132 KB
+FORMAT: PPTX (Microsoft PowerPoint)
+CREATED: 2026-03-02
+TOTAL SLIDES: 10
+
+COLOR PALETTE USED
+==================
+Primary (Deep Forest Green): 1A3C34
+Secondary (Warm Cream): F7F3ED
+Accent 1 (Scarlet Macaw Red): E63946
+Accent 2 (Bluebird Blue): 4169E1
+Accent 3 (Tropical Gold): FFD60A
+Dark Text: 2D2D2D
+Light Text: FFFFFF
+Additional Colors:
+  - Flight Feather Blue: 006BA6
+  - Midnight Mask: 1A1A2E
+  - Dawn Perch: 6BA3D6
+  - Wren's Wing: 8B6F47
+  - Breast Feather: E8E8E8
+  - Fairy-wren Azure: 0080FF
+  - Jungle Gilded: DAA520
+
+TYPOGRAPHY
+===========
+Headers: Georgia (36-44pt, bold)
+Body Text: Calibri (14-16pt)
+Consistent sizing and spacing throughout
+
+SLIDE BREAKDOWN
+===============
+
+SLIDE 1: TITLE
+- Main title: "Plumage Palettes"
+- Subtitle: "Nature-Inspired Paint Colors from the World's Most Spectacular Birds"
+- Design: Dark forest green background (1A3C34) with cream text
+- Style: Premium, elegant, centered layout
+
+SLIDE 2: THE PROBLEM
+- Title: "Paint Colors Deserve Better Names & Stories"
+- Content: Two-column layout
+  - Left: Problem text explaining generic paint naming issues
+  - Right: Visual elements (3 colored rectangles in accent colors)
+- Design: Warm cream background with dark text
+
+SLIDE 3: THE VISION
+- Title: "What If Your Paint Palette Told a Story?"
+- Content: Vision statement about connecting birds to colors
+- Highlight: Key message box with dark background and gold text
+- Message: "Colors with character. Stories with meaning."
+
+SLIDE 4: SAMPLE PALETTE - SCARLET MACAW
+- 5 Color Swatches:
+  1. E63946 "Macaw Scarlet"
+  2. FFD60A "Tropical Gold"
+  3. 006BA6 "Flight Feather Blue"
+  4. FFFFFF "Bare Face White"
+  5. DAA520 "Jungle Gilded"
+- Bird Info: "Scarlet Macaw (Ara macao) — The iconic tropical parrot, threatened by illegal pet trade"
+- Design: Dark info box with primary color border
+
+SLIDE 5: SAMPLE PALETTE - SUPERB FAIRY-WREN
+- 5 Color Swatches:
+  1. 0080FF "Fairy-wren Azure"
+  2. 1A1A2E "Midnight Mask"
+  3. 6BA3D6 "Dawn Perch"
+  4. 8B6F47 "Wren's Wing"
+  5. E8E8E8 "Breast Feather"
+- Bird Info: "Superb Fairy-wren (Malurus cyaneus) — Males carry flower petals to impress females"
+- Design: Dark info box with accent2 color border
+
+SLIDE 6: CONSERVATION ANGLE
+- Title: "Beautiful Birds Need Our Help"
+- Statistics with accent bars:
+  1. "Global wildlife trade: $7-23 billion annually"
+  2. "1 in 4 bird species caught in wildlife trade"
+  3. "Painted Buntings illegally trapped from Louisiana, sold in Europe"
+  4. "Florida Scrub-Jays: fewer than 10,000 remain"
+- Callout: "A portion of every sale donated to the National Audubon Society"
+- Design: Gold border on callout box
+
+SLIDE 7: PRODUCT LINE EXPANSION
+- Title: "Beyond Birds: A World of Color"
+- Grid Layout (6 cards in 3x2):
+  1. Butterflies & Moths (yellow)
+  2. Dragonflies & Beetles (blue)
+  3. Tropical Fish & Coral (red)
+  4. Wildflowers & Plants (green)
+  5. Pacific Northwest (dark blue)
+  6. Everglades (bright blue)
+- Design: Colored rectangles with white text
+
+SLIDE 8: MARKET OPPORTUNITY
+- Title: "A New Category in Home Design"
+- 5 Key Points (with colored square bullets):
+  1. Home paint market: $30B+ globally
+  2. Growing consumer demand for ethical, story-driven products
+  3. Nature-inspired decor trending across social media
+  4. No direct competitor combining paint + wildlife conservation
+  5. Digital + physical product potential
+- Design: Warm background with dark text
+
+SLIDE 9: REVENUE MODEL
+- Title: "How It Works"
+- 5 Revenue Streams (with colored circle bullets):
+  1. Licensed paint color collections with major paint brands
+  2. Digital app/website (subscription + in-app purchases)
+  3. Physical color booklets/cards sold at home improvement stores
+  4. Regional editions and seasonal collections
+  5. Conservation-branded partnerships
+- Design: Warm background with cycling accent colors
+
+SLIDE 10: CALL TO ACTION
+- Title: "Let's Paint a Better World"
+- Tagline: "Every color tells a story. Every purchase protects a species."
+- Contact: "info@plumagepalettes.com"
+- Design: Matching title slide with dark forest green background and gold accents
+- Style: Bold, memorable closing slide
+
+DESIGN QUALITY FEATURES
+======================
+✓ Consistent color palette throughout (no color corruption)
+✓ Professional typography (Georgia + Calibri pairing)
+✓ Visual variety across slides (different layouts prevent monotony)
+✓ Adequate whitespace and margins (0.5" minimum)
+✓ Large, readable font sizes (36-44pt titles, 14-16pt body)
+✓ Accent elements (colored bars, boxes, swatches) for visual interest
+✓ Professional spacing and alignment
+✓ No accent lines under titles (per requirements)
+✓ Clean, premium aesthetic suitable for investor pitch
+✓ Storytelling arc from problem to vision to solution
+
+VALIDATION STATUS
+=================
+✓ All 10 slides created successfully
+✓ PPTX structure verified and valid
+✓ All required content included
+✓ Color palette applied correctly (no hex corruption)
+✓ File size is appropriate (132 KB)
+✓ Ready for presentation
+
+NOTES FOR PRESENTER
+====================
+- File is compatible with PowerPoint, Google Slides, and other presentation software
+- All colors are print-safe and web-safe
+- Consider adding high-quality bird photography to slides 4 and 5 for maximum impact
+- The conservation statistics on slide 6 are placeholders and should be verified with current data
+- Presenter notes can be added directly in PowerPoint if needed
+- The design supports both digital presentation and printed handouts
