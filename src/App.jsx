@@ -7,6 +7,7 @@ import Explore from './components/sections/Explore';
 import PaletteDetail from './components/sections/PaletteDetail';
 import MyStudio from './components/sections/MyStudio';
 import Learn from './components/sections/Learn';
+import CollectionDetail from './components/sections/CollectionDetail';
 import QuizFlow from './components/features/QuizFlow';
 import ColorMatchFlow from './components/features/ColorMatchFlow';
 import AIChatPanel from './components/features/AIChatPanel';
@@ -23,6 +24,7 @@ export function useNav() {
 export default function App() {
   const [activeSection, setActiveSection] = useState('discover');
   const [selectedBirdId, setSelectedBirdId] = useState(null);
+  const [selectedCollectionId, setSelectedCollectionId] = useState(null);
   const [chatOpen, setChatOpen] = useState(false);
   const [chatContext, setChatContext] = useState(null);
   const [quizOpen, setQuizOpen] = useState(false);
@@ -37,6 +39,10 @@ export default function App() {
       setPreviousSection(activeSection);
       setSelectedBirdId(options.birdId);
       setActiveSection('palette-detail');
+    } else if (section === 'collection-detail' && options.collectionId) {
+      setPreviousSection(activeSection);
+      setSelectedCollectionId(options.collectionId);
+      setActiveSection('collection-detail');
     } else if (section === 'explore' && options.filters) {
       setExploreFilters(options.filters);
       setActiveSection('explore');
@@ -88,6 +94,9 @@ export default function App() {
             {activeSection === 'explore' && <Explore />}
             {activeSection === 'palette-detail' && selectedBirdId && (
               <PaletteDetail birdId={selectedBirdId} />
+            )}
+            {activeSection === 'collection-detail' && selectedCollectionId && (
+              <CollectionDetail collectionId={selectedCollectionId} />
             )}
             {activeSection === 'my-studio' && <MyStudio />}
             {activeSection === 'learn' && <Learn />}

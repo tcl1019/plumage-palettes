@@ -1,13 +1,16 @@
 import React, { useState, useMemo, useCallback, useRef, useEffect } from 'react';
-import { Search, ArrowRight, Sparkles, Home, BedDouble, CookingPot, Bath, UtensilsCrossed, Camera, Pipette, Palette, ChevronLeft, ChevronRight, Heart, ArrowDown } from 'lucide-react';
+import { Search, ArrowRight, Sparkles, Home, BedDouble, CookingPot, Bath, UtensilsCrossed, Camera, Pipette, Palette, ChevronLeft, ChevronRight, Heart, ArrowDown, Moon, Sun, Gem, Waves, Minus, Leaf, Sunset } from 'lucide-react';
 import { birds } from '../../data/birds';
 import { HERO_BIRDS } from '../../data/herobirds';
 import { FLOCK_PAIRINGS } from '../../data/flockPairings';
+import { COLLECTIONS } from '../../data/collections';
 import { MOODS } from '../../data/constants';
 import PaletteStrip from '../shared/PaletteStrip';
 import FeatherPattern from '../shared/FeatherPattern';
 import SaveButton from '../shared/SaveButton';
 import { useNav } from '../../App';
+
+const COLLECTION_ICONS = { Moon, Sun, Heart, Gem, Waves, Minus, Leaf, Sunset };
 
 const ROOM_CARDS = [
   { id: 'bedroom', label: 'Bedroom', Icon: BedDouble, desc: 'Calm & restful' },
@@ -306,6 +309,44 @@ export default function Discover() {
                 <p className="text-sm font-semibold text-gray-800">{mood.label}</p>
               </button>
             ))}
+          </div>
+        </div>
+
+        {/* Curated Collections */}
+        <div className="mb-10">
+          <h2 className="text-sm font-bold text-gray-600 uppercase tracking-wider mb-4 flex items-center gap-2">
+            <Sparkles className="w-4 h-4" /> Curated Collections
+          </h2>
+          <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0">
+            {COLLECTIONS.map((collection, idx) => {
+              const Icon = COLLECTION_ICONS[collection.icon] || Gem;
+              const previewBirds = collection.birdIds.slice(0, 3).map(id => birds.find(b => b.id === id)).filter(Boolean);
+              return (
+                <button
+                  key={collection.id}
+                  onClick={() => navigate('collection-detail', { collectionId: collection.id })}
+                  className="flex-shrink-0 w-56 rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-left group"
+                  style={{
+                    background: `linear-gradient(135deg, ${collection.coverColors[0]}, ${collection.coverColors[1]}, ${collection.coverColors[2] || collection.coverColors[1]})`,
+                    animation: 'cardSlideIn 400ms ease-out both',
+                    animationDelay: `${idx * 80}ms`,
+                  }}
+                >
+                  <div className="p-4 h-full flex flex-col justify-between" style={{ minHeight: 160 }}>
+                    <div>
+                      <Icon className="w-5 h-5 text-white/60 mb-2 group-hover:text-white/80 transition-colors" />
+                      <p className="font-display text-base text-white leading-snug">{collection.name}</p>
+                      <p className="text-[10px] text-white/50 mt-1">{collection.tagline}</p>
+                    </div>
+                    <div className="flex gap-0.5 mt-3 rounded overflow-hidden h-3">
+                      {previewBirds.flatMap(b => b.colors.slice(0, 2)).slice(0, 6).map((c, i) => (
+                        <div key={i} className="flex-1" style={{ backgroundColor: c.hex || c }} />
+                      ))}
+                    </div>
+                  </div>
+                </button>
+              );
+            })}
           </div>
         </div>
 
