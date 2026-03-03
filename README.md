@@ -2,14 +2,15 @@
 
 **Nature-inspired interior design palettes, powered by birds.**
 
-Ploom turns the plumage of 219 real bird species into actionable interior design palettes — complete with paint codes, material pairings, room visualizations, and shareable exports.
+Ploom turns the plumage of 228 real bird species into actionable interior design palettes — complete with paint codes, material pairings, room visualizations, and shareable exports.
 
 **Live:** [ploom on GitHub Pages](https://tcl1019.github.io/plumage-palettes/)
 
 ## Features
 
 ### Discover & Explore
-- **219 bird palettes** — each with 5-6 colors, harmony analysis, room ratings, and finish recommendations
+- **228 bird palettes** — each with 5-6 colors, harmony analysis, room ratings, and finish recommendations
+- **Bird-first landing** — full-screen hero carousel with Unsplash photography, hand-written stories, and abstract FeatherPattern SVG backgrounds
 - **Style Quiz** — 4 questions to match your space to a palette
 - **Photo Color Match** — upload a photo or enter a hex to find the closest bird palette
 - **Browse by room, mood, style, or harmony type**
@@ -68,9 +69,10 @@ src/
     features/     # RoomVisualizer, RoomPlanner, PaletteMixer, CompareView, etc.
     layout/       # Header, Navigation
     sections/     # Discover, Explore, PaletteDetail, MyStudio, Learn
-    shared/       # PaintMatch, MaterialPairings, PaletteStrip, NatureCard, etc.
+    shared/       # PaintMatch, MaterialPairings, PaletteStrip, FeatherPattern, NatureCard, etc.
   data/
-    birds.js      # 219 bird palettes with colors, rooms, harmony, nature data
+    birds.js      # 228 bird palettes with colors, rooms, harmony, nature data
+    herobirds.js  # Featured birds with hand-written stories + Unsplash image URLs
     materials.js  # Material pairing logic (14 styles, 5 moods, 3 undertones)
     paints/       # Sherwin-Williams + Benjamin Moore color databases
     constants.js  # Design styles, finishes, roles, moods

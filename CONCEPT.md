@@ -14,7 +14,7 @@ Picking paint colors is one of the most stressful parts of decorating. People sp
 
 Nature already solved color harmony. Birds evolved their plumage over millions of years — every combination serves a purpose, and every palette has built-in balance. Ploom translates that biological wisdom into practical design tools:
 
-- **219 bird palettes** with 5-6 colors each, analyzed for harmony type (analogous, complementary, triadic, etc.)
+- **228 bird palettes** with 5-6 colors each, analyzed for harmony type (analogous, complementary, triadic, etc.)
 - **Room-specific ratings** — not every palette works in every room; Ploom tells you which rooms each palette suits best
 - **Real paint codes** — Sherwin-Williams and Benjamin Moore matches for every color, with deltaE accuracy ratings
 - **One-tap shopping** — direct links to buy matched paints on SW and BM websites
@@ -35,7 +35,8 @@ Nature already solved color harmony. Birds evolved their plumage over millions o
 Users enter through one of several paths:
 - **Style Quiz** — 4 questions about their space → matched to a palette
 - **Photo Upload** — snap a room or swatch → extract colors → find the closest bird palette
-- **Browse** — filter by room, mood, style, harmony, or just scroll all 219
+- **Bird-first hero** — full-screen carousel of featured birds with Unsplash photography, hand-written nature stories, and abstract FeatherPattern SVG backgrounds
+- **Browse** — filter by room, mood, style, harmony, or just scroll all 228
 
 ### Palette Detail
 Each palette page is a complete design brief:
@@ -73,7 +74,7 @@ Bring-your-own-API-key chat that knows the palette context. Ask it anything — 
 
 ## Data
 
-- **219 bird species** from Christopher Reiger's Field Guide art series
+- **228 bird species** — 219 from Christopher Reiger's Field Guide art series + 9 iconic species (Northern Cardinal, Mandarin Duck, Resplendent Quetzal, Common Kingfisher, Snowy Owl, Golden Pheasant, Keel-billed Toucan, Anna's Hummingbird, Mallard Female)
 - **~1,500 Sherwin-Williams colors** with pre-computed LAB values
 - **~2,100 Benjamin Moore colors** with pre-computed LAB values
 - **14 design styles** mapped to material pairings (farmhouse, japandi, art deco, etc.)
@@ -92,4 +93,4 @@ Bring-your-own-API-key chat that knows the palette context. Ask it anything — 
 
 ## Status
 
-Live and feature-complete at v4. Current bundle: ~1,045KB main (170KB gzipped) + ~200KB paint data (loaded on demand).
+Live at v5. Current bundle: ~1,093KB main (183KB gzipped) + ~200KB paint data (loaded on demand).
