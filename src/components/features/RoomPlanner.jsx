@@ -10,7 +10,7 @@ const ROOM_TYPES = [
   'Dining Room', 'Office', 'Hallway', 'Entryway', 'Nursery', 'Guest Room',
 ];
 
-function PlanList({ onSelect }) {
+function ProjectList({ onSelect }) {
   const { studio, createHousePlan, deleteHousePlan } = useStudioContext();
   const [newName, setNewName] = useState('');
   const [showNew, setShowNew] = useState(false);
@@ -27,12 +27,12 @@ function PlanList({ onSelect }) {
   return (
     <div>
       <div className="flex items-center justify-between mb-4">
-        <p className="text-sm text-gray-500">{plans.length} plan{plans.length !== 1 ? 's' : ''}</p>
+        <p className="text-sm text-gray-500">{plans.length} project{plans.length !== 1 ? 's' : ''}</p>
         <button
           onClick={() => setShowNew(!showNew)}
           className="flex items-center gap-1.5 px-3 py-1.5 bg-plumage-primary text-white rounded-lg text-xs font-medium hover:bg-plumage-primary-light transition-colors"
         >
-          <Plus className="w-3 h-3" /> New Plan
+          <Plus className="w-3 h-3" /> New Project
         </button>
       </div>
 
@@ -40,7 +40,7 @@ function PlanList({ onSelect }) {
         <div className="bg-plumage-surface-alt rounded-xl p-4 mb-4">
           <input
             type="text"
-            placeholder="Plan name (e.g., Our Home)"
+            placeholder="Project name (e.g., Our Home, Kitchen Reno)"
             value={newName}
             onChange={e => setNewName(e.target.value)}
             onKeyDown={e => e.key === 'Enter' && handleCreate()}
@@ -57,8 +57,8 @@ function PlanList({ onSelect }) {
       {plans.length === 0 && !showNew ? (
         <div className="text-center py-12">
           <Home className="w-10 h-10 text-gray-200 mx-auto mb-3" />
-          <p className="text-gray-500 text-sm mb-2">No house plans yet</p>
-          <p className="text-xs text-gray-400">Create a plan to map your whole home's color story.</p>
+          <p className="text-gray-500 text-sm mb-2">No projects yet</p>
+          <p className="text-xs text-gray-400">Create a project to plan palettes across your rooms.</p>
         </div>
       ) : (
         <div className="space-y-3">
@@ -154,14 +154,14 @@ function PaletteSearch({ onSelect, onClose }) {
   );
 }
 
-function PlanDetail({ planId, onBack }) {
+function ProjectDetail({ planId, onBack }) {
   const { studio, addRoomToPlan, updateRoomInPlan, removeRoomFromPlan, toggleAdjacency } = useStudioContext();
   const plan = (studio.housePlans || []).find(p => p.id === planId);
 
   const [addingRoom, setAddingRoom] = useState(false);
   const [newRoomName, setNewRoomName] = useState('Living Room');
-  const [assigningRoom, setAssigningRoom] = useState(null); // roomId being assigned a palette
-  const [linkMode, setLinkMode] = useState(null); // roomId being linked
+  const [assigningRoom, setAssigningRoom] = useState(null);
+  const [linkMode, setLinkMode] = useState(null);
   const [showFlow, setShowFlow] = useState(false);
 
   const flowResult = useMemo(() => {
@@ -169,7 +169,7 @@ function PlanDetail({ planId, onBack }) {
     return checkHouseFlow(plan);
   }, [showFlow, plan]);
 
-  if (!plan) return <div className="text-center py-12 text-gray-500">Plan not found.</div>;
+  if (!plan) return <div className="text-center py-12 text-gray-500">Project not found.</div>;
 
   const handleAddRoom = () => {
     addRoomToPlan(planId, { name: newRoomName, roomType: newRoomName.toLowerCase().replace(/\s+/g, '-') });
@@ -195,7 +195,7 @@ function PlanDetail({ planId, onBack }) {
     <div>
       <div className="flex items-center justify-between mb-4">
         <button onClick={onBack} className="text-sm text-gray-500 hover:text-plumage-primary transition-colors">
-          &larr; All Plans
+          &larr; All Projects
         </button>
         <div className="flex gap-2">
           {plan.rooms.length >= 2 && adjacencyCount > 0 && (
@@ -213,7 +213,7 @@ function PlanDetail({ planId, onBack }) {
 
       <h2 className="font-display text-xl text-gray-800 mb-1">{plan.name}</h2>
       <p className="text-xs text-gray-400 mb-4">
-        {plan.rooms.length} rooms · {assignedCount} with palettes · {adjacencyCount} adjacencies
+        {plan.rooms.length} room{plan.rooms.length !== 1 ? 's' : ''} · {assignedCount} with palettes{adjacencyCount > 0 ? ` · ${adjacencyCount} adjacencies` : ''}
       </p>
 
       {/* Flow Results */}
@@ -380,8 +380,8 @@ export default function RoomPlanner() {
   const [selectedPlan, setSelectedPlan] = useState(null);
 
   if (selectedPlan) {
-    return <PlanDetail planId={selectedPlan} onBack={() => setSelectedPlan(null)} />;
+    return <ProjectDetail planId={selectedPlan} onBack={() => setSelectedPlan(null)} />;
   }
 
-  return <PlanList onSelect={setSelectedPlan} />;
+  return <ProjectList onSelect={setSelectedPlan} />;
 }
