@@ -76,7 +76,7 @@ function HeroBirdCard({ heroBird, bird, isActive, onExplore }) {
       </div>
 
       {/* Content overlay */}
-      <div className="relative z-10 h-full flex flex-col justify-end p-6 md:p-10">
+      <div className="relative z-10 h-full flex flex-col justify-end p-6 pb-14 md:p-10 md:pb-16">
         {/* Bird name & scientific */}
         <div className="mb-4">
           <p className="text-white/50 text-xs uppercase tracking-[0.2em] font-medium mb-1">

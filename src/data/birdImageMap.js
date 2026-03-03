@@ -164,8 +164,7 @@ export const BIRD_IMAGE_MAP = {
   16: { unsplashId: 'm4G78xfDnKA', imageCredit: 'Margaret Strickland', image: 'https://images.unsplash.com/photo-1677641800969-6b48b2a363ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080' },
   // 17: Dark-eyed Junco
   17: { unsplashId: 'RyqtMoupyoI', imageCredit: 'Joshua J. Cotten', image: 'https://images.unsplash.com/photo-1624134657846-22b43dd3e622?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080' },
-  // 18: Evening Grosbeak
-  18: { unsplashId: '2xkUW9URWDw', imageCredit: 'Mark Olsen', image: 'https://images.unsplash.com/photo-1620392931520-f90facaef074?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080' },
+  // 18: Evening Grosbeak — removed: was showing Rose-breasted Grosbeak photo (no Unsplash match found)
   // 19: Pink Robin
   19: { unsplashId: 'ImhNT6UAaGE', imageCredit: 'Vincent van Zalinge', image: 'https://images.unsplash.com/photo-1574626003470-ac963a52dc7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080' },
   // 20: White-crowned Sparrow
@@ -512,8 +511,7 @@ export const BIRD_IMAGE_MAP = {
   201: { unsplashId: 'jZT6kAAHIHk', imageCredit: 'Joshua J. Cotten', image: 'https://images.unsplash.com/photo-1624123794521-77770ac5007a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080' },
   // 202: Bobolink (dup)
   202: { unsplashId: 'fF5ByVQC0rQ', imageCredit: 'Mark Olsen', image: 'https://images.unsplash.com/photo-1618098750476-7595588232fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080' },
-  // 203: Evening Grosbeak (dup)
-  203: { unsplashId: '2xkUW9URWDw', imageCredit: 'Mark Olsen', image: 'https://images.unsplash.com/photo-1620392931520-f90facaef074?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080' },
+  // 203: Evening Grosbeak (dup) — removed: was showing Rose-breasted Grosbeak photo
   // 204: Pygmy Nuthatch
   204: { unsplashId: 'TxkisEuUs7w', imageCredit: 'Andy Holmes', image: 'https://images.unsplash.com/photo-1581452416075-20409263fe9f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080' },
   // 205: Carolina Chickadee

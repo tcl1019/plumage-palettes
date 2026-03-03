@@ -112,7 +112,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Vermilion and vermilion tones inspired by the Killdeer's natural palette.",
+    "tagline": "Warm vermilion and orange from the Killdeer — a palette that makes every room feel like home.",
     "moods": [
       "warm",
       "balanced"
@@ -215,7 +215,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Vermilion and azure tones inspired by the American Avocet's natural palette.",
+    "tagline": "Warm vermilion and azure from the American Avocet — a palette that makes every room feel like home.",
     "moods": [
       "calm",
       "warm"
@@ -334,7 +334,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vermilion and red tones inspired by the Ferruginous Hawk — Light Morph's natural palette.",
+    "tagline": "Warm vermilion and red from the Ferruginous Hawk — Light Morph — a palette that makes every room feel like home.",
     "moods": [
       "warm",
       "balanced"
@@ -461,7 +461,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Orange and orange tones inspired by the American Barn Owl's natural palette.",
+    "tagline": "The American Barn Owl works the full orange spectrum, from shadow to highlight.",
     "moods": [
       "calm",
       "fresh"
@@ -571,7 +571,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Vermilion and orange tones inspired by the Brant — Atlantic's natural palette.",
+    "tagline": "The Brant — Atlantic runs warm: vermilion and orange tones for spaces that radiate comfort.",
     "moods": [
       "calm"
     ],
@@ -697,7 +697,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Quiet, tonal neutrals drawn from the Western Screech-Owl. Understated elegance.",
+    "tagline": "Whisper-soft neutrals drawn from the Western Screech-Owl. Let the textures do the talking.",
     "moods": [
       "calm"
     ],
@@ -815,7 +815,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Cyan and vermilion tones inspired by the Northern Pintail (Male) — Breeding's natural palette.",
+    "tagline": "Cyan and vermilion, both from the warm side of the wheel. The Northern Pintail (Male) — Breeding knows what cozy looks like.",
     "moods": [
       "warm",
       "balanced"
@@ -942,7 +942,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Orange and vermilion tones inspired by the Great Horned Owl's natural palette.",
+    "tagline": "Orange and vermilion, both from the warm side of the wheel. The Great Horned Owl knows what cozy looks like.",
     "moods": [
       "calm",
       "balanced"
@@ -1068,7 +1068,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Orange and vermilion tones inspired by the Brown Creeper's natural palette.",
+    "tagline": "Warm orange and vermilion from the Brown Creeper — a palette that makes every room feel like home.",
     "moods": [
       "calm",
       "balanced"
@@ -1193,7 +1193,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Quiet, tonal neutrals drawn from the Barred Owl. Understated elegance.",
+    "tagline": "A study in restraint. The Barred Owl's muted plumage translates to serene, textural interiors.",
     "moods": [
       "calm"
     ],
@@ -1319,7 +1319,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Amber and orange tones inspired by the Northern Pygmy-Owl's natural palette.",
+    "tagline": "The Northern Pygmy-Owl runs warm: amber and orange tones for spaces that radiate comfort.",
     "moods": [
       "calm",
       "warm"
@@ -1446,7 +1446,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Vermilion and orange tones inspired by the Bewick's Wren's natural palette.",
+    "tagline": "The Bewick's Wren's sun-washed plumage becomes airy vermilion and gentle orange for open spaces.",
     "moods": [
       "warm",
       "balanced"
@@ -1573,7 +1573,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Orange and orange tones inspired by the Wrentit's natural palette.",
+    "tagline": "The Wrentit's sun-washed plumage becomes airy orange and gentle vermilion for open spaces.",
     "moods": [
       "warm",
       "balanced"
@@ -1692,7 +1692,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vermilion and orange tones inspired by the Canada Goose's natural palette.",
+    "tagline": "Vermilion and orange, both from the warm side of the wheel. The Canada Goose knows what cozy looks like.",
     "moods": [
       "warm",
       "balanced"
@@ -1819,7 +1819,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Orange and orange tones inspired by the Mourning Dove's natural palette.",
+    "tagline": "The Mourning Dove runs warm: orange and red tones for spaces that radiate comfort.",
     "moods": [
       "fresh",
       "warm"
@@ -1945,7 +1945,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Amber and vermilion tones inspired by the Hermit Thrush's natural palette.",
+    "tagline": "Amber and vermilion, both from the warm side of the wheel. The Hermit Thrush knows what cozy looks like.",
     "moods": [
       "calm",
       "balanced"
@@ -2072,7 +2072,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Quiet, tonal neutrals drawn from the Dark-eyed Junco (Male) — Oregon. Understated elegance.",
+    "tagline": "Nearly colorless, entirely captivating. The Dark-eyed Junco (Male) — Oregon's palette is pure atmosphere.",
     "moods": [
       "calm"
     ],
@@ -2198,7 +2198,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Amber and amber tones inspired by the Evening Grosbeak (Male)'s natural palette.",
+    "tagline": "Warm amber and orange from the Evening Grosbeak (Male) — a palette that makes every room feel like home.",
     "moods": [
       "warm",
       "bold"
@@ -2325,7 +2325,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Vermilion and vermilion tones inspired by the Pink Robin (Female)'s natural palette.",
+    "tagline": "A masterclass in vermilion — the Pink Robin (Female) shows how one hue can fill an entire room.",
     "moods": [
       "calm",
       "fresh"
@@ -2452,7 +2452,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Orange and orange tones inspired by the White-crowned Sparrow's natural palette.",
+    "tagline": "Light, lifted, livable. The White-crowned Sparrow's orange-and-red palette breathes.",
     "moods": [
       "calm",
       "warm"
@@ -2579,7 +2579,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Orange and azure tones inspired by the Bull-headed Shrike (Male)'s natural palette.",
+    "tagline": "The Bull-headed Shrike (Male) runs warm: orange and azure tones for spaces that radiate comfort.",
     "moods": [
       "warm",
       "balanced"
@@ -2706,7 +2706,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Orange and vermilion tones inspired by the Golden Eagle's natural palette.",
+    "tagline": "Orange and vermilion, both from the warm side of the wheel. The Golden Eagle knows what cozy looks like.",
     "moods": [
       "warm",
       "balanced"
@@ -2833,7 +2833,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vermilion and vermilion tones inspired by the Cinnamon Teal (Female)'s natural palette.",
+    "tagline": "Sun-soaked vermilion paired with orange. The Cinnamon Teal (Female)'s palette is all golden-hour warmth.",
     "moods": [
       "warm"
     ],
@@ -2959,7 +2959,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "A focused, tonal palette inspired by the Chestnut-backed Chickadee's subtle plumage.",
+    "tagline": "The Chestnut-backed Chickadee keeps it simple — a single vermilion thread running through every shade.",
     "moods": [
       "calm"
     ],
@@ -3085,7 +3085,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vivid vermilions and vermilions straight from the Cinnamon Teal (Male) — Breeding's brilliant plumage.",
+    "tagline": "Vermilion meets orange at full volume. This is the Cinnamon Teal (Male) — Breeding's palette, and it doesn't whisper.",
     "moods": [
       "warm",
       "bold"
@@ -3210,7 +3210,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Red and blue tones inspired by the Northern Jacana's natural palette.",
+    "tagline": "Warm red and blue from the Northern Jacana — a palette that makes every room feel like home.",
     "moods": [
       "calm",
       "warm"
@@ -3337,7 +3337,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vermilion and orange tones inspired by the Red Phalarope (Female)'s natural palette.",
+    "tagline": "Breezy vermilion and soft orange — the Red Phalarope (Female)'s palette fills a room with light.",
     "moods": [
       "warm",
       "bold"
@@ -3456,7 +3456,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Blue and vermilion tones inspired by the Eastern Bluebird (Male)'s natural palette.",
+    "tagline": "A complementary clash of blue and vermilion — the Eastern Bluebird (Male)'s palette is high contrast, high reward.",
     "moods": [
       "bold",
       "eclectic"
@@ -3565,7 +3565,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vermilion and vermilion tones inspired by the Orchard Oriole (Male)'s natural palette.",
+    "tagline": "The Orchard Oriole (Male) runs warm: vermilion and orange tones for spaces that radiate comfort.",
     "moods": [
       "warm",
       "bold"
@@ -3674,7 +3674,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vermilion and rose tones inspired by the Scarlet Tanager (Male)'s natural palette.",
+    "tagline": "Sun-soaked vermilion paired with rose. The Scarlet Tanager (Male)'s palette is all golden-hour warmth.",
     "moods": [
       "warm"
     ],
@@ -3782,7 +3782,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Red and red tones inspired by the Ruddy Duck (Male)'s natural palette.",
+    "tagline": "The Ruddy Duck (Male) plays red against azure — opposites on the wheel, partners in a room.",
     "moods": [
       "warm",
       "balanced"
@@ -3909,7 +3909,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vermilion and vermilion tones inspired by the Great Egret's natural palette.",
+    "tagline": "Warm vermilion and orange from the Great Egret — a palette that makes every room feel like home.",
     "moods": [
       "warm",
       "balanced"
@@ -4035,7 +4035,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Orange and vermilion tones inspired by the Ruddy Turnstone (Male) — Breeding's natural palette.",
+    "tagline": "Moody orange and deep vermilion from the Ruddy Turnstone (Male) — Breeding. Rooms that feel like a warm embrace.",
     "moods": [
       "warm",
       "bold"
@@ -4162,7 +4162,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Amber and vermilion tones inspired by the Canvasback (Male) — Breeding's natural palette.",
+    "tagline": "The Canvasback (Male) — Breeding's sun-washed plumage becomes airy amber and gentle vermilion for open spaces.",
     "moods": [
       "calm",
       "warm"
@@ -4289,7 +4289,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vermilion and vermilion tones inspired by the Wild Turkey (Male)'s natural palette.",
+    "tagline": "Warm vermilion and orange from the Wild Turkey (Male) — a palette that makes every room feel like home.",
     "moods": [
       "warm",
       "bold"
@@ -4416,7 +4416,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Blue and blue tones inspired by the Peregrine Falcon's natural palette.",
+    "tagline": "Softly spoken blue and orange — the Peregrine Falcon's palette doesn't shout, it invites.",
     "moods": [
       "warm",
       "bold"
@@ -4542,7 +4542,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Blue and orange tones inspired by the Green-winged Teal (Female)'s natural palette.",
+    "tagline": "The Green-winged Teal (Female) favors the middle ground: muted blue and gentle orange for lived-in spaces.",
     "moods": [
       "bold",
       "balanced"
@@ -4669,7 +4669,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "A focused, tonal palette inspired by the Yellow-rumped Warbler (Male)'s subtle plumage.",
+    "tagline": "A tonal study in amber, distilled from the Yellow-rumped Warbler (Male)'s understated plumage.",
     "moods": [
       "calm",
       "balanced"
@@ -4780,7 +4780,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "A focused, tonal palette inspired by the Golden-cheeked Warbler (Male)'s subtle plumage.",
+    "tagline": "One hue, many moods. The Golden-cheeked Warbler (Male)'s plumage unfolds in layered amber tones.",
     "moods": [
       "calm",
       "warm"
@@ -4891,7 +4891,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Orange and amber tones inspired by the Townsend's Warbler's natural palette.",
+    "tagline": "The Townsend's Warbler's dark plumage yields a palette built for candlelight and quiet evenings.",
     "moods": [
       "warm",
       "bold"
@@ -5018,7 +5018,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Amber and amber tones inspired by the Blackburnian Warbler (Male)'s natural palette.",
+    "tagline": "The Blackburnian Warbler (Male)'s sun-washed plumage becomes airy amber and gentle orange for open spaces.",
     "moods": [
       "fresh",
       "warm"
@@ -5144,7 +5144,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Amber and azure tones inspired by the Eurasian Blue Tit's natural palette.",
+    "tagline": "A complementary clash of amber and azure — the Eurasian Blue Tit's palette is high contrast, high reward.",
     "moods": [
       "bold"
     ],
@@ -5268,7 +5268,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Azure and amber tones inspired by the Black-capped Vireo (Male)'s natural palette.",
+    "tagline": "Moody azure and deep amber from the Black-capped Vireo (Male). Rooms that feel like a warm embrace.",
     "moods": [
       "sophisticated"
     ],
@@ -5394,7 +5394,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Gold and amber tones inspired by the Western Kingbird's natural palette.",
+    "tagline": "Sun-soaked gold paired with amber. The Western Kingbird's palette is all golden-hour warmth.",
     "moods": [
       "warm",
       "balanced"
@@ -5521,7 +5521,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Amber and vermilion tones inspired by the Western Meadowlark's natural palette.",
+    "tagline": "The Western Meadowlark's dark plumage yields a palette built for candlelight and quiet evenings.",
     "moods": [
       "warm",
       "bold"
@@ -5648,7 +5648,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Amber and gold tones inspired by the Wilson's Warbler (Female)'s natural palette.",
+    "tagline": "Sun-soaked amber paired with gold. The Wilson's Warbler (Female)'s palette is all golden-hour warmth.",
     "moods": [
       "warm",
       "bold"
@@ -5775,7 +5775,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Orange and amber tones inspired by the Common Yellowthroat (Male)'s natural palette.",
+    "tagline": "Orange and amber, both from the warm side of the wheel. The Common Yellowthroat (Male) knows what cozy looks like.",
     "moods": [
       "warm",
       "bold"
@@ -5902,7 +5902,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Gold and amber tones inspired by the Lesser Goldfinch (Female)'s natural palette.",
+    "tagline": "The Lesser Goldfinch (Female) runs warm: gold and amber tones for spaces that radiate comfort.",
     "moods": [
       "calm",
       "warm"
@@ -6028,7 +6028,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Amber and amber tones inspired by the Lesser Goldfinch (Male)'s natural palette.",
+    "tagline": "Sun-soaked amber paired with orange. The Lesser Goldfinch (Male)'s palette is all golden-hour warmth.",
     "moods": [
       "warm",
       "balanced"
@@ -6154,7 +6154,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Amber and orange tones inspired by the Wilson's Warbler (Male)'s natural palette.",
+    "tagline": "Amber and orange, both from the warm side of the wheel. The Wilson's Warbler (Male) knows what cozy looks like.",
     "moods": [
       "warm",
       "bold"
@@ -6279,7 +6279,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Amber and gold tones inspired by the Hooded Warbler (Male)'s natural palette.",
+    "tagline": "Neither loud nor quiet. The Hooded Warbler (Male)'s amber-and-gold palette hits the sweet spot.",
     "moods": [
       "bold",
       "balanced"
@@ -6406,7 +6406,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Chartreuse and yellow tones inspired by the Red-bearded Bee-eater (Male)'s natural palette.",
+    "tagline": "The Red-bearded Bee-eater (Male) runs warm: chartreuse and yellow tones for spaces that radiate comfort.",
     "moods": [
       "sophisticated"
     ],
@@ -6506,7 +6506,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Amber and red tones inspired by the Lesser Goldfinch (Male) — Eastern's natural palette.",
+    "tagline": "Sun-soaked amber paired with red. The Lesser Goldfinch (Male) — Eastern's palette is all golden-hour warmth.",
     "moods": [
       "warm"
     ],
@@ -6632,7 +6632,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Azure and amber tones inspired by the Northern Flicker (Male)'s natural palette.",
+    "tagline": "Warm azure and amber from the Northern Flicker (Male) — a palette that makes every room feel like home.",
     "moods": [
       "warm",
       "bold"
@@ -6735,7 +6735,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Orange and amber tones inspired by the Red-winged Blackbird (Male)'s natural palette.",
+    "tagline": "Sun-soaked orange paired with amber. The Red-winged Blackbird (Male)'s palette is all golden-hour warmth.",
     "moods": [
       "warm",
       "bold"
@@ -6846,7 +6846,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Orange and amber tones inspired by the Yellow-headed Blackbird (Male)'s natural palette.",
+    "tagline": "Warm orange and amber from the Yellow-headed Blackbird (Male) — a palette that makes every room feel like home.",
     "moods": [
       "warm",
       "balanced"
@@ -6973,7 +6973,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Orange and orange tones inspired by the Hooded Oriole (Male)'s natural palette.",
+    "tagline": "A masterclass in orange — the Hooded Oriole (Male) shows how one hue can fill an entire room.",
     "moods": [
       "warm",
       "bold"
@@ -7092,7 +7092,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Amber and amber tones inspired by the American Goldfinch (Male)'s natural palette.",
+    "tagline": "Warm amber and orange from the American Goldfinch (Male) — a palette that makes every room feel like home.",
     "moods": [
       "fresh",
       "warm"
@@ -7219,7 +7219,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vivid ambers and ambers straight from the Western Tanager (Male) — Breeding's brilliant plumage.",
+    "tagline": "Unapologetically vivid. The Western Tanager (Male) — Breeding pairs amber with rose — and dares you to look away.",
     "moods": [
       "fresh",
       "warm"
@@ -7330,7 +7330,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vivid ambers and ambers straight from the Yellow Warbler (Male)'s brilliant plumage.",
+    "tagline": "The Yellow Warbler (Male) brings the drama: saturated amber and red that own any space.",
     "moods": [
       "warm",
       "bold"
@@ -7432,7 +7432,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vivid ambers and ambers straight from the Saffron Finch (Male)'s brilliant plumage.",
+    "tagline": "Amber meets vermilion at full volume. This is the Saffron Finch (Male)'s palette, and it doesn't whisper.",
     "moods": [
       "warm",
       "bold"
@@ -7559,7 +7559,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Orange and vermilion tones inspired by the Cedar Waxwing's natural palette.",
+    "tagline": "Warm orange and vermilion from the Cedar Waxwing — a palette that makes every room feel like home.",
     "moods": [
       "warm",
       "bold"
@@ -7686,7 +7686,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Orange and vermilion tones inspired by the Bullock's Oriole (Male)'s natural palette.",
+    "tagline": "Light, lifted, livable. The Bullock's Oriole (Male)'s orange-and-vermilion palette breathes.",
     "moods": [
       "warm",
       "bold"
@@ -7797,7 +7797,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vermilion and orange tones inspired by the Baltimore Oriole (Male)'s natural palette.",
+    "tagline": "Vermilion and orange, both from the warm side of the wheel. The Baltimore Oriole (Male) knows what cozy looks like.",
     "moods": [
       "warm",
       "bold"
@@ -7900,7 +7900,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vivid vermilions and ambers straight from the Orange Dove (Male)'s brilliant plumage.",
+    "tagline": "Unapologetically vivid. The Orange Dove (Male) pairs vermilion with amber — and dares you to look away.",
     "moods": [
       "fresh",
       "warm"
@@ -8027,7 +8027,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vivid vermilions and ambers straight from the Golden Pheasant (Male)'s brilliant plumage.",
+    "tagline": "Vermilion meets amber at full volume. This is the Golden Pheasant (Male)'s palette, and it doesn't whisper.",
     "moods": [
       "warm",
       "bold"
@@ -8154,7 +8154,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vivid vermilions and oranges straight from the Northern Cardinal (Female)'s brilliant plumage.",
+    "tagline": "The Northern Cardinal (Female) brings the drama: saturated vermilion and orange that own any space.",
     "moods": [
       "warm",
       "bold"
@@ -8280,7 +8280,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Vermilion and amber tones inspired by the American Robin (Male)'s natural palette.",
+    "tagline": "Sun-soaked vermilion paired with amber. The American Robin (Male)'s palette is all golden-hour warmth.",
     "moods": [
       "calm",
       "balanced"
@@ -8391,7 +8391,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Orange and orange tones inspired by the California Towhee's natural palette.",
+    "tagline": "Warm orange and vermilion from the California Towhee — a palette that makes every room feel like home.",
     "moods": [
       "warm",
       "bold"
@@ -8518,7 +8518,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Rose and chartreuse tones inspired by the Anna's Hummingbird (Male)'s natural palette.",
+    "tagline": "The Anna's Hummingbird (Male) plays rose against chartreuse — opposites on the wheel, partners in a room.",
     "moods": [
       "bold",
       "eclectic"
@@ -8645,7 +8645,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vermilion and gold tones inspired by the Red-shouldered Hawk's natural palette.",
+    "tagline": "Sun-soaked vermilion paired with gold. The Red-shouldered Hawk's palette is all golden-hour warmth.",
     "moods": [
       "warm",
       "bold"
@@ -8772,7 +8772,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Blue and vermilion tones inspired by the Varied Thrush (Male)'s natural palette.",
+    "tagline": "Blue and vermilion, both from the warm side of the wheel. The Varied Thrush (Male) knows what cozy looks like.",
     "moods": [
       "warm",
       "bold"
@@ -8899,7 +8899,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Orange and orange tones inspired by the European Robin's natural palette.",
+    "tagline": "Orange and azure, both from the warm side of the wheel. The European Robin knows what cozy looks like.",
     "moods": [
       "warm",
       "balanced"
@@ -9024,7 +9024,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Vermilion and orange tones inspired by the Silverbird's natural palette.",
+    "tagline": "Sun-soaked vermilion paired with orange. The Silverbird's palette is all golden-hour warmth.",
     "moods": [
       "calm",
       "warm"
@@ -9151,7 +9151,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Azure and vermilion tones inspired by the American Kestrel (Male)'s natural palette.",
+    "tagline": "Sun-soaked azure paired with vermilion. The American Kestrel (Male)'s palette is all golden-hour warmth.",
     "moods": [
       "warm",
       "bold"
@@ -9278,7 +9278,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Vermilion and orange tones inspired by the Northern Flicker (Male) — Red-shafted's natural palette.",
+    "tagline": "The Northern Flicker (Male) — Red-shafted's sun-washed plumage becomes airy vermilion and gentle orange for open spaces.",
     "moods": [
       "calm",
       "fresh"
@@ -9403,7 +9403,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Azure and azure tones inspired by the Great Blue Heron's natural palette.",
+    "tagline": "The Great Blue Heron favors the middle ground: muted azure and gentle red for lived-in spaces.",
     "moods": [
       "balanced"
     ],
@@ -9529,7 +9529,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Amber and vermilion tones inspired by the Cooper's Hawk (Male)'s natural palette.",
+    "tagline": "Pale amber drifting into vermilion. The Cooper's Hawk (Male)'s palette is morning light in paint form.",
     "moods": [
       "calm",
       "fresh"
@@ -9656,7 +9656,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Blue and vermilion tones inspired by the California Quail (Male)'s natural palette.",
+    "tagline": "Warm blue and vermilion from the California Quail (Male) — a palette that makes every room feel like home.",
     "moods": [
       "calm",
       "warm"
@@ -9783,7 +9783,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Quiet, tonal neutrals drawn from the Mississippi Kite (Female). Understated elegance.",
+    "tagline": "The Mississippi Kite (Female) proves color isn't everything — these quiet tones let materials and light shine.",
     "moods": [
       "calm"
     ],
@@ -9900,7 +9900,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Quiet, tonal neutrals drawn from the Heermann's Gull — Breeding. Understated elegance.",
+    "tagline": "A study in restraint. The Heermann's Gull — Breeding's muted plumage translates to serene, textural interiors.",
     "moods": [
       "calm"
     ],
@@ -10016,7 +10016,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Quiet, tonal neutrals drawn from the Ring-billed Gull. Understated elegance.",
+    "tagline": "The Ring-billed Gull proves color isn't everything — these quiet tones let materials and light shine.",
     "moods": [
       "calm"
     ],
@@ -10141,7 +10141,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Quiet, tonal neutrals drawn from the Ancient Murrelet. Understated elegance.",
+    "tagline": "A study in restraint. The Ancient Murrelet's muted plumage translates to serene, textural interiors.",
     "moods": [
       "calm"
     ],
@@ -10267,7 +10267,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Azure and azure tones inspired by the Whimbrel's natural palette.",
+    "tagline": "Softly spoken azure and orange — the Whimbrel's palette doesn't shout, it invites.",
     "moods": [
       "calm",
       "balanced"
@@ -10392,7 +10392,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Blue and blue tones inspired by the Blue-gray Gnatcatcher (Male) — Breeding's natural palette.",
+    "tagline": "Collected and composed. The Blue-gray Gnatcatcher (Male) — Breeding pairs blue with azure for effortless tranquility.",
     "moods": [
       "calm",
       "balanced"
@@ -10495,7 +10495,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "A focused, tonal palette inspired by the Piping Plover's subtle plumage.",
+    "tagline": "All vermilion, no filler. The Piping Plover's focused palette creates rooms that feel immediately whole.",
     "moods": [
       "calm",
       "warm"
@@ -10596,7 +10596,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "A focused, tonal palette inspired by the Rose-breasted Grosbeak's subtle plumage.",
+    "tagline": "The Rose-breasted Grosbeak keeps it simple — a single amber thread running through every shade.",
     "moods": [
       "calm",
       "balanced"
@@ -10697,7 +10697,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Quiet, tonal neutrals drawn from the Willet. Understated elegance.",
+    "tagline": "Nearly colorless, entirely captivating. The Willet's palette is pure atmosphere.",
     "moods": [
       "calm"
     ],
@@ -10791,7 +10791,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "A focused, tonal palette inspired by the Mute Swan's subtle plumage.",
+    "tagline": "One hue, many moods. The Mute Swan's plumage unfolds in layered orange tones.",
     "moods": [
       "calm",
       "fresh"
@@ -10892,7 +10892,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Cyan and azure tones inspired by the Caspian Tern's natural palette.",
+    "tagline": "Rich, enveloping tones of cyan and azure — the Caspian Tern's gift to cozy interiors.",
     "moods": [
       "sophisticated"
     ],
@@ -10968,7 +10968,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "A focused, tonal palette inspired by the Eared Grebe's subtle plumage.",
+    "tagline": "The Eared Grebe keeps it simple — a single azure thread running through every shade.",
     "moods": [
       "sophisticated"
     ],
@@ -11078,7 +11078,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Amber and orange tones inspired by the Snowy Egret's natural palette.",
+    "tagline": "The Snowy Egret runs warm: amber and orange tones for spaces that radiate comfort.",
     "moods": [
       "warm",
       "bold"
@@ -11180,7 +11180,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Amber and red tones inspired by the Snow Goose's natural palette.",
+    "tagline": "Breezy amber and soft red — the Snow Goose's palette fills a room with light.",
     "moods": [
       "fresh",
       "warm"
@@ -11274,7 +11274,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Orange and rose tones inspired by the White Ibis's natural palette.",
+    "tagline": "Light, lifted, livable. The White Ibis's orange-and-rose palette breathes.",
     "moods": [
       "fresh",
       "warm"
@@ -11376,7 +11376,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vivid oranges and oranges straight from the American White Pelican's brilliant plumage.",
+    "tagline": "The American White Pelican brings the drama: saturated orange and vermilion that own any space.",
     "moods": [
       "fresh",
       "warm"
@@ -11486,7 +11486,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Orange and rose tones inspired by the Western Gull's natural palette.",
+    "tagline": "Warm orange and rose from the Western Gull — a palette that makes every room feel like home.",
     "moods": [
       "warm",
       "balanced"
@@ -11588,7 +11588,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Quiet, tonal neutrals drawn from the White-tailed Kite. Understated elegance.",
+    "tagline": "Whisper-soft neutrals drawn from the White-tailed Kite. Let the textures do the talking.",
     "moods": [
       "calm",
       "fresh"
@@ -11715,7 +11715,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Quiet, tonal neutrals drawn from the Common Goldeneye (Female). Understated elegance.",
+    "tagline": "A study in restraint. The Common Goldeneye (Female)'s muted plumage translates to serene, textural interiors.",
     "moods": [
       "calm"
     ],
@@ -11824,7 +11824,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Azure and orange tones inspired by the Black-crowned Night Heron's natural palette.",
+    "tagline": "A complementary clash of azure and orange — the Black-crowned Night Heron's palette is high contrast, high reward.",
     "moods": [
       "fresh",
       "balanced"
@@ -11951,7 +11951,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Blue and orange tones inspired by the Band-tailed Pigeon's natural palette.",
+    "tagline": "Pale blue drifting into orange. The Band-tailed Pigeon's palette is morning light in paint form.",
     "moods": [
       "calm",
       "fresh"
@@ -12061,7 +12061,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Quiet, tonal neutrals drawn from the Forster's Tern. Understated elegance.",
+    "tagline": "A study in restraint. The Forster's Tern's muted plumage translates to serene, textural interiors.",
     "moods": [
       "calm"
     ],
@@ -12161,7 +12161,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Quiet, tonal neutrals drawn from the Caspian Tern — Breeding. Understated elegance.",
+    "tagline": "Whisper-soft neutrals drawn from the Caspian Tern — Breeding. Let the textures do the talking.",
     "moods": [
       "calm"
     ],
@@ -12287,7 +12287,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Quiet, tonal neutrals drawn from the King Penguin. Understated elegance.",
+    "tagline": "Nearly colorless, entirely captivating. The King Penguin's palette is pure atmosphere.",
     "moods": [
       "calm",
       "fresh"
@@ -12397,7 +12397,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Azure and rose tones inspired by the Great Black-backed Gull's natural palette.",
+    "tagline": "The Great Black-backed Gull nails it: azure and rose in proportions that feel effortless.",
     "moods": [
       "calm"
     ],
@@ -12498,7 +12498,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vivid vermilions and indigos straight from the Horned Puffin's brilliant plumage.",
+    "tagline": "Unapologetically vivid. The Horned Puffin pairs vermilion with indigo — and dares you to look away.",
     "moods": [
       "warm",
       "bold"
@@ -12591,7 +12591,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "A focused, tonal palette inspired by the Black Skimmer's subtle plumage.",
+    "tagline": "A tonal study in vermilion, distilled from the Black Skimmer's understated plumage.",
     "moods": [
       "warm"
     ],
@@ -12693,7 +12693,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vermilion and vermilion tones inspired by the American Oystercatcher's natural palette.",
+    "tagline": "Layer upon layer of vermilion — the American Oystercatcher builds depth from a single hue family.",
     "moods": [
       "warm",
       "balanced"
@@ -12804,7 +12804,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Vermilion and orange tones inspired by the Bald Eagle's natural palette.",
+    "tagline": "The Bald Eagle runs warm: vermilion and orange tones for spaces that radiate comfort.",
     "moods": [
       "calm",
       "warm"
@@ -12899,7 +12899,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Azure and vermilion tones inspired by the Black Oystercatcher's natural palette.",
+    "tagline": "Azure and vermilion in perfect tension. The Black Oystercatcher proves opposites attract.",
     "moods": [
       "calm",
       "warm"
@@ -12992,7 +12992,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "A focused, tonal palette inspired by the American Coot's subtle plumage.",
+    "tagline": "A tonal study in blue, distilled from the American Coot's understated plumage.",
     "moods": [
       "calm"
     ],
@@ -13100,7 +13100,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Rose and rose tones inspired by the Montezuma Oropendola's natural palette.",
+    "tagline": "The Montezuma Oropendola's dark plumage yields a palette built for candlelight and quiet evenings.",
     "moods": [
       "warm"
     ],
@@ -13201,7 +13201,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "A focused, tonal palette inspired by the Double-crested Cormorant's subtle plumage.",
+    "tagline": "All amber, no filler. The Double-crested Cormorant's focused palette creates rooms that feel immediately whole.",
     "moods": [
       "calm",
       "balanced"
@@ -13296,7 +13296,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vermilion and azure tones inspired by the Turkey Vulture's natural palette.",
+    "tagline": "The Turkey Vulture's dark plumage yields a palette built for candlelight and quiet evenings.",
     "moods": [
       "warm"
     ],
@@ -13422,7 +13422,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Teal and indigo tones inspired by the European Starling (Male)'s natural palette.",
+    "tagline": "The European Starling (Male)'s palette runs cool: teal and indigo that bring stillness to any space.",
     "moods": [
       "calm",
       "bold"
@@ -13515,7 +13515,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vivid reds and oranges straight from the Red-winged Blackbird — v2's brilliant plumage.",
+    "tagline": "Bold red and orange straight from the Red-winged Blackbird — v2's plumage — for rooms that make an entrance.",
     "moods": [
       "warm",
       "bold"
@@ -13642,7 +13642,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vermilion and orange tones inspired by the House Finch (Male)'s natural palette.",
+    "tagline": "Breezy vermilion and soft orange — the House Finch (Male)'s palette fills a room with light.",
     "moods": [
       "fresh",
       "warm"
@@ -13769,7 +13769,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Rose and red tones inspired by the American Flamingo's natural palette.",
+    "tagline": "The American Flamingo's sun-washed plumage becomes airy rose and gentle red for open spaces.",
     "moods": [
       "fresh",
       "warm"
@@ -13896,7 +13896,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Rose and rose tones inspired by the Purple Finch (Male)'s natural palette.",
+    "tagline": "Breezy rose and soft red — the Purple Finch (Male)'s palette fills a room with light.",
     "moods": [
       "fresh",
       "warm"
@@ -14023,7 +14023,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vivid magentas and azures straight from the Roseate Spoonbill's brilliant plumage.",
+    "tagline": "The Roseate Spoonbill brings the drama: saturated magenta and azure that own any space.",
     "moods": [
       "fresh",
       "warm"
@@ -14150,7 +14150,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vivid reds and vermilions straight from the Scarlet Ibis's brilliant plumage.",
+    "tagline": "Red meets vermilion at full volume. This is the Scarlet Ibis's palette, and it doesn't whisper.",
     "moods": [
       "fresh",
       "warm"
@@ -14277,7 +14277,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Red and red tones inspired by the Northern Cardinal (Male)'s natural palette.",
+    "tagline": "Layer upon layer of red — the Northern Cardinal (Male) builds depth from a single hue family.",
     "moods": [
       "warm",
       "bold"
@@ -14403,7 +14403,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Red and red tones inspired by the Scarlet Tanager (Male) — Alternate's natural palette.",
+    "tagline": "Layer upon layer of red — the Scarlet Tanager (Male) — Alternate builds depth from a single hue family.",
     "moods": [
       "bold",
       "balanced"
@@ -14504,7 +14504,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Green and red tones inspired by the Crimson-collared Tanager's natural palette.",
+    "tagline": "A richly balanced mix anchored by green and red. The Crimson-collared Tanager's plumage does the math.",
     "moods": [
       "sophisticated"
     ],
@@ -14620,7 +14620,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Azure and red tones inspired by the Red-headed Woodpecker's natural palette.",
+    "tagline": "Moody azure and deep red from the Red-headed Woodpecker. Rooms that feel like a warm embrace.",
     "moods": [
       "bold"
     ],
@@ -14746,7 +14746,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Red and red tones inspired by the Red-breasted Sapsucker's natural palette.",
+    "tagline": "The Red-breasted Sapsucker plays red against orange — opposites on the wheel, partners in a room.",
     "moods": [
       "warm",
       "bold"
@@ -14864,7 +14864,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "A focused, tonal palette inspired by the Painted Redstart's subtle plumage.",
+    "tagline": "One hue, many moods. The Painted Redstart's plumage unfolds in layered red tones.",
     "moods": [
       "calm"
     ],
@@ -14989,7 +14989,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Azure and azure tones inspired by the Rose-breasted Grosbeak (Male)'s natural palette.",
+    "tagline": "Sun-soaked azure paired with orange. The Rose-breasted Grosbeak (Male)'s palette is all golden-hour warmth.",
     "moods": [
       "warm",
       "bold"
@@ -15099,7 +15099,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Azure and rose tones inspired by the American Crow (Male)'s natural palette.",
+    "tagline": "The American Crow (Male)'s dark plumage yields a palette built for candlelight and quiet evenings.",
     "moods": [
       "sophisticated"
     ],
@@ -15192,7 +15192,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "A focused, tonal palette inspired by the Nuttall's Woodpecker (Male)'s subtle plumage.",
+    "tagline": "A tonal study in orange, distilled from the Nuttall's Woodpecker (Male)'s understated plumage.",
     "moods": [
       "calm"
     ],
@@ -15293,7 +15293,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Azure and orange tones inspired by the American Crow (Female)'s natural palette.",
+    "tagline": "A complementary clash of azure and orange — the American Crow (Female)'s palette is high contrast, high reward.",
     "moods": [
       "calm",
       "balanced"
@@ -15411,7 +15411,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Red and azure tones inspired by the Pileated Woodpecker (Male)'s natural palette.",
+    "tagline": "The Pileated Woodpecker (Male)'s sun-washed plumage becomes airy red and gentle azure for open spaces.",
     "moods": [
       "calm",
       "balanced"
@@ -15514,7 +15514,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Orange and rose tones inspired by the Purple Gallinule's natural palette.",
+    "tagline": "The Purple Gallinule's dark plumage yields a palette built for candlelight and quiet evenings.",
     "moods": [
       "calm",
       "warm"
@@ -15632,7 +15632,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Azure and rose tones inspired by the Laughing Gull's natural palette.",
+    "tagline": "The Laughing Gull's dark plumage yields a palette built for candlelight and quiet evenings.",
     "moods": [
       "calm"
     ],
@@ -15757,7 +15757,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "A focused, tonal palette inspired by the Red-faced Warbler (Male)'s subtle plumage.",
+    "tagline": "The Red-faced Warbler (Male) keeps it simple — a single red thread running through every shade.",
     "moods": [
       "calm"
     ],
@@ -15849,7 +15849,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vivid roses and roses straight from the Black-necked Stilt's brilliant plumage.",
+    "tagline": "Layer upon layer of rose — the Black-necked Stilt builds depth from a single hue family.",
     "moods": [
       "warm",
       "bold"
@@ -15976,7 +15976,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Azure and rose tones inspired by the Pink Robin (Male)'s natural palette.",
+    "tagline": "Moody azure and deep rose from the Pink Robin (Male). Rooms that feel like a warm embrace.",
     "moods": [
       "warm",
       "bold"
@@ -16078,7 +16078,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Quiet, tonal neutrals drawn from the Common Raven. Understated elegance.",
+    "tagline": "The Common Raven proves color isn't everything — these quiet tones let materials and light shine.",
     "moods": [
       "calm"
     ],
@@ -16204,7 +16204,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vivid roses and ambers straight from the Scarlet Macaw's brilliant plumage.",
+    "tagline": "The Scarlet Macaw brings the drama: saturated rose and amber that own any space.",
     "moods": [
       "warm",
       "bold"
@@ -16330,7 +16330,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Blue and orange tones inspired by the Barn Swallow's natural palette.",
+    "tagline": "The Barn Swallow plays blue against orange — opposites on the wheel, partners in a room.",
     "moods": [
       "warm",
       "bold"
@@ -16457,7 +16457,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Blue and blue tones inspired by the Buff-breasted Paradise-Kingfisher (Male)'s natural palette.",
+    "tagline": "Breezy blue and soft orange — the Buff-breasted Paradise-Kingfisher (Male)'s palette fills a room with light.",
     "moods": [
       "warm",
       "bold"
@@ -16574,7 +16574,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "A focused, tonal palette inspired by the Little Blue Heron — Breeding's subtle plumage.",
+    "tagline": "The Little Blue Heron — Breeding keeps it simple — a single neutral thread running through every shade.",
     "moods": [
       "calm"
     ],
@@ -16684,7 +16684,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Azure and vermilion tones inspired by the Belted Kingfisher (Female)'s natural palette.",
+    "tagline": "The Belted Kingfisher (Female)'s dark plumage yields a palette built for candlelight and quiet evenings.",
     "moods": [
       "calm"
     ],
@@ -16808,7 +16808,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Azure and vermilion tones inspired by the Blue Rock-Thrush (Male)'s natural palette.",
+    "tagline": "Neither loud nor quiet. The Blue Rock-Thrush (Male)'s azure-and-vermilion palette hits the sweet spot.",
     "moods": [
       "calm",
       "balanced"
@@ -16902,7 +16902,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Quiet, tonal neutrals drawn from the Common Blackbird (Male). Understated elegance.",
+    "tagline": "The Common Blackbird (Male) proves color isn't everything — these quiet tones let materials and light shine.",
     "moods": [
       "calm"
     ],
@@ -16995,7 +16995,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Quiet, tonal neutrals drawn from the Southern Cassowary (Female). Understated elegance.",
+    "tagline": "Nearly colorless, entirely captivating. The Southern Cassowary (Female)'s palette is pure atmosphere.",
     "moods": [
       "calm"
     ],
@@ -17121,7 +17121,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Azure and azure tones inspired by the Phainopepla (Male)'s natural palette.",
+    "tagline": "A masterclass in azure — the Phainopepla (Male) shows how one hue can fill an entire room.",
     "moods": [
       "calm"
     ],
@@ -17246,7 +17246,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Blue and azure tones inspired by the Black-billed Magpie's natural palette.",
+    "tagline": "Blue and azure, cool and considered. The Black-billed Magpie's palette is a deep breath.",
     "moods": [
       "sophisticated"
     ],
@@ -17338,7 +17338,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Blue and azure tones inspired by the Purple Martin (Male)'s natural palette.",
+    "tagline": "The Purple Martin (Male)'s dark plumage yields a palette built for candlelight and quiet evenings.",
     "moods": [
       "sophisticated"
     ],
@@ -17462,7 +17462,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Blue and violet tones inspired by the Black Paradise-Kingfisher (Male)'s natural palette.",
+    "tagline": "Dusty blue meets faded violet. The Black Paradise-Kingfisher (Male)'s palette feels like it's always been there.",
     "moods": [
       "calm"
     ],
@@ -17586,7 +17586,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Amber and blue tones inspired by the Bobolink (Male)'s natural palette.",
+    "tagline": "Cool amber and blue from the Bobolink (Male) — for rooms that feel calm from the moment you walk in.",
     "moods": [
       "calm",
       "balanced"
@@ -17713,7 +17713,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Amber and indigo tones inspired by the Violet-backed Starling (Male)'s natural palette.",
+    "tagline": "The Violet-backed Starling (Male) plays amber against indigo — opposites on the wheel, partners in a room.",
     "moods": [
       "fresh",
       "bold"
@@ -17839,7 +17839,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Azure and red tones inspired by the Superb Starling (Female)'s natural palette.",
+    "tagline": "Cool azure and red from the Superb Starling (Female) — for rooms that feel calm from the moment you walk in.",
     "moods": [
       "calm"
     ],
@@ -17956,7 +17956,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Azure and orange tones inspired by the California Scrub Jay's natural palette.",
+    "tagline": "Azure and orange in perfect tension. The California Scrub Jay proves opposites attract.",
     "moods": [
       "bold",
       "balanced"
@@ -18083,7 +18083,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Orange and vermilion tones inspired by the Steller's Jay (Female)'s natural palette.",
+    "tagline": "The Steller's Jay (Female) plays orange against vermilion — opposites on the wheel, partners in a room.",
     "moods": [
       "warm",
       "balanced"
@@ -18210,7 +18210,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Vermilion and azure tones inspired by the Azure-winged Magpie's natural palette.",
+    "tagline": "Vermilion and azure, cool and considered. The Azure-winged Magpie's palette is a deep breath.",
     "moods": [
       "balanced"
     ],
@@ -18336,7 +18336,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Azure and orange tones inspired by the Florida Scrub Jay's natural palette.",
+    "tagline": "Collected and composed. The Florida Scrub Jay pairs azure with orange for effortless tranquility.",
     "moods": [
       "balanced"
     ],
@@ -18462,7 +18462,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Blue and vermilion tones inspired by the Blue Jay's natural palette.",
+    "tagline": "Cool blue and vermilion from the Blue Jay — for rooms that feel calm from the moment you walk in.",
     "moods": [
       "bold",
       "eclectic"
@@ -18589,7 +18589,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vivid azures and azures straight from the Steller's Jay's brilliant plumage.",
+    "tagline": "The Steller's Jay works the full azure spectrum, from shadow to highlight.",
     "moods": [
       "bold",
       "eclectic"
@@ -18716,7 +18716,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Blue and orange tones inspired by the Blue Grosbeak (Male)'s natural palette.",
+    "tagline": "Neither loud nor quiet. The Blue Grosbeak (Male)'s blue-and-orange palette hits the sweet spot.",
     "moods": [
       "warm",
       "balanced"
@@ -18843,7 +18843,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Blue and vermilion tones inspired by the Western Bluebird (Male)'s natural palette.",
+    "tagline": "A complementary clash of blue and vermilion — the Western Bluebird (Male)'s palette is high contrast, high reward.",
     "moods": [
       "fresh",
       "bold"
@@ -18970,7 +18970,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Vivid blues and cyans straight from the Satin Bowerbird (Male) — Breeding's brilliant plumage.",
+    "tagline": "The Satin Bowerbird (Male) — Breeding brings the drama: saturated blue and cyan that own any space.",
     "moods": [
       "bold",
       "eclectic"
@@ -19097,7 +19097,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vivid azures and azures straight from the Indigo Bunting (Male)'s brilliant plumage.",
+    "tagline": "Azure meets blue at full volume. This is the Indigo Bunting (Male)'s palette, and it doesn't whisper.",
     "moods": [
       "bold",
       "eclectic"
@@ -19224,7 +19224,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Vivid azures and azures straight from the Mountain Bluebird (Male)'s brilliant plumage.",
+    "tagline": "Bold azure and blue straight from the Mountain Bluebird (Male)'s plumage — for rooms that make an entrance.",
     "moods": [
       "fresh",
       "bold"
@@ -19351,7 +19351,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Azure and azure tones inspired by the Blue-gray Tanager's natural palette.",
+    "tagline": "Azure in every register. The Blue-gray Tanager's palette is tonal richness made simple.",
     "moods": [
       "fresh",
       "balanced"
@@ -19478,7 +19478,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Vivid cyans and cyans straight from the Green Honeycreeper (Male)'s brilliant plumage.",
+    "tagline": "Unapologetically vivid. The Green Honeycreeper (Male) pairs cyan with red — and dares you to look away.",
     "moods": [
       "bold",
       "eclectic"
@@ -19605,7 +19605,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Vivid cyans and oranges straight from the Golden-hooded Tanager's brilliant plumage.",
+    "tagline": "The Golden-hooded Tanager brings the drama: saturated cyan and orange that own any space.",
     "moods": [
       "bold",
       "eclectic"
@@ -19732,7 +19732,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Azure and azure tones inspired by the Lazuli Bunting (Male) — Breeding's natural palette.",
+    "tagline": "Breezy azure and soft gold — the Lazuli Bunting (Male) — Breeding's palette fills a room with light.",
     "moods": [
       "fresh",
       "bold"
@@ -19858,7 +19858,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Azure and vermilion tones inspired by the Paradise Tanager's natural palette.",
+    "tagline": "The Paradise Tanager plays azure against vermilion — opposites on the wheel, partners in a room.",
     "moods": [
       "bold",
       "balanced"
@@ -19985,7 +19985,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Orange and blue tones inspired by the Lilac-breasted Roller's natural palette.",
+    "tagline": "Light, lifted, livable. The Lilac-breasted Roller's orange-and-blue palette breathes.",
     "moods": [
       "fresh"
     ],
@@ -20111,7 +20111,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Vivid vermilions and ambers straight from the European Bee-eater (Female)'s brilliant plumage.",
+    "tagline": "Unapologetically vivid. The European Bee-eater (Female) pairs vermilion with amber — and dares you to look away.",
     "moods": [
       "bold",
       "eclectic"
@@ -20237,7 +20237,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Vermilion and azure tones inspired by the Common Kingfisher (Female)'s natural palette.",
+    "tagline": "Cool vermilion and azure from the Common Kingfisher (Female) — for rooms that feel calm from the moment you walk in.",
     "moods": [
       "balanced"
     ],
@@ -20361,7 +20361,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Azure and vermilion tones inspired by the Dollarbird's natural palette.",
+    "tagline": "Dusty azure meets faded vermilion. The Dollarbird's palette feels like it's always been there.",
     "moods": [
       "balanced"
     ],
@@ -20487,7 +20487,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Azure and azure tones inspired by the South Papuan Pitta (Female)'s natural palette.",
+    "tagline": "Dusty azure meets faded red. The South Papuan Pitta (Female)'s palette feels like it's always been there.",
     "moods": [
       "bold",
       "eclectic"
@@ -20612,7 +20612,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Azure and blue tones inspired by the Agami Heron's natural palette.",
+    "tagline": "Azure and blue, cool and considered. The Agami Heron's palette is a deep breath.",
     "moods": [
       "balanced"
     ],
@@ -20737,7 +20737,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Orange and azure tones inspired by the European Starling's natural palette.",
+    "tagline": "The European Starling's palette runs cool: orange and azure that bring stillness to any space.",
     "moods": [
       "balanced"
     ],
@@ -20862,7 +20862,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Amber and azure tones inspired by the Green Heron's natural palette.",
+    "tagline": "The Green Heron favors the middle ground: muted amber and gentle azure for lived-in spaces.",
     "moods": [
       "calm"
     ],
@@ -20988,7 +20988,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Blue and blue tones inspired by the Gartered Trogon (Male)'s natural palette.",
+    "tagline": "The Gartered Trogon (Male)'s palette runs cool: blue and amber that bring stillness to any space.",
     "moods": [
       "bold",
       "eclectic"
@@ -21114,7 +21114,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Teal and orange tones inspired by the Pigeon Guillemot's natural palette.",
+    "tagline": "Neither loud nor quiet. The Pigeon Guillemot's teal-and-orange palette hits the sweet spot.",
     "moods": [
       "sophisticated"
     ],
@@ -21240,7 +21240,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Vivid cyans and ambers straight from the Painted Bunting — Alternate's brilliant plumage.",
+    "tagline": "Unapologetically vivid. The Painted Bunting — Alternate pairs cyan with amber — and dares you to look away.",
     "moods": [
       "bold",
       "eclectic"
@@ -21367,7 +21367,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vivid azures and azures straight from the Yellow-billed Magpie's brilliant plumage.",
+    "tagline": "Bold azure and cyan straight from the Yellow-billed Magpie's plumage — for rooms that make an entrance.",
     "moods": [
       "bold",
       "eclectic"
@@ -21494,7 +21494,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Azure and blue tones inspired by the Varied Green Sunbird (Male)'s natural palette.",
+    "tagline": "The Varied Green Sunbird (Male) plays azure against blue — opposites on the wheel, partners in a room.",
     "moods": [
       "bold"
     ],
@@ -21619,7 +21619,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Chartreuse and green tones inspired by the Orange Dove (Female)'s natural palette.",
+    "tagline": "The Orange Dove (Female) favors the middle ground: muted chartreuse and gentle green for lived-in spaces.",
     "moods": [
       "balanced"
     ],
@@ -21745,7 +21745,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Blue and blue tones inspired by the Anna's Hummingbird (Female)'s natural palette.",
+    "tagline": "Blue leads, chartreuse follows. A natural rhythm borrowed from the Anna's Hummingbird (Female).",
     "moods": [
       "bold",
       "balanced"
@@ -21872,7 +21872,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Teal and chartreuse tones inspired by the Lesson's Motmot's natural palette.",
+    "tagline": "Moody teal and deep chartreuse from the Lesson's Motmot. Rooms that feel like a warm embrace.",
     "moods": [
       "bold"
     ],
@@ -21996,7 +21996,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Vivid azures and yellows straight from the Rainbow Bee-eater (Female)'s brilliant plumage.",
+    "tagline": "The Rainbow Bee-eater (Female) brings the drama: saturated azure and yellow that own any space.",
     "moods": [
       "sophisticated"
     ],
@@ -22122,7 +22122,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vivid ambers and chartreuses straight from the Gouldian Finch (Male)'s brilliant plumage.",
+    "tagline": "The Gouldian Finch (Male) brings the drama: saturated amber and chartreuse that own any space.",
     "moods": [
       "bold",
       "eclectic"
@@ -22249,7 +22249,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Vivid chartreuses and yellows straight from the Rainbow Lorikeet's brilliant plumage.",
+    "tagline": "The Rainbow Lorikeet brings the drama: saturated chartreuse and yellow that own any space.",
     "moods": [
       "bold",
       "eclectic"
@@ -22376,7 +22376,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Chartreuse and gold tones inspired by the Green Jay's natural palette.",
+    "tagline": "The Green Jay plays chartreuse against gold — opposites on the wheel, partners in a room.",
     "moods": [
       "bold",
       "eclectic"
@@ -22502,7 +22502,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Gold and gold tones inspired by the Painted Bunting (Female)'s natural palette.",
+    "tagline": "Gold and yellow, both from the warm side of the wheel. The Painted Bunting (Female) knows what cozy looks like.",
     "moods": [
       "bold",
       "balanced"
@@ -22629,7 +22629,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Vivid chartreuses and greens straight from the Grass-green Tanager (Female)'s brilliant plumage.",
+    "tagline": "Chartreuse meets green at full volume. This is the Grass-green Tanager (Female)'s palette, and it doesn't whisper.",
     "moods": [
       "bold",
       "eclectic"
@@ -22756,7 +22756,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vivid greens and greens straight from the Grass-green Tanager's brilliant plumage.",
+    "tagline": "Unapologetically vivid. The Grass-green Tanager pairs green with teal — and dares you to look away.",
     "moods": [
       "warm",
       "bold"
@@ -22883,7 +22883,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Gold and chartreuse tones inspired by the Red-masked Parakeet's natural palette.",
+    "tagline": "The Red-masked Parakeet plays gold against chartreuse — opposites on the wheel, partners in a room.",
     "moods": [
       "bold"
     ],
@@ -23009,7 +23009,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Orange and red tones inspired by the Red-headed Barbet (Male)'s natural palette.",
+    "tagline": "The Red-headed Barbet (Male) runs warm: orange and red tones for spaces that radiate comfort.",
     "moods": [
       "bold"
     ],
@@ -23135,7 +23135,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vivid reds and blues straight from the Painted Bunting (Male)'s brilliant plumage.",
+    "tagline": "Bold red and blue straight from the Painted Bunting (Male)'s plumage — for rooms that make an entrance.",
     "moods": [
       "bold",
       "eclectic"
@@ -23262,7 +23262,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Orange and teal tones inspired by the Broad-billed Hummingbird (Male)'s natural palette.",
+    "tagline": "The Broad-billed Hummingbird (Male)'s dark plumage yields a palette built for candlelight and quiet evenings.",
     "moods": [
       "bold",
       "eclectic"
@@ -23389,7 +23389,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Cyan and cyan tones inspired by the Lewis's Woodpecker's natural palette.",
+    "tagline": "The Lewis's Woodpecker's palette runs cool: cyan and azure that bring stillness to any space.",
     "moods": [
       "bold",
       "balanced"
@@ -23516,7 +23516,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Red and teal tones inspired by the Northern Shoveler (Male)'s natural palette.",
+    "tagline": "Moody red and deep teal from the Northern Shoveler (Male). Rooms that feel like a warm embrace.",
     "moods": [
       "warm"
     ],
@@ -23641,7 +23641,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Red and teal tones inspired by the Mallard (Male)'s natural palette.",
+    "tagline": "The Mallard (Male)'s dark plumage yields a palette built for candlelight and quiet evenings.",
     "moods": [
       "warm"
     ],
@@ -23749,7 +23749,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Green and orange tones inspired by the Common Myna (Male)'s natural palette.",
+    "tagline": "Moody green and deep orange from the Common Myna (Male). Rooms that feel like a warm embrace.",
     "moods": [
       "warm"
     ],
@@ -23875,7 +23875,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vivid vermilions and oranges straight from the Green-winged Teal (Male) — Breeding's brilliant plumage.",
+    "tagline": "Bold vermilion and orange straight from the Green-winged Teal (Male) — Breeding's plumage — for rooms that make an entrance.",
     "moods": [
       "warm",
       "bold"
@@ -24002,7 +24002,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Blue and orange tones inspired by the Ruby-crowned Kinglet (Male)'s natural palette.",
+    "tagline": "Pale blue drifting into orange. The Ruby-crowned Kinglet (Male)'s palette is morning light in paint form.",
     "moods": [
       "calm",
       "fresh"
@@ -24129,7 +24129,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Orange and blue tones inspired by the Bobolink (Male) — Non-breeding's natural palette.",
+    "tagline": "Light, lifted, livable. The Bobolink (Male) — Non-breeding's orange-and-blue palette breathes.",
     "moods": [
       "bold",
       "balanced"
@@ -24256,7 +24256,7 @@ export const birds = [
     ],
     "season": "spring-summer",
     "seasonNote": "Light, airy tones that feel fresh and energizing in warm-weather light.",
-    "tagline": "Orange and azure tones inspired by the Evening Grosbeak (Female)'s natural palette.",
+    "tagline": "Pale orange drifting into azure. The Evening Grosbeak (Female)'s palette is morning light in paint form.",
     "moods": [
       "fresh",
       "warm"
@@ -24383,7 +24383,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Orange and azure tones inspired by the Pygmy Nuthatch's natural palette.",
+    "tagline": "The Pygmy Nuthatch's sun-washed plumage becomes airy orange and gentle azure for open spaces.",
     "moods": [
       "calm",
       "fresh"
@@ -24510,7 +24510,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Quiet, tonal neutrals drawn from the Carolina Chickadee. Understated elegance.",
+    "tagline": "A study in restraint. The Carolina Chickadee's muted plumage translates to serene, textural interiors.",
     "moods": [
       "calm"
     ],
@@ -24626,7 +24626,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Quiet, tonal neutrals drawn from the Bushtit. Understated elegance.",
+    "tagline": "Nearly colorless, entirely captivating. The Bushtit's palette is pure atmosphere.",
     "moods": [
       "calm"
     ],
@@ -24743,7 +24743,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Quiet, tonal neutrals drawn from the Oak Titmouse. Understated elegance.",
+    "tagline": "The Oak Titmouse proves color isn't everything — these quiet tones let materials and light shine.",
     "moods": [
       "calm"
     ],
@@ -24868,7 +24868,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Quiet, tonal neutrals drawn from the Carolina Wren. Understated elegance.",
+    "tagline": "The Carolina Wren proves color isn't everything — these quiet tones let materials and light shine.",
     "moods": [
       "calm"
     ],
@@ -24968,7 +24968,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Azure and magenta tones inspired by the Common Loon's natural palette.",
+    "tagline": "The Common Loon's dark plumage yields a palette built for candlelight and quiet evenings.",
     "moods": [
       "sophisticated"
     ],
@@ -25045,7 +25045,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "A focused, tonal palette inspired by the Snowy Owl (Female)'s subtle plumage.",
+    "tagline": "All orange, no filler. The Snowy Owl (Female)'s focused palette creates rooms that feel immediately whole.",
     "moods": [
       "calm"
     ],
@@ -25154,7 +25154,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "A focused, tonal palette inspired by the Loggerhead Shrike's subtle plumage.",
+    "tagline": "The Loggerhead Shrike keeps it simple — a single vermilion thread running through every shade.",
     "moods": [
       "calm"
     ],
@@ -25278,7 +25278,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Quiet, tonal neutrals drawn from the Chimney Swift. Understated elegance.",
+    "tagline": "Whisper-soft neutrals drawn from the Chimney Swift. Let the textures do the talking.",
     "moods": [
       "calm"
     ],
@@ -25403,7 +25403,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Quiet, tonal neutrals drawn from the Pink-eared Duck. Understated elegance.",
+    "tagline": "The Pink-eared Duck proves color isn't everything — these quiet tones let materials and light shine.",
     "moods": [
       "calm"
     ],
@@ -25505,7 +25505,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "A focused, tonal palette inspired by the Black Phoebe's subtle plumage.",
+    "tagline": "The Black Phoebe keeps it simple — a single orange thread running through every shade.",
     "moods": [
       "calm"
     ],
@@ -25631,7 +25631,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Blue and vermilion tones inspired by the Black Vulture's natural palette.",
+    "tagline": "Moody blue and deep vermilion from the Black Vulture. Rooms that feel like a warm embrace.",
     "moods": [
       "calm"
     ],
@@ -25723,7 +25723,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "A focused, tonal palette inspired by the American Crow's subtle plumage.",
+    "tagline": "All blue, no filler. The American Crow's focused palette creates rooms that feel immediately whole.",
     "moods": [
       "calm"
     ],
@@ -25840,7 +25840,7 @@ export const birds = [
     ],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Quiet, tonal neutrals drawn from the American Coot. Understated elegance.",
+    "tagline": "The American Coot proves color isn't everything — these quiet tones let materials and light shine.",
     "moods": [
       "calm"
     ],
@@ -25966,7 +25966,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Azure and red tones inspired by the Brewer's Blackbird (Male)'s natural palette.",
+    "tagline": "Deep azure anchored by red. The Brewer's Blackbird (Male)'s palette wraps a room in warmth.",
     "moods": [
       "calm"
     ],
@@ -26058,7 +26058,7 @@ export const birds = [
     ],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Vivid reds and oranges straight from the Red-winged Blackbird (Male) — Alternate's brilliant plumage.",
+    "tagline": "Unapologetically vivid. The Red-winged Blackbird (Male) — Alternate pairs red with orange — and dares you to look away.",
     "moods": [
       "warm",
       "bold"
@@ -26153,7 +26153,7 @@ export const birds = [
     "styles": ["farmhouse", "coastal", "scandinavian", "contemporary"],
     "season": "year-round",
     "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
-    "tagline": "Warm mottled tans and a flash of cobalt-periwinkle from the female Mallard's hidden speculum.",
+    "tagline": "Sun-soaked orange paired with blue. The Mallard (Female)'s palette is all golden-hour warmth.",
     "moods": ["calm", "warm"],
     "nature": {
       "colorStory": "The female Mallard's mottled brown plumage is precision camouflage — each feather edged in buff to break up her outline on the nest. But hidden in her wings is a cobalt-periwinkle speculum, the same structural iridescence her mate carries. She reveals it in flight like a secret, a flash of brilliant blue against warm brown that proves understated doesn't mean uninteresting.",
@@ -26228,7 +26228,7 @@ export const birds = [
     "styles": ["traditional", "art-deco", "eclectic"],
     "season": "fall-winter",
     "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
-    "tagline": "Pure crimson confidence from the Northern Cardinal — the bird that makes winter feel alive.",
+    "tagline": "Warm red and orange from the Northern Cardinal (Male) — a palette that makes every room feel like home.",
     "moods": ["bold", "warm"],
     "nature": {
       "colorStory": "The male Northern Cardinal gets his red from carotenoid pigments in seeds and berries, converted in the liver into the red pigments deposited in feathers. Brighter males hold better territories and attract more mates. The black mask prevents glare from interfering with the bird's vision, like an athlete's eye black.",
@@ -26311,7 +26311,7 @@ export const birds = [
     "styles": ["art-deco", "eclectic", "bohemian", "tropical"],
     "season": "fall-winter",
     "seasonNote": "Rich, warm tones that feel celebratory and enveloping during cooler months.",
-    "tagline": "Orange sails, purple crest, forest green — the Mandarin Duck's palace-worthy palette.",
+    "tagline": "The Mandarin Duck (Male) balances vermilion and teal with the ease of a natural colorist.",
     "moods": ["bold", "eclectic"],
     "nature": {
       "colorStory": "The male Mandarin Duck's orange 'sail' feathers are elongated tertials that fan upward like a ship's rigging — unique in the duck world. The purple-green iridescent crest, orange face plumes, and white eye stripe create what Japanese artists considered the symbol of conjugal fidelity. Pairs bow to each other in elaborate courtship dances.",
@@ -26386,7 +26386,7 @@ export const birds = [
     "styles": ["art-deco", "tropical", "bohemian", "eclectic"],
     "season": "year-round",
     "seasonNote": "A vivid palette that commands attention in every season.",
-    "tagline": "Emerald, crimson, and gold — the sacred Quetzal's cloud forest regalia.",
+    "tagline": "Bold teal and rose straight from the Resplendent Quetzal's plumage — for rooms that make an entrance.",
     "moods": ["bold", "eclectic"],
     "nature": {
       "colorStory": "The Resplendent Quetzal's iridescent green plumage comes from specialized hexagonal melanin platelets in the feather nanostructure that create thin-film interference. The male's meter-long tail coverts — not actual tail feathers — undulate in flight like green ribbons. Aztec and Maya royalty wore quetzal plumes as currency more valuable than gold.",
@@ -26461,7 +26461,7 @@ export const birds = [
     "styles": ["coastal", "contemporary", "mid-century", "scandinavian"],
     "season": "spring-summer",
     "seasonNote": "A palette that evokes sun on water and warm summer days.",
-    "tagline": "Cobalt flash and warm orange — the Kingfisher's split-second streak over still water.",
+    "tagline": "The Common Kingfisher brings the drama: saturated azure and cyan that own any space.",
     "moods": ["fresh", "bold"],
     "nature": {
       "colorStory": "The Kingfisher's blue is entirely structural — photonic crystals in the feather barbs reflect blue wavelengths with remarkable purity. The orange breast is carotenoid-based. Japan's Shinkansen bullet train was redesigned after the kingfisher's beak shape, which enters water without a splash. The bird inspired engineering, and now its colors inspire design.",
@@ -26536,7 +26536,7 @@ export const birds = [
     "styles": ["scandinavian", "contemporary", "farmhouse"],
     "season": "year-round",
     "seasonNote": "A clean, bright palette that works in every season and every light.",
-    "tagline": "Arctic white and charcoal barring — the Snowy Owl's tundra minimalism.",
+    "tagline": "Sun-soaked orange paired with amber. The Snowy Owl's palette is all golden-hour warmth.",
     "moods": ["calm", "fresh"],
     "nature": {
       "colorStory": "Male Snowy Owls become whiter with age — the oldest birds are nearly pure white, while females retain dark barring throughout life. Their feathers are the densest of any owl, providing insulation to -40°F. Those piercing yellow eyes can spot a lemming from a mile away across the flat white tundra.",
@@ -26611,7 +26611,7 @@ export const birds = [
     "styles": ["art-deco", "bohemian", "eclectic", "traditional"],
     "season": "fall-winter",
     "seasonNote": "Rich, warm tones that feel celebratory during the holiday season and cozy in winter.",
-    "tagline": "Liquid gold, deep crimson, and forest green — the Golden Pheasant's imperial opulence.",
+    "tagline": "Orange meets red at full volume. This is the Golden Pheasant (Male)'s palette, and it doesn't whisper.",
     "moods": ["bold", "warm"],
     "nature": {
       "colorStory": "The male Golden Pheasant's cape — a fan of orange-gold feathers barred in iridescent blue-black — is raised during courtship to create a shimmering disc that nearly hides his head. The crimson breast, green back, and golden crest combine carotenoid pigments with structural iridescence. In Chinese art, the golden pheasant represents virtue and prosperity.",
@@ -26694,7 +26694,7 @@ export const birds = [
     "styles": ["tropical", "eclectic", "bohemian", "contemporary"],
     "season": "year-round",
     "seasonNote": "A vivid palette that brings tropical energy to any season.",
-    "tagline": "Jet black, lemon yellow, and a rainbow bill — the Toucan's tropical maximalism.",
+    "tagline": "Unapologetically vivid. The Keel-billed Toucan pairs amber with teal — and dares you to look away.",
     "moods": ["bold", "eclectic"],
     "nature": {
       "colorStory": "The Keel-billed Toucan's enormous bill is green, orange, red, and blue — but weighs almost nothing. It's a honeycomb of keratin and bone struts, lighter than it looks but strong enough to crack nuts. The bill's colors may help individuals recognize each other in the dense canopy. They sleep in tree cavities, tucking that enormous bill over their back and folding their tail overhead.",
@@ -26769,7 +26769,7 @@ export const birds = [
     "styles": ["contemporary", "tropical", "eclectic", "bohemian"],
     "season": "spring-summer",
     "seasonNote": "A vivid palette that captures the energy of a blooming garden.",
-    "tagline": "Emerald body, magenta gorget — the Anna's Hummingbird is a flying jewel.",
+    "tagline": "Sun-soaked teal paired with rose. The Anna's Hummingbird's palette is all golden-hour warmth.",
     "moods": ["bold", "fresh"],
     "nature": {
       "colorStory": "The Anna's Hummingbird's magenta gorget is pure structural color — layers of melanin platelets act as thin-film mirrors, reflecting only magenta wavelengths. Tilt the bird one degree and it goes black. Their hearts beat 1,200 times per minute in flight, wings rotating in a figure-eight 80 times per second. They're the only hummingbird that sings — a scratchy, buzzy song delivered from the top of the tallest tree in the neighborhood.",

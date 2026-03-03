@@ -77,35 +77,6 @@ export function useStudio() {
     return studio.savedPalettes.includes(birdId);
   }, [studio.savedPalettes]);
 
-  // Projects
-  const createProject = useCallback((project) => {
-    const newProject = {
-      id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
-      createdAt: Date.now(),
-      updatedAt: Date.now(),
-      notes: '',
-      ...project,
-    };
-    update(prev => ({ ...prev, projects: [...prev.projects, newProject] }));
-    return newProject.id;
-  }, [update]);
-
-  const updateProject = useCallback((id, partial) => {
-    update(prev => ({
-      ...prev,
-      projects: prev.projects.map(p =>
-        p.id === id ? { ...p, ...partial, updatedAt: Date.now() } : p
-      ),
-    }));
-  }, [update]);
-
-  const deleteProject = useCallback((id) => {
-    update(prev => ({
-      ...prev,
-      projects: prev.projects.filter(p => p.id !== id),
-    }));
-  }, [update]);
-
   // Custom palettes
   const createCustomPalette = useCallback((palette) => {
     const newPalette = {
@@ -239,9 +210,6 @@ export function useStudio() {
     unsavePalette,
     toggleSave,
     isSaved,
-    createProject,
-    updateProject,
-    deleteProject,
     createCustomPalette,
     deleteCustomPalette,
     saveQuizResult,
