@@ -3,6 +3,7 @@ import { RotateCcw, Check, X, ArrowRight, Target, Zap } from 'lucide-react';
 import { birds } from '../../../data/birds';
 import { getUndertone, getTextColor } from '../../../utils/colorUtils';
 import { ROLE_LABELS } from '../../../data/constants';
+import { getSmartBird } from '../../../utils/paletteHelpers';
 
 // ─── Helpers ──────────────────────────────────────────────
 
@@ -16,7 +17,7 @@ function shuffle(arr) {
 }
 
 function pickRandomBird() {
-  return birds[Math.floor(Math.random() * birds.length)];
+  return getSmartBird(birds[Math.floor(Math.random() * birds.length)]);
 }
 
 function generateQuizColors() {

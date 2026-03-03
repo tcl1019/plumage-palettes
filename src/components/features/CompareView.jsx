@@ -5,6 +5,7 @@ import PaletteStrip from '../shared/PaletteStrip';
 import RoomVisualizer from './RoomVisualizer';
 import { ROLE_LABELS } from '../../data/constants';
 import { getUndertone } from '../../utils/colorUtils';
+import { getSmartBird } from '../../utils/paletteHelpers';
 
 export default function CompareView({ onClose, initialBirdIds = [] }) {
   const [leftBirdId, setLeftBirdId] = useState(initialBirdIds[0] || null);
@@ -12,8 +13,8 @@ export default function CompareView({ onClose, initialBirdIds = [] }) {
   const [picking, setPicking] = useState(null); // 'left' | 'right' | null
   const [search, setSearch] = useState('');
 
-  const leftBird = leftBirdId ? birds.find(b => b.id === leftBirdId) : null;
-  const rightBird = rightBirdId ? birds.find(b => b.id === rightBirdId) : null;
+  const leftBird = leftBirdId ? getSmartBird(birds.find(b => b.id === leftBirdId)) : null;
+  const rightBird = rightBirdId ? getSmartBird(birds.find(b => b.id === rightBirdId)) : null;
 
   const filteredBirds = birds.filter(b => {
     if (!search) return true;

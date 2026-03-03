@@ -6,8 +6,10 @@ import PaletteStrip from './PaletteStrip';
 import SaveButton from './SaveButton';
 import { StatusBadge, HarmonyBadge, SeasonBadge } from './Badge';
 import { useNav } from '../../App';
+import { getSmartBird } from '../../utils/paletteHelpers';
 
-export default function BirdCard({ bird, compact = false }) {
+export default function BirdCard({ bird: rawBird, compact = false }) {
+  const bird = getSmartBird(rawBird);
   const { navigate } = useNav();
 
   const heroBird = HERO_BIRD_MAP[bird.id];

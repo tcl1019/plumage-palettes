@@ -1,16 +1,170 @@
-import { getUndertone, hexToLab, deltaE } from './colorUtils';
+import { getUndertone, hexToRgb, rgbToHsl, hexToLab, deltaE } from './colorUtils';
+import { FINISH_GUIDE } from '../data/constants';
+
+/**
+ * Score how suitable a color is for walls (60% coverage).
+ * Higher = more suitable. Considers saturation, lightness, and mutedness.
+ * Ideal wall colors: muted (low-medium saturation), moderate lightness.
+ */
+function wallSuitability(hex) {
+  const rgb = hexToRgb(hex);
+  if (!rgb) return 0;
+  const { s, l } = rgbToHsl(rgb.r, rgb.g, rgb.b);
+
+  let score = 100;
+
+  // Penalize high saturation — vivid colors overwhelm at 60%
+  if (s > 50) score -= (s - 50) * 1.8;
+  else if (s > 35) score -= (s - 35) * 0.5;
+
+  // Penalize extreme lightness — too dark or too washed-out
+  if (l < 15) score -= (15 - l) * 4;
+  else if (l < 25) score -= (25 - l) * 1.5;
+  if (l > 85) score -= (l - 85) * 2;
+
+  // Slight preference for the sweet spot: 30-70% lightness, 8-30% saturation
+  if (l >= 30 && l <= 70 && s >= 8 && s <= 30) score += 10;
+
+  return score;
+}
+
+/**
+ * Score how suitable a color is as an accent (10% pop of interest).
+ * Vivid, saturated, or very dark/light colors make good accents.
+ */
+function accentSuitability(hex) {
+  const rgb = hexToRgb(hex);
+  if (!rgb) return 0;
+  const { s, l } = rgbToHsl(rgb.r, rgb.g, rgb.b);
+
+  let score = 50;
+  // Reward high saturation
+  if (s > 50) score += (s - 50) * 1.2;
+  // Reward extreme lightness (very light or very dark = contrast)
+  if (l < 15 || l > 85) score += 15;
+  return score;
+}
+
+const ROLE_FINISHES = {
+  dominant: 'Eggshell',
+  secondary: 'Satin',
+  accent: 'Semi-Gloss',
+  highlight: 'Semi-Gloss',
+};
+
+const ROLE_APPLICATIONS = {
+  dominant: [
+    'Primary wall color for a cohesive, livable room',
+    'Main wall color — soft enough to live with every day',
+    'All four walls for a grounding, enveloping effect',
+  ],
+  secondary: [
+    'Linen drapery, upholstered seating, or woven throw blankets',
+    'Sofa fabric, area rug, or curtain panels',
+    'Textiles and soft furnishings that anchor the room',
+  ],
+  accent: [
+    'Decorative ceramics, a patterned pillow, or art frames',
+    'Statement throw pillows, vases, or a painted accent chair',
+    'A single feature wall, artwork, or decorative objects',
+  ],
+  highlight: [
+    'Interior doors, a painted bookshelf, or fireplace surround',
+    'A single bold object — lamp, side table, or art piece',
+    'Small pops: candles, book spines, or a single shelf accent',
+  ],
+};
+
+/**
+ * Reassign color roles for a bird palette based on color properties.
+ * Returns a new colors array with smarter role assignments.
+ */
+export function reassignRoles(bird) {
+  const colors = bird.colors;
+  if (!colors || colors.length === 0) return colors;
+
+  // Score each color for wall vs accent suitability
+  const scored = colors.map((c, i) => ({
+    index: i,
+    color: c,
+    wallScore: wallSuitability(c.hex),
+    accentScore: accentSuitability(c.hex),
+  }));
+
+  // Sort by wall suitability (best wall candidate first)
+  const byWall = [...scored].sort((a, b) => b.wallScore - a.wallScore);
+  // Sort by accent suitability (best accent candidate first)
+  const byAccent = [...scored].sort((a, b) => b.accentScore - a.accentScore);
+
+  const assigned = new Map();
+  const usedIndices = new Set();
+
+  // 1. Pick the best wall color (dominant)
+  const wallPick = byWall[0];
+  assigned.set(wallPick.index, 'dominant');
+  usedIndices.add(wallPick.index);
+
+  // 2. Pick the best accent (most vivid remaining)
+  const accentPick = byAccent.find(s => !usedIndices.has(s.index));
+  if (accentPick) {
+    assigned.set(accentPick.index, 'accent');
+    usedIndices.add(accentPick.index);
+  }
+
+  // 3. Pick secondary — next best wall-suitable color (for textiles)
+  const secondaryPick = byWall.find(s => !usedIndices.has(s.index));
+  if (secondaryPick) {
+    assigned.set(secondaryPick.index, 'secondary');
+    usedIndices.add(secondaryPick.index);
+  }
+
+  // 4. Remaining colors become highlight or additional accents
+  const remaining = scored.filter(s => !usedIndices.has(s.index));
+  if (remaining.length > 0) {
+    // First remaining → highlight (feature)
+    assigned.set(remaining[0].index, 'highlight');
+  }
+  for (let i = 1; i < remaining.length; i++) {
+    assigned.set(remaining[i].index, 'accent');
+  }
+
+  // Build new colors array preserving original order
+  return colors.map((c, i) => {
+    const newRole = assigned.get(i) || c.role;
+    const appOptions = ROLE_APPLICATIONS[newRole] || ROLE_APPLICATIONS.accent;
+    return {
+      ...c,
+      role: newRole,
+      finish: ROLE_FINISHES[newRole] || c.finish,
+      application: appOptions[i % appOptions.length],
+    };
+  });
+}
+
+/**
+ * Get a bird with smart role assignments applied.
+ * Caches results so we don't recompute on every render.
+ */
+const _smartCache = new Map();
+export function getSmartBird(bird) {
+  if (_smartCache.has(bird.id)) return _smartCache.get(bird.id);
+  const smartBird = { ...bird, colors: reassignRoles(bird) };
+  _smartCache.set(bird.id, smartBird);
+  return smartBird;
+}
 
 export function mapBirdToRoomColors(bird) {
+  const smartBird = getSmartBird(bird);
   const byRole = {};
-  for (const c of bird.colors) {
-    byRole[c.role] = c.hex;
+  for (const c of smartBird.colors) {
+    if (!byRole[c.role]) byRole[c.role] = c.hex;
   }
   return {
-    walls: byRole.dominant || bird.colors[0]?.hex || '#E5E5E5',
-    textiles: byRole.secondary || bird.colors[1]?.hex || '#CCCCCC',
-    accents: byRole.accent || bird.colors[2]?.hex || '#999999',
+    walls: byRole.dominant || smartBird.colors[0]?.hex || '#E5E5E5',
+    textiles: byRole.secondary || smartBird.colors[1]?.hex || '#CCCCCC',
+    accents: byRole.accent || smartBird.colors[2]?.hex || '#999999',
     trim: byRole.neutral || bird.neutrals?.trim?.hex || '#F5F5F5',
-    feature: byRole.highlight || bird.colors[3]?.hex || '#666666',
+    feature: byRole.highlight || smartBird.colors[3]?.hex || '#666666',
     floor: bird.neutrals?.floor?.hex || '#8B7D6B',
     ceiling: bird.neutrals?.ceiling?.hex || '#F7F5F2',
   };

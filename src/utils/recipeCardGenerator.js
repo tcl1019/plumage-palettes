@@ -5,6 +5,7 @@
 import { loadPaintData, findNearestPaints } from './paintMatcher';
 import { getTextColor } from './colorUtils';
 import { DESIGN_STYLES, FINISH_GUIDE } from '../data/constants';
+import { getSmartBird } from './paletteHelpers';
 
 const W = 1080;
 const H = 1920;
@@ -33,7 +34,8 @@ function roundRect(ctx, x, y, w, h, r) {
   ctx.closePath();
 }
 
-export async function generateRecipeCard(bird) {
+export async function generateRecipeCard(originalBird) {
+  const bird = getSmartBird(originalBird);
   await ensureFonts();
 
   const { sw } = await loadPaintData();
