@@ -34,7 +34,9 @@ export default function Explore() {
   }, [exploreFilters, setExploreFilters]);
 
   const filteredBirds = useMemo(() => {
-    return birds.filter(bird => {
+    const roomName = roomFilter !== 'all' ? ROOM_NAME_MAP[roomFilter] : null;
+
+    const filtered = birds.filter(bird => {
       const searchLower = searchTerm.toLowerCase();
       const matchesSearch = !searchTerm ||
         bird.name.toLowerCase().includes(searchLower) ||
@@ -46,16 +48,26 @@ export default function Explore() {
       const matchesSeason = seasonFilter === 'all' || bird.season === seasonFilter || bird.season === 'year-round';
       const matchesMood = moodFilter === 'all' || (bird.moods && bird.moods.includes(moodFilter));
 
-      // Room-based filtering
+      // Room-based filtering — only show palettes rated 4+ for the room
       let matchesRoom = true;
-      if (roomFilter !== 'all') {
-        const roomName = ROOM_NAME_MAP[roomFilter];
+      if (roomName) {
         const roomEntry = bird.rooms?.find(r => r.room === roomName);
-        matchesRoom = roomEntry && roomEntry.rating >= 3;
+        matchesRoom = roomEntry && roomEntry.rating >= 4;
       }
 
       return matchesSearch && matchesStatus && matchesStyle && matchesSeason && matchesMood && matchesRoom;
     });
+
+    // Sort by room rating (best first) when a room filter is active
+    if (roomName) {
+      filtered.sort((a, b) => {
+        const rA = a.rooms?.find(r => r.room === roomName)?.rating || 0;
+        const rB = b.rooms?.find(r => r.room === roomName)?.rating || 0;
+        return rB - rA;
+      });
+    }
+
+    return filtered;
   }, [searchTerm, conservationFilter, styleFilter, seasonFilter, moodFilter, roomFilter]);
 
   const hasActiveFilters = searchTerm || conservationFilter !== 'all' || styleFilter !== 'all' || seasonFilter !== 'all' || moodFilter !== 'all' || roomFilter !== 'all';

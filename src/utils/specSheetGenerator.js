@@ -6,6 +6,7 @@ import { loadPaintData, findNearestPaints } from './paintMatcher';
 import { getTextColor } from './colorUtils';
 import { DESIGN_STYLES, FINISH_GUIDE } from '../data/constants';
 import { getMaterialSuggestions } from '../data/materials';
+import { getSmartBird } from './paletteHelpers';
 
 const W = 2480;
 const H = 3508;
@@ -54,7 +55,8 @@ function drawStars(ctx, x, y, rating, size = 28) {
   }
 }
 
-export async function generateSpecSheet(bird) {
+export async function generateSpecSheet(originalBird) {
+  const bird = getSmartBird(originalBird);
   await ensureFonts();
 
   const { sw, bm } = await loadPaintData();

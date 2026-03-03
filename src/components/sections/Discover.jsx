@@ -9,6 +9,7 @@ import PaletteStrip from '../shared/PaletteStrip';
 import FeatherPattern from '../shared/FeatherPattern';
 import SaveButton from '../shared/SaveButton';
 import { useNav } from '../../App';
+import { getSmartBird } from '../../utils/paletteHelpers';
 
 const COLLECTION_ICONS = { Moon, Sun, Heart, Gem, Waves, Minus, Leaf, Sunset };
 
@@ -138,10 +139,10 @@ function HeroCarousel() {
   const autoplayRef = useRef(null);
 
   const heroBirds = useMemo(() =>
-    HERO_BIRDS.map(h => ({
-      hero: h,
-      bird: birds.find(b => b.id === h.id),
-    })).filter(h => h.bird),
+    HERO_BIRDS.map(h => {
+      const bird = birds.find(b => b.id === h.id);
+      return { hero: h, bird: bird ? getSmartBird(bird) : null };
+    }).filter(h => h.bird),
   []);
 
   const goTo = useCallback((index) => {

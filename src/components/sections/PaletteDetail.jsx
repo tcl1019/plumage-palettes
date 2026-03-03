@@ -4,7 +4,7 @@ import { birds } from '../../data/birds';
 import { FLOCK_PAIRINGS } from '../../data/flockPairings';
 import { DESIGN_STYLES, ROLE_LABELS, HARMONY_COLORS, SEASON_STYLES, IUCN_STATUS } from '../../data/constants';
 import { getUndertone, generateTints, generateShades, getTextColor } from '../../utils/colorUtils';
-import { findSimilarPalettes, mapBirdToRoomColors } from '../../utils/paletteHelpers';
+import { findSimilarPalettes, mapBirdToRoomColors, getSmartBird } from '../../utils/paletteHelpers';
 import { useCopyToClipboard } from '../../hooks/useCopyToClipboard';
 import { useNav } from '../../App';
 import RoomVisualizer from '../features/RoomVisualizer';
@@ -59,6 +59,7 @@ export default function PaletteDetail({ birdId }) {
 
   if (!bird) return <div className="text-center py-20 text-gray-500">Palette not found.</div>;
 
+  const smartBird = getSmartBird(bird);
   const similar = findSimilarPalettes(bird, birds, 3);
   const relatedPairings = FLOCK_PAIRINGS.filter(p => p.birdIds.includes(bird.id));
   const roomColors = mapBirdToRoomColors(bird);
@@ -230,7 +231,7 @@ export default function PaletteDetail({ birdId }) {
           <Palette className="w-4 h-4" /> The Palette
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-          {bird.colors.map((color, idx) => {
+          {smartBird.colors.map((color, idx) => {
             const undertone = getUndertone(color.hex);
             const utDot = undertone === 'warm' ? 'bg-orange-400' : undertone === 'cool' ? 'bg-blue-400' : 'bg-gray-400';
             const isExpanded = expandedColor === idx;
@@ -330,7 +331,7 @@ export default function PaletteDetail({ birdId }) {
 
       {/* Material Pairings */}
       <div className="mb-8">
-        <MaterialPairings bird={bird} />
+        <MaterialPairings bird={smartBird} />
       </div>
 
       {/* Room Ratings */}

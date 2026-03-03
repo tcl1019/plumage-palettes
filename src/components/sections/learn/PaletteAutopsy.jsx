@@ -3,6 +3,7 @@ import { ArrowRight, Layers } from 'lucide-react';
 import { birds } from '../../../data/birds';
 import { getUndertone, getTextColor } from '../../../utils/colorUtils';
 import { ROLE_LABELS, HARMONY_COLORS } from '../../../data/constants';
+import { getSmartBird } from '../../../utils/paletteHelpers';
 import PaletteStrip from '../../shared/PaletteStrip';
 import { useNav } from '../../../App';
 
@@ -217,7 +218,7 @@ export default function PaletteAutopsy() {
   const [selectedBird, setSelectedBird] = useState(null);
 
   if (selectedBird) {
-    return <AutopsyDetail bird={selectedBird} onBack={() => setSelectedBird(null)} />;
+    return <AutopsyDetail bird={getSmartBird(selectedBird)} onBack={() => setSelectedBird(null)} />;
   }
 
   return (
