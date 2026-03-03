@@ -1,117 +1,92 @@
-# Plumage Palettes - Complete Concept Documentation
+# Ploom
 
-## Main Deliverable
+**Nature-inspired interior design palettes, powered by birds.**
 
-**PRIMARY FILE:** `plumage-palettes-concept.docx` (16 KB)
-- Professional concept document for Plumage Palettes paint color product line
-- Microsoft Word 2007+ format (.docx)
-- Ready to present to stakeholders, partners, or investors
+Ploom turns the plumage of 219 real bird species into actionable interior design palettes — complete with paint codes, material pairings, room visualizations, and shareable exports.
 
-## What's Inside the Concept Document
+**Live:** [ploom on GitHub Pages](https://tcl1019.github.io/plumage-palettes/)
 
-The document is a comprehensive 12-page professional concept presentation covering:
+## Features
 
-1. **Cover Page** - Professional title treatment with forest green branding
-2. **Table of Contents** - Easy navigation of all sections
-3. **Executive Summary** - Overview, value proposition, and unique positioning
-4. **The Concept** - Detailed product description and distribution channels
-5. **Featured Species & Palettes** - Complete table of 13 birds with color names
-6. **Conservation Mission** - Bird crisis context and Audubon partnership
-7. **Product Line & Expansion** - Current and future product editions
-8. **Market Analysis** - Market size, trends, and target demographics
-9. **Revenue Model** - Six revenue streams explained
-10. **Next Steps** - Clear action items for market launch
-11. **Conclusion** - Final positioning and vision statement
+### Discover & Explore
+- **219 bird palettes** — each with 5-6 colors, harmony analysis, room ratings, and finish recommendations
+- **Style Quiz** — 4 questions to match your space to a palette
+- **Photo Color Match** — upload a photo or enter a hex to find the closest bird palette
+- **Browse by room, mood, style, or harmony type**
 
-## Document Design Features
+### Palette Detail
+- **Room Visualizer** — abstract grid compositions for living room, bedroom, kitchen, and bathroom
+- **Paint Matching** — top 2 Sherwin-Williams + 2 Benjamin Moore matches per color with deltaE quality ratings
+- **Shop Links** — direct links to SW and BM product pages for every match
+- **Material Pairings** — flooring, hardware, stone, and textile suggestions based on style, mood, and undertone
+- **Nature's Design Brief** — the biology behind each bird's color strategy
+- **Value Scales** — tints and shades for every color in the palette
 
-- **Professional Formatting:** Arial font, forest green (#1A3C34) branding
-- **Clear Structure:** Section breaks, headers, footers on all pages
-- **Data Presentation:** Comprehensive table with all 13 bird species
-- **Readable Layout:** 1-inch margins, proper spacing and typography
-- **Complete Content:** ~4,500+ words covering all strategic aspects
+### Export & Share
+- **Palette Recipe Card** — shareable 1080x1920 Instagram-story PNG with colors, paint codes, and finishes
+- **Contractor Spec Sheet** — A4-sized PNG with all SW + BM codes, finishes, materials, and room ratings
 
-## The 13 Featured Bird Species
+### My Studio
+- **Save palettes**, create **projects**, and mix **custom palettes**
+- **Room-by-Room Planner** — map your house, assign palettes to rooms, mark adjacencies, and run a color flow check (deltaE-based transition analysis)
+- **Compare** palettes side by side
+- **Palette Mixer** — blend colors from multiple palettes
 
-All with conservation status and signature color palettes:
+### AI Color Consultant
+- **Chat with AI** about any palette using your own API key
+- Context-aware: knows the palette, room ratings, and harmony when you ask
 
-1. Superb Fairy-wren (Least Concern)
-2. Resplendent Quetzal (Near Threatened)
-3. Mallard (Least Concern)
-4. Eastern Bluebird (Least Concern)
-5. Florida Scrub-Jay (Threatened)
-6. Scarlet Macaw (Least Concern)
-7. Mandarin Duck (Least Concern)
-8. Painted Bunting (Least Concern, declining)
-9. Indigo Bunting (Least Concern)
-10. Red-necked Tanager (Least Concern)
-11. Victoria Crowned Pigeon (Near Threatened)
-12. Greater Bird-of-Paradise (Least Concern)
-13. Double-crested Cormorant (Least Concern)
+## Tech Stack
 
-## Key Strategic Elements
+- **React 18** + **Vite**
+- **Tailwind CSS** for styling
+- **Lucide React** for icons
+- Canvas API for image generation (no external dependencies)
+- localStorage for persistence
+- Code-split paint data + export generators
 
-### Value Proposition
-- **60+ unique paint colors** from 13 spectacular birds
-- **Conservation partnership** with National Audubon Society
-- **Multiple distribution channels:** physical booklets, digital app, licensed paint
-- **No direct competitors** combining colors + conservation + charity
+## Getting Started
 
-### Market Opportunity
-- Global paint market: **$30 billion+**
-- US birding community: **47 million strong**
-- Target demographics: nature lovers, design enthusiasts, environmentally conscious consumers
+```bash
+npm install
+npm run dev
+```
 
-### Revenue Streams
-1. Licensed Paint Collections (partnerships with major brands)
-2. Digital Subscriptions & In-App Purchases
-3. Physical Booklet Sales
-4. Limited Edition Premium Products
-5. Co-Branded Partnerships
-6. Educational Programs & Workshops
+Runs at `http://localhost:5173/plumage-palettes/`
 
-## Using This Document
+```bash
+npm run build
+```
 
-### For Investors/Partners
-- Presents clear market opportunity and unique positioning
-- Shows multiple revenue streams and expansion potential
-- Demonstrates conservation impact and brand purpose
+Production build outputs to `dist/`.
 
-### For Product Development
-- Lists all 13 species with proposed color palettes
-- Outlines feature set for digital and physical products
-- Provides expansion roadmap for future editions
+## Project Structure
 
-### For Marketing
-- Includes demographic analysis and positioning strategy
-- Identifies key target audiences and messaging angles
-- Suggests distribution partnerships and channels
+```
+src/
+  components/
+    features/     # RoomVisualizer, RoomPlanner, PaletteMixer, CompareView, etc.
+    layout/       # Header, Navigation
+    sections/     # Discover, Explore, PaletteDetail, MyStudio, Learn
+    shared/       # PaintMatch, MaterialPairings, PaletteStrip, NatureCard, etc.
+  data/
+    birds.js      # 219 bird palettes with colors, rooms, harmony, nature data
+    materials.js  # Material pairing logic (14 styles, 5 moods, 3 undertones)
+    paints/       # Sherwin-Williams + Benjamin Moore color databases
+    constants.js  # Design styles, finishes, roles, moods
+    flockPairings.js
+  hooks/
+    useStudio.js  # localStorage state: saves, projects, house plans, custom palettes
+  utils/
+    colorUtils.js          # hex/rgb/hsl/lab conversions, deltaE, tints/shades
+    paintMatcher.js        # Nearest-paint search with pre-computed LAB values
+    recipeCardGenerator.js # Canvas API — 1080x1920 recipe card
+    specSheetGenerator.js  # Canvas API — 2480x3508 spec sheet
+    flowCheck.js           # Room adjacency color flow analysis
+    shopUrls.js            # SW + BM product page URL generation
+    colorExtractor.js      # Photo upload color extraction
+```
 
-## Supporting Files in This Directory
+## License
 
-- `QUICK_REFERENCE.md` - One-page overview of key facts
-- `DOCUMENT_SUMMARY.txt` - Detailed outline of all sections
-- `plumage-palettes-pitch.pptx` - Companion presentation (bonus)
-- `plumage-palettes.jsx` - Adobe Illustrator script (bonus)
-
-## File Validation
-
-✓ File format: Microsoft Word 2007+
-✓ Archive integrity: Verified (no errors)
-✓ File size: 16 KB (optimal for email/sharing)
-✓ Content: Complete and comprehensive
-✓ Formatting: Professional and consistent
-
-## Ready to Use
-
-The document is production-ready and can be:
-- Emailed directly to stakeholders
-- Printed for in-person presentations
-- Edited in Microsoft Word for customization
-- Shared digitally as-is
-
----
-
-**Created:** March 2, 2026
-**Prepared by:** Tyla
-**Status:** Complete and validated
+MIT
