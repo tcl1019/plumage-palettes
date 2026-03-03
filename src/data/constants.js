@@ -49,6 +49,14 @@ export const ROOM_TYPES = [
   { id: 'dining-room', label: 'Dining Room', icon: 'utensils' },
 ];
 
+export const IUCN_STATUS = {
+  'Least Concern':    { code: 'LC', color: '#4CAF50', bg: 'bg-green-100', text: 'text-green-800' },
+  'Near Threatened':  { code: 'NT', color: '#FFB300', bg: 'bg-amber-100', text: 'text-amber-800' },
+  'Vulnerable':       { code: 'VU', color: '#FF9800', bg: 'bg-orange-100', text: 'text-orange-800' },
+  'Endangered':       { code: 'EN', color: '#F44336', bg: 'bg-red-100', text: 'text-red-800' },
+  'Critically Endangered': { code: 'CR', color: '#B71C1C', bg: 'bg-red-200', text: 'text-red-900' },
+};
+
 export const MOODS = [
   { id: 'calm', label: 'Calm & Serene', gradient: 'from-blue-200 to-green-200', harmonies: ['analogous', 'monochromatic'], undertones: ['cool'] },
   { id: 'warm', label: 'Warm & Cozy', gradient: 'from-amber-200 to-orange-200', harmonies: ['analogous', 'monochromatic'], undertones: ['warm'] },
