@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { BookOpen, Palette, Feather, Paintbrush, Eye, Sparkles, ArrowRight, Star } from 'lucide-react';
+import { BookOpen, Palette, Feather, Paintbrush, Eye, Sparkles, ArrowRight, Star, Zap, Layers, Leaf } from 'lucide-react';
 import { birds } from '../../data/birds';
 import { FLOCK_PAIRINGS } from '../../data/flockPairings';
 import { DESIGN_STYLES, FINISH_GUIDE, ROLE_LABELS } from '../../data/constants';
 import PaletteStrip from '../shared/PaletteStrip';
 import { useNav } from '../../App';
+import ColorLab from './learn/ColorLab';
+import PaletteAutopsy from './learn/PaletteAutopsy';
+import NatureDesignBridges from './learn/NatureDesignBridges';
 
 const TABS = [
   { id: 'color-theory', label: 'Color Theory', Icon: Palette },
@@ -12,6 +15,9 @@ const TABS = [
   { id: 'flock-pairings', label: 'Flock Pairings', Icon: Feather },
   { id: 'style-directory', label: 'Styles', Icon: Eye },
   { id: 'finishes', label: 'Paint Finishes', Icon: Paintbrush },
+  { id: 'color-lab', label: 'Color Lab', Icon: Zap },
+  { id: 'palette-autopsy', label: 'Autopsy', Icon: Layers },
+  { id: 'nature-design', label: 'Nature \u00d7 Design', Icon: Leaf },
 ];
 
 function ColorTheoryTab() {
@@ -404,6 +410,9 @@ export default function Learn() {
       {activeTab === 'flock-pairings' && <FlockPairingsTab />}
       {activeTab === 'style-directory' && <StyleDirectoryTab />}
       {activeTab === 'finishes' && <FinishesTab />}
+      {activeTab === 'color-lab' && <ColorLab />}
+      {activeTab === 'palette-autopsy' && <PaletteAutopsy />}
+      {activeTab === 'nature-design' && <NatureDesignBridges />}
     </div>
   );
 }
