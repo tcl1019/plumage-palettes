@@ -116,7 +116,11 @@ export const birds = [
     "moods": [
       "warm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Killdeer's bold black-and-white breast bands serve as disruptive camouflage, breaking up its body outline against gravel and shoreline. Its warm brown upperparts blend seamlessly with open ground where it nests.",
+      "habitat": "Open fields, gravel bars, and shorelines translate to spacious, uncluttered interiors with warm earth tones and natural textures."
+    }
   },
   {
     "id": 2,
@@ -215,7 +219,11 @@ export const birds = [
     "moods": [
       "calm",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The American Avocet's rusty-orange head and neck during breeding season results from carotenoid pigments in its crustacean diet, while its striking black-and-white wing pattern creates a bold visual display during courtship flights.",
+      "habitat": "Shallow alkaline lakes and coastal mudflats inspire airy, open-concept rooms with warm terracotta accents against clean white backdrops."
+    }
   },
   {
     "id": 3,
@@ -330,7 +338,11 @@ export const birds = [
     "moods": [
       "warm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Ferruginous Hawk's rusty-red leg feathers and back come from pheomelanin pigments, providing camouflage against the red-earth prairies where it hunts. Its pale underside creates classic countershading for aerial stealth.",
+      "habitat": "Vast open grasslands and arid plateaus inspire expansive living rooms with warm sienna tones and high ceilings that echo the open sky."
+    }
   },
   {
     "id": 4,
@@ -453,7 +465,11 @@ export const birds = [
     "moods": [
       "calm",
       "fresh"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Barn Owl's ghostly white underside acts as counter-illumination camouflage during nighttime hunting, while its golden-buff upperparts with delicate grey vermiculations help it roost undetected against tree bark and old wood.",
+      "habitat": "Rustic barns, old-growth hollows, and quiet countryside settings evoke serene interiors with soft neutrals, weathered wood, and ambient candlelight warmth."
+    }
   },
   {
     "id": 5,
@@ -558,7 +574,11 @@ export const birds = [
     "tagline": "Vermilion and orange tones inspired by the Brant — Atlantic's natural palette.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Brant's sooty-black head and breast help absorb warmth in its cold Arctic breeding grounds, while the subtle white neck collar serves as species recognition among flocking geese.",
+      "habitat": "Windswept Arctic tundra and coastal bays inspire minimalist rooms with charcoal and slate palettes warmed by soft natural textiles."
+    }
   },
   {
     "id": 6,
@@ -680,7 +700,11 @@ export const birds = [
     "tagline": "Quiet, tonal neutrals drawn from the Western Screech-Owl. Understated elegance.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Western Screech-Owl's intricate bark-like plumage pattern is a masterwork of cryptic camouflage, combining melanin streaks and vermiculations that render it virtually invisible against tree trunks during daytime roosting.",
+      "habitat": "Oak woodlands and riparian corridors inspire intimate, cozy dens with layered wood tones and textural depth in every surface."
+    }
   },
   {
     "id": 7,
@@ -795,7 +819,11 @@ export const birds = [
     "moods": [
       "warm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Northern Pintail's chocolate-brown head and crisp white breast stripe represent classic sexual selection, with females preferring the most cleanly patterned males. Its elongated tail feathers signal genetic fitness.",
+      "habitat": "Prairie wetlands and elegant lakes translate to refined, classic interiors with rich chocolate and cream color blocking."
+    }
   },
   {
     "id": 8,
@@ -918,7 +946,11 @@ export const birds = [
     "moods": [
       "calm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Great Horned Owl's complex barred plumage provides exceptional camouflage in diverse forest habitats, while its prominent ear tufts aid in species recognition and emotional signaling rather than actual hearing.",
+      "habitat": "Dense old-growth forests and sheltered canyons inspire dramatic, layered interiors with deep earth tones and commanding architectural presence."
+    }
   },
   {
     "id": 9,
@@ -1040,7 +1072,11 @@ export const birds = [
     "moods": [
       "calm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Brown Creeper's streaked brown-and-white dorsal plumage is an exquisite example of bark-mimicry camouflage, making it nearly invisible as it spirals up tree trunks foraging for insects.",
+      "habitat": "Mature coniferous forests with textured bark inspire understated interiors where subtle pattern and tonal variation create quiet sophistication."
+    }
   },
   {
     "id": 10,
@@ -1160,7 +1196,11 @@ export const birds = [
     "tagline": "Quiet, tonal neutrals drawn from the Barred Owl. Understated elegance.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Barred Owl's horizontal chest barring and vertical belly streaking create a disruptive pattern that fragments its silhouette among dappled forest shadows, aiding its ambush hunting strategy.",
+      "habitat": "Swampy old-growth bottomlands and dense mixed forests inspire moody, layered interiors with soft grey tones and filtered natural light."
+    }
   },
   {
     "id": 11,
@@ -1283,7 +1323,11 @@ export const birds = [
     "moods": [
       "calm",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Northern Pygmy-Owl sports false eye-spots on the back of its head — dark feather patches rimmed in white that deter predators by mimicking a watchful face, a remarkable example of defensive mimicry.",
+      "habitat": "Mountain conifer forests and woodland edges translate to compact, warm spaces with honey-toned wood and carefully curated details."
+    }
   },
   {
     "id": 12,
@@ -1406,7 +1450,11 @@ export const birds = [
     "moods": [
       "warm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "Bewick's Wren carries subtle brown-grey plumage with a distinctive white supercilium that aids in species recognition among similar small wrens. Its understated coloring provides camouflage in dense brush.",
+      "habitat": "Scrubby thickets, garden hedgerows, and brushy woodland edges inspire cozy cottage interiors with warm brown tones and inviting textural layers."
+    }
   },
   {
     "id": 13,
@@ -1529,7 +1577,11 @@ export const birds = [
     "moods": [
       "warm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Wrentit's uniform warm brown plumage provides excellent concealment in the dense chaparral where it spends its entire sedentary life. Its subtle coloring prioritizes camouflage over sexual display.",
+      "habitat": "Dense coastal chaparral and scrubland inspire intimate, enveloping rooms with warm umber walls and layered natural-fiber textiles."
+    }
   },
   {
     "id": 14,
@@ -1644,7 +1696,11 @@ export const birds = [
     "moods": [
       "warm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Canada Goose's black head and neck with white chinstrap create a bold recognition pattern for flock cohesion, while its brown-grey body provides camouflage during ground nesting in open habitats.",
+      "habitat": "Lakeshores, meadows, and suburban parklands inspire versatile family-friendly interiors with grounding earth tones and timeless warmth."
+    }
   },
   {
     "id": 15,
@@ -1767,7 +1823,11 @@ export const birds = [
     "moods": [
       "fresh",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Mourning Dove's soft pinkish-brown plumage with iridescent neck patches results from a combination of melanin pigments and thin-film interference in specialized feather structures, offering subtle beauty alongside ground-nesting camouflage.",
+      "habitat": "Open woodlands, farm fields, and suburban gardens translate to gentle, welcoming interiors with blush and taupe tones that feel universally calming."
+    }
   },
   {
     "id": 16,
@@ -1889,7 +1949,11 @@ export const birds = [
     "moods": [
       "calm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Hermit Thrush's spotted breast serves dual purposes: breaking up its outline in the dappled forest understory and signaling species identity. Its rufous tail, pumped nervously, may startle hidden insects into motion.",
+      "habitat": "Quiet coniferous forest floors carpeted in needles inspire meditative interiors with muted earth tones, soft textures, and contemplative stillness."
+    }
   },
   {
     "id": 17,
@@ -2011,7 +2075,11 @@ export const birds = [
     "tagline": "Quiet, tonal neutrals drawn from the Dark-eyed Junco (Male) — Oregon. Understated elegance.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Dark-eyed Junco's sharp contrast between its slate-dark hood and white belly creates flash coloration — when it flushes, the sudden appearance of white outer tail feathers may confuse pursuing predators.",
+      "habitat": "Mountain conifer forests and snow-dusted woodland edges inspire clean, high-contrast interiors with charcoal and white palettes brightened by natural light."
+    }
   },
   {
     "id": 18,
@@ -2134,7 +2202,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Evening Grosbeak's brilliant yellow body with bold black-and-white wings signals fitness to females, powered by carotenoid pigments from its seed-heavy diet. The massive bill evolved for cracking tough conifer seeds.",
+      "habitat": "Boreal conifer forests and mountain woodlands inspire bold interiors with golden-yellow accents against dramatic dark architectural elements."
+    }
   },
   {
     "id": 19,
@@ -2257,7 +2329,11 @@ export const birds = [
     "moods": [
       "calm",
       "fresh"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The female Pink Robin's soft grey-brown plumage provides critical camouflage while incubating eggs on her moss-covered nest, a stark contrast to the male's vivid pink breast that evolved through sexual selection.",
+      "habitat": "Cool temperate rainforests and ferny gullies of southeastern Australia translate to serene, mossy-toned spaces with soft grey and gentle natural light."
+    }
   },
   {
     "id": 20,
@@ -2380,7 +2456,11 @@ export const birds = [
     "moods": [
       "calm",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The White-crowned Sparrow's bold black-and-white head stripes serve as species recognition signals among closely related sparrow species. Its crisp patterning develops through successive juvenile molts.",
+      "habitat": "Brushy mountain meadows and coastal scrub inspire fresh, layered interiors with clean graphic contrasts and warm neutral foundations."
+    }
   },
   {
     "id": 21,
@@ -2503,7 +2583,11 @@ export const birds = [
     "moods": [
       "warm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Bull-headed Shrike's rufous crown and black mask identify it as a formidable predator among songbirds, using its hooked bill to impale prey on thorns. The bold facial pattern may intimidate competitors.",
+      "habitat": "Open woodlands with scattered thorny shrubs across East Asia inspire balanced interiors with warm chestnut accents and structured, intentional arrangements."
+    }
   },
   {
     "id": 22,
@@ -2626,7 +2710,11 @@ export const birds = [
     "moods": [
       "warm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Golden Eagle's dark brown plumage with tawny-gold nape hackles absorbs solar warmth at high altitudes while providing camouflage against rocky mountain terrain. The golden crown feathers are a badge of maturity.",
+      "habitat": "Remote mountain crags and vast open landscapes inspire grand, commanding interiors with rich amber and deep brown tones under soaring ceilings."
+    }
   },
   {
     "id": 23,
@@ -2748,7 +2836,11 @@ export const birds = [
     "tagline": "Vermilion and vermilion tones inspired by the Cinnamon Teal (Female)'s natural palette.",
     "moods": [
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The female Cinnamon Teal's heavily mottled brown plumage provides superb camouflage among marsh vegetation during ground nesting, with subtle scaling patterns that mimic dried reeds and sedges.",
+      "habitat": "Shallow freshwater marshes with dense cattails and sedges inspire warm, organic interiors with woven textures and honeyed brown tones."
+    }
   },
   {
     "id": 24,
@@ -2870,7 +2962,11 @@ export const birds = [
     "tagline": "A focused, tonal palette inspired by the Chestnut-backed Chickadee's subtle plumage.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Chestnut-backed Chickadee's rich rufous back and flanks distinguish it from other chickadee species in its Pacific coast range. Its dark cap and white cheeks follow the classic chickadee pattern for species recognition.",
+      "habitat": "Damp coastal conifer forests draped in moss inspire cozy Pacific Northwest interiors with warm chestnut wood and soft green undertones."
+    }
   },
   {
     "id": 25,
@@ -2993,7 +3089,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Cinnamon Teal's rich cinnamon-red plumage comes from pheomelanin pigments and signals breeding fitness to females. This warm coloring is maintained only during breeding season through a complete body molt.",
+      "habitat": "Western marshes and alkaline ponds fringed with rushes inspire warm, saturated interiors with terracotta walls and natural reed-woven accessories."
+    }
   },
   {
     "id": 26,
@@ -3114,7 +3214,11 @@ export const birds = [
     "moods": [
       "calm",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Northern Jacana's rich chestnut body and contrasting yellow-green wing patches create a distinctive pattern visible during its characteristic wing-spread displays. Its bold coloring reflects a reversed sex-role system where males are the drabber caretakers.",
+      "habitat": "Tropical floating-lily ponds and lush wetlands inspire vibrant interiors with warm chestnut tones accented by fresh botanical greens."
+    }
   },
   {
     "id": 27,
@@ -3237,7 +3341,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "In a remarkable sex-role reversal, the female Red Phalarope wears the brighter breeding plumage — rich chestnut with a dark crown — to compete for mates, while males are drabber for nest camouflage.",
+      "habitat": "Arctic tundra pools and open ocean expanses translate to bold, warm interiors with rust and deep blue-grey as primary design elements."
+    }
   },
   {
     "id": 28,
@@ -3352,7 +3460,11 @@ export const birds = [
     "moods": [
       "bold",
       "eclectic"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Eastern Bluebird's vivid blue upperparts result from structural coloration — microscopic air pockets in feather barbs scatter light to produce blue without any blue pigment. Its rusty breast adds warmth through pheomelanin.",
+      "habitat": "Open meadows with scattered nest boxes and fence posts inspire cheerful, open interiors with sky-blue accents and warm russet textiles."
+    }
   },
   {
     "id": 29,
@@ -3457,7 +3569,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Orchard Oriole's deep chestnut-and-black plumage is the darkest of North American orioles, with melanin-rich feathers that resist wear in the thorny orchard habitats where it forages and nests.",
+      "habitat": "Shaded orchards, riverside groves, and open woodland edges inspire warm, inviting dining spaces with deep mahogany tones and golden candlelight."
+    }
   },
   {
     "id": 30,
@@ -3561,7 +3677,11 @@ export const birds = [
     "tagline": "Vermilion and rose tones inspired by the Scarlet Tanager (Male)'s natural palette.",
     "moods": [
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Scarlet Tanager's blazing red plumage comes from carotenoid pigments converted from its insect diet, making it one of the most intensely colored songbirds. It molts to olive-green for winter migration camouflage.",
+      "habitat": "Mature deciduous forest canopies with dappled sunlight inspire bold, saturated interiors with vivid red statement pieces against lush green backdrops."
+    }
   },
   {
     "id": 31,
@@ -3666,7 +3786,11 @@ export const birds = [
     "moods": [
       "warm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Ruddy Duck's chestnut body, sky-blue bill, and bright white cheek patches form a striking breeding display. The blue bill color comes from structural coloration and signals hormonal health to potential mates.",
+      "habitat": "Prairie pothole marshes and quiet reed-lined ponds inspire warm, grounded interiors with rich rust tones and calming blue-grey accents."
+    }
   },
   {
     "id": 32,
@@ -3789,7 +3913,11 @@ export const birds = [
     "moods": [
       "warm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Great Egret's pristine white plumage serves as a hunting advantage in shallow waters where it reduces its shadow, and its spectacular breeding aigrettes nearly drove it to extinction when coveted by the millinery trade.",
+      "habitat": "Serene wetland edges and sun-drenched marshes translate to luminous, airy interiors with pure white walls and warm metallic accents."
+    }
   },
   {
     "id": 33,
@@ -3911,7 +4039,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Ruddy Turnstone's breeding plumage of chestnut, black, and white in bold geometric patterns serves as both camouflage against rocky shores and a courtship display, with brighter males attracting more mates.",
+      "habitat": "Rocky coastlines and pebbly tidal flats inspire dynamic interiors with bold pattern mixing and warm terra-cotta paired with crisp black and white."
+    }
   },
   {
     "id": 34,
@@ -4034,7 +4166,11 @@ export const birds = [
     "moods": [
       "calm",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Canvasback's rich chestnut head contrasts with a pale grey body, creating a distinctive profile that females select for during pair bonding. The red eye color intensifies during breeding season through increased blood flow.",
+      "habitat": "Expansive prairie marshes and deep freshwater lakes inspire stately interiors with burgundy accents on soft grey canvases."
+    }
   },
   {
     "id": 35,
@@ -4157,7 +4293,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Wild Turkey's iridescent bronze, copper, and green plumage results from structural coloration in melanin granules that shift hue with viewing angle. His bare red-blue head skin changes color with mood and dominance displays.",
+      "habitat": "Hardwood forests and brushy clearings inspire richly layered interiors with burnished copper, deep bronze, and warm woodland textures."
+    }
   },
   {
     "id": 36,
@@ -4280,7 +4420,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Peregrine Falcon's dark malar stripe reduces sun glare during its record-breaking hunting stoops, while its blue-grey upperparts and barred underside provide camouflage when viewed from both above and below in flight.",
+      "habitat": "Dramatic cliff faces, skyscraper ledges, and open skies translate to sleek, modern interiors with slate-blue tones and strong architectural lines."
+    }
   },
   {
     "id": 37,
@@ -4402,7 +4546,11 @@ export const birds = [
     "moods": [
       "bold",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The female Green-winged Teal's mottled brown plumage provides superb concealment among marsh grasses during nesting, with each feather edged in buff to mimic scattered leaf litter on the ground.",
+      "habitat": "Secluded freshwater ponds and marshy backwaters inspire layered, textured interiors with rich brown tones and subtle pattern variation."
+    }
   },
   {
     "id": 38,
@@ -4525,7 +4673,11 @@ export const birds = [
     "moods": [
       "calm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Yellow-rumped Warbler's bright yellow patches on crown, flanks, and rump are carotenoid-based signals of foraging ability. Its unique capacity to digest waxy bayberries allows it to winter farther north than most warblers.",
+      "habitat": "Boreal forests transitioning to coastal scrub inspire versatile interiors with cool blue-grey foundations punctuated by cheerful yellow accents."
+    }
   },
   {
     "id": 39,
@@ -4632,7 +4784,11 @@ export const birds = [
     "moods": [
       "calm",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Golden-cheeked Warbler's jet-black upperparts and golden face patches create a striking visual that helps maintain pair bonds in its exclusive Ashe juniper habitat. This endangered species uses juniper bark strips for nest building.",
+      "habitat": "Ancient juniper-oak woodlands of the Texas Hill Country inspire distinctive interiors with warm gold accents against deep charcoal in rustic-refined settings."
+    }
   },
   {
     "id": 40,
@@ -4739,7 +4895,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "Townsend's Warbler's bold black-and-yellow facial pattern serves as a clear species identifier in the complex mixed-species flocks of Pacific Northwest conifer forests, preventing wasted courtship between similar species.",
+      "habitat": "Towering coastal old-growth conifers with filtered light inspire sophisticated interiors with olive-gold and black contrasts in tall, airy spaces."
+    }
   },
   {
     "id": 41,
@@ -4862,7 +5022,11 @@ export const birds = [
     "moods": [
       "fresh",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Blackburnian Warbler's blazing orange throat — among the most vivid in North American birds — is powered by carotenoid pigments and serves as an unmistakable signal in the shadowy upper canopy where it forages.",
+      "habitat": "Mature spruce-fir forests with dappled sunlight breaking through inspire fresh interiors with fiery orange accents against cool dark-green and charcoal tones."
+    }
   },
   {
     "id": 42,
@@ -4983,7 +5147,11 @@ export const birds = [
     "tagline": "Amber and azure tones inspired by the Eurasian Blue Tit's natural palette.",
     "moods": [
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Eurasian Blue Tit's blue crown reflects ultraviolet light invisible to humans but visible to other blue tits, playing a key role in mate selection. Its yellow breast comes from carotenoid-rich caterpillars.",
+      "habitat": "European deciduous woodlands and cottage gardens inspire playful, cheerful interiors with cobalt blue and sunny yellow in lighthearted compositions."
+    }
   },
   {
     "id": 43,
@@ -5103,7 +5271,11 @@ export const birds = [
     "tagline": "Azure and amber tones inspired by the Black-capped Vireo (Male)'s natural palette.",
     "moods": [
       "sophisticated"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The endangered Black-capped Vireo's bold black cap and white spectacles create distinctive facial markings for mate recognition in its scrubby oak habitat. Males with the cleanest head patterns are preferred by females.",
+      "habitat": "Dense low-growing oak scrub and rocky limestone hillsides inspire refined, understated interiors with smart black-and-white contrasts and olive-green accents."
+    }
   },
   {
     "id": 44,
@@ -5226,7 +5398,11 @@ export const birds = [
     "moods": [
       "warm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Western Kingbird's bright yellow belly powered by carotenoid pigments serves as an honest signal of dietary quality. Its grey head and concealed orange-red crown patch flash dramatically during territorial disputes.",
+      "habitat": "Open ranch country with scattered trees and fence-post perches inspires relaxed, sun-filled interiors with soft grey and warm yellow that feel casually elegant."
+    }
   },
   {
     "id": 45,
@@ -5349,7 +5525,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Western Meadowlark's brilliant yellow breast with a bold black V-chevron evolved as a long-distance visual signal across open grasslands. The black marking grows larger and bolder as birds age, signaling experience.",
+      "habitat": "Rolling prairie grasslands under vast open skies inspire bright, optimistic interiors with golden-yellow focal walls and warm natural wood floors."
+    }
   },
   {
     "id": 46,
@@ -5472,7 +5652,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The female Wilson's Warbler's olive-yellow plumage provides camouflage in the dense willow thickets where she nests on the ground, lacking the male's bold black cap but retaining bright yellow underparts.",
+      "habitat": "Mountain willow thickets and streamside tangles inspire fresh, nature-drenched interiors with soft olive-green and sunny yellow in garden-inspired rooms."
+    }
   },
   {
     "id": 47,
@@ -5595,7 +5779,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Common Yellowthroat's bold black bandit mask bordered by white is a key sexual signal — females preferring males with wider masks, which correlate with territory quality and parental investment.",
+      "habitat": "Dense cattail marshes and wet meadow edges inspire spirited interiors with warm yellow foundations accented by dramatic dark contrasts."
+    }
   },
   {
     "id": 48,
@@ -5718,7 +5906,11 @@ export const birds = [
     "moods": [
       "calm",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The female Lesser Goldfinch's subtle olive-green plumage provides nesting camouflage among leafy vegetation, with only hints of the yellow that blazes on the male, a common pattern of sexual dimorphism in finches.",
+      "habitat": "Scrubby oak woodlands and weedy fields in warm climates translate to gentle, sunlit interiors with muted olive and soft gold tones."
+    }
   },
   {
     "id": 49,
@@ -5840,7 +6032,11 @@ export const birds = [
     "moods": [
       "warm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Lesser Goldfinch's bright yellow underparts and black cap are maintained by carotenoid pigments from seeds, with western populations showing greener backs and eastern populations jet-black, reflecting geographic variation.",
+      "habitat": "Open woodlands and suburban gardens of the arid West inspire lively interiors with sunshine-yellow accents and warm, casual furnishings."
+    }
   },
   {
     "id": 50,
@@ -5962,7 +6158,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Wilson's Warbler's glossy black cap atop bright yellow plumage is a sexual selection target — females choose males with larger, more symmetrical caps, which indicate genetic quality and parasite resistance.",
+      "habitat": "Dense montane willow thickets near rushing streams inspire vibrant, energetic interiors with bold yellow walls and crisp dark accent details."
+    }
   },
   {
     "id": 51,
@@ -6083,7 +6283,11 @@ export const birds = [
     "moods": [
       "bold",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Hooded Warbler's striking black hood framing a bright yellow face evolved through sexual selection, with hood completeness indicating male quality. White tail spots are flashed to startle insect prey from foliage.",
+      "habitat": "Shaded deciduous forest understory with dappled light inspires dramatic interiors with bold black-and-gold contrasts softened by lush green accents."
+    }
   },
   {
     "id": 52,
@@ -6205,7 +6409,11 @@ export const birds = [
     "tagline": "Chartreuse and yellow tones inspired by the Red-bearded Bee-eater (Male)'s natural palette.",
     "moods": [
       "sophisticated"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Red-bearded Bee-eater's vivid red throat feathers and green body plumage combine structural and pigment-based coloration, creating a tropical spectacle. Its elongated throat feathers fan out during courtship displays.",
+      "habitat": "Tropical broadleaf forests of Southeast Asia inspire richly layered interiors with emerald green and crimson-red in lush, botanical settings."
+    }
   },
   {
     "id": 53,
@@ -6301,7 +6509,11 @@ export const birds = [
     "tagline": "Amber and red tones inspired by the Lesser Goldfinch (Male) — Eastern's natural palette.",
     "moods": [
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The eastern form of the Lesser Goldfinch displays a jet-black back instead of the olive-green of western birds, a melanin-rich variation that may provide better UV protection in different light environments.",
+      "habitat": "Woodland edges and brushy Texas hillsides inspire warm, inviting interiors with golden accents against deep dark tones in relaxed arrangements."
+    }
   },
   {
     "id": 54,
@@ -6424,7 +6636,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Northern Flicker's spotted breast, barred back, and black bib combine multiple pattern types for ground-foraging camouflage. Its red or yellow underwing color varies geographically and plays a role in mate selection.",
+      "habitat": "Open woodlands with ant-rich lawns and dead snags translate to eclectic interiors that mix warm spotted patterns with bold unexpected color pops."
+    }
   },
   {
     "id": 55,
@@ -6523,7 +6739,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Red-winged Blackbird's vivid red-and-yellow shoulder epaulets are the ultimate territory signal — he controls how much red he displays by adjusting feather position, revealing more during aggressive encounters.",
+      "habitat": "Cattail marshes and open wetland edges inspire bold, confident interiors with vivid red accent pieces anchored by sleek dark foundations."
+    }
   },
   {
     "id": 56,
@@ -6630,7 +6850,11 @@ export const birds = [
     "moods": [
       "warm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Yellow-headed Blackbird's bright golden head results from carotenoid pigments and signals dominance — it displaces the smaller Red-winged Blackbird from prime marsh territories. Females prefer the most vividly colored males.",
+      "habitat": "Deep-water cattail marshes of the western prairies inspire striking interiors with warm golden-yellow focal points against matte black backgrounds."
+    }
   },
   {
     "id": 57,
@@ -6753,7 +6977,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Hooded Oriole's flame-orange body with black face and bib is intensified by carotenoid pigments, with brighter males commanding better territories in the palm and ornamental trees where they weave hanging nests.",
+      "habitat": "Southwestern palm oases and flowering tropical gardens translate to vibrant, sun-drenched interiors with warm amber and burnt-orange textiles."
+    }
   },
   {
     "id": 58,
@@ -6868,7 +7096,11 @@ export const birds = [
     "moods": [
       "fresh",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male American Goldfinch transforms from dull olive-brown to blazing canary-yellow each spring through a complete body molt, with the intensity of yellow revealing dietary carotenoid intake and thus foraging prowess to females.",
+      "habitat": "Sunny meadows, thistle fields, and suburban gardens inspire bright, cheerful interiors with fresh lemon-yellow accents and light, airy atmospheres."
+    }
   },
   {
     "id": 59,
@@ -6991,7 +7223,11 @@ export const birds = [
     "moods": [
       "fresh",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Western Tanager's red head uniquely comes from rhodoxanthin, a rare pigment obtained from insects rather than the typical carotenoid pathway, making it one of few birds that cannot produce its own red coloration from diet alone.",
+      "habitat": "Open mountain conifer forests with wildflower meadows inspire fresh, vibrant interiors with red and golden-yellow accents against cool evergreen backdrops."
+    }
   },
   {
     "id": 60,
@@ -7098,7 +7334,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Yellow Warbler's all-yellow plumage with rusty breast streaks is among the brightest of warblers, with carotenoid richness signaling territory quality. It famously builds new nest floors over Brown-headed Cowbird eggs.",
+      "habitat": "Streamside willow thickets and lush riparian corridors inspire sunny, optimistic interiors with golden-yellow walls and natural green accents."
+    }
   },
   {
     "id": 61,
@@ -7196,7 +7436,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Saffron Finch's brilliant saffron-yellow plumage with an orange crown is intensified by carotenoid pigments, serving as an honest indicator of health and foraging success in its competitive social flocks.",
+      "habitat": "Tropical lowland gardens and semi-open savannas inspire warm, vibrant interiors with saffron-yellow and terracotta in lively, welcoming compositions."
+    }
   },
   {
     "id": 62,
@@ -7319,7 +7563,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Cedar Waxwing's silky plumage, yellow tail tip, and unique red waxy wing tips come from astaxanthin carotenoids in the berries it consumes. The number of waxy tips increases with age, signaling maturity to potential mates.",
+      "habitat": "Fruiting ornamental trees and berry-laden woodland edges inspire polished interiors with warm peach, soft grey, and rich amber in elegant compositions."
+    }
   },
   {
     "id": 63,
@@ -7442,7 +7690,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Bullock's Oriole's vivid orange underparts with black crown and eye-line evolved through both natural and sexual selection, with brighter males securing better riparian territories for their woven hanging nests.",
+      "habitat": "Cottonwood-lined rivers and shaded ranch groves of the West inspire lively interiors with bright orange and warm amber against cool shade tones."
+    }
   },
   {
     "id": 64,
@@ -7549,7 +7801,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Baltimore Oriole's flame-orange and black plumage made it the namesake of Lord Baltimore's heraldic colors. Carotenoid-rich fruits and insects fuel this vivid display, with duller males holding inferior territories.",
+      "habitat": "Leafy deciduous canopies and elm-lined streets inspire classic interiors with tangerine and black accents in traditional yet vibrant settings."
+    }
   },
   {
     "id": 65,
@@ -7648,7 +7904,11 @@ export const birds = [
     "moods": [
       "fresh",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Orange Dove's stunning all-orange plumage with olive head is unique among pigeons and results from specialized psittacofulvin-like pigments. Found only in Fiji, its vivid color signals fitness in the limited island habitat.",
+      "habitat": "Lush Fijian tropical forests with dense canopy and filtered light inspire exotic interiors with warm tangerine and deep olive in tropical-modern settings."
+    }
   },
   {
     "id": 66,
@@ -7771,7 +8031,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Golden Pheasant's extravagant cape of orange-and-black barred feathers fans into a spectacular courtship shield. Its crimson body, golden crest, and blue-green back combine nearly every type of feather pigmentation.",
+      "habitat": "Dense montane bamboo forests of central China translate to opulent interiors with gold, crimson, and jewel tones in rich layered arrangements."
+    }
   },
   {
     "id": 67,
@@ -7894,7 +8158,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The female Northern Cardinal's warm buff-brown plumage with red-tinged wings and crest provides excellent nest camouflage while retaining enough color to maintain pair bonds. She sings from the nest to coordinate with her mate.",
+      "habitat": "Dense shrubby thickets and suburban hedgerows inspire warm, welcoming interiors with rosy-tan tones and subtle red accents in comfortable settings."
+    }
   },
   {
     "id": 68,
@@ -8016,7 +8284,11 @@ export const birds = [
     "moods": [
       "calm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The American Robin's rusty-red breast signals territory and attracts mates through melanin-based coloring, while its dark grey-brown upperparts provide camouflage from aerial predators when viewed from above.",
+      "habitat": "Suburban gardens and open woodlands inspire warm, welcoming interiors with natural earth tones and a balance of comfort and vitality."
+    }
   },
   {
     "id": 69,
@@ -8123,7 +8395,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The California Towhee's uniform warm brown plumage provides ground-foraging camouflage in the dry chaparral and scrub where it scratches through leaf litter. Its rusty undertail coverts flash during territorial disputes.",
+      "habitat": "Sun-baked California chaparral and garden edges inspire warm, relaxed interiors with terracotta, warm browns, and desert-inspired natural materials."
+    }
   },
   {
     "id": 70,
@@ -8246,7 +8522,11 @@ export const birds = [
     "moods": [
       "bold",
       "eclectic"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Anna's Hummingbird's iridescent magenta gorget and crown are created entirely by structural coloration — nanoscale platelets that refract light like tiny prisms, appearing black when light hits at the wrong angle.",
+      "habitat": "Coastal California gardens with flowering native plants inspire vibrant, jewel-toned interiors with iridescent magenta and emerald-green accents."
+    }
   },
   {
     "id": 71,
@@ -8369,7 +8649,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Red-shouldered Hawk's rufous barring and bold black-and-white wing pattern serve as territorial markings visible to other raptors in flight, while the warm orange-red breast helps it blend against autumn forest canopies.",
+      "habitat": "Bottomland hardwood forests and riparian woodlands inspire richly layered interiors with warm cinnamon-red and deep woodland tones."
+    }
   },
   {
     "id": 72,
@@ -8492,7 +8776,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Varied Thrush's burnt-orange breast band divided by a dramatic black necklace evolved as a species recognition signal in the dark Pacific Northwest rainforests where visual signaling is challenging.",
+      "habitat": "Mossy Pacific rainforests with towering conifers and filtered light inspire moody, dramatic interiors with deep orange and charcoal in atmospheric compositions."
+    }
   },
   {
     "id": 73,
@@ -8615,7 +8903,11 @@ export const birds = [
     "moods": [
       "warm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The European Robin's iconic red-orange breast developed for territorial signaling — it aggressively displays this patch to rivals. The color comes from carotenoid pigments and is present in both sexes, as both defend winter territories.",
+      "habitat": "English cottage gardens and hedgerow-lined lanes inspire charming, intimate interiors with warm coral and soft brown in classic, timeless settings."
+    }
   },
   {
     "id": 74,
@@ -8736,7 +9028,11 @@ export const birds = [
     "moods": [
       "calm",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Silverbird's shimmering silvery-grey upperparts and warm rufous underparts create a striking two-toned appearance adapted to its open savanna perch-hunting lifestyle across East Africa, where it catches insects on the wing.",
+      "habitat": "East African highland savannas and scattered acacia woodlands inspire elegant interiors with silvery-grey and warm terracotta in serene open-plan spaces."
+    }
   },
   {
     "id": 75,
@@ -8859,7 +9155,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male American Kestrel's rufous back with blue-grey wings is one of the most colorful raptor palettes, with bold facial stripes that reduce solar glare during its characteristic hover-hunting. Males with brighter plumage are preferred by females.",
+      "habitat": "Open farmlands, meadows, and highway medians with scattered perches inspire bright, dynamic interiors with warm rust and slate-blue in energetic combinations."
+    }
   },
   {
     "id": 76,
@@ -8982,7 +9282,11 @@ export const birds = [
     "moods": [
       "calm",
       "fresh"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Red-shafted Flicker's salmon-red underwing and tail feather shafts distinguish it from the yellow-shafted eastern form. This color results from unique rhodoxanthin pigments and plays a critical role in mate selection at hybrid zones.",
+      "habitat": "Open western woodlands with grassy clearings inspire fresh, nature-connected interiors with soft coral and warm grey in calm, spacious compositions."
+    }
   },
   {
     "id": 77,
@@ -9102,7 +9406,11 @@ export const birds = [
     "tagline": "Azure and azure tones inspired by the Great Blue Heron's natural palette.",
     "moods": [
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Great Blue Heron's blue-grey plumage provides camouflage against water and sky while wading, with ornamental breeding plumes on head and chest signaling reproductive fitness. Special powder-down feathers help waterproof its plumage.",
+      "habitat": "Still lake edges, tidal marshes, and misty shorelines inspire contemplative interiors with blue-grey tones and a sense of patient, timeless elegance."
+    }
   },
   {
     "id": 78,
@@ -9225,7 +9533,11 @@ export const birds = [
     "moods": [
       "calm",
       "fresh"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Cooper's Hawk's blue-grey upperparts and rufous-barred breast provide counter-shading camouflage during rapid dashes through forest vegetation to ambush songbirds. Adults' red eye color deepens with age and dominance.",
+      "habitat": "Dense suburban woodlands and mature deciduous forests translate to refined interiors with cool blue-grey walls and warm copper accents."
+    }
   },
   {
     "id": 79,
@@ -9348,7 +9660,11 @@ export const birds = [
     "moods": [
       "calm",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male California Quail's forward-curving topknot plume, scaled belly, and chestnut crown patch are all products of sexual selection. The intricate belly scaling may help assess body condition in these highly social birds.",
+      "habitat": "Chaparral-covered hillsides and oak-studded California valleys inspire warm, casually elegant interiors with earthy tones and organic textures."
+    }
   },
   {
     "id": 80,
@@ -9470,7 +9786,11 @@ export const birds = [
     "tagline": "Quiet, tonal neutrals drawn from the Mississippi Kite (Female). Understated elegance.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Mississippi Kite's sleek pearly-grey plumage provides aerial camouflage as it gracefully hawks dragonflies and cicadas. Its pale head and dark tail create a subtle gradient optimized for blending with open skies.",
+      "habitat": "Tall cottonwood groves and southern Great Plains woodlands inspire tranquil, airy interiors with soft silver-grey tones and streamlined forms."
+    }
   },
   {
     "id": 81,
@@ -9583,7 +9903,11 @@ export const birds = [
     "tagline": "Quiet, tonal neutrals drawn from the Heermann's Gull — Breeding. Understated elegance.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "Heermann's Gull's dramatic dark grey body with bright white head and red bill is unusual among gulls, providing camouflage against the dark volcanic islands where it breeds. Its coloring is adapted to its unique Pacific range.",
+      "habitat": "Rocky Pacific islands and misty coastal bluffs inspire sophisticated interiors with charcoal, crisp white, and bold red accents in coastal-modern style."
+    }
   },
   {
     "id": 82,
@@ -9695,7 +10019,11 @@ export const birds = [
     "tagline": "Quiet, tonal neutrals drawn from the Ring-billed Gull. Understated elegance.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Ring-billed Gull's clean white-and-grey plumage with a distinctive black ring on its yellow bill takes three years to develop through successive molts, with each plumage stage reducing aggression from territorial adults.",
+      "habitat": "Urban lakefronts, parking lots, and sandy beaches translate to versatile, unfussy interiors with clean grey-and-white palettes and modern simplicity."
+    }
   },
   {
     "id": 83,
@@ -9816,7 +10144,11 @@ export const birds = [
     "tagline": "Quiet, tonal neutrals drawn from the Ancient Murrelet. Understated elegance.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Ancient Murrelet's grey back and black head with white throat streaks resemble ocean wave patterns when viewed from above, providing camouflage from aerial predators while swimming. Its name refers to the white head plumes resembling grey hair.",
+      "habitat": "Remote foggy seabird colonies and cold North Pacific waters inspire moody, atmospheric interiors with deep charcoal and soft grey in maritime-inspired spaces."
+    }
   },
   {
     "id": 84,
@@ -9939,7 +10271,11 @@ export const birds = [
     "moods": [
       "calm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Whimbrel's cryptic brown-streaked plumage renders it nearly invisible on the tundra nesting grounds, while its bold crown stripes aid species recognition. Its long curved bill evolved to extract fiddler crabs from burrows.",
+      "habitat": "Wind-swept tundra breeding grounds and coastal mudflats inspire natural, textured interiors with warm sandy tones and organic woven materials."
+    }
   },
   {
     "id": 85,
@@ -10060,7 +10396,11 @@ export const birds = [
     "moods": [
       "calm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Blue-gray Gnatcatcher's delicate blue-grey upperparts and white underside provide canopy camouflage as it flits through outer foliage. Its black supercilium during breeding season signals male quality to potential mates.",
+      "habitat": "Open deciduous woodlands with dappled sunlight inspire light, breezy interiors with soft blue-grey walls and plenty of natural light."
+    }
   },
   {
     "id": 86,
@@ -10159,7 +10499,11 @@ export const birds = [
     "moods": [
       "calm",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The endangered Piping Plover's pale sand-colored plumage provides remarkable camouflage on the sandy beaches where it nests. Its subtle black breast band and forehead patch appear only in breeding season for mate attraction.",
+      "habitat": "Pristine sandy beaches and dune systems translate to soft, minimal interiors with pale sand tones and gentle coastal light."
+    }
   },
   {
     "id": 87,
@@ -10256,7 +10600,11 @@ export const birds = [
     "moods": [
       "calm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Rose-breasted Grosbeak's striking red breast triangle against black-and-white plumage serves as a beacon in the forest canopy, with patch size correlating to age and experience. The rose color comes from carotenoid pigments.",
+      "habitat": "Leafy deciduous forests and suburban shade trees inspire classic, balanced interiors with bold rose-red accents against crisp monochrome palettes."
+    }
   },
   {
     "id": 88,
@@ -10352,7 +10700,11 @@ export const birds = [
     "tagline": "Quiet, tonal neutrals drawn from the Willet. Understated elegance.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Willet's plain grey-brown plumage transforms dramatically in flight, revealing bold black-and-white wing stripes that signal alarm to other shorebirds. This flash pattern confuses predators and coordinates flock escape behavior.",
+      "habitat": "Coastal salt marshes and open tidal flats inspire understated, versatile interiors with warm grey tones that reveal hidden pattern when light shifts."
+    }
   },
   {
     "id": 89,
@@ -10443,7 +10795,11 @@ export const birds = [
     "moods": [
       "calm",
       "fresh"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Mute Swan's all-white plumage is maintained by the absence of melanin, though its feathers still use structural integrity from keratin. The orange bill with black knob is a secondary sexual characteristic that enlarges during breeding.",
+      "habitat": "Tranquil estate lakes and misty river bends inspire pure, ethereal interiors with pristine whites, soft creams, and graceful curved furnishings."
+    }
   },
   {
     "id": 90,
@@ -10539,7 +10895,11 @@ export const birds = [
     "tagline": "Cyan and azure tones inspired by the Caspian Tern's natural palette.",
     "moods": [
       "sophisticated"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Caspian Tern's striking black cap and massive coral-red bill create a bold visual profile. The cap dulls to streaked grey in winter, while the red bill darkens, following a common pattern of reduced breeding ornamentation outside mating season.",
+      "habitat": "Large inland lakes and coastal shorelines with sandy nesting islands inspire sophisticated interiors with crisp black, white, and warm coral accents."
+    }
   },
   {
     "id": 91,
@@ -10611,7 +10971,11 @@ export const birds = [
     "tagline": "A focused, tonal palette inspired by the Eared Grebe's subtle plumage.",
     "moods": [
       "sophisticated"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Eared Grebe's breeding plumage features dramatic golden ear tufts fanning behind ruby-red eyes, a display that intensifies during elaborate head-shaking courtship rituals. Its dark body helps it absorb heat in cold mountain lakes.",
+      "habitat": "High-altitude saline lakes and sheltered mountain ponds inspire refined interiors with dark, moody tones accented by warm gold and ruby highlights."
+    }
   },
   {
     "id": 92,
@@ -10718,7 +11082,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Snowy Egret's brilliant white plumage and bright yellow feet serve its hunting strategy — it uses its golden toes to stir up prey while the white body reduces its shadow on the water surface. Its delicate breeding plumes once made it a target for hat-makers.",
+      "habitat": "Shallow coastal lagoons and sunlit tidal pools translate to fresh, luminous interiors with crisp whites accented by touches of golden yellow."
+    }
   },
   {
     "id": 93,
@@ -10816,7 +11184,11 @@ export const birds = [
     "moods": [
       "fresh",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Snow Goose exists in two color morphs — white and blue — controlled by a single gene. The white morph's plumage provides camouflage in Arctic snow, while black wingtips contain melanin that resists feather wear.",
+      "habitat": "Arctic tundra nesting grounds and vast agricultural wintering fields inspire clean, expansive interiors with pure whites and subtle warm undertones."
+    }
   },
   {
     "id": 94,
@@ -10906,7 +11278,11 @@ export const birds = [
     "moods": [
       "fresh",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The White Ibis's all-white adult plumage develops gradually from brown juvenile feathers over two years. Its red face and curved bill intensify during breeding season through increased carotenoid deposition from its crustacean diet.",
+      "habitat": "Mangrove swamps and subtropical wetland rookeries inspire fresh, airy interiors with warm white walls and coral-red accent pieces."
+    }
   },
   {
     "id": 95,
@@ -11004,7 +11380,11 @@ export const birds = [
     "moods": [
       "fresh",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The American White Pelican's gleaming white plumage with black flight feathers and a unique horn-like plate on its orange bill during breeding season makes it unmistakable. The white coloring aids in cooperative fishing by herding fish toward shallows.",
+      "habitat": "Vast inland lakes and island colonies inspire grand, open interiors with pure white and warm amber-orange in spacious, welcoming compositions."
+    }
   },
   {
     "id": 96,
@@ -11110,7 +11490,11 @@ export const birds = [
     "moods": [
       "warm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Western Gull's dark slate-grey mantle, the darkest of Pacific coast gulls, distinguishes it from lighter-mantled species. This melanin-rich coloring may provide better resistance to feather-degrading bacteria in its coastal environment.",
+      "habitat": "Rocky Pacific headlands and windswept island colonies translate to handsome, sturdy interiors with slate grey and clean white in coastal-contemporary style."
+    }
   },
   {
     "id": 97,
@@ -11208,7 +11592,11 @@ export const birds = [
     "moods": [
       "calm",
       "fresh"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The White-tailed Kite's ghostly pale plumage with black shoulder patches creates a distinctive hovering silhouette. Its white underside minimizes its shadow when hunting from above, a form of aggressive camouflage.",
+      "habitat": "Open grasslands and savanna edges with scattered trees inspire bright, serene interiors with soft whites and cool greys in uncluttered, modern spaces."
+    }
   },
   {
     "id": 98,
@@ -11330,7 +11718,11 @@ export const birds = [
     "tagline": "Quiet, tonal neutrals drawn from the Common Goldeneye (Female). Understated elegance.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The female Common Goldeneye's warm chocolate-brown head and grey body provide camouflage in the tree cavities where she nests, often high above forest floors. Her subtle plumage contrasts sharply with the male's flashy black-and-white pattern.",
+      "habitat": "Boreal lakes surrounded by old-growth conifers with natural tree-cavity nesting sites inspire calm, understated interiors with chocolate and cool grey tones."
+    }
   },
   {
     "id": 99,
@@ -11436,7 +11828,11 @@ export const birds = [
     "moods": [
       "fresh",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Black-crowned Night Heron's bold black cap and back contrast with its pale grey wings and white underside, a pattern optimized for its crepuscular hunting habits when low-light conditions favor strong visual contrasts.",
+      "habitat": "Marshy pond edges and twilight wetlands inspire atmospheric interiors with crisp black-and-white contrasts softened by gentle grey and green tones."
+    }
   },
   {
     "id": 100,
@@ -11559,7 +11955,11 @@ export const birds = [
     "moods": [
       "calm",
       "fresh"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Band-tailed Pigeon's soft blue-grey plumage with a white nape crescent and iridescent green-bronze neck patch blends with the dappled canopy of Pacific coast oak and conifer forests where it forages on acorns and berries.",
+      "habitat": "Misty Pacific Northwest forests and mountain oak groves inspire serene interiors with soft plum-grey tones and subtle iridescent accents."
+    }
   },
   {
     "id": 101,
@@ -11664,7 +12064,11 @@ export const birds = [
     "tagline": "Quiet, tonal neutrals drawn from the Forster's Tern. Understated elegance.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "Forster's Tern's sleek silver-white plumage with black cap and deeply forked tail is streamlined for agile aerial diving. In winter, the black cap recedes to just an eye patch, reducing the conspicuous breeding signal.",
+      "habitat": "Open marshes and coastal shorelines with dancing light on water inspire airy, minimal interiors with silvery whites and clean, streamlined forms."
+    }
   },
   {
     "id": 102,
@@ -11760,7 +12164,11 @@ export const birds = [
     "tagline": "Quiet, tonal neutrals drawn from the Caspian Tern — Breeding. Understated elegance.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "In full breeding plumage, the Caspian Tern's jet-black cap extends to below the eye, framing its massive red bill in dramatic contrast. This cap signals breeding readiness and helps coordinate pair bonding rituals.",
+      "habitat": "Sandy nesting islands and large open waterways translate to striking, purposeful interiors with bold black-and-red accents against pale, sandy neutrals."
+    }
   },
   {
     "id": 103,
@@ -11883,7 +12291,11 @@ export const birds = [
     "moods": [
       "calm",
       "fresh"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The King Penguin's vivid orange-gold ear patches and breast gradient result from unique spheniscin pigments found only in penguins. This bright display helps mates locate each other among dense breeding colonies of thousands.",
+      "habitat": "Sub-Antarctic windswept beaches and glacial valleys inspire refined, contemporary interiors with charcoal, white, and warm gold in sophisticated compositions."
+    }
   },
   {
     "id": 104,
@@ -11988,7 +12400,11 @@ export const birds = [
     "tagline": "Azure and rose tones inspired by the Great Black-backed Gull's natural palette.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Great Black-backed Gull's jet-black mantle is the darkest of any gull species, packed with melanin that provides both UV protection and feather durability for this largest and most aggressive of gulls.",
+      "habitat": "Rocky Atlantic coastlines and rugged island colonies inspire bold, commanding interiors with deep charcoal and pure white in strong, confident compositions."
+    }
   },
   {
     "id": 105,
@@ -12086,7 +12502,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Horned Puffin's bold white face, thick orange bill, and dark fleshy horn above the eye are breeding ornaments that grow larger and more colorful with age. The black-and-white body provides marine camouflage while diving.",
+      "habitat": "Remote Alaskan sea cliffs and cold North Pacific waters inspire playful yet bold interiors with bright orange accents against black-and-white maritime themes."
+    }
   },
   {
     "id": 106,
@@ -12174,7 +12594,11 @@ export const birds = [
     "tagline": "A focused, tonal palette inspired by the Black Skimmer's subtle plumage.",
     "moods": [
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Black Skimmer's jet-black upperparts and white underside provide counter-shading camouflage while it flies low over water. Its unique lower mandible, longer than the upper, has a knife-like tip for slicing through surface water to catch fish.",
+      "habitat": "Sandy barrier beaches and calm coastal lagoons at sunset inspire sleek, dramatic interiors with bold black-and-white contrasts and warm sunset accents."
+    }
   },
   {
     "id": 107,
@@ -12273,7 +12697,11 @@ export const birds = [
     "moods": [
       "warm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The American Oystercatcher's bold black-and-white body with a bright red-orange bill and yellow eye ring creates a striking visual signal along shorelines. The heavy bill is specially adapted to pry open oysters and mussels.",
+      "habitat": "Rocky jetties and shell-strewn tidal flats inspire bold, coastal interiors with warm coral, crisp black-and-white, and natural shell textures."
+    }
   },
   {
     "id": 108,
@@ -12380,7 +12808,11 @@ export const birds = [
     "moods": [
       "calm",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Bald Eagle's iconic white head and tail develop only at sexual maturity around age five, making it an age-based status signal. The brown body absorbs warmth, while the white head may reduce glare while hunting fish.",
+      "habitat": "Wild river corridors and towering lakeside conifers inspire commanding, stately interiors with deep brown and pure white in powerful, dignified compositions."
+    }
   },
   {
     "id": 109,
@@ -12471,7 +12903,11 @@ export const birds = [
     "moods": [
       "calm",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Black Oystercatcher's all-dark plumage provides camouflage against the dark volcanic and mussel-encrusted rocks of its Pacific shoreline habitat. Its vivid red-orange bill and yellow eye ring are the sole bright signals for mate attraction.",
+      "habitat": "Dark rocky Pacific intertidal zones and wave-battered shorelines inspire moody, grounded interiors with charcoal tones and bold orange-red accent details."
+    }
   },
   {
     "id": 110,
@@ -12559,7 +12995,11 @@ export const birds = [
     "tagline": "A focused, tonal palette inspired by the American Coot's subtle plumage.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The American Coot's slate-grey plumage and ivory-white bill with a dark ring serve as species signals in the dense marsh habitats where it feeds. Its lobed toes, rather than webbed feet, are an adaptation for both swimming and walking on mud.",
+      "habitat": "Urban park ponds and marshy lake edges translate to understated, versatile interiors with slate grey tones and clean, functional design."
+    }
   },
   {
     "id": 111,
@@ -12663,7 +13103,11 @@ export const birds = [
     "tagline": "Rose and rose tones inspired by the Montezuma Oropendola's natural palette.",
     "moods": [
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Montezuma Oropendola's chestnut body with black head and striking orange-tipped tail evolved alongside its spectacular pendulum courtship display, where males swing upside down from branches while singing buzzy calls.",
+      "habitat": "Tropical lowland forests with towering colony nest-trees inspire warm, exotic interiors with rich chestnut and amber-gold in bold tropical arrangements."
+    }
   },
   {
     "id": 112,
@@ -12761,7 +13205,11 @@ export const birds = [
     "moods": [
       "calm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Double-crested Cormorant's glossy black plumage lacks the waterproofing oils of most aquatic birds, allowing it to dive more efficiently but requiring its iconic wings-spread drying pose. Breeding adults develop orange facial skin and wispy head crests.",
+      "habitat": "Coastal pilings, rocky lake islands, and river snags inspire handsome, functional interiors with deep charcoal tones and warm bronze-orange highlights."
+    }
   },
   {
     "id": 113,
@@ -12851,7 +13299,11 @@ export const birds = [
     "tagline": "Vermilion and azure tones inspired by the Turkey Vulture's natural palette.",
     "moods": [
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Turkey Vulture's black plumage absorbs solar heat for thermoregulation during early morning, while its bare red head prevents bacterial contamination from carrion feeding. Its two-toned underwing pattern is a key soaring identification mark.",
+      "habitat": "Open countryside thermals and rocky cliff roosts inspire bold, unconventional interiors with dramatic dark tones and unexpected warm red accents."
+    }
   },
   {
     "id": 114,
@@ -12974,7 +13426,11 @@ export const birds = [
     "moods": [
       "calm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The European Starling's glossy iridescent plumage creates shifting purple-green sheens through structural coloration in melanin granules. Its white-tipped winter feathers wear away to reveal the glossy breeding plumage beneath, a unique molt strategy.",
+      "habitat": "Urban rooftops, old-world buildings, and starling-murmuration skies inspire sophisticated interiors with iridescent dark tones and shifting metallic accents."
+    }
   },
   {
     "id": 115,
@@ -13063,7 +13519,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Red-winged Blackbird's flame-red epaulets bordered by yellow are controlled by both carotenoid pigments and feather microstructure. Males actively conceal or reveal these patches to modulate aggressive signaling in territorial contexts.",
+      "habitat": "Wetland margins and sun-drenched marsh edges translate to bold, energetic interiors with rich scarlet and warm gold punctuating dark, grounded foundations."
+    }
   },
   {
     "id": 116,
@@ -13186,7 +13646,11 @@ export const birds = [
     "moods": [
       "fresh",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male House Finch's red coloring varies from pale yellow to deep red depending on carotenoid-rich foods available during molt. Females prefer the reddest males, who prove to be better foragers and providers.",
+      "habitat": "Suburban porches, urban window boxes, and dry western scrublands inspire welcoming, approachable interiors with rosy-red accents in casual, homey settings."
+    }
   },
   {
     "id": 117,
@@ -13309,7 +13773,11 @@ export const birds = [
     "moods": [
       "fresh",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The American Flamingo's iconic pink color comes entirely from carotenoid pigments in the algae and brine shrimp it filter-feeds. Zoo flamingos lose color without carotenoid supplements, proving the diet-dependent nature of this famous hue.",
+      "habitat": "Tropical lagoons and salt flats shimmering with heat inspire warm, playful interiors with coral-pink and soft peach in breezy, resort-inspired settings."
+    }
   },
   {
     "id": 118,
@@ -13432,7 +13900,11 @@ export const birds = [
     "moods": [
       "fresh",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Purple Finch's raspberry-wine wash comes from carotenoid pigments, making it look like it was dipped in raspberry juice as Roger Tory Peterson famously described. This color signals dietary competence to choosy females.",
+      "habitat": "Cool coniferous forests and mixed woodlands with berry-laden understory inspire refined interiors with wine-rose and forest-green in elegant, natural compositions."
+    }
   },
   {
     "id": 119,
@@ -13555,7 +14027,11 @@ export const birds = [
     "moods": [
       "fresh",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Roseate Spoonbill's stunning pink plumage intensifies with age from carotenoid pigments in crustaceans, with the oldest birds displaying the deepest rose. Its unique spoon-shaped bill sweeps through shallow water to detect prey by touch.",
+      "habitat": "Mangrove-fringed lagoons and Gulf Coast wetlands inspire warm, romantic interiors with graduated pinks, soft corals, and lush tropical greenery."
+    }
   },
   {
     "id": 120,
@@ -13678,7 +14154,11 @@ export const birds = [
     "moods": [
       "fresh",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Scarlet Ibis achieves its blazing red plumage through concentrated carotenoid pigments from red crabs and shellfish in its mangrove habitat. Young birds start brown-grey and gradually turn scarlet over two years.",
+      "habitat": "Caribbean mangrove swamps and tropical tidal estuaries inspire vibrant, expressive interiors with vivid scarlet as a commanding statement color."
+    }
   },
   {
     "id": 121,
@@ -13801,7 +14281,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Northern Cardinal's vivid red plumage is powered by carotenoid pigments from fruits and seeds, with brighter males defending better territories and fledging more offspring. The crest can be raised to signal alertness or aggression.",
+      "habitat": "Dense suburban hedgerows and woodland thickets inspire bold, confident interiors with rich cardinal-red as a signature accent against warm neutrals."
+    }
   },
   {
     "id": 122,
@@ -13923,7 +14407,11 @@ export const birds = [
     "moods": [
       "bold",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "This alternate view of the Scarlet Tanager captures its intense carotenoid-red body against jet-black wings, a combination that makes it one of the most visually striking birds in the eastern forest canopy.",
+      "habitat": "Deep deciduous forest interiors with towering oaks inspire dramatic interiors with saturated red and black in bold, gallery-worthy compositions."
+    }
   },
   {
     "id": 123,
@@ -14019,7 +14507,11 @@ export const birds = [
     "tagline": "Green and red tones inspired by the Crimson-collared Tanager's natural palette.",
     "moods": [
       "sophisticated"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Crimson-collared Tanager's deep crimson hood and rump against velvety black plumage creates a stunning contrast in the dim understory of Central American forests, where bright colors must be intense to be visible in low light.",
+      "habitat": "Tropical montane cloud forests with misty canopies inspire luxurious interiors with deep crimson velvet and rich black in sophisticated, moody compositions."
+    }
   },
   {
     "id": 124,
@@ -14131,7 +14623,11 @@ export const birds = [
     "tagline": "Azure and red tones inspired by the Red-headed Woodpecker's natural palette.",
     "moods": [
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Red-headed Woodpecker's entirely crimson head, bold black-and-white body, and white wing patches make it one of the most visually graphic birds in North America. Both sexes share this striking pattern, unusual among woodpeckers.",
+      "habitat": "Open oak savannas and dead-snag-dotted forests inspire bold, graphic interiors with saturated red, crisp white, and deep black in strong geometric arrangements."
+    }
   },
   {
     "id": 125,
@@ -14254,7 +14750,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Red-breasted Sapsucker's entirely red head and breast are unique among sapsuckers, produced by carotenoid pigments. It drills precise rows of sap wells in trees, creating a food source that also attracts insects and other birds.",
+      "habitat": "Pacific coastal forests with moss-draped conifers and birch groves inspire artistic interiors with warm red focal points against cool forest-green backdrops."
+    }
   },
   {
     "id": 126,
@@ -14367,7 +14867,11 @@ export const birds = [
     "tagline": "A focused, tonal palette inspired by the Painted Redstart's subtle plumage.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Painted Redstart's jet-black plumage with vivid red belly and white wing patches creates a dramatic fanning display used to flush insects from bark crevices. Uniquely, both sexes share this identical bright plumage.",
+      "habitat": "Pine-oak canyons of the Arizona sky islands inspire dramatic, nature-connected interiors with deep black, bright red, and crisp white in mountain-modern style."
+    }
   },
   {
     "id": 127,
@@ -14489,7 +14993,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Rose-breasted Grosbeak's triangular red breast patch against tuxedo-like black-and-white plumage makes it unmistakable. The red patch is carotenoid-based and its size honestly signals male quality to prospective mates.",
+      "habitat": "Mixed deciduous forests with flowering understory inspire classic, romantic interiors with bold rose-red accents in black-and-white formal settings."
+    }
   },
   {
     "id": 128,
@@ -14594,7 +15102,11 @@ export const birds = [
     "tagline": "Azure and rose tones inspired by the American Crow (Male)'s natural palette.",
     "moods": [
       "sophisticated"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The American Crow's all-black plumage displays iridescent purple and blue-green sheens through structural coloration in its melanin-rich feathers. This glossy black provides UV protection and projects social dominance in its complex social groups.",
+      "habitat": "Diverse landscapes from urban centers to agricultural fields inspire sophisticated, monochromatic interiors with textured blacks and subtle metallic sheens."
+    }
   },
   {
     "id": 129,
@@ -14683,7 +15195,11 @@ export const birds = [
     "tagline": "A focused, tonal palette inspired by the Nuttall's Woodpecker (Male)'s subtle plumage.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "Nuttall's Woodpecker's black-and-white barred pattern provides camouflage against the dappled bark of California's oak woodlands. The male's red nape patch serves as a species-specific signal in areas where similar woodpeckers overlap.",
+      "habitat": "California live-oak woodlands and coastal chaparral inspire clean, patterned interiors with graphic black-and-white and subtle warm red accents."
+    }
   },
   {
     "id": 130,
@@ -14781,7 +15297,11 @@ export const birds = [
     "moods": [
       "calm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The female American Crow is virtually identical to the male in plumage — a rarity that reflects the species' egalitarian social structure where both sexes share equally in territory defense and offspring rearing.",
+      "habitat": "Adaptable habitats from old-growth forests to city parks inspire versatile, grounded interiors with deep charcoal tones and practical, intelligent design."
+    }
   },
   {
     "id": 131,
@@ -14895,7 +15415,11 @@ export const birds = [
     "moods": [
       "calm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Pileated Woodpecker's flaming red crest and bold black-and-white body make it the largest woodpecker in most of North America. The crest signals dominance, with larger crests corresponding to more successful territory holders.",
+      "habitat": "Mature forest interiors with massive dead trees and deep shade inspire grand, dramatic interiors with bold red accents against strong black-and-white contrasts."
+    }
   },
   {
     "id": 132,
@@ -14994,7 +15518,11 @@ export const birds = [
     "moods": [
       "calm",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Purple Gallinule's stunning indigo-purple body, green back, and sky-blue frontal shield combine structural and pigment-based coloration, creating an iridescent jewel-tone effect as it walks across lily pads on impossibly long toes.",
+      "habitat": "Lush tropical marshes with floating lilies and dense emergent vegetation inspire rich, jewel-toned interiors with deep purple and emerald-green accents."
+    }
   },
   {
     "id": 133,
@@ -15107,7 +15635,11 @@ export const birds = [
     "tagline": "Azure and rose tones inspired by the Laughing Gull's natural palette.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Laughing Gull's black hood during breeding season serves as a visual signal during courtship displays, while its grey-and-white body provides standard gull camouflage. The hood is lost in winter, replaced by dusky smudging.",
+      "habitat": "Sandy Atlantic beaches and bustling coastal boardwalks inspire relaxed, breezy interiors with soft grey and white in easy-going coastal compositions."
+    }
   },
   {
     "id": 134,
@@ -15228,7 +15760,11 @@ export const birds = [
     "tagline": "A focused, tonal palette inspired by the Red-faced Warbler (Male)'s subtle plumage.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Red-faced Warbler's striking red-and-black face pattern against grey body plumage makes it one of the most distinctive western warblers. This unique coloring evolved in the high-elevation pine-oak forests of the Southwest.",
+      "habitat": "Cool mountain pine-oak forests with fern-covered floors inspire fresh, upland interiors with warm coral-red accents against cool grey and green tones."
+    }
   },
   {
     "id": 135,
@@ -15317,7 +15853,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Black-necked Stilt's stark black-and-white plumage and impossibly long pink legs make it one of the most visually striking shorebirds. Its counter-shading helps conceal it from fish prey when viewed from below against bright sky.",
+      "habitat": "Shallow saline ponds and open mudflat expanses inspire bold, minimalist interiors with high-contrast black-and-white and warm pink accent details."
+    }
   },
   {
     "id": 136,
@@ -15440,7 +15980,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Pink Robin's vivid rose-pink breast against sooty-dark upperparts creates a startling contrast in the dim temperate rainforest understory of southeastern Australia, signaling fitness to females during breeding season.",
+      "habitat": "Cool temperate rainforests of Tasmania and southeastern Australia inspire intimate, moody interiors with soft pink focal points against deep charcoal tones."
+    }
   },
   {
     "id": 137,
@@ -15537,7 +16081,11 @@ export const birds = [
     "tagline": "Quiet, tonal neutrals drawn from the Common Raven. Understated elegance.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Common Raven's all-black plumage is among the most light-absorbent in the bird world, with structural iridescence creating deep purple-blue sheens. Its shaggy throat hackles fluff during vocalizations and dominance displays.",
+      "habitat": "Rugged mountain crags, ancient forests, and remote wilderness inspire bold, dramatic interiors with inky black tones and raw, natural materials."
+    }
   },
   {
     "id": 138,
@@ -15660,7 +16208,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Scarlet Macaw's brilliant red, yellow, and blue plumage combines multiple pigment types — psittacofulvins for red and yellow, and structural coloration for blue — creating one of nature's most spectacular color displays for mate recognition in dense canopy.",
+      "habitat": "Tropical lowland rainforests and canopy emergent trees inspire maximalist interiors with vivid primary colors in bold, expressive, tropical-eclectic settings."
+    }
   },
   {
     "id": 139,
@@ -15782,7 +16334,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Barn Swallow's deep iridescent blue-black upperparts and rufous underparts create strong contrast for aerial visibility, with longer tail streamers in males signaling genetic fitness. Females select males with the most symmetrical, longest tails.",
+      "habitat": "Open farmlands, barn rafters, and pastoral countryside inspire classic interiors with warm terracotta and deep navy-blue in timeless, comfortable compositions."
+    }
   },
   {
     "id": 140,
@@ -15905,7 +16461,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Buff-breasted Paradise-Kingfisher's electric blue upperparts, warm buff underside, and spectacular elongated white tail streamers evolved through intense sexual selection in the tropical forests of New Guinea and northern Australia.",
+      "habitat": "Tropical monsoon forests and lush riverine corridors of Australasia inspire vibrant interiors with electric blue and warm buff in exotic, luminous compositions."
+    }
   },
   {
     "id": 141,
@@ -16017,7 +16577,11 @@ export const birds = [
     "tagline": "A focused, tonal palette inspired by the Little Blue Heron — Breeding's subtle plumage.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Little Blue Heron's all-dark slate-blue breeding plumage develops from the white juvenile plumage, an unusual transition where immature birds gain camouflage benefits by resembling the more aggressive Snowy Egret in mixed flocks.",
+      "habitat": "Quiet freshwater ponds and mangrove-fringed waterways inspire calm, contemplative interiors with deep blue-grey tones and soft aquatic light."
+    }
   },
   {
     "id": 142,
@@ -16123,7 +16687,11 @@ export const birds = [
     "tagline": "Azure and vermilion tones inspired by the Belted Kingfisher (Female)'s natural palette.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "Unusually, the female Belted Kingfisher is more colorful than the male, wearing an additional rust-colored belly band alongside the blue-grey breast band. This reversed sexual dimorphism remains unexplained by current ornithological research.",
+      "habitat": "Clear streams with eroded clay banks and overhanging branches inspire fresh, aquatic interiors with blue-grey and warm rust in nature-connected settings."
+    }
   },
   {
     "id": 143,
@@ -16244,7 +16812,11 @@ export const birds = [
     "moods": [
       "calm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Blue Rock-Thrush's entirely blue-grey plumage with darker wings is produced by structural coloration that appears more vivid in the harsh mountain sunlight of its rocky habitat across southern Eurasia.",
+      "habitat": "Mediterranean cliff faces, castle ruins, and rocky mountain outcrops inspire serene, stone-cool interiors with deep blue-grey and warm limestone tones."
+    }
   },
   {
     "id": 144,
@@ -16333,7 +16905,11 @@ export const birds = [
     "tagline": "Quiet, tonal neutrals drawn from the Common Blackbird (Male). Understated elegance.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Common Blackbird's jet-black plumage with a bright golden-orange bill and eye ring creates the iconic European garden bird. The bill color comes from carotenoid pigments and signals male health and territory quality.",
+      "habitat": "English gardens, hedgerow lanes, and leafy European parks inspire classic, refined interiors with deep black and warm golden accents in timeless settings."
+    }
   },
   {
     "id": 145,
@@ -16422,7 +16998,11 @@ export const birds = [
     "tagline": "Quiet, tonal neutrals drawn from the Southern Cassowary (Female). Understated elegance.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Southern Cassowary's glossy black plumage with vivid blue-and-red bare neck skin and prominent casque is among the most dramatic bird appearances. The bright colors signal dominance, with females being larger and more vibrantly colored.",
+      "habitat": "Dense tropical rainforest floors of Australia and New Guinea inspire dramatic, primeval interiors with deep blacks and unexpected vivid blue accent walls."
+    }
   },
   {
     "id": 146,
@@ -16544,7 +17124,11 @@ export const birds = [
     "tagline": "Azure and azure tones inspired by the Phainopepla (Male)'s natural palette.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Phainopepla's silky jet-black plumage with hidden white wing patches that flash in flight evolved in the desert Southwest, where it specializes in eating mistletoe berries and defending berry-rich territories.",
+      "habitat": "Desert washes with mesquite and mistletoe-laden trees inspire sleek, minimalist interiors with glossy black surfaces and warm desert-neutral backdrops."
+    }
   },
   {
     "id": 147,
@@ -16665,7 +17249,11 @@ export const birds = [
     "tagline": "Blue and azure tones inspired by the Black-billed Magpie's natural palette.",
     "moods": [
       "sophisticated"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Black-billed Magpie's iridescent blue-green tail and wings against bold black-and-white body plumage create structural colors that shift with viewing angle. Its long graduated tail aids in agile maneuvering through dense vegetation.",
+      "habitat": "Open ranch country with willowy creek bottoms and scattered aspens inspire sophisticated interiors with iridescent blue-green and black-and-white contrasts."
+    }
   },
   {
     "id": 148,
@@ -16753,7 +17341,11 @@ export const birds = [
     "tagline": "Blue and azure tones inspired by the Purple Martin (Male)'s natural palette.",
     "moods": [
       "sophisticated"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Purple Martin's entirely dark iridescent purple-blue plumage is created by structural coloration that shifts from deep purple to blue-black depending on light angle, helping attract mates to its colonial nest sites.",
+      "habitat": "Open agricultural fields and suburban settings with martin houses inspire refined interiors with deep iridescent purple-blue and clean white in elegant compositions."
+    }
   },
   {
     "id": 149,
@@ -16873,7 +17465,11 @@ export const birds = [
     "tagline": "Blue and violet tones inspired by the Black Paradise-Kingfisher (Male)'s natural palette.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Black Paradise-Kingfisher's glossy black plumage with a blue rump and elongated white tail streamers evolved through runaway sexual selection in its island habitat of New Guinea, where few predators constrain ornamentation.",
+      "habitat": "Tropical island forests with lush undergrowth and filtered canopy light inspire dramatic, exotic interiors with rich black and electric blue accents."
+    }
   },
   {
     "id": 150,
@@ -16994,7 +17590,11 @@ export const birds = [
     "moods": [
       "calm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Bobolink's unique reverse-tuxedo breeding plumage — black below and white above — is unlike any other North American songbird. This pattern may provide camouflage when viewed from below against bright sky during display flights.",
+      "habitat": "Tallgrass prairies and rolling hayfields in summer inspire bright, open interiors with bold black-and-white contrasts and warm golden straw accents."
+    }
   },
   {
     "id": 151,
@@ -17117,7 +17717,11 @@ export const birds = [
     "moods": [
       "fresh",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Violet-backed Starling's stunning iridescent violet-purple upperparts and pure white underside result from multilayer structural coloration in feather barbules that create some of the most vivid purple hues in the avian world.",
+      "habitat": "African woodland savannas and fruiting fig trees inspire bold, contemporary interiors with vivid purple accents against clean white and natural wood tones."
+    }
   },
   {
     "id": 152,
@@ -17238,7 +17842,11 @@ export const birds = [
     "tagline": "Azure and red tones inspired by the Superb Starling (Female)'s natural palette.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Superb Starling's iridescent blue-green upperparts, orange breast, and white breast band create a tri-colored display maintained by both sexes in this cooperative-breeding East African species. The white eye ring adds definition to its expressive face.",
+      "habitat": "East African acacia savannas and lodge gardens inspire warm, layered interiors with teal, burnt orange, and warm neutrals in globally-inspired compositions."
+    }
   },
   {
     "id": 153,
@@ -17352,7 +17960,11 @@ export const birds = [
     "moods": [
       "bold",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The California Scrub Jay's blue crown, wings, and tail with grey-brown back result from structural coloration — no blue pigment exists. Its bold white supercilium and blue necklace help with individual recognition in its complex social groups.",
+      "habitat": "Coastal oak woodlands and chaparral-covered hillsides of California inspire relaxed, layered interiors with cerulean blue and warm sandy brown in casual elegance."
+    }
   },
   {
     "id": 154,
@@ -17475,7 +18087,11 @@ export const birds = [
     "moods": [
       "warm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The female Steller's Jay shares the male's striking dark blue body and black crested head, though with slightly less vivid coloring. Structural coloration in feather nanostructures produces the blue, which disappears if feathers are crushed.",
+      "habitat": "Mountain conifer forests and misty redwood groves inspire deep, atmospheric interiors with rich indigo-blue and warm dark brown in forest-lodge style."
+    }
   },
   {
     "id": 155,
@@ -17597,7 +18213,11 @@ export const birds = [
     "tagline": "Vermilion and azure tones inspired by the Azure-winged Magpie's natural palette.",
     "moods": [
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Azure-winged Magpie's soft azure-blue wings and tail against a warm grey body present one of ornithology's great biogeographic puzzles — populations exist only in East Asia and Iberia, separated by thousands of miles.",
+      "habitat": "Mediterranean cork-oak forests and East Asian temple gardens inspire balanced interiors with soft blue and warm grey in peaceful, harmonious compositions."
+    }
   },
   {
     "id": 156,
@@ -17719,7 +18339,11 @@ export const birds = [
     "tagline": "Azure and orange tones inspired by the Florida Scrub Jay's natural palette.",
     "moods": [
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The endangered Florida Scrub Jay's blue head and wings with grey-brown back evolved in isolation on Florida's ancient sand scrub, one of the oldest ecosystems in North America. It is the only bird species endemic to Florida.",
+      "habitat": "Rare Florida sand scrub with low-growing oaks and open sandy patches inspire bright, airy interiors with clear blue and warm sandy tones in relaxed coastal settings."
+    }
   },
   {
     "id": 157,
@@ -17842,7 +18466,11 @@ export const birds = [
     "moods": [
       "bold",
       "eclectic"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Blue Jay's brilliant blue plumage is entirely structural — melanin-based feather nanostructures scatter blue wavelengths while absorbing others. If you grind a Blue Jay feather, it turns grey-brown. Its bold crest communicates emotional state.",
+      "habitat": "Eastern deciduous forests and backyard bird feeders inspire vibrant, energetic interiors with cobalt blue and white in bold, confident compositions."
+    }
   },
   {
     "id": 158,
@@ -17965,7 +18593,11 @@ export const birds = [
     "moods": [
       "bold",
       "eclectic"
-    ]
+    ],
+    "nature": {
+      "colorStory": "Steller's Jay's deep blue body and dramatic black crest combine structural blue coloration with melanin-rich black feathering. Regional variations show more or less blue on the head, creating a gradient of forms across its western range.",
+      "habitat": "Towering mountain conifer forests and campground clearings inspire dramatic interiors with deep blue and charcoal-black in bold, mountainous compositions."
+    }
   },
   {
     "id": 159,
@@ -18088,7 +18720,11 @@ export const birds = [
     "moods": [
       "warm",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Blue Grosbeak's deep cerulean plumage with rusty wingbars results from structural coloration that appears more vivid in direct sunlight. Males in better condition produce more intensely blue feathers, signaling fitness to females.",
+      "habitat": "Brushy field edges and overgrown hedgerows inspire warm, grounded interiors with rich blue walls and rusty-brown accent textiles."
+    }
   },
   {
     "id": 160,
@@ -18211,7 +18847,11 @@ export const birds = [
     "moods": [
       "fresh",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Western Bluebird's vivid blue upperparts and rust-orange breast combine structural blue coloration with pheomelanin warmth, creating a palette that signals territory quality in the open woodlands and meadows where it nests.",
+      "habitat": "Oak-studded meadows and mountain pastures with scattered nest boxes inspire cheerful, nature-connected interiors with sky-blue and warm rust tones."
+    }
   },
   {
     "id": 161,
@@ -18334,7 +18974,11 @@ export const birds = [
     "moods": [
       "bold",
       "eclectic"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Satin Bowerbird's glossy violet-blue-black plumage is complemented by its obsessive collection of blue objects for its bower. This dual visual strategy — body color and environmental decoration — represents a unique intersection of natural and artistic selection.",
+      "habitat": "Wet eucalyptus forests of eastern Australia inspire artistic, curated interiors with deep violet-blue and collected objects displayed as intentional design elements."
+    }
   },
   {
     "id": 162,
@@ -18457,7 +19101,11 @@ export const birds = [
     "moods": [
       "bold",
       "eclectic"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Indigo Bunting's electric blue plumage contains no blue pigment — it is created entirely by light scattering through melanin granules in feather nanostructures. In shade, the bird appears almost black.",
+      "habitat": "Brushy forest edges and overgrown power-line cuts inspire vibrant, energetic interiors with saturated indigo-blue and warm green in dynamic, eclectic compositions."
+    }
   },
   {
     "id": 163,
@@ -18580,7 +19228,11 @@ export const birds = [
     "moods": [
       "fresh",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Mountain Bluebird's pure sky-blue plumage — the bluest of all bluebird species — is entirely structural and appears most vivid against the snow-covered mountain meadows where it hovers while hunting insects.",
+      "habitat": "High alpine meadows and vast mountain parklands inspire bright, open interiors with pure cerulean-blue and snow-white in uplifting, luminous spaces."
+    }
   },
   {
     "id": 164,
@@ -18703,7 +19355,11 @@ export const birds = [
     "moods": [
       "fresh",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Blue-gray Tanager's soft blue-grey plumage with brighter blue wing edges results from structural coloration common in the tanager family. Its subtle coloring belies its bold personality as one of the most adaptable tropical birds.",
+      "habitat": "Lush tropical gardens and open woodland edges of Central and South America inspire fresh, contemporary interiors with soft blue-grey and warm tropical accents."
+    }
   },
   {
     "id": 165,
@@ -18826,7 +19482,11 @@ export const birds = [
     "moods": [
       "bold",
       "eclectic"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Green Honeycreeper's vivid turquoise-green plumage with black cap combines structural and carotenoid-based coloration, creating an electric tropical jewel. Females are leaf-green, providing nesting camouflage.",
+      "habitat": "Humid tropical forest canopies and flowering trees inspire bold, jewel-toned interiors with electric teal-green and deep black in dramatic tropical compositions."
+    }
   },
   {
     "id": 166,
@@ -18949,7 +19609,11 @@ export const birds = [
     "moods": [
       "bold",
       "eclectic"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Golden-hooded Tanager's iridescent gold hood, turquoise shoulders, and black mask combine multiple coloration mechanisms in a dazzling display optimized for visibility in the dappled tropical forest light.",
+      "habitat": "Edge habitats and second-growth tropical forests inspire vibrant, eclectic interiors with gold, turquoise, and black in playful, globally-inspired compositions."
+    }
   },
   {
     "id": 167,
@@ -19072,7 +19736,11 @@ export const birds = [
     "moods": [
       "fresh",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Lazuli Bunting's sky-blue head and back, warm orange breast, and white belly combine structural and pigment-based colors in a palette influenced by hybridization with Indigo Buntings where ranges overlap.",
+      "habitat": "Brushy mountain hillsides and streamside thickets of the West inspire fresh, layered interiors with sky-blue, warm apricot, and crisp white in lively compositions."
+    }
   },
   {
     "id": 168,
@@ -19194,7 +19862,11 @@ export const birds = [
     "moods": [
       "bold",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Paradise Tanager's multicolored plumage — apple-green head, sky-blue underparts, black back, and scarlet rump — combines nearly every avian coloration mechanism in one spectacular package for recognition in species-rich tropical flocks.",
+      "habitat": "Amazonian terra-firme rainforest canopies inspire eclectic, maximalist interiors with vivid multi-hued accents in creative, art-filled compositions."
+    }
   },
   {
     "id": 169,
@@ -19316,7 +19988,11 @@ export const birds = [
     "tagline": "Orange and blue tones inspired by the Lilac-breasted Roller's natural palette.",
     "moods": [
       "fresh"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Lilac-breasted Roller's extraordinary palette of lilac, turquoise, azure, and green across its plumage results from structural coloration in specialized feather nanostructures, making it one of Africa's most photographed birds.",
+      "habitat": "Open East African savannas with scattered thorn trees and vast skies inspire expansive interiors with lilac, turquoise, and warm earth tones in airy compositions."
+    }
   },
   {
     "id": 170,
@@ -19439,7 +20115,11 @@ export const birds = [
     "moods": [
       "bold",
       "eclectic"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The European Bee-eater's rainbow palette of turquoise, gold, chestnut, and green is one of Europe's most colorful bird displays. Both sexes share this vivid coloring, which helps maintain pair bonds during their long-distance migration from Africa.",
+      "habitat": "Sandy riverbank nesting colonies and Mediterranean open country inspire vibrant, warm interiors with turquoise, gold, and warm chestnut in joyful compositions."
+    }
   },
   {
     "id": 171,
@@ -19560,7 +20240,11 @@ export const birds = [
     "tagline": "Vermilion and azure tones inspired by the Common Kingfisher (Female)'s natural palette.",
     "moods": [
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Common Kingfisher's electric blue-orange combination serves dual purposes: the blue dorsal surface provides camouflage from above against water, while the orange breast remains hidden as the bird perches over streams.",
+      "habitat": "Clear streams, willow-shaded riverbanks, and quiet millponds inspire serene interiors with vivid kingfisher-blue and warm copper-orange in balanced, nature-intimate spaces."
+    }
   },
   {
     "id": 172,
@@ -19680,7 +20364,11 @@ export const birds = [
     "tagline": "Azure and vermilion tones inspired by the Dollarbird's natural palette.",
     "moods": [
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Dollarbird's dark teal-blue plumage with pale blue coin-shaped wing spots visible in flight gives it its common name. Its red bill and eye ring come from carotenoid pigments, contrasting boldly with the structural blue body.",
+      "habitat": "Open tropical forests and woodland clearings of Australasia inspire balanced, sophisticated interiors with deep teal and warm red accents in contemporary style."
+    }
   },
   {
     "id": 173,
@@ -19803,7 +20491,11 @@ export const birds = [
     "moods": [
       "bold",
       "eclectic"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The South Papuan Pitta's vivid combination of black, crimson, green, and blue across its compact body represents one of the most color-packed patterns relative to body size in the bird world, evolved for recognition on the dark forest floor.",
+      "habitat": "Dense tropical forest floors of New Guinea with leaf litter and mossy logs inspire bold, eclectic interiors with rich jewel tones in intimate, layered compositions."
+    }
   },
   {
     "id": 174,
@@ -19923,7 +20615,11 @@ export const birds = [
     "tagline": "Azure and blue tones inspired by the Agami Heron's natural palette.",
     "moods": [
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Agami Heron's extraordinary breeding plumage of deep chestnut, silvery-blue grey, and powder-blue facial skin creates one of the most stunning heron displays. Its secretive nature in forested streams makes sightings prized by birders.",
+      "habitat": "Secluded tropical forest streams and shaded riverbanks inspire sophisticated, layered interiors with deep blue-grey, chestnut, and subtle metallic accents."
+    }
   },
   {
     "id": 175,
@@ -20044,7 +20740,11 @@ export const birds = [
     "tagline": "Orange and azure tones inspired by the European Starling's natural palette.",
     "moods": [
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The European Starling's plumage shifts dramatically by season — glossy iridescent green-purple in breeding season transforms to heavily spotted buff-and-white in winter as pale feather tips accumulate then wear away.",
+      "habitat": "Historic European streetscapes and garden hedgerows inspire versatile interiors with shifting iridescent dark tones and warm buff highlights."
+    }
   },
   {
     "id": 176,
@@ -20165,7 +20865,11 @@ export const birds = [
     "tagline": "Amber and azure tones inspired by the Green Heron's natural palette.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Green Heron's deep green-black cap, chestnut neck, and blue-green back create compact, jewel-toned camouflage perfect for lurking at wooded pond edges. It is one of few birds known to use bait — dropping objects to lure fish.",
+      "habitat": "Wooded pond edges and overgrown stream banks inspire intimate, thoughtful interiors with deep green, warm chestnut, and quiet, contemplative moods."
+    }
   },
   {
     "id": 177,
@@ -20288,7 +20992,11 @@ export const birds = [
     "moods": [
       "bold",
       "eclectic"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Gartered Trogon's iridescent green upperparts and vivid yellow belly represent the classic trogon color scheme, where structural green-gold above conceals the bird against the canopy while bright yellow below signals to mates below.",
+      "habitat": "Tropical montane forests and cloud-forest edges inspire luxurious interiors with emerald green and bright golden-yellow in lush, dramatic compositions."
+    }
   },
   {
     "id": 178,
@@ -20409,7 +21117,11 @@ export const birds = [
     "tagline": "Teal and orange tones inspired by the Pigeon Guillemot's natural palette.",
     "moods": [
       "sophisticated"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Pigeon Guillemot's breeding plumage of sooty black with bold white wing patches and vivid red-orange feet creates a striking display on rocky sea cliffs. The bright feet intensify during courtship, signaling hormonal health.",
+      "habitat": "Rocky Pacific sea cliffs and sheltered coastal coves inspire sophisticated interiors with deep charcoal and bold red-orange accents in maritime-modern settings."
+    }
   },
   {
     "id": 179,
@@ -20532,7 +21244,11 @@ export const birds = [
     "moods": [
       "bold",
       "eclectic"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Painted Bunting's extraordinary plumage — blue head, red underparts, green back — combines nearly every major avian pigment and structural mechanism in one small body, earning it the title of North America's most colorful songbird.",
+      "habitat": "Dense brushy tangles and coastal scrub of the Southeast inspire maximalist, eclectic interiors with vivid blue, red, and green in festive, joyful compositions."
+    }
   },
   {
     "id": 180,
@@ -20655,7 +21371,11 @@ export const birds = [
     "moods": [
       "bold",
       "eclectic"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Yellow-billed Magpie, endemic only to California's Central Valley, evolved its yellow bill and eye patch as distinct signals from the similar Black-billed Magpie. Its iridescent blue-green tail shimmers with structural coloration.",
+      "habitat": "California oak savannas and ranch-country riparian groves inspire warm, distinctly Californian interiors with gold, blue-green, and pastoral warmth."
+    }
   },
   {
     "id": 181,
@@ -20777,7 +21497,11 @@ export const birds = [
     "tagline": "Azure and blue tones inspired by the Varied Green Sunbird (Male)'s natural palette.",
     "moods": [
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Varied Green Sunbird's iridescent green plumage with yellow underparts results from specialized feather nanostructures that produce metallic sheens for courtship displays among flowering trees in its African range.",
+      "habitat": "African gardens and woodland edges with flowering plants inspire lively interiors with metallic green and sunny yellow in bright, nature-inspired settings."
+    }
   },
   {
     "id": 182,
@@ -20898,7 +21622,11 @@ export const birds = [
     "tagline": "Chartreuse and green tones inspired by the Orange Dove (Female)'s natural palette.",
     "moods": [
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The female Orange Dove's olive-green plumage provides camouflage in Fiji's dense forest canopy, a stark contrast to the male's vivid orange. This strong sexual dimorphism reflects intense male competition for mates on these islands.",
+      "habitat": "Dense Fijian forest interiors with filtered tropical light inspire balanced interiors with warm olive-green and subtle golden undertones in peaceful, organic compositions."
+    }
   },
   {
     "id": 183,
@@ -21021,7 +21749,11 @@ export const birds = [
     "moods": [
       "bold",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The female Anna's Hummingbird's grey-green plumage with subtle iridescent throat spots provides nesting camouflage while retaining enough iridescence for species recognition. Her muted palette lets her blend into lichen-covered nest sites.",
+      "habitat": "Coastal California gardens and flowering canyon slopes inspire polished, nature-connected interiors with soft sage-green and subtle metallic accents."
+    }
   },
   {
     "id": 184,
@@ -21143,7 +21875,11 @@ export const birds = [
     "tagline": "Teal and chartreuse tones inspired by the Lesson's Motmot's natural palette.",
     "moods": [
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "Lesson's Motmot's turquoise-green plumage with a rufous head and distinctive racquet-tipped tail feathers — created by deliberate self-plucking — serve as sexual signals in the dark tropical forest understory.",
+      "habitat": "Tropical montane forest ravines and shaded coffee plantations inspire rich, layered interiors with teal-green and warm cinnamon in lush, atmospheric compositions."
+    }
   },
   {
     "id": 185,
@@ -21263,7 +21999,11 @@ export const birds = [
     "tagline": "Vivid azures and yellows straight from the Rainbow Bee-eater (Female)'s brilliant plumage.",
     "moods": [
       "sophisticated"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Rainbow Bee-eater's green, blue, chestnut, and gold plumage incorporates both pigment-based and structural coloration across different feather tracts, creating one of Australia's most chromatic bird species.",
+      "habitat": "Open Australian bushland and sandy riverbanks inspire warm, colorful interiors with teal, golden-amber, and warm chestnut in relaxed, nature-connected settings."
+    }
   },
   {
     "id": 186,
@@ -21386,7 +22126,11 @@ export const birds = [
     "moods": [
       "bold",
       "eclectic"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Gouldian Finch's tri-colored head (red, black, or orange morphs), purple breast, and green-gold body make it one of the most vibrantly colored birds on Earth. These colors result from a rare combination of carotenoids, melanins, and structural coloration.",
+      "habitat": "Australian tropical savanna woodlands with native grasses inspire bold, maximalist interiors with vivid primary colors in playful, art-inspired compositions."
+    }
   },
   {
     "id": 187,
@@ -21509,7 +22253,11 @@ export const birds = [
     "moods": [
       "bold",
       "eclectic"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Rainbow Lorikeet's spectacular multicolored plumage — blue head, orange breast, green wings, red beak — uses nearly every coloration mechanism available to birds, from carotenoids to melanins to structural feather nanostructures.",
+      "habitat": "Flowering eucalyptus forests and tropical coastal gardens of Australia inspire exuberant interiors with vibrant rainbow accents in bold, tropical-eclectic settings."
+    }
   },
   {
     "id": 188,
@@ -21632,7 +22380,11 @@ export const birds = [
     "moods": [
       "bold",
       "eclectic"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Green Jay's vivid green body with blue head, black throat, and yellow outer tail feathers combine structural and pigment-based coloration in one of the Western Hemisphere's most colorful corvids.",
+      "habitat": "Subtropical brushlands and mesquite-draped river thickets of South Texas inspire lively interiors with tropical green, cobalt blue, and warm yellow in eclectic compositions."
+    }
   },
   {
     "id": 189,
@@ -21754,7 +22506,11 @@ export const birds = [
     "moods": [
       "bold",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The female Painted Bunting's uniform yellow-green plumage provides remarkable camouflage in the dense brush where she nests, a dramatic contrast to the male's rainbow colors that illustrates the extremes of sexual dimorphism in birds.",
+      "habitat": "Dense coastal shrub thickets and overgrown field edges inspire fresh, garden-inspired interiors with soft chartreuse-green and warm golden undertones."
+    }
   },
   {
     "id": 190,
@@ -21877,7 +22633,11 @@ export const birds = [
     "moods": [
       "bold",
       "eclectic"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Grass-green Tanager's intense green plumage matches the mossy cloud-forest canopy of the Andes where it forages in mixed-species flocks, with coloring derived from a combination of carotenoid pigments and structural feather elements.",
+      "habitat": "Misty Andean cloud forests with mossy epiphyte-laden branches inspire lush interiors with verdant green walls and earthy textures in immersive, botanical compositions."
+    }
   },
   {
     "id": 191,
@@ -22000,7 +22760,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Grass-green Tanager's brilliant emerald plumage blends seamlessly with its cloud-forest canopy habitat, while subtle yellow-green edging on flight feathers provides just enough contrast for species recognition in mixed flocks.",
+      "habitat": "Andean cloud forests dripping with moss and bromeliads translate to richly textured interiors with deep green and warm amber accents in layered, organic compositions."
+    }
   },
   {
     "id": 192,
@@ -22122,7 +22886,11 @@ export const birds = [
     "tagline": "Gold and chartreuse tones inspired by the Red-masked Parakeet's natural palette.",
     "moods": [
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Red-masked Parakeet's bright green body with vivid red face mask and wing patches combine psittacofulvin pigments unique to parrots, which produce colors through a chemical pathway found nowhere else in the animal kingdom.",
+      "habitat": "Dry tropical forests and established urban colonies inspire bold, spirited interiors with vivid green and warm red in playful, energetic compositions."
+    }
   },
   {
     "id": 193,
@@ -22244,7 +23012,11 @@ export const birds = [
     "tagline": "Orange and red tones inspired by the Red-headed Barbet (Male)'s natural palette.",
     "moods": [
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Red-headed Barbet's crimson head, green body, and yellow breast create a traffic-light palette powered by carotenoid pigments and structural coloration, visible across the cloud-forest clearings where it perches conspicuously.",
+      "habitat": "Humid tropical montane forest clearings and fruiting trees inspire vibrant, fruit-toned interiors with red, green, and golden-yellow in bold, botanical arrangements."
+    }
   },
   {
     "id": 194,
@@ -22367,7 +23139,11 @@ export const birds = [
     "moods": [
       "bold",
       "eclectic"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Painted Bunting's incomparable palette — indigo-blue head, red underparts, chartreuse-green back — is created by a unique combination of structural coloration (blue), carotenoids (red), and mixed pigments (green), making it the most colorful North American songbird.",
+      "habitat": "Brushy thickets and weedy field edges of the Deep South inspire jubilant, color-saturated interiors with vivid blue, red, and green in festive, maximalist arrangements."
+    }
   },
   {
     "id": 195,
@@ -22490,7 +23266,11 @@ export const birds = [
     "moods": [
       "bold",
       "eclectic"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Broad-billed Hummingbird's metallic green body with sapphire-blue throat and bright coral-red bill create a dazzling display through structural coloration that shifts with every angle of light.",
+      "habitat": "Desert canyon gardens and flowering agave stands of the borderlands inspire vibrant, jewel-toned interiors with electric green and sapphire-blue in luminous, dynamic compositions."
+    }
   },
   {
     "id": 196,
@@ -22613,7 +23393,11 @@ export const birds = [
     "moods": [
       "bold",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "Lewis's Woodpecker's uniquely un-woodpecker-like plumage — dark iridescent green back, grey collar, and pink-red belly — reflects its unusual flycatching behavior, catching insects on the wing rather than drilling into bark.",
+      "habitat": "Open ponderosa pine forests and burned-over woodlands inspire unconventional interiors with deep rose-pink and forest green in thoughtful, distinctive compositions."
+    }
   },
   {
     "id": 197,
@@ -22735,7 +23519,11 @@ export const birds = [
     "tagline": "Red and teal tones inspired by the Northern Shoveler (Male)'s natural palette.",
     "moods": [
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Northern Shoveler's iridescent green head, white breast, and chestnut flanks create a bold breeding palette maintained through carotenoid and melanin pigments. Its oversized spatulate bill is lined with comb-like lamellae for filter-feeding.",
+      "habitat": "Shallow prairie marshes and flooded agricultural fields inspire warm, grounded interiors with deep green, warm chestnut, and clean white in balanced compositions."
+    }
   },
   {
     "id": 198,
@@ -22856,7 +23644,11 @@ export const birds = [
     "tagline": "Red and teal tones inspired by the Mallard (Male)'s natural palette.",
     "moods": [
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Mallard's iconic iridescent green head is produced by hexagonal melanin platelets that create thin-film interference, while the purple-blue speculum feathers result from a different nanostructure — both are structural, not pigment-based.",
+      "habitat": "Peaceful park ponds, winding rivers, and farm wetlands inspire classic, approachable interiors with deep green, warm brown, and touches of navy-blue in timeless compositions."
+    }
   },
   {
     "id": 199,
@@ -22960,7 +23752,11 @@ export const birds = [
     "tagline": "Green and orange tones inspired by the Common Myna (Male)'s natural palette.",
     "moods": [
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Common Myna's warm brown body with bold black hood and yellow eye patch evolved alongside its aggressive, adaptable personality. The bright yellow facial skin and legs intensify during breeding as indicators of health and dominance.",
+      "habitat": "Bustling South Asian streetscapes and tropical garden edges inspire warm, lively interiors with chocolate brown and bright golden-yellow in confident, worldly compositions."
+    }
   },
   {
     "id": 200,
@@ -23083,7 +23879,11 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Green-winged Teal's chestnut head with iridescent green eye patch combines pheomelanin and structural coloration in an intricate face pattern. The green speculum that gives the species its name is visible mainly in flight.",
+      "habitat": "Wooded ponds and quiet marsh edges with overhanging willows inspire refined, nature-intimate interiors with warm chestnut and deep green accents in cozy settings."
+    }
   },
   {
     "id": 201,
@@ -23206,7 +24006,11 @@ export const birds = [
     "moods": [
       "calm",
       "fresh"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Ruby-crowned Kinglet's concealed ruby-red crown patch is normally hidden, erupting into visibility only during agitated displays or courtship — a secret weapon of color reserved for the most intense social encounters.",
+      "habitat": "Dense conifer forests and thicket edges inspire delicate, fresh interiors with soft olive-green and surprise pops of warm ruby-red in intimate, detailed compositions."
+    }
   },
   {
     "id": 202,
@@ -23329,7 +24133,11 @@ export const birds = [
     "moods": [
       "bold",
       "balanced"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The non-breeding male Bobolink molts from its bold black-and-white breeding plumage to warm buffy-brown streaked feathers, perfectly camouflaging it in the South American grasslands where it overwinters.",
+      "habitat": "Golden South American pampas and agricultural grasslands inspire warm, relaxed interiors with honeyed buff tones and subtle streaked-pattern textiles."
+    }
   },
   {
     "id": 203,
@@ -23452,7 +24260,11 @@ export const birds = [
     "moods": [
       "fresh",
       "warm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The female Evening Grosbeak's understated olive-gold and grey plumage with bold black-and-white wing patterns provides camouflage on the nest while retaining enough flock-recognition features for winter sociality.",
+      "habitat": "Boreal forest canopies and mountain conifer stands inspire refined interiors with soft olive-gold and warm grey in quiet, harmonious compositions."
+    }
   },
   {
     "id": 204,
@@ -23575,7 +24387,11 @@ export const birds = [
     "moods": [
       "calm",
       "fresh"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Pygmy Nuthatch's subtle grey-blue cap and warm buff underparts provide bark-clinging camouflage in the ponderosa pine forests it depends on. Its cooperative roosting behavior — huddling in cavities by the dozen — reduces heat loss in cold mountains.",
+      "habitat": "Open ponderosa pine forests and mountain meadow edges inspire cozy, compact interiors with soft blue-grey and warm buff in charming, efficient compositions."
+    }
   },
   {
     "id": 205,
@@ -23697,7 +24513,11 @@ export const birds = [
     "tagline": "Quiet, tonal neutrals drawn from the Carolina Chickadee. Understated elegance.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Carolina Chickadee's crisp black cap and bib with white cheeks follow the universal chickadee recognition pattern, while its grey-and-buff body provides camouflage as it acrobatically forages on fine branch tips.",
+      "habitat": "Southeastern deciduous forests and shaded suburban gardens inspire cheerful, welcoming interiors with soft grey and warm buff in approachable, friendly compositions."
+    }
   },
   {
     "id": 206,
@@ -23809,7 +24629,11 @@ export const birds = [
     "tagline": "Quiet, tonal neutrals drawn from the Bushtit. Understated elegance.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Bushtit's tiny grey body with minimal markings represents evolutionary investment in social behavior over ornamental plumage. These highly gregarious birds travel in flocks of up to 40, relying on group vigilance rather than individual concealment.",
+      "habitat": "Scrubby oak woodlands and coastal chaparral of the West inspire soft, minimal interiors with quiet grey tones and delicate, unassuming elegance."
+    }
   },
   {
     "id": 207,
@@ -23922,7 +24746,11 @@ export const birds = [
     "tagline": "Quiet, tonal neutrals drawn from the Oak Titmouse. Understated elegance.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Oak Titmouse's plain grey-brown plumage is an example of evolutionary conservatism — it relies on vocal rather than visual signals for territory defense and mate attraction, singing complex songs from its California oak woodland habitat.",
+      "habitat": "Quiet California oak woodlands with dappled shade and acorn-littered floors inspire understated interiors with warm taupe and grey-brown in calm, unhurried compositions."
+    }
   },
   {
     "id": 208,
@@ -24043,7 +24871,11 @@ export const birds = [
     "tagline": "Quiet, tonal neutrals drawn from the Carolina Wren. Understated elegance.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Carolina Wren's rich rufous-brown upperparts and warm buff underside with bold white supercilium provide camouflage in the tangled undergrowth where it forages, while its impossibly loud song compensates for its small, hidden body.",
+      "habitat": "Dense southeastern thickets and vine-draped woodland understory inspire warm, enveloping interiors with rich cinnamon-brown and cream in cozy, inviting compositions."
+    }
   },
   {
     "id": 209,
@@ -24139,7 +24971,11 @@ export const birds = [
     "tagline": "Azure and magenta tones inspired by the Common Loon's natural palette.",
     "moods": [
       "sophisticated"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Common Loon's breeding plumage of black-and-white checkerboard back with necklace-like stripes disrupts its outline on water. Its red eye enhances underwater vision in deep lakes and serves as a breeding signal.",
+      "habitat": "Pristine northern lakes surrounded by dark conifers and morning mist inspire sophisticated, contemplative interiors with graphic black-and-white and deep lake-water tones."
+    }
   },
   {
     "id": 210,
@@ -24212,7 +25048,11 @@ export const birds = [
     "tagline": "A focused, tonal palette inspired by the Snowy Owl (Female)'s subtle plumage.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The female Snowy Owl's white plumage with heavy dark barring provides camouflage against the tundra landscape of rock and snow patches. Females are more barred than males, with plumage lightening with age but never becoming fully white.",
+      "habitat": "Arctic tundra expanses and windswept open plains inspire serene, luminous interiors with soft white and gentle grey barring in spacious, light-filled compositions."
+    }
   },
   {
     "id": 211,
@@ -24317,7 +25157,11 @@ export const birds = [
     "tagline": "A focused, tonal palette inspired by the Loggerhead Shrike's subtle plumage.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Loggerhead Shrike's bold black mask and grey-white plumage advertise its predatory nature — a songbird that impales prey on thorns and barbed wire. The mask may reduce glare while hunting, similar to a football player's eye black.",
+      "habitat": "Open grasslands with scattered shrubs and fence-line perches inspire clean, structured interiors with grey, white, and bold black accents in purposeful compositions."
+    }
   },
   {
     "id": 212,
@@ -24437,7 +25281,11 @@ export const birds = [
     "tagline": "Quiet, tonal neutrals drawn from the Chimney Swift. Understated elegance.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Chimney Swift's uniformly dark sooty-brown plumage is streamlined for its almost entirely aerial lifestyle — it eats, drinks, and even sleeps on the wing. Its rigid tail spines brace against vertical chimney walls during roosting.",
+      "habitat": "Urban chimneys and the open sky above towns inspire sleek, minimalist interiors with warm charcoal-brown tones and aerodynamic, clean-lined furnishings."
+    }
   },
   {
     "id": 213,
@@ -24558,7 +25406,11 @@ export const birds = [
     "tagline": "Quiet, tonal neutrals drawn from the Pink-eared Duck. Understated elegance.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Pink-eared Duck's zebra-striped body with small pink ear patches behind the eye and a distinctive spatulate bill are unique among ducks. The stripes may function in disruptive camouflage among reflective water surfaces in Australia.",
+      "habitat": "Inland Australian wetlands and ephemeral flood lakes inspire whimsical, one-of-a-kind interiors with soft grey stripes and delicate blush-pink touches."
+    }
   },
   {
     "id": 214,
@@ -24656,7 +25508,11 @@ export const birds = [
     "tagline": "A focused, tonal palette inspired by the Black Phoebe's subtle plumage.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Black Phoebe's crisp black-and-white tuxedo plumage provides counter-shading — dark above against the sky when seen by fish, white below against stream reflections when spotted by aerial predators — while it hunts from waterside perches.",
+      "habitat": "Shaded stream banks and quiet fountain edges inspire clean, ordered interiors with sharp black-and-white contrasts in streamlined, thoughtful compositions."
+    }
   },
   {
     "id": 215,
@@ -24778,7 +25634,11 @@ export const birds = [
     "tagline": "Blue and vermilion tones inspired by the Black Vulture's natural palette.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The Black Vulture's all-dark plumage with silvery wing patches absorbs solar warmth for thermoregulation. Its bare dark head prevents bacterial contamination from carrion feeding, and its relatively short tail reflects its soaring style with frequent wing flaps.",
+      "habitat": "Open countryside, forest edges, and urban rooftops inspire bold, no-nonsense interiors with deep charcoal and subtle silver-grey in strong, grounded compositions."
+    }
   },
   {
     "id": 216,
@@ -24866,7 +25726,11 @@ export const birds = [
     "tagline": "A focused, tonal palette inspired by the American Crow's subtle plumage.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The American Crow's entirely black plumage shows deep purple iridescence in sunlight through structural coloration. Melanin-saturated feathers resist bacterial degradation and wear, supporting the crow's remarkable longevity and intelligence.",
+      "habitat": "Diverse landscapes from ancient forests to modern cities inspire adaptable, sophisticated interiors with rich black tones and subtle violet undertones in versatile compositions."
+    }
   },
   {
     "id": 217,
@@ -24979,7 +25843,11 @@ export const birds = [
     "tagline": "Quiet, tonal neutrals drawn from the American Coot. Understated elegance.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The American Coot's charcoal-grey body with white bill and frontal shield represents a unique rail lineage adapted to open water. The white shield signals dominance, with larger shields indicating higher-ranking individuals.",
+      "habitat": "Open lake surfaces and marshy urban ponds inspire practical, grounded interiors with slate-grey and clean white in unpretentious, functional compositions."
+    }
   },
   {
     "id": 218,
@@ -25101,7 +25969,11 @@ export const birds = [
     "tagline": "Azure and red tones inspired by the Brewer's Blackbird (Male)'s natural palette.",
     "moods": [
       "calm"
-    ]
+    ],
+    "nature": {
+      "colorStory": "The male Brewer's Blackbird's glossy black plumage with iridescent purple head and green body sheen results from structural coloration in flat melanin platelets. Its bright yellow eye creates a piercing gaze used in dominance displays.",
+      "habitat": "Open urban lots, parking areas, and agricultural fields inspire sleek, urban-modern interiors with iridescent black and unexpected yellow accent lighting."
+    }
   },
   {
     "id": 219,
@@ -25190,6 +26062,10 @@ export const birds = [
     "moods": [
       "warm",
       "bold"
-    ]
+    ],
+    "nature": {
+      "colorStory": "This alternate view of the Red-winged Blackbird captures its crimson epaulets fully displayed, revealing the carotenoid-rich feathers bordered by yellow that transform this marsh-dweller into one of North America's most recognizable breeding displays.",
+      "habitat": "Sprawling cattail marshes and wetland prairies inspire bold, confident interiors with vivid red and golden accents grounded by deep, natural black tones."
+    }
   }
 ];

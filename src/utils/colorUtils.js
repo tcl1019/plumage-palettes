@@ -68,3 +68,40 @@ export const getRelativeLuminance = (hex) => {
 
 export const getTextColor = (bgHex) =>
   getRelativeLuminance(bgHex) > 0.179 ? '#1A1A1A' : '#FFFFFF';
+
+// sRGB -> Linear RGB -> XYZ (D65) -> CIELAB
+export const rgbToLab = (r, g, b) => {
+  // sRGB to linear
+  let rl = r / 255, gl = g / 255, bl = b / 255;
+  rl = rl > 0.04045 ? Math.pow((rl + 0.055) / 1.055, 2.4) : rl / 12.92;
+  gl = gl > 0.04045 ? Math.pow((gl + 0.055) / 1.055, 2.4) : gl / 12.92;
+  bl = bl > 0.04045 ? Math.pow((bl + 0.055) / 1.055, 2.4) : bl / 12.92;
+
+  // Linear RGB to XYZ (D65 illuminant)
+  let x = (rl * 0.4124564 + gl * 0.3575761 + bl * 0.1804375) / 0.95047;
+  let y = (rl * 0.2126729 + gl * 0.7151522 + bl * 0.0721750);
+  let z = (rl * 0.0193339 + gl * 0.1191920 + bl * 0.9503041) / 1.08883;
+
+  // XYZ to Lab
+  const f = t => t > 0.008856 ? Math.cbrt(t) : (7.787 * t) + 16 / 116;
+  x = f(x); y = f(y); z = f(z);
+
+  return {
+    L: (116 * y) - 16,
+    a: 500 * (x - y),
+    b: 200 * (y - z),
+  };
+};
+
+export const hexToLab = (hex) => {
+  const rgb = hexToRgb(hex);
+  if (!rgb) return null;
+  return rgbToLab(rgb.r, rgb.g, rgb.b);
+};
+
+export const deltaE = (lab1, lab2) => {
+  const dL = lab1.L - lab2.L;
+  const da = lab1.a - lab2.a;
+  const db = lab1.b - lab2.b;
+  return Math.sqrt(dL * dL + da * da + db * db);
+};

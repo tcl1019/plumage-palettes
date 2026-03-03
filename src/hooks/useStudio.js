@@ -8,6 +8,7 @@ const defaultStudio = {
   projects: [],
   customPalettes: [],
   quizHistory: [],
+  housePlans: [],
   aiApiKey: '',
 };
 
@@ -136,6 +137,102 @@ export function useStudio() {
     update(prev => ({ ...prev, aiApiKey: key }));
   }, [update]);
 
+  // House Plans
+  const createHousePlan = useCallback((name) => {
+    const plan = {
+      id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
+      name,
+      createdAt: Date.now(),
+      updatedAt: Date.now(),
+      rooms: [],
+    };
+    update(prev => ({ ...prev, housePlans: [...(prev.housePlans || []), plan] }));
+    return plan.id;
+  }, [update]);
+
+  const deleteHousePlan = useCallback((id) => {
+    update(prev => ({
+      ...prev,
+      housePlans: (prev.housePlans || []).filter(p => p.id !== id),
+    }));
+  }, [update]);
+
+  const updateHousePlan = useCallback((id, partial) => {
+    update(prev => ({
+      ...prev,
+      housePlans: (prev.housePlans || []).map(p =>
+        p.id === id ? { ...p, ...partial, updatedAt: Date.now() } : p
+      ),
+    }));
+  }, [update]);
+
+  const addRoomToPlan = useCallback((planId, room) => {
+    const newRoom = {
+      id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
+      adjacentTo: [],
+      ...room,
+    };
+    update(prev => ({
+      ...prev,
+      housePlans: (prev.housePlans || []).map(p =>
+        p.id === planId ? { ...p, rooms: [...p.rooms, newRoom], updatedAt: Date.now() } : p
+      ),
+    }));
+    return newRoom.id;
+  }, [update]);
+
+  const updateRoomInPlan = useCallback((planId, roomId, partial) => {
+    update(prev => ({
+      ...prev,
+      housePlans: (prev.housePlans || []).map(p =>
+        p.id === planId ? {
+          ...p,
+          rooms: p.rooms.map(r => r.id === roomId ? { ...r, ...partial } : r),
+          updatedAt: Date.now(),
+        } : p
+      ),
+    }));
+  }, [update]);
+
+  const removeRoomFromPlan = useCallback((planId, roomId) => {
+    update(prev => ({
+      ...prev,
+      housePlans: (prev.housePlans || []).map(p =>
+        p.id === planId ? {
+          ...p,
+          rooms: p.rooms
+            .filter(r => r.id !== roomId)
+            .map(r => ({ ...r, adjacentTo: (r.adjacentTo || []).filter(id => id !== roomId) })),
+          updatedAt: Date.now(),
+        } : p
+      ),
+    }));
+  }, [update]);
+
+  const toggleAdjacency = useCallback((planId, roomIdA, roomIdB) => {
+    update(prev => ({
+      ...prev,
+      housePlans: (prev.housePlans || []).map(p => {
+        if (p.id !== planId) return p;
+        return {
+          ...p,
+          rooms: p.rooms.map(r => {
+            if (r.id === roomIdA) {
+              const adj = r.adjacentTo || [];
+              return { ...r, adjacentTo: adj.includes(roomIdB) ? adj.filter(id => id !== roomIdB) : [...adj, roomIdB] };
+            }
+            if (r.id === roomIdB) {
+              const adj = r.adjacentTo || [];
+              return { ...r, adjacentTo: adj.includes(roomIdA) ? adj.filter(id => id !== roomIdA) : [...adj, roomIdA] };
+            }
+            return r;
+          }),
+          updatedAt: Date.now(),
+        };
+      }),
+    }));
+  }, [update]);
+
   return {
     studio,
     savePalette,
@@ -149,6 +246,13 @@ export function useStudio() {
     deleteCustomPalette,
     saveQuizResult,
     setApiKey,
+    createHousePlan,
+    deleteHousePlan,
+    updateHousePlan,
+    addRoomToPlan,
+    updateRoomInPlan,
+    removeRoomFromPlan,
+    toggleAdjacency,
   };
 }
 

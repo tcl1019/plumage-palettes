@@ -13,7 +13,7 @@ export default function Header() {
           className="flex items-center gap-2 hover:opacity-80 transition-opacity"
         >
           <Heart className="w-5 h-5 text-rose-300" fill="currentColor" />
-          <span className="font-bold text-lg tracking-tight">Plumage Palettes</span>
+          <span className="font-bold text-lg tracking-tight">Ploom</span>
         </button>
         <p className="text-xs text-emerald-200 hidden sm:block">Nature-Inspired Interior Design</p>
       </div>

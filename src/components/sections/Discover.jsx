@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { Search, Compass, ArrowRight, Sparkles, Home, BedDouble, CookingPot, Bath, UtensilsCrossed } from 'lucide-react';
+import { Search, Compass, ArrowRight, Sparkles, Home, BedDouble, CookingPot, Bath, UtensilsCrossed, Camera, Pipette, Palette } from 'lucide-react';
 import { birds } from '../../data/birds';
 import { FLOCK_PAIRINGS } from '../../data/flockPairings';
 import { MOODS } from '../../data/constants';
@@ -56,6 +56,30 @@ export default function Discover() {
           <span className="inline-flex items-center gap-1.5 text-white bg-white/20 px-4 py-2 rounded-xl text-sm font-medium group-hover:bg-white/30 transition-colors">
             Take the Quiz <ArrowRight className="w-4 h-4" />
           </span>
+        </div>
+      </div>
+
+      {/* Match From Your World CTA */}
+      <div className="mb-10">
+        <h2 className="text-sm font-bold text-gray-600 uppercase tracking-wider mb-4 flex items-center gap-2">
+          <Pipette className="w-4 h-4" /> Match From Your World
+        </h2>
+        <div className="grid grid-cols-3 gap-3">
+          {[
+            { id: 'photo', label: 'Upload Photo', desc: 'Snap your room or a swatch', Icon: Camera },
+            { id: 'hex', label: 'Enter a Color', desc: 'Paste hex or pick', Icon: Pipette },
+            { id: 'rescue', label: 'Rescue My Room', desc: 'Bridge clashing colors', Icon: Palette },
+          ].map(({ id, label, desc, Icon }) => (
+            <button
+              key={id}
+              onClick={() => navigate('color-match', { matchMode: id })}
+              className="bg-white rounded-xl p-4 border border-plumage-border hover:shadow-md hover:-translate-y-0.5 transition-all text-left group"
+            >
+              <Icon className="w-6 h-6 text-plumage-primary mb-2 group-hover:scale-110 transition-transform" />
+              <p className="text-sm font-semibold text-gray-800">{label}</p>
+              <p className="text-[10px] text-gray-400">{desc}</p>
+            </button>
+          ))}
         </div>
       </div>
 

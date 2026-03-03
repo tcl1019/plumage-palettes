@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { ArrowLeft, Star, Sparkles, ArrowRight, Lightbulb, Palette, Home, Paintbrush, Layers, Eye, Leaf, Info, Check } from 'lucide-react';
+import React, { useState, useCallback } from 'react';
+import { ArrowLeft, Star, Sparkles, ArrowRight, Lightbulb, Palette, Home, Paintbrush, Layers, Eye, Leaf, Info, Check, Share2, FileText, Download } from 'lucide-react';
 import { birds } from '../../data/birds';
 import { FLOCK_PAIRINGS } from '../../data/flockPairings';
 import { DESIGN_STYLES, ROLE_LABELS, HARMONY_COLORS, SEASON_STYLES } from '../../data/constants';
@@ -9,7 +9,10 @@ import { useCopyToClipboard } from '../../hooks/useCopyToClipboard';
 import { useNav } from '../../App';
 import RoomVisualizer from '../features/RoomVisualizer';
 import PaletteStrip from '../shared/PaletteStrip';
+import PaintMatch from '../shared/PaintMatch';
 import SaveButton from '../shared/SaveButton';
+import NatureCard from '../shared/NatureCard';
+import MaterialPairings from '../shared/MaterialPairings';
 import { StatusBadge, HarmonyBadge, SeasonBadge, RoleBadge } from '../shared/Badge';
 
 export default function PaletteDetail({ birdId }) {
@@ -18,6 +21,28 @@ export default function PaletteDetail({ birdId }) {
   const { copiedHex, copyToClipboard } = useCopyToClipboard();
   const [expandedColor, setExpandedColor] = useState(null);
   const [showScale, setShowScale] = useState(null);
+
+  const [exporting, setExporting] = useState(null); // 'card' | 'spec' | null
+
+  const handleExport = useCallback(async (type) => {
+    setExporting(type);
+    try {
+      if (type === 'card') {
+        const { generateRecipeCard, downloadBlob } = await import('../../utils/recipeCardGenerator');
+        const blob = await generateRecipeCard(bird);
+        downloadBlob(blob, `${bird.name.toLowerCase().replace(/\s+/g, '-')}-palette-card.png`);
+      } else {
+        const { generateSpecSheet } = await import('../../utils/specSheetGenerator');
+        const { downloadBlob } = await import('../../utils/recipeCardGenerator');
+        const blob = await generateSpecSheet(bird);
+        downloadBlob(blob, `${bird.name.toLowerCase().replace(/\s+/g, '-')}-spec-sheet.png`);
+      }
+    } catch (err) {
+      console.error('Export failed:', err);
+    } finally {
+      setExporting(null);
+    }
+  }, [bird]);
 
   if (!bird) return <div className="text-center py-20 text-gray-500">Palette not found.</div>;
 
@@ -135,6 +160,8 @@ export default function PaletteDetail({ birdId }) {
                     <p className="text-xs text-gray-400 italic flex items-center gap-1.5">
                       <Lightbulb className="w-3.5 h-3.5 flex-shrink-0" /> {color.lightingNote}
                     </p>
+                    {/* Paint Matches */}
+                    <PaintMatch hex={color.hex} />
                     {/* Value Scale */}
                     <div>
                       <p className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-2">Value Scale</p>
@@ -182,6 +209,11 @@ export default function PaletteDetail({ birdId }) {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Material Pairings */}
+      <div className="mb-8">
+        <MaterialPairings bird={bird} />
       </div>
 
       {/* Room Ratings */}
@@ -240,6 +272,13 @@ export default function PaletteDetail({ birdId }) {
         </div>
       </div>
 
+      {/* Nature's Design Brief */}
+      {bird.nature && (
+        <div className="mb-8">
+          <NatureCard bird={bird} />
+        </div>
+      )}
+
       {/* Conservation */}
       <div className="bg-white rounded-2xl p-5 border-l-4 border-plumage-primary mb-8">
         <p className="text-xs font-bold text-plumage-primary uppercase tracking-wider mb-2">Conservation</p>
@@ -269,18 +308,32 @@ export default function PaletteDetail({ birdId }) {
       )}
 
       {/* CTAs */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
         <button
           onClick={() => navigate('chat', { context: { type: 'palette', bird } })}
-          className="flex items-center justify-center gap-2 px-4 py-3 bg-plumage-primary text-white rounded-xl font-medium hover:bg-plumage-primary-light transition-colors"
+          className="flex items-center justify-center gap-2 px-4 py-3 bg-plumage-primary text-white rounded-xl font-medium text-sm hover:bg-plumage-primary-light transition-colors col-span-2 sm:col-span-1"
         >
-          <Sparkles className="w-4 h-4" /> Get AI Advice For This Palette
+          <Sparkles className="w-4 h-4" /> AI Advice
         </button>
         <button
           onClick={() => navigate('my-studio')}
-          className="flex items-center justify-center gap-2 px-4 py-3 bg-white text-plumage-primary border border-plumage-primary rounded-xl font-medium hover:bg-emerald-50 transition-colors"
+          className="flex items-center justify-center gap-2 px-4 py-3 bg-white text-plumage-primary border border-plumage-primary rounded-xl font-medium text-sm hover:bg-emerald-50 transition-colors col-span-2 sm:col-span-1"
         >
-          <Layers className="w-4 h-4" /> Start a Project
+          <Layers className="w-4 h-4" /> Project
+        </button>
+        <button
+          onClick={() => handleExport('card')}
+          disabled={!!exporting}
+          className="flex items-center justify-center gap-2 px-4 py-3 bg-white text-gray-700 border border-plumage-border rounded-xl font-medium text-sm hover:bg-gray-50 transition-colors disabled:opacity-50"
+        >
+          <Share2 className="w-4 h-4" /> {exporting === 'card' ? 'Creating...' : 'Share Card'}
+        </button>
+        <button
+          onClick={() => handleExport('spec')}
+          disabled={!!exporting}
+          className="flex items-center justify-center gap-2 px-4 py-3 bg-white text-gray-700 border border-plumage-border rounded-xl font-medium text-sm hover:bg-gray-50 transition-colors disabled:opacity-50"
+        >
+          <FileText className="w-4 h-4" /> {exporting === 'spec' ? 'Creating...' : 'Spec Sheet'}
         </button>
       </div>
 

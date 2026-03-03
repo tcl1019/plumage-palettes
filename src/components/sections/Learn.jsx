@@ -8,6 +8,7 @@ import { useNav } from '../../App';
 
 const TABS = [
   { id: 'color-theory', label: 'Color Theory', Icon: Palette },
+  { id: 'bird-science', label: 'Bird Science', Icon: BookOpen },
   { id: 'flock-pairings', label: 'Flock Pairings', Icon: Feather },
   { id: 'style-directory', label: 'Styles', Icon: Eye },
   { id: 'finishes', label: 'Paint Finishes', Icon: Paintbrush },
@@ -89,7 +90,7 @@ function ColorTheoryTab() {
       <div className="bg-white rounded-2xl p-5 border border-plumage-border">
         <h3 className="font-display text-lg text-gray-800 mb-3">Color Harmonies</h3>
         <p className="text-sm text-gray-600 mb-4">
-          Each palette in Plumage uses one of these proven color relationships.
+          Each palette in Ploom uses one of these proven color relationships.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {[
@@ -102,6 +103,114 @@ function ColorTheoryTab() {
             <div key={item.name} className="bg-plumage-surface-alt rounded-xl p-3">
               <p className="text-xs font-bold text-gray-700 mb-1">{item.name}</p>
               <p className="text-xs text-gray-500">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function BirdScienceTab() {
+  return (
+    <div className="space-y-8">
+      {/* Structural vs Pigment Color */}
+      <div className="bg-white rounded-2xl p-5 border border-plumage-border">
+        <h3 className="font-display text-lg text-gray-800 mb-3">Structural vs. Pigment Color</h3>
+        <p className="text-sm text-gray-600 mb-4">
+          Not all bird color comes from pigment. Blue feathers contain no blue pigment at all — they're created by microscopic structures that scatter light, similar to why the sky appears blue.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="bg-plumage-surface-alt rounded-xl p-4">
+            <p className="text-xs font-bold text-gray-700 mb-2">Pigment Colors</p>
+            <p className="text-xs text-gray-500 mb-2">Melanins (browns, blacks, rusts) and carotenoids (reds, oranges, yellows) are chemical compounds deposited in feathers.</p>
+            <p className="text-[10px] text-plumage-primary font-medium">Design connection: Like matte and eggshell finishes — color is embedded in the surface itself.</p>
+          </div>
+          <div className="bg-plumage-surface-alt rounded-xl p-4">
+            <p className="text-xs font-bold text-gray-700 mb-2">Structural Colors</p>
+            <p className="text-xs text-gray-500 mb-2">Blues, iridescent greens, and UV reflections are created by nanostructures in feather barbs that interfere with light waves.</p>
+            <p className="text-[10px] text-plumage-primary font-medium">Design connection: Like glossy and metallic finishes — the surface changes color with viewing angle.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* The 60/30/10 in Nature */}
+      <div className="bg-white rounded-2xl p-5 border border-plumage-border">
+        <h3 className="font-display text-lg text-gray-800 mb-3">The 60/30/10 Rule — In Nature</h3>
+        <p className="text-sm text-gray-600 mb-4">
+          Interior designers didn't invent the 60/30/10 ratio — birds did. Most species follow this exact pattern in their plumage, and it maps directly to how we assign color roles in a room.
+        </p>
+        <div className="space-y-2">
+          {[
+            { pct: '60%', bird: 'Body/back plumage', room: 'Walls & ceiling', note: 'The dominant field color. In birds, it\'s usually the most camouflaged. In rooms, it sets the tone.' },
+            { pct: '30%', bird: 'Breast & wing patches', room: 'Furniture & textiles', note: 'The secondary area. Often a contrasting but harmonious shade that supports the dominant.' },
+            { pct: '10%', bird: 'Eye rings, bill, wing bars', room: 'Accent decor & art', note: 'Small but vital. In birds, these spots attract mates and signal species. In rooms, they draw the eye.' },
+          ].map(item => (
+            <div key={item.pct} className="bg-plumage-surface-alt rounded-xl p-3 flex gap-3">
+              <span className="text-xs font-bold text-plumage-primary w-10 flex-shrink-0">{item.pct}</span>
+              <div>
+                <p className="text-xs text-gray-700"><strong>Bird:</strong> {item.bird} → <strong>Room:</strong> {item.room}</p>
+                <p className="text-[10px] text-gray-500 mt-0.5">{item.note}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Camouflage vs Display */}
+      <div className="bg-white rounded-2xl p-5 border border-plumage-border">
+        <h3 className="font-display text-lg text-gray-800 mb-3">Camouflage vs. Display</h3>
+        <p className="text-sm text-gray-600 mb-4">
+          Every bird balances two competing pressures: blend in to survive, or stand out to reproduce. This tension maps perfectly to interior design choices.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="bg-plumage-surface-alt rounded-xl p-4">
+            <p className="text-xs font-bold text-gray-700 mb-2">Camouflage = Analogous Harmony</p>
+            <p className="text-xs text-gray-500">Muted, earth-toned birds (sparrows, owls, sandpipers) use adjacent colors that blend together. Their palettes create serene, cohesive rooms — perfect for bedrooms and spa bathrooms.</p>
+          </div>
+          <div className="bg-plumage-surface-alt rounded-xl p-4">
+            <p className="text-xs font-bold text-gray-700 mb-2">Display = Complementary Harmony</p>
+            <p className="text-xs text-gray-500">Bold birds (macaws, tanagers, kingfishers) use contrasting colors to stand out. Their palettes create energetic, statement-making spaces — ideal for dining rooms and creative studios.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Sexual Dimorphism */}
+      <div className="bg-white rounded-2xl p-5 border border-plumage-border">
+        <h3 className="font-display text-lg text-gray-800 mb-3">Sexual Dimorphism in Design</h3>
+        <p className="text-sm text-gray-600 mb-4">
+          In many species, males and females of the same bird look strikingly different. These aren't random — they're warm/cool and bold/subtle versions of the same genetic palette.
+        </p>
+        <div className="space-y-2">
+          {[
+            { label: 'Male palettes', desc: 'Tend toward bold, saturated colors with high contrast. Think statement walls, jewel-toned accents, and dramatic dining rooms.' },
+            { label: 'Female palettes', desc: 'Tend toward subtle, earth-toned colors with soft transitions. Think cozy reading nooks, serene bedrooms, and understated elegance.' },
+            { label: 'Pairing them', desc: 'Use the male version in your accent spaces and the female version in your living spaces — same genetic palette, two expressions of it.' },
+          ].map(item => (
+            <div key={item.label} className="flex items-start gap-3 bg-plumage-surface-alt rounded-xl p-3">
+              <span className="text-xs font-bold text-gray-700 w-24 flex-shrink-0">{item.label}</span>
+              <p className="text-xs text-gray-500">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Seasonal Plumage */}
+      <div className="bg-white rounded-2xl p-5 border border-plumage-border">
+        <h3 className="font-display text-lg text-gray-800 mb-3">Seasonal Plumage & Your Home</h3>
+        <p className="text-sm text-gray-600 mb-4">
+          Many birds molt into different plumage for breeding season vs. winter. This natural cycle connects directly to the seasonal design metadata in every Ploom palette.
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          {[
+            { season: 'Spring', desc: 'Fresh greens, bright accents. Birds return to breeding colors — vibrant and optimistic.', color: 'bg-emerald-100 text-emerald-700' },
+            { season: 'Summer', desc: 'Bold, saturated hues at peak intensity. Full breeding plumage.', color: 'bg-amber-100 text-amber-700' },
+            { season: 'Fall', desc: 'Warm rusts, deep golds. Post-molt transition colors.', color: 'bg-orange-100 text-orange-700' },
+            { season: 'Winter', desc: 'Muted, subtle tones. Non-breeding plumage — cozy and grounded.', color: 'bg-blue-100 text-blue-700' },
+          ].map(item => (
+            <div key={item.season} className="bg-plumage-surface-alt rounded-xl p-3 text-center">
+              <span className={`inline-block px-2 py-0.5 rounded-full text-[10px] font-bold mb-2 ${item.color}`}>{item.season}</span>
+              <p className="text-[10px] text-gray-500">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -291,6 +400,7 @@ export default function Learn() {
       </div>
 
       {activeTab === 'color-theory' && <ColorTheoryTab />}
+      {activeTab === 'bird-science' && <BirdScienceTab />}
       {activeTab === 'flock-pairings' && <FlockPairingsTab />}
       {activeTab === 'style-directory' && <StyleDirectoryTab />}
       {activeTab === 'finishes' && <FinishesTab />}

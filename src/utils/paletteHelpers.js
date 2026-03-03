@@ -1,4 +1,4 @@
-import { getUndertone } from './colorUtils';
+import { getUndertone, hexToLab, deltaE } from './colorUtils';
 
 export function mapBirdToRoomColors(bird) {
   const byRole = {};
@@ -58,6 +58,84 @@ export function parseShareUrl() {
   } catch {
     return null;
   }
+}
+
+/**
+ * Match bird palettes against a set of input colors.
+ * For each bird, compute the minimum deltaE from each input color to any bird color,
+ * then sum the minimums. Lower total = better match.
+ *
+ * @param {Array<string>} inputHexes - Array of hex colors to match against
+ * @param {Array} allBirds - All bird palette objects
+ * @param {number} count - Number of results to return
+ * @param {string} mode - 'match' (find palettes containing these colors) or 'rescue' (find palettes that bridge clashing colors)
+ * @returns {Array<{bird: object, score: number, matchedColors: Array}>}
+ */
+export function matchPalettesByColors(inputHexes, allBirds, count = 5, mode = 'match') {
+  const inputLabs = inputHexes.map(hex => ({ hex, lab: hexToLab(hex) })).filter(c => c.lab);
+  if (inputLabs.length === 0) return [];
+
+  const results = allBirds.map(bird => {
+    const birdLabs = bird.colors.map(c => ({ hex: c.hex, name: c.name, role: c.role, lab: hexToLab(c.hex) })).filter(c => c.lab);
+    if (birdLabs.length === 0) return { bird, score: Infinity, matchedColors: [] };
+
+    const matchedColors = [];
+    let totalScore = 0;
+
+    for (const input of inputLabs) {
+      let bestDist = Infinity;
+      let bestMatch = null;
+      for (const bc of birdLabs) {
+        const dist = deltaE(input.lab, bc.lab);
+        if (dist < bestDist) {
+          bestDist = dist;
+          bestMatch = bc;
+        }
+      }
+      matchedColors.push({
+        inputHex: input.hex,
+        matchHex: bestMatch.hex,
+        matchName: bestMatch.name,
+        matchRole: bestMatch.role,
+        deltaE: bestDist,
+      });
+      totalScore += bestDist;
+    }
+
+    // For rescue mode, also reward palette diversity (more spread = better bridge)
+    if (mode === 'rescue') {
+      const uniqueMatches = new Set(matchedColors.map(m => m.matchHex));
+      // Bonus for matching to different bird colors (bridges the gap)
+      if (uniqueMatches.size > 1) {
+        totalScore *= 0.7; // 30% bonus for palettes that map inputs to different colors
+      }
+    }
+
+    return { bird, score: totalScore, matchedColors };
+  });
+
+  results.sort((a, b) => a.score - b.score);
+  return results.slice(0, count);
+}
+
+/**
+ * Generate a human-readable explanation of why a palette matches.
+ */
+export function getMatchExplanation(matchResult) {
+  const { bird, matchedColors } = matchResult;
+  const avgDeltaE = matchedColors.reduce((sum, m) => sum + m.deltaE, 0) / matchedColors.length;
+
+  if (avgDeltaE < 3) {
+    return `${bird.name} contains near-exact matches for your colors — this palette was practically made for your space.`;
+  }
+  if (avgDeltaE < 8) {
+    const roles = [...new Set(matchedColors.map(m => m.matchRole))];
+    return `Your colors align with ${bird.name}'s ${roles.join(' and ')} tones. A natural, harmonious fit.`;
+  }
+  if (avgDeltaE < 15) {
+    return `${bird.name} offers a complementary range that bridges your existing colors with ${bird.harmony.type} harmony.`;
+  }
+  return `${bird.name} provides a fresh direction while nodding to your current palette's undertones.`;
 }
 
 export function getBirdHighestRatedRoom(bird) {

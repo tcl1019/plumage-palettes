@@ -8,6 +8,7 @@ import PaletteDetail from './components/sections/PaletteDetail';
 import MyStudio from './components/sections/MyStudio';
 import Learn from './components/sections/Learn';
 import QuizFlow from './components/features/QuizFlow';
+import ColorMatchFlow from './components/features/ColorMatchFlow';
 import AIChatPanel from './components/features/AIChatPanel';
 
 // Navigation context
@@ -25,6 +26,7 @@ export default function App() {
   const [chatOpen, setChatOpen] = useState(false);
   const [chatContext, setChatContext] = useState(null);
   const [quizOpen, setQuizOpen] = useState(false);
+  const [colorMatchOpen, setColorMatchOpen] = useState(false);
   const [exploreFilters, setExploreFilters] = useState(null);
   const [previousSection, setPreviousSection] = useState(null);
 
@@ -43,6 +45,8 @@ export default function App() {
       setChatOpen(true);
     } else if (section === 'quiz') {
       setQuizOpen(true);
+    } else if (section === 'color-match') {
+      setColorMatchOpen(true);
     } else {
       setActiveSection(section);
     }
@@ -94,6 +98,11 @@ export default function App() {
           {/* Quiz overlay */}
           {quizOpen && (
             <QuizFlow onClose={() => setQuizOpen(false)} />
+          )}
+
+          {/* Color Match overlay */}
+          {colorMatchOpen && (
+            <ColorMatchFlow onClose={() => setColorMatchOpen(false)} />
           )}
 
           {/* AI Chat panel */}

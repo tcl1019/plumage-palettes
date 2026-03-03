@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
-import { Heart, FolderPlus, Palette, ArrowLeftRight, Plus, Trash2, Home, Sparkles } from 'lucide-react';
+import { Heart, FolderPlus, Palette, ArrowLeftRight, Plus, Trash2, Home, Sparkles, LayoutGrid } from 'lucide-react';
 import { birds } from '../../data/birds';
 import PaletteStrip from '../shared/PaletteStrip';
 import SaveButton from '../shared/SaveButton';
 import PaletteMixer from '../features/PaletteMixer';
 import CompareView from '../features/CompareView';
 import RoomVisualizer from '../features/RoomVisualizer';
+import RoomPlanner from '../features/RoomPlanner';
 import { useStudioContext } from '../../hooks/useStudio';
 import { useNav } from '../../App';
 
 const TABS = [
   { id: 'saved', label: 'Saved', Icon: Heart },
   { id: 'projects', label: 'Projects', Icon: FolderPlus },
+  { id: 'planner', label: 'Room Planner', Icon: LayoutGrid },
   { id: 'mixer', label: 'Mixer', Icon: Palette },
   { id: 'compare', label: 'Compare', Icon: ArrowLeftRight },
 ];
@@ -230,6 +232,7 @@ export default function MyStudio() {
         </>
       )}
       {activeTab === 'projects' && <ProjectsList />}
+      {activeTab === 'planner' && <RoomPlanner />}
       {activeTab === 'mixer' && <PaletteMixer />}
       {activeTab === 'compare' && <CompareView />}
     </div>
