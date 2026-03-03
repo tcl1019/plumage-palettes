@@ -26067,5 +26067,713 @@ export const birds = [
       "colorStory": "This alternate view of the Red-winged Blackbird captures its crimson epaulets fully displayed, revealing the carotenoid-rich feathers bordered by yellow that transform this marsh-dweller into one of North America's most recognizable breeding displays.",
       "habitat": "Sprawling cattail marshes and wetland prairies inspire bold, confident interiors with vivid red and golden accents grounded by deep, natural black tones."
     }
+  },
+  {
+    "id": 220,
+    "name": "Mallard (Female)",
+    "scientific": "Anas platyrhynchos",
+    "description": "The understated beauty of the female Mallard — warm mottled tans punctuated by a flash of cobalt-periwinkle speculum.",
+    "status": "Least Concern",
+    "conservation": "The most abundant and widespread dabbling duck in the Northern Hemisphere.",
+    "colors": [
+      {
+        "hex": "#C4A882",
+        "name": "Mallard Warm Tan",
+        "role": "dominant",
+        "finish": "Eggshell",
+        "application": "Primary wall color for a cohesive room envelope",
+        "lightingNote": "Warm and inviting in all lighting; gains richness under incandescent bulbs"
+      },
+      {
+        "hex": "#8B6E4F",
+        "name": "Mallard Mottled Brown",
+        "role": "secondary",
+        "finish": "Satin",
+        "application": "Upholstered sofa, curtains, or a large area rug",
+        "lightingNote": "A rich mid-tone that feels grounded and natural in every light"
+      },
+      {
+        "hex": "#5B6DAF",
+        "name": "Mallard Periwinkle",
+        "role": "accent",
+        "finish": "Semi-Gloss",
+        "application": "Statement throw pillows, ceramic vases, or artwork",
+        "lightingNote": "Cool and unexpected — catches the eye like the speculum flash on water"
+      },
+      {
+        "hex": "#2F4785",
+        "name": "Mallard Cobalt Flash",
+        "role": "highlight",
+        "finish": "Semi-Gloss",
+        "application": "A painted accent chair, decorative objects, or lampshade",
+        "lightingNote": "Deep and jewel-toned under warm light; electric under daylight"
+      },
+      {
+        "hex": "#DDD0BE",
+        "name": "Mallard Cream Edge",
+        "role": "accent",
+        "finish": "Semi-Gloss",
+        "application": "Trim, ceiling, baseboards, and window casings",
+        "lightingNote": "A soft warm neutral that bridges the tans and blues gracefully"
+      },
+      {
+        "hex": "#D4956A",
+        "name": "Mallard Orange Bill",
+        "role": "accent",
+        "finish": "Satin",
+        "application": "Decorative ceramics, a patterned pillow, or art frames",
+        "lightingNote": "Warm and earthy; adds a gentle pop of warmth against the tans"
+      }
+    ],
+    "harmony": {
+      "type": "split-complementary",
+      "explanation": "Warm earth tones with a cool blue accent — the unexpected periwinkle speculum creates dynamic tension against the mottled tans."
+    },
+    "neutrals": {
+      "trim": {
+        "hex": "#F5F0EA",
+        "name": "Mallard Hen White"
+      },
+      "ceiling": {
+        "hex": "#FAF8F5",
+        "name": "Mallard Hen Ceiling"
+      },
+      "floor": {
+        "hex": "#7A6652",
+        "name": "Mallard Hen Floor"
+      }
+    },
+    "rooms": [
+      { "room": "Bedroom", "rating": 5, "reason": "Soft, enveloping tans with a whisper of blue — a naturally restful bedroom palette." },
+      { "room": "Living Room", "rating": 5, "reason": "Warm and layered with an unexpected cool accent that keeps it interesting." },
+      { "room": "Dining Room", "rating": 4, "reason": "Earthy warmth creates a convivial dining atmosphere; the blue adds sophistication." },
+      { "room": "Kitchen", "rating": 4, "reason": "The periwinkle pops against warm cabinetry; pair with brass hardware." },
+      { "room": "Bathroom", "rating": 3, "reason": "Works as a spa-like retreat; lean into the blues for a water-inspired feel." }
+    ],
+    "styles": ["farmhouse", "coastal", "scandinavian", "contemporary"],
+    "season": "year-round",
+    "seasonNote": "A balanced palette that adapts gracefully across all seasons.",
+    "tagline": "Warm mottled tans and a flash of cobalt-periwinkle from the female Mallard's hidden speculum.",
+    "moods": ["calm", "warm"],
+    "nature": {
+      "colorStory": "The female Mallard's mottled brown plumage is precision camouflage — each feather edged in buff to break up her outline on the nest. But hidden in her wings is a cobalt-periwinkle speculum, the same structural iridescence her mate carries. She reveals it in flight like a secret, a flash of brilliant blue against warm brown that proves understated doesn't mean uninteresting.",
+      "habitat": "Peaceful park ponds, cattail marshes, and river bends inspire warm, layered interiors where quiet sophistication hides an unexpected flash of color."
+    }
+  },
+  {
+    "id": 221,
+    "name": "Northern Cardinal (Male)",
+    "scientific": "Cardinalis cardinalis",
+    "description": "The unmistakable vivid red of the male Northern Cardinal — America's most recognizable backyard bird.",
+    "status": "Least Concern",
+    "conservation": "One of the most common and beloved songbirds in eastern North America.",
+    "colors": [
+      {
+        "hex": "#D62828",
+        "name": "Cardinal Crimson",
+        "role": "dominant",
+        "finish": "Eggshell",
+        "application": "A bold feature wall or accent room — too intense for all four walls",
+        "lightingNote": "Vivid and energetic under daylight; softens to a warm glow under incandescent"
+      },
+      {
+        "hex": "#8B1A1A",
+        "name": "Cardinal Deep Red",
+        "role": "secondary",
+        "finish": "Satin",
+        "application": "Upholstered sofa, curtains, or a large area rug",
+        "lightingNote": "Deep and enveloping; reveals warm undertones in bright light"
+      },
+      {
+        "hex": "#1A1A1A",
+        "name": "Cardinal Mask",
+        "role": "accent",
+        "finish": "Semi-Gloss",
+        "application": "Statement throw pillows, matte hardware, or picture frames",
+        "lightingNote": "A dramatic dark neutral that anchors the palette in any light"
+      },
+      {
+        "hex": "#E8A04A",
+        "name": "Cardinal Bill Orange",
+        "role": "highlight",
+        "finish": "Semi-Gloss",
+        "application": "A lacquered side table, painted cabinet, or stair risers",
+        "lightingNote": "Warm amber that bridges the red and neutral tones beautifully"
+      },
+      {
+        "hex": "#7C6B5D",
+        "name": "Cardinal Warm Gray",
+        "role": "accent",
+        "finish": "Satin",
+        "application": "Linen drapery, woven throw blankets, or side chairs",
+        "lightingNote": "A versatile neutral that shifts subtly between warm and cool"
+      }
+    ],
+    "harmony": {
+      "type": "monochromatic",
+      "explanation": "A red-dominant palette with tonal depth — from bright crimson to deep burgundy, anchored by warm neutrals."
+    },
+    "neutrals": {
+      "trim": { "hex": "#F5F2EF", "name": "Cardinal White" },
+      "ceiling": { "hex": "#FAF8F6", "name": "Cardinal Ceiling" },
+      "floor": { "hex": "#6B5B4F", "name": "Cardinal Floor" }
+    },
+    "rooms": [
+      { "room": "Bedroom", "rating": 2, "reason": "Bold palette works best as a feature wall rather than a full room bedroom." },
+      { "room": "Living Room", "rating": 4, "reason": "Confident and warm — a red living room demands attention and rewards it." },
+      { "room": "Dining Room", "rating": 5, "reason": "Red stimulates appetite and conversation — the classic power dining room." },
+      { "room": "Kitchen", "rating": 3, "reason": "The red works on a kitchen island or accent wall; pair with brass hardware." },
+      { "room": "Bathroom", "rating": 2, "reason": "Too intense for small bathrooms; consider as an accent in a powder room." }
+    ],
+    "styles": ["traditional", "art-deco", "eclectic"],
+    "season": "fall-winter",
+    "seasonNote": "Rich, grounding colors that feel cozy and enveloping during cooler months.",
+    "tagline": "Pure crimson confidence from the Northern Cardinal — the bird that makes winter feel alive.",
+    "moods": ["bold", "warm"],
+    "nature": {
+      "colorStory": "The male Northern Cardinal gets his red from carotenoid pigments in seeds and berries, converted in the liver into the red pigments deposited in feathers. Brighter males hold better territories and attract more mates. The black mask prevents glare from interfering with the bird's vision, like an athlete's eye black.",
+      "habitat": "Snow-dusted hedgerows, berry-laden thickets, and backyard feeders inspire bold, classic interiors with confident red statements against warm wood and neutral grounds."
+    }
+  },
+  {
+    "id": 222,
+    "name": "Mandarin Duck (Male)",
+    "scientific": "Aix galericulata",
+    "description": "The ornate male Mandarin Duck — arguably the most elaborately colorful waterfowl on Earth.",
+    "status": "Least Concern",
+    "conservation": "Native to East Asia; feral populations established in Britain and California.",
+    "colors": [
+      {
+        "hex": "#E07830",
+        "name": "Mandarin Sail Orange",
+        "role": "dominant",
+        "finish": "Eggshell",
+        "application": "Primary wall color for a cohesive room envelope",
+        "lightingNote": "Warm and commanding; deepens beautifully under incandescent light"
+      },
+      {
+        "hex": "#1D4D3A",
+        "name": "Mandarin Forest Green",
+        "role": "secondary",
+        "finish": "Satin",
+        "application": "Upholstered sofa, curtains, or a large area rug",
+        "lightingNote": "A rich deep green that grounds the palette's warmth"
+      },
+      {
+        "hex": "#4A2D6B",
+        "name": "Mandarin Purple Crest",
+        "role": "accent",
+        "finish": "Semi-Gloss",
+        "application": "Statement throw pillows, ceramic vases, or artwork",
+        "lightingNote": "Regal and moody; shifts between blue and violet depending on the light"
+      },
+      {
+        "hex": "#F5E6C8",
+        "name": "Mandarin Cream Breast",
+        "role": "accent",
+        "finish": "Semi-Gloss",
+        "application": "Trim, ceiling, baseboards, and window casings",
+        "lightingNote": "A warm ivory that softens the bold palette"
+      },
+      {
+        "hex": "#C4965A",
+        "name": "Mandarin Buff Flank",
+        "role": "accent",
+        "finish": "Satin",
+        "application": "Linen drapery, woven throw blankets, or side chairs",
+        "lightingNote": "Warm and inviting in all lighting"
+      },
+      {
+        "hex": "#2A4A7A",
+        "name": "Mandarin Wing Blue",
+        "role": "highlight",
+        "finish": "Semi-Gloss",
+        "application": "A painted accent chair, decorative objects, or lampshade",
+        "lightingNote": "A cool counterpoint that keeps the warm palette from feeling heavy"
+      }
+    ],
+    "harmony": {
+      "type": "triadic",
+      "explanation": "Orange, green, and purple form a triadic triad — bold and complex, balanced by the cream and buff neutrals."
+    },
+    "neutrals": {
+      "trim": { "hex": "#F5F2EE", "name": "Mandarin White" },
+      "ceiling": { "hex": "#FAF8F5", "name": "Mandarin Ceiling" },
+      "floor": { "hex": "#7A6248", "name": "Mandarin Floor" }
+    },
+    "rooms": [
+      { "room": "Bedroom", "rating": 3, "reason": "Lean into the cream and buff for walls, use orange and green as textile accents." },
+      { "room": "Living Room", "rating": 5, "reason": "A showstopper living room palette — bold, layered, and endlessly interesting." },
+      { "room": "Dining Room", "rating": 5, "reason": "The warm orange and green create an inviting, celebratory dining atmosphere." },
+      { "room": "Kitchen", "rating": 3, "reason": "Green cabinetry with orange and brass accents creates an eclectic kitchen." },
+      { "room": "Bathroom", "rating": 3, "reason": "Use the deep green and cream for a jewel-box powder room." }
+    ],
+    "styles": ["art-deco", "eclectic", "bohemian", "tropical"],
+    "season": "fall-winter",
+    "seasonNote": "Rich, warm tones that feel celebratory and enveloping during cooler months.",
+    "tagline": "Orange sails, purple crest, forest green — the Mandarin Duck's palace-worthy palette.",
+    "moods": ["bold", "eclectic"],
+    "nature": {
+      "colorStory": "The male Mandarin Duck's orange 'sail' feathers are elongated tertials that fan upward like a ship's rigging — unique in the duck world. The purple-green iridescent crest, orange face plumes, and white eye stripe create what Japanese artists considered the symbol of conjugal fidelity. Pairs bow to each other in elaborate courtship dances.",
+      "habitat": "Wooded ponds, temple gardens, and forested streams in East Asia inspire richly layered interiors that blend warm orange, deep green, and regal purple in ornate, intentional compositions."
+    }
+  },
+  {
+    "id": 223,
+    "name": "Resplendent Quetzal",
+    "scientific": "Pharomachrus mocinno",
+    "description": "The sacred bird of Mesoamerica — iridescent emerald green, crimson breast, and meter-long tail streamers.",
+    "status": "Near Threatened",
+    "conservation": "Cloud forest habitat loss threatens this iconic species; ecotourism provides economic incentive for conservation.",
+    "colors": [
+      {
+        "hex": "#1A8C4E",
+        "name": "Quetzal Emerald",
+        "role": "dominant",
+        "finish": "Eggshell",
+        "application": "Primary wall color for a grounding, immersive effect",
+        "lightingNote": "Shifts from bright emerald in daylight to deep forest green under incandescent"
+      },
+      {
+        "hex": "#C82333",
+        "name": "Quetzal Crimson Breast",
+        "role": "secondary",
+        "finish": "Satin",
+        "application": "Upholstered sofa, curtains, or a large area rug",
+        "lightingNote": "Vivid and energetic under daylight; softens to a warm glow under incandescent"
+      },
+      {
+        "hex": "#D4AF37",
+        "name": "Quetzal Gold",
+        "role": "highlight",
+        "finish": "Semi-Gloss",
+        "application": "A lacquered side table, painted cabinet, or stair risers",
+        "lightingNote": "Warm metallic glow that bridges the green and red"
+      },
+      {
+        "hex": "#0D3B2E",
+        "name": "Quetzal Deep Forest",
+        "role": "accent",
+        "finish": "Semi-Gloss",
+        "application": "Statement throw pillows, ceramic vases, or artwork",
+        "lightingNote": "A dramatic dark that reads as the deepest jungle shadow"
+      },
+      {
+        "hex": "#F5F0E8",
+        "name": "Quetzal Cloud Mist",
+        "role": "accent",
+        "finish": "Semi-Gloss",
+        "application": "Trim, ceiling, baseboards, and window casings",
+        "lightingNote": "The misty white of cloud forests at dawn"
+      }
+    ],
+    "harmony": {
+      "type": "complementary",
+      "explanation": "Red and green in perfect opposition — the Christmas palette that nature perfected millions of years before the holiday."
+    },
+    "neutrals": {
+      "trim": { "hex": "#F5F0E8", "name": "Quetzal White" },
+      "ceiling": { "hex": "#FAF8F4", "name": "Quetzal Ceiling" },
+      "floor": { "hex": "#5C4A3A", "name": "Quetzal Floor" }
+    },
+    "rooms": [
+      { "room": "Bedroom", "rating": 3, "reason": "Deep green walls create a cocooning bedroom; keep the red as accents only." },
+      { "room": "Living Room", "rating": 5, "reason": "A dramatic, lush living room that feels like stepping into a cloud forest." },
+      { "room": "Dining Room", "rating": 5, "reason": "The red-green complementary scheme creates the most energizing dining space possible." },
+      { "room": "Kitchen", "rating": 4, "reason": "Deep green cabinetry with gold hardware and red accents — stunning." },
+      { "room": "Bathroom", "rating": 4, "reason": "Emerald tile with gold fixtures creates a luxurious, spa-like retreat." }
+    ],
+    "styles": ["art-deco", "tropical", "bohemian", "eclectic"],
+    "season": "year-round",
+    "seasonNote": "A vivid palette that commands attention in every season.",
+    "tagline": "Emerald, crimson, and gold — the sacred Quetzal's cloud forest regalia.",
+    "moods": ["bold", "eclectic"],
+    "nature": {
+      "colorStory": "The Resplendent Quetzal's iridescent green plumage comes from specialized hexagonal melanin platelets in the feather nanostructure that create thin-film interference. The male's meter-long tail coverts — not actual tail feathers — undulate in flight like green ribbons. Aztec and Maya royalty wore quetzal plumes as currency more valuable than gold.",
+      "habitat": "Mossy cloud forests draped in epiphytes and orchids, shrouded in perpetual mist, inspire lush, maximalist interiors with deep green, vivid red, and touches of gold."
+    }
+  },
+  {
+    "id": 224,
+    "name": "Common Kingfisher",
+    "scientific": "Alcedo atthis",
+    "description": "Electric cobalt and warm orange — the Common Kingfisher's split-second flash over still water.",
+    "status": "Least Concern",
+    "conservation": "Widespread across Europe and Asia; sensitive to water pollution and harsh winters.",
+    "colors": [
+      {
+        "hex": "#0077B6",
+        "name": "Kingfisher Cobalt",
+        "role": "dominant",
+        "finish": "Eggshell",
+        "application": "Primary wall color for a bold, immersive room",
+        "lightingNote": "Electric under daylight; deepens to a rich navy feel under incandescent"
+      },
+      {
+        "hex": "#00B4D8",
+        "name": "Kingfisher Turquoise Back",
+        "role": "secondary",
+        "finish": "Satin",
+        "application": "Linen drapery, woven throw blankets, or side chairs",
+        "lightingNote": "A calming tone that brightens in natural light"
+      },
+      {
+        "hex": "#D4733A",
+        "name": "Kingfisher Breast Orange",
+        "role": "accent",
+        "finish": "Semi-Gloss",
+        "application": "Statement throw pillows, ceramic vases, or artwork",
+        "lightingNote": "Warm and inviting; the perfect complement to the blues"
+      },
+      {
+        "hex": "#F0E6D4",
+        "name": "Kingfisher Throat White",
+        "role": "accent",
+        "finish": "Semi-Gloss",
+        "application": "Trim, ceiling, baseboards, and window casings",
+        "lightingNote": "A warm white that softens the high-contrast palette"
+      },
+      {
+        "hex": "#1A3A4A",
+        "name": "Kingfisher Deep Teal",
+        "role": "highlight",
+        "finish": "Semi-Gloss",
+        "application": "A feature wall, painted vanity, or built-in shelving",
+        "lightingNote": "The darkest tone in the palette — reads as midnight blue-green"
+      }
+    ],
+    "harmony": {
+      "type": "complementary",
+      "explanation": "Blue and orange in direct opposition — nature's highest-energy color contrast, softened by turquoise and cream."
+    },
+    "neutrals": {
+      "trim": { "hex": "#F0E6D4", "name": "Kingfisher White" },
+      "ceiling": { "hex": "#F8F5F0", "name": "Kingfisher Ceiling" },
+      "floor": { "hex": "#7A6652", "name": "Kingfisher Floor" }
+    },
+    "rooms": [
+      { "room": "Bedroom", "rating": 3, "reason": "Use the cobalt sparingly — turquoise walls with orange accents for a calm-but-lively bedroom." },
+      { "room": "Living Room", "rating": 5, "reason": "The blue-orange complementary scheme is endlessly versatile and always inviting." },
+      { "room": "Dining Room", "rating": 4, "reason": "Bold and sociable — the warm orange keeps the cool blues from feeling cold." },
+      { "room": "Kitchen", "rating": 4, "reason": "Blue cabinetry with orange and brass accents — a coastal kitchen dream." },
+      { "room": "Bathroom", "rating": 5, "reason": "The aquatic color story is naturally at home in bathrooms; pair with white fixtures." }
+    ],
+    "styles": ["coastal", "contemporary", "mid-century", "scandinavian"],
+    "season": "spring-summer",
+    "seasonNote": "A palette that evokes sun on water and warm summer days.",
+    "tagline": "Cobalt flash and warm orange — the Kingfisher's split-second streak over still water.",
+    "moods": ["fresh", "bold"],
+    "nature": {
+      "colorStory": "The Kingfisher's blue is entirely structural — photonic crystals in the feather barbs reflect blue wavelengths with remarkable purity. The orange breast is carotenoid-based. Japan's Shinkansen bullet train was redesigned after the kingfisher's beak shape, which enters water without a splash. The bird inspired engineering, and now its colors inspire design.",
+      "habitat": "Still pools, overhanging willows, and clear chalk streams inspire serene waterside interiors with brilliant blue focal points and warm orange accents."
+    }
+  },
+  {
+    "id": 225,
+    "name": "Snowy Owl",
+    "scientific": "Bubo scandiacus",
+    "description": "Arctic white with subtle dark barring — the Snowy Owl's tundra camouflage as a minimalist palette.",
+    "status": "Vulnerable",
+    "conservation": "Climate change and declining lemming populations threaten this Arctic specialist.",
+    "colors": [
+      {
+        "hex": "#F5F2EE",
+        "name": "Snowy Tundra White",
+        "role": "dominant",
+        "finish": "Eggshell",
+        "application": "All four walls for a bright, expansive feel",
+        "lightingNote": "Reads as pure clean white in daylight; gains subtle warmth under incandescent"
+      },
+      {
+        "hex": "#D8D2CC",
+        "name": "Snowy Barred Pale",
+        "role": "secondary",
+        "finish": "Satin",
+        "application": "Linen drapery, woven throw blankets, or side chairs",
+        "lightingNote": "A sophisticated warm gray that adds depth to the white"
+      },
+      {
+        "hex": "#4A4540",
+        "name": "Snowy Dark Barring",
+        "role": "accent",
+        "finish": "Semi-Gloss",
+        "application": "Statement throw pillows, matte hardware, or picture frames",
+        "lightingNote": "A warm charcoal that anchors the pale palette"
+      },
+      {
+        "hex": "#E8C84A",
+        "name": "Snowy Eye Gold",
+        "role": "highlight",
+        "finish": "Semi-Gloss",
+        "application": "A lacquered side table, painted cabinet, or stair risers",
+        "lightingNote": "The piercing yellow of owl eyes — a bold focal point in the minimal palette"
+      },
+      {
+        "hex": "#8A8278",
+        "name": "Snowy Lichen Gray",
+        "role": "accent",
+        "finish": "Satin",
+        "application": "Decorative ceramics, a patterned pillow, or art frames",
+        "lightingNote": "An organic mid-gray that bridges white and dark"
+      }
+    ],
+    "harmony": {
+      "type": "monochromatic",
+      "explanation": "A near-achromatic palette from white through gray to charcoal, punctuated by a single golden accent — pure minimalism."
+    },
+    "neutrals": {
+      "trim": { "hex": "#FFFFFF", "name": "Snowy White" },
+      "ceiling": { "hex": "#FAFAFA", "name": "Snowy Ceiling" },
+      "floor": { "hex": "#B8AFA5", "name": "Snowy Floor" }
+    },
+    "rooms": [
+      { "room": "Bedroom", "rating": 5, "reason": "The ultimate serene bedroom — white on white with charcoal and gold punctuation." },
+      { "room": "Living Room", "rating": 5, "reason": "A bright, airy living room that feels expansive and modern." },
+      { "room": "Dining Room", "rating": 3, "reason": "Elegant but may feel too spare for dining; add textural warmth." },
+      { "room": "Kitchen", "rating": 5, "reason": "The all-white kitchen with charcoal accents and gold hardware — timeless." },
+      { "room": "Bathroom", "rating": 5, "reason": "Clean, bright, spa-like — exactly what a bathroom should feel like." }
+    ],
+    "styles": ["scandinavian", "contemporary", "farmhouse"],
+    "season": "year-round",
+    "seasonNote": "A clean, bright palette that works in every season and every light.",
+    "tagline": "Arctic white and charcoal barring — the Snowy Owl's tundra minimalism.",
+    "moods": ["calm", "fresh"],
+    "nature": {
+      "colorStory": "Male Snowy Owls become whiter with age — the oldest birds are nearly pure white, while females retain dark barring throughout life. Their feathers are the densest of any owl, providing insulation to -40°F. Those piercing yellow eyes can spot a lemming from a mile away across the flat white tundra.",
+      "habitat": "Vast Arctic tundra, snow-swept prairies, and frozen coastlines inspire bright, minimal interiors where white space itself becomes a design element, punctuated only by texture and a single warm accent."
+    }
+  },
+  {
+    "id": 226,
+    "name": "Golden Pheasant (Male)",
+    "scientific": "Chrysolophus pictus",
+    "description": "Liquid gold, deep crimson, and iridescent green — the Golden Pheasant is nature's most opulent palette.",
+    "status": "Least Concern",
+    "conservation": "Native to mountainous central China; introduced populations exist in Britain.",
+    "colors": [
+      {
+        "hex": "#E8A817",
+        "name": "Pheasant Liquid Gold",
+        "role": "dominant",
+        "finish": "Eggshell",
+        "application": "Primary wall color or feature wall for a warm, golden room",
+        "lightingNote": "Warm and luminous in all lighting; glows under incandescent"
+      },
+      {
+        "hex": "#C82020",
+        "name": "Pheasant Crimson Breast",
+        "role": "secondary",
+        "finish": "Satin",
+        "application": "Upholstered sofa, curtains, or a large area rug",
+        "lightingNote": "Vivid and energetic under daylight; deepens to a rich burgundy under incandescent"
+      },
+      {
+        "hex": "#1B5E3B",
+        "name": "Pheasant Iridescent Green",
+        "role": "accent",
+        "finish": "Semi-Gloss",
+        "application": "Statement throw pillows, ceramic vases, or artwork",
+        "lightingNote": "Deep and jewel-toned; shifts from forest to emerald depending on light"
+      },
+      {
+        "hex": "#2D2040",
+        "name": "Pheasant Deep Purple",
+        "role": "accent",
+        "finish": "Semi-Gloss",
+        "application": "Statement throw pillows, decorative objects, or artwork",
+        "lightingNote": "A dramatic dark that reads as midnight in low light"
+      },
+      {
+        "hex": "#F0D070",
+        "name": "Pheasant Cape Gold",
+        "role": "highlight",
+        "finish": "Semi-Gloss",
+        "application": "A lacquered side table, painted cabinet, or stair risers",
+        "lightingNote": "A lighter gold that adds luminosity and warmth"
+      }
+    ],
+    "harmony": {
+      "type": "triadic",
+      "explanation": "Gold, red, and green in triadic balance — the most opulent natural palette imaginable, grounded by deep purple."
+    },
+    "neutrals": {
+      "trim": { "hex": "#F5F0E6", "name": "Pheasant White" },
+      "ceiling": { "hex": "#FAF7F2", "name": "Pheasant Ceiling" },
+      "floor": { "hex": "#6B5840", "name": "Pheasant Floor" }
+    },
+    "rooms": [
+      { "room": "Bedroom", "rating": 2, "reason": "Too opulent for a restful bedroom; reserve for a glamorous guest room." },
+      { "room": "Living Room", "rating": 4, "reason": "A bold, maximalist living room — lean into the gold for a luxurious feel." },
+      { "room": "Dining Room", "rating": 5, "reason": "The ultimate celebratory dining room — gold, crimson, and green say feast." },
+      { "room": "Kitchen", "rating": 3, "reason": "Gold and green work on cabinetry; keep the red as accents." },
+      { "room": "Bathroom", "rating": 3, "reason": "A jewel-box powder room in deep green with gold fixtures." }
+    ],
+    "styles": ["art-deco", "bohemian", "eclectic", "traditional"],
+    "season": "fall-winter",
+    "seasonNote": "Rich, warm tones that feel celebratory during the holiday season and cozy in winter.",
+    "tagline": "Liquid gold, deep crimson, and forest green — the Golden Pheasant's imperial opulence.",
+    "moods": ["bold", "warm"],
+    "nature": {
+      "colorStory": "The male Golden Pheasant's cape — a fan of orange-gold feathers barred in iridescent blue-black — is raised during courtship to create a shimmering disc that nearly hides his head. The crimson breast, green back, and golden crest combine carotenoid pigments with structural iridescence. In Chinese art, the golden pheasant represents virtue and prosperity.",
+      "habitat": "Bamboo-choked mountain slopes, dense rhododendron forests, and misty Chinese highlands inspire opulent, layered interiors with warm metallics, deep jewel tones, and rich textile traditions."
+    }
+  },
+  {
+    "id": 227,
+    "name": "Keel-billed Toucan",
+    "scientific": "Ramphastos sulfuratus",
+    "description": "The rainbow bill, jet-black body, and lemon-yellow breast of Central America's iconic toucan.",
+    "status": "Least Concern",
+    "conservation": "National bird of Belize; dependent on large old-growth trees for nesting cavities.",
+    "colors": [
+      {
+        "hex": "#1A1A1A",
+        "name": "Toucan Jet Black",
+        "role": "dominant",
+        "finish": "Eggshell",
+        "application": "A dramatic dark feature wall or all four walls in a moody room",
+        "lightingNote": "Deep and enveloping; reveals subtle warmth under incandescent"
+      },
+      {
+        "hex": "#F0D420",
+        "name": "Toucan Lemon Breast",
+        "role": "secondary",
+        "finish": "Satin",
+        "application": "Upholstered sofa, curtains, or a large area rug",
+        "lightingNote": "Sunny and energetic; glows like a beacon against the black"
+      },
+      {
+        "hex": "#2AAF5C",
+        "name": "Toucan Bill Green",
+        "role": "accent",
+        "finish": "Semi-Gloss",
+        "application": "Statement throw pillows, ceramic vases, or artwork",
+        "lightingNote": "A fresh tropical green that pops against dark backgrounds"
+      },
+      {
+        "hex": "#E84830",
+        "name": "Toucan Bill Tip Red",
+        "role": "highlight",
+        "finish": "Semi-Gloss",
+        "application": "A painted accent chair, decorative objects, or lampshade",
+        "lightingNote": "Vivid and attention-grabbing; use sparingly for maximum impact"
+      },
+      {
+        "hex": "#3A8EC4",
+        "name": "Toucan Leg Blue",
+        "role": "accent",
+        "finish": "Semi-Gloss",
+        "application": "Decorative ceramics, a patterned pillow, or art frames",
+        "lightingNote": "A cool tropical blue that balances the warm yellow and red"
+      },
+      {
+        "hex": "#E8862A",
+        "name": "Toucan Bill Orange",
+        "role": "accent",
+        "finish": "Semi-Gloss",
+        "application": "A lacquered side table, painted cabinet, or stair risers",
+        "lightingNote": "Warm and playful; bridges the yellow and red on the rainbow bill"
+      }
+    ],
+    "harmony": {
+      "type": "triadic",
+      "explanation": "Yellow, green, and red-orange form an energetic triadic scheme against a jet-black ground — maximalist tropical exuberance."
+    },
+    "neutrals": {
+      "trim": { "hex": "#F5F2EE", "name": "Toucan White" },
+      "ceiling": { "hex": "#FAF8F5", "name": "Toucan Ceiling" },
+      "floor": { "hex": "#4A3E34", "name": "Toucan Floor" }
+    },
+    "rooms": [
+      { "room": "Bedroom", "rating": 2, "reason": "Too energetic for sleep; use as a maximalist guest suite." },
+      { "room": "Living Room", "rating": 4, "reason": "A dramatic dark living room with tropical pops — bold and memorable." },
+      { "room": "Dining Room", "rating": 4, "reason": "The dark walls with vivid accents create an intimate, dramatic dining experience." },
+      { "room": "Kitchen", "rating": 3, "reason": "Black cabinetry with yellow and green accents — striking but niche." },
+      { "room": "Bathroom", "rating": 3, "reason": "A jewel-box powder room in black with tropical color accents." }
+    ],
+    "styles": ["tropical", "eclectic", "bohemian", "contemporary"],
+    "season": "year-round",
+    "seasonNote": "A vivid palette that brings tropical energy to any season.",
+    "tagline": "Jet black, lemon yellow, and a rainbow bill — the Toucan's tropical maximalism.",
+    "moods": ["bold", "eclectic"],
+    "nature": {
+      "colorStory": "The Keel-billed Toucan's enormous bill is green, orange, red, and blue — but weighs almost nothing. It's a honeycomb of keratin and bone struts, lighter than it looks but strong enough to crack nuts. The bill's colors may help individuals recognize each other in the dense canopy. They sleep in tree cavities, tucking that enormous bill over their back and folding their tail overhead.",
+      "habitat": "Tropical rainforest canopy, fruiting trees, and humid lowlands inspire bold, maximalist interiors with dark walls, vivid accent colors, and lush green plants."
+    }
+  },
+  {
+    "id": 228,
+    "name": "Anna's Hummingbird",
+    "scientific": "Calypte anna",
+    "description": "Iridescent magenta gorget and emerald green body — the jewel of the Pacific Coast.",
+    "status": "Least Concern",
+    "conservation": "One of the few hummingbirds expanding its range, thriving in urban gardens along the West Coast.",
+    "colors": [
+      {
+        "hex": "#2A8C5A",
+        "name": "Hummingbird Emerald",
+        "role": "dominant",
+        "finish": "Eggshell",
+        "application": "Primary wall color for a fresh, vibrant room",
+        "lightingNote": "Shifts from bright in daylight to deep and moody at night"
+      },
+      {
+        "hex": "#C4186A",
+        "name": "Hummingbird Magenta Gorget",
+        "role": "secondary",
+        "finish": "Satin",
+        "application": "Upholstered sofa, curtains, or a large area rug",
+        "lightingNote": "Vivid and iridescent-feeling; shifts between pink and red depending on angle"
+      },
+      {
+        "hex": "#7B7B7B",
+        "name": "Hummingbird Pewter Breast",
+        "role": "accent",
+        "finish": "Semi-Gloss",
+        "application": "Linen drapery, woven throw blankets, or side chairs",
+        "lightingNote": "A neutral gray that lets the green and magenta shine"
+      },
+      {
+        "hex": "#F0EDE6",
+        "name": "Hummingbird Belly White",
+        "role": "accent",
+        "finish": "Semi-Gloss",
+        "application": "Trim, ceiling, baseboards, and window casings",
+        "lightingNote": "A soft warm white that grounds the vivid palette"
+      },
+      {
+        "hex": "#1A3D2A",
+        "name": "Hummingbird Deep Green",
+        "role": "highlight",
+        "finish": "Semi-Gloss",
+        "application": "A feature wall, painted vanity, or built-in shelving",
+        "lightingNote": "The darkest green — a dramatic anchor for the palette"
+      }
+    ],
+    "harmony": {
+      "type": "complementary",
+      "explanation": "Green and magenta in complementary opposition — the most electrifying contrast in the garden, softened by gray and white."
+    },
+    "neutrals": {
+      "trim": { "hex": "#F0EDE6", "name": "Hummingbird White" },
+      "ceiling": { "hex": "#F8F6F2", "name": "Hummingbird Ceiling" },
+      "floor": { "hex": "#6B6058", "name": "Hummingbird Floor" }
+    },
+    "rooms": [
+      { "room": "Bedroom", "rating": 3, "reason": "Emerald walls with magenta accents create a lush, botanical bedroom." },
+      { "room": "Living Room", "rating": 5, "reason": "A vibrant, garden-inspired living room that feels alive." },
+      { "room": "Dining Room", "rating": 4, "reason": "Green and magenta create a lively, sophisticated dining atmosphere." },
+      { "room": "Kitchen", "rating": 4, "reason": "Emerald cabinetry with gray and white — a fresh, modern kitchen." },
+      { "room": "Bathroom", "rating": 5, "reason": "A botanical spa with emerald tile and magenta towels — unforgettable." }
+    ],
+    "styles": ["contemporary", "tropical", "eclectic", "bohemian"],
+    "season": "spring-summer",
+    "seasonNote": "A vivid palette that captures the energy of a blooming garden.",
+    "tagline": "Emerald body, magenta gorget — the Anna's Hummingbird is a flying jewel.",
+    "moods": ["bold", "fresh"],
+    "nature": {
+      "colorStory": "The Anna's Hummingbird's magenta gorget is pure structural color — layers of melanin platelets act as thin-film mirrors, reflecting only magenta wavelengths. Tilt the bird one degree and it goes black. Their hearts beat 1,200 times per minute in flight, wings rotating in a figure-eight 80 times per second. They're the only hummingbird that sings — a scratchy, buzzy song delivered from the top of the tallest tree in the neighborhood.",
+      "habitat": "Pacific Coast gardens, chaparral slopes, and eucalyptus groves inspire fresh, botanical interiors where jewel-toned greens and vivid magenta accents bring the garden indoors."
+    }
   }
 ];
