@@ -425,18 +425,152 @@ function assignMoods(analyzed) {
 
 // ── Tagline generation ──────────────────────────────────────────────
 function generateTagline(birdName, analyzed, harmony) {
-  const dominant = analyzed.sort((a, b) => b.pct - a.pct)[0];
-  const chromatic = analyzed.filter(a => a.hsl.s > 20);
-  const avgSat = analyzed.reduce((s, a) => s + a.hsl.s, 0) / analyzed.length;
+  const sorted = [...analyzed].sort((a, b) => b.pct - a.pct);
+  const chromatic = sorted.filter(a => a.hsl.s > 20);
+  const avgSat = sorted.reduce((s, a) => s + a.hsl.s, 0) / sorted.length;
+  const avgLight = sorted.reduce((s, a) => s + a.hsl.l, 0) / sorted.length;
+  const warmCount = sorted.filter(a => a.isWarm).length;
+  const coolCount = sorted.filter(a => a.isCool).length;
+  const darkCount = sorted.filter(a => a.isDark).length;
+  const lightCount = sorted.filter(a => a.isLight).length;
+  const mutedCount = sorted.filter(a => a.isMuted).length;
 
-  if (avgSat < 15) return `Quiet, tonal neutrals drawn from the ${birdName}. Understated elegance.`;
-  if (chromatic.length <= 1) return `A focused, tonal palette inspired by the ${birdName}'s subtle plumage.`;
+  // Deterministic "random" based on bird name for template selection
+  const nameHash = birdName.split('').reduce((h, c) => ((h << 5) - h + c.charCodeAt(0)) | 0, 0);
+  const pick = (arr) => arr[Math.abs(nameHash) % arr.length];
 
-  const color1 = getHueName(chromatic[0]?.hsl.h || 0).toLowerCase();
-  const color2 = chromatic.length > 1 ? getHueName(chromatic[1]?.hsl.h || 0).toLowerCase() : '';
+  // Get distinct color names (avoid "vermilion and vermilion")
+  const color1 = chromatic.length > 0 ? getHueName(chromatic[0].hsl.h).toLowerCase() : '';
+  let color2 = '';
+  if (chromatic.length > 1) {
+    // Find the first chromatic color with a DIFFERENT hue name
+    for (let i = 1; i < chromatic.length; i++) {
+      const name = getHueName(chromatic[i].hsl.h).toLowerCase();
+      if (name !== color1) { color2 = name; break; }
+    }
+  }
+  const Color1 = color1.charAt(0).toUpperCase() + color1.slice(1);
+  const hasTwoColors = color1 && color2;
+  const harmonyType = harmony?.type || 'analogous';
 
-  if (avgSat > 55) return `Vivid ${color1}s and ${color2}s straight from the ${birdName}'s brilliant plumage.`;
-  return `${color1.charAt(0).toUpperCase() + color1.slice(1)} and ${color2} tones inspired by the ${birdName}'s natural palette.`;
+  // ── Near-neutral / very low saturation palettes ──
+  if (avgSat < 15) {
+    return pick([
+      `Whisper-soft neutrals drawn from the ${birdName}. Let the textures do the talking.`,
+      `The ${birdName} proves color isn't everything — these quiet tones let materials and light shine.`,
+      `A study in restraint. The ${birdName}'s muted plumage translates to serene, textural interiors.`,
+      `Nearly colorless, entirely captivating. The ${birdName}'s palette is pure atmosphere.`,
+    ]);
+  }
+
+  // ── Monochromatic / single chromatic color ──
+  if (chromatic.length <= 1) {
+    const tone = color1 || 'neutral';
+    return pick([
+      `One hue, many moods. The ${birdName}'s plumage unfolds in layered ${tone} tones.`,
+      `A tonal study in ${tone}, distilled from the ${birdName}'s understated plumage.`,
+      `The ${birdName} keeps it simple — a single ${tone} thread running through every shade.`,
+      `All ${tone}, no filler. The ${birdName}'s focused palette creates rooms that feel immediately whole.`,
+    ]);
+  }
+
+  // ── Single dominant color (two chromas share same hue name) ──
+  if (!hasTwoColors) {
+    return pick([
+      `Layer upon layer of ${color1} — the ${birdName} builds depth from a single hue family.`,
+      `The ${birdName} works the full ${color1} spectrum, from shadow to highlight.`,
+      `${Color1} in every register. The ${birdName}'s palette is tonal richness made simple.`,
+      `A masterclass in ${color1} — the ${birdName} shows how one hue can fill an entire room.`,
+    ]);
+  }
+
+  // ── High saturation / vivid palettes ──
+  if (avgSat > 55) {
+    return pick([
+      `Unapologetically vivid. The ${birdName} pairs ${color1} with ${color2} — and dares you to look away.`,
+      `${Color1} meets ${color2} at full volume. This is the ${birdName}'s palette, and it doesn't whisper.`,
+      `Bold ${color1} and ${color2} straight from the ${birdName}'s plumage — for rooms that make an entrance.`,
+      `The ${birdName} brings the drama: saturated ${color1} and ${color2} that own any space.`,
+    ]);
+  }
+
+  // ── Dark / moody palettes ──
+  if (avgLight < 35 || darkCount >= 3) {
+    return pick([
+      `Moody ${color1} and deep ${color2} from the ${birdName}. Rooms that feel like a warm embrace.`,
+      `The ${birdName}'s dark plumage yields a palette built for candlelight and quiet evenings.`,
+      `Rich, enveloping tones of ${color1} and ${color2} — the ${birdName}'s gift to cozy interiors.`,
+      `Deep ${color1} anchored by ${color2}. The ${birdName}'s palette wraps a room in warmth.`,
+    ]);
+  }
+
+  // ── Light / airy palettes ──
+  if (avgLight > 65 || lightCount >= 3) {
+    return pick([
+      `Breezy ${color1} and soft ${color2} — the ${birdName}'s palette fills a room with light.`,
+      `The ${birdName}'s sun-washed plumage becomes airy ${color1} and gentle ${color2} for open spaces.`,
+      `Light, lifted, livable. The ${birdName}'s ${color1}-and-${color2} palette breathes.`,
+      `Pale ${color1} drifting into ${color2}. The ${birdName}'s palette is morning light in paint form.`,
+    ]);
+  }
+
+  // ── Warm-dominant palettes ──
+  if (warmCount > coolCount + 1) {
+    return pick([
+      `Warm ${color1} and ${color2} from the ${birdName} — a palette that makes every room feel like home.`,
+      `The ${birdName} runs warm: ${color1} and ${color2} tones for spaces that radiate comfort.`,
+      `Sun-soaked ${color1} paired with ${color2}. The ${birdName}'s palette is all golden-hour warmth.`,
+      `${Color1} and ${color2}, both from the warm side of the wheel. The ${birdName} knows what cozy looks like.`,
+    ]);
+  }
+
+  // ── Cool-dominant palettes ──
+  if (coolCount > warmCount + 1) {
+    return pick([
+      `Cool ${color1} and ${color2} from the ${birdName} — for rooms that feel calm from the moment you walk in.`,
+      `The ${birdName}'s palette runs cool: ${color1} and ${color2} that bring stillness to any space.`,
+      `Collected and composed. The ${birdName} pairs ${color1} with ${color2} for effortless tranquility.`,
+      `${Color1} and ${color2}, cool and considered. The ${birdName}'s palette is a deep breath.`,
+    ]);
+  }
+
+  // ── Muted / soft palettes ──
+  if (mutedCount >= 3) {
+    return pick([
+      `Softly spoken ${color1} and ${color2} — the ${birdName}'s palette doesn't shout, it invites.`,
+      `The ${birdName} favors the middle ground: muted ${color1} and gentle ${color2} for lived-in spaces.`,
+      `Neither loud nor quiet. The ${birdName}'s ${color1}-and-${color2} palette hits the sweet spot.`,
+      `Dusty ${color1} meets faded ${color2}. The ${birdName}'s palette feels like it's always been there.`,
+    ]);
+  }
+
+  // ── Complementary harmony ──
+  if (harmonyType === 'complementary') {
+    return pick([
+      `${Color1} and ${color2} in perfect tension. The ${birdName} proves opposites attract.`,
+      `A complementary clash of ${color1} and ${color2} — the ${birdName}'s palette is high contrast, high reward.`,
+      `The ${birdName} plays ${color1} against ${color2} — opposites on the wheel, partners in a room.`,
+    ]);
+  }
+
+  // ── Triadic harmony ──
+  if (harmonyType === 'triadic') {
+    return pick([
+      `The ${birdName} balances ${color1} and ${color2} with the ease of a natural colorist.`,
+      `Three-way color harmony from the ${birdName}: ${color1}, ${color2}, and everything in between.`,
+      `A richly balanced mix anchored by ${color1} and ${color2}. The ${birdName}'s plumage does the math.`,
+    ]);
+  }
+
+  // ── General / catch-all with variety ──
+  return pick([
+    `${Color1} grounded by ${color2}. The ${birdName}'s palette is ready for real rooms.`,
+    `The ${birdName} brings ${color1} and ${color2} together — a pairing that just works.`,
+    `From feather to finish: the ${birdName}'s ${color1}-and-${color2} palette, translated for interiors.`,
+    `${Color1} leads, ${color2} follows. A natural rhythm borrowed from the ${birdName}.`,
+    `What the ${birdName} wears, your room can wear. ${Color1} and ${color2}, balanced by nature.`,
+    `The ${birdName} nails it: ${color1} and ${color2} in proportions that feel effortless.`,
+  ]);
 }
 
 // ── Scientific names (lookup) ──────────────────────────────────────
