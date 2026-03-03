@@ -81,6 +81,56 @@ body {
   to { opacity: 1; transform: scale(1); }
 }
 
+/* Atmospheric room visualizer — layered fade-ins */
+@keyframes atmoFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes atmoBloomIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes atmoAccentPulse {
+  from { opacity: 0; transform: scale(0.5); }
+  60% { opacity: 1; transform: scale(1.05); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.atmo-layer-base {
+  animation: atmoFadeIn 600ms ease-out both;
+}
+.atmo-layer-ceiling {
+  animation: atmoFadeIn 800ms ease-out 100ms both;
+}
+.atmo-layer-floor {
+  animation: atmoFadeIn 800ms ease-out 150ms both;
+}
+.atmo-layer-textile {
+  animation: atmoBloomIn 900ms ease-out 200ms both;
+}
+.atmo-layer-feature {
+  animation: atmoBloomIn 900ms ease-out 300ms both;
+}
+.atmo-layer-accent {
+  animation: atmoAccentPulse 700ms ease-out 450ms both;
+}
+.atmo-layer-trim {
+  animation: atmoFadeIn 600ms ease-out 350ms both;
+}
+.atmo-layer-light {
+  animation: atmoFadeIn 1000ms ease-out 200ms both;
+}
+
+/* Film grain for atmospheric depth */
+.atmo-grain {
+  background-image:
+    repeating-conic-gradient(rgba(0,0,0,0.015) 0% 25%, transparent 0% 50%);
+  background-size: 4px 4px;
+  opacity: 0.6;
+}
+
 /* Color chip cascade for palette detail */
 @keyframes chipCascade {
   from { opacity: 0; transform: translateY(12px); }
