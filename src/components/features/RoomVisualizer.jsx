@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Home, BedDouble, CookingPot, Bath } from 'lucide-react';
 import { mapBirdToRoomColors, getBirdHighestRatedRoom } from '../../utils/paletteHelpers';
-import { getTextColor } from '../../utils/colorUtils';
+import { hexToRgb, rgbToHsl } from '../../utils/colorUtils';
 
 const ROOM_OPTIONS = [
   { id: 'living-room', label: 'Living', Icon: Home },
@@ -10,147 +10,192 @@ const ROOM_OPTIONS = [
   { id: 'bathroom', label: 'Bath', Icon: Bath },
 ];
 
-// Texture class per surface type for mood-board feel
-const SURFACE_TEXTURE = {
-  walls: 'texture-linen',
-  textiles: 'texture-knit',
-  floor: 'texture-grain',
-  feature: 'texture-smooth',
-  accents: 'texture-smooth',
-  trim: '',
-};
-
-// Different layout compositions per room type — elevated abstract architectural grids
-const LAYOUTS = {
+// Each room "mood" adjusts where and how color layers sit
+const ROOM_MOODS = {
   'living-room': {
-    grid: 'grid-cols-12 grid-rows-6',
-    aspect: 'aspect-[16/9]',
-    blocks: [
-      ['col-span-8 row-span-4', 'walls', 'Walls'],
-      ['col-span-8 row-span-2', 'textiles', 'Textiles'],
-      ['col-span-4 row-span-3', 'feature', 'Feature'],
-      ['col-span-4 row-span-1', 'accents', 'Accents'],
-      ['col-span-4 row-span-1', 'trim', 'Trim'],
-      ['col-span-4 row-span-1', 'floor', ''],
-    ],
-    // Floating accent shapes suggesting objects (relative position %, size)
-    accents: [
-      { x: 72, y: 15, w: 12, h: 18, shape: 'rect', key: 'feature', opacity: 0.3, label: '' }, // frame
-      { x: 18, y: 68, w: 6, h: 6, shape: 'circle', key: 'accents', opacity: 0.5, label: '' }, // pillow
-      { x: 85, y: 72, w: 3, h: 12, shape: 'rect', key: 'accents', opacity: 0.25, label: '' }, // lamp
-    ],
+    wallSpread: 0.55,   // wall color fills top 55%
+    lightAngle: 135,    // light from upper-left
+    warmth: 0.15,       // warm overlay intensity
+    accentY: 70,        // accent pop sits lower
+    accentSize: 18,
+    textileBlur: 50,
+    featureX: 75,       // feature blob offset
+    featureY: 35,
   },
   'bedroom': {
-    grid: 'grid-cols-12 grid-rows-6',
-    aspect: 'aspect-[16/9]',
-    blocks: [
-      ['col-span-12 row-span-2', 'walls', 'Walls'],
-      ['col-span-5 row-span-2', 'feature', 'Headboard'],
-      ['col-span-7 row-span-2', 'textiles', 'Bedding'],
-      ['col-span-3 row-span-1', 'accents', 'Pillows'],
-      ['col-span-5 row-span-1', 'trim', 'Trim'],
-      ['col-span-4 row-span-1', 'floor', ''],
-    ],
-    accents: [
-      { x: 45, y: 12, w: 10, h: 14, shape: 'rect', key: 'accents', opacity: 0.25, label: '' }, // art
-      { x: 22, y: 55, w: 5, h: 5, shape: 'circle', key: 'accents', opacity: 0.4, label: '' }, // pillow
-      { x: 88, y: 45, w: 4, h: 16, shape: 'rect', key: 'trim', opacity: 0.2, label: '' }, // nightstand
-    ],
+    wallSpread: 0.60,   // more enveloping
+    lightAngle: 180,    // light from above (soft, diffuse)
+    warmth: 0.08,
+    accentY: 60,
+    accentSize: 14,
+    textileBlur: 60,
+    featureX: 30,
+    featureY: 45,
   },
   'kitchen': {
-    grid: 'grid-cols-12 grid-rows-6',
-    aspect: 'aspect-[16/9]',
-    blocks: [
-      ['col-span-8 row-span-2', 'feature', 'Cabinets'],
-      ['col-span-4 row-span-3', 'walls', 'Walls'],
-      ['col-span-8 row-span-1', 'trim', 'Counter'],
-      ['col-span-8 row-span-2', 'textiles', 'Base'],
-      ['col-span-4 row-span-2', 'accents', 'Accents'],
-      ['col-span-12 row-span-1', 'floor', ''],
-    ],
-    accents: [
-      { x: 78, y: 18, w: 6, h: 8, shape: 'rect', key: 'accents', opacity: 0.35, label: '' }, // window
-      { x: 30, y: 42, w: 4, h: 4, shape: 'circle', key: 'accents', opacity: 0.45, label: '' }, // hardware
-    ],
+    wallSpread: 0.45,   // less wall, more surface
+    lightAngle: 90,     // bright side light
+    warmth: 0.12,
+    accentY: 55,
+    accentSize: 22,
+    textileBlur: 35,
+    featureX: 65,
+    featureY: 25,
   },
   'bathroom': {
-    grid: 'grid-cols-12 grid-rows-6',
-    aspect: 'aspect-[16/9]',
-    blocks: [
-      ['col-span-7 row-span-3', 'walls', 'Walls'],
-      ['col-span-5 row-span-2', 'accents', 'Mirror'],
-      ['col-span-5 row-span-1', 'trim', 'Vanity'],
-      ['col-span-7 row-span-2', 'textiles', 'Textiles'],
-      ['col-span-5 row-span-2', 'feature', 'Tile'],
-      ['col-span-12 row-span-1', 'floor', ''],
-    ],
-    accents: [
-      { x: 65, y: 10, w: 14, h: 18, shape: 'rect', key: 'accents', opacity: 0.2, label: '' }, // mirror
-      { x: 20, y: 65, w: 5, h: 8, shape: 'rect', key: 'textiles', opacity: 0.3, label: '' }, // towel
-    ],
+    wallSpread: 0.50,
+    lightAngle: 160,
+    warmth: -0.05,      // slightly cool
+    accentY: 65,
+    accentSize: 16,
+    textileBlur: 45,
+    featureX: 50,
+    featureY: 40,
   },
 };
 
-function ColorBlock({ className, color, label, textureClass, index, animKey }) {
-  const textColor = getTextColor(color);
-  return (
-    <div
-      className={`${className} relative overflow-hidden rounded-lg group`}
-      style={{
-        backgroundColor: color,
-        boxShadow: `inset 0 1px 2px rgba(255,255,255,0.12), inset 0 -1px 3px rgba(0,0,0,0.08)`,
-        animation: 'blockReveal 400ms ease-out both',
-        animationDelay: `${index * 60}ms`,
-        transition: 'background-color 500ms ease-out',
-      }}
-      key={animKey}
-    >
-      {/* Surface texture overlay */}
-      <div className={`absolute inset-0 ${textureClass} pointer-events-none`} />
+/**
+ * Convert hex to rgba string
+ */
+function hexRgba(hex, alpha) {
+  const rgb = hexToRgb(hex);
+  if (!rgb) return `rgba(128,128,128,${alpha})`;
+  return `rgba(${rgb.r},${rgb.g},${rgb.b},${alpha})`;
+}
 
-      {/* Light source gradient (simulates window light from upper left) */}
+/**
+ * Determine if a color is warm or cool for light tinting
+ */
+function colorTemperature(hex) {
+  const rgb = hexToRgb(hex);
+  if (!rgb) return 'neutral';
+  const { h, s } = rgbToHsl(rgb.r, rgb.g, rgb.b);
+  if (s < 10) return 'neutral';
+  if ((h >= 0 && h <= 70) || h >= 330) return 'warm';
+  return 'cool';
+}
+
+function AtmosphericScene({ colors, mood, animKey }) {
+  const wallTemp = colorTemperature(colors.walls);
+  const lightTint = wallTemp === 'warm'
+    ? 'rgba(255,240,220,0.07)'
+    : wallTemp === 'cool'
+      ? 'rgba(220,235,255,0.07)'
+      : 'rgba(245,245,240,0.05)';
+
+  return (
+    <div className="absolute inset-0 overflow-hidden" key={animKey}>
+      {/* Layer 1: Wall color — fills the whole canvas as base */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 atmo-layer-base"
+        style={{ backgroundColor: colors.walls }}
+      />
+
+      {/* Layer 2: Ceiling fade — lighter wash at the top */}
+      <div
+        className="absolute inset-0 atmo-layer-ceiling"
         style={{
-          background: 'linear-gradient(135deg, rgba(255,255,255,0.07) 0%, transparent 50%, rgba(0,0,0,0.04) 100%)',
+          background: `linear-gradient(180deg, ${hexRgba(colors.ceiling, 0.5)} 0%, transparent ${mood.wallSpread * 80}%)`,
         }}
       />
 
-      {/* Label — always visible at low opacity, brighter on hover */}
-      {label && (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span
-            className="font-display text-[9px] sm:text-[10px] tracking-[0.15em] opacity-30 group-hover:opacity-70 transition-opacity duration-300 select-none"
-            style={{ color: textColor }}
-          >
-            {label}
-          </span>
-        </div>
-      )}
+      {/* Layer 3: Floor wash — grounds the bottom */}
+      <div
+        className="absolute inset-0 atmo-layer-floor"
+        style={{
+          background: `linear-gradient(0deg, ${hexRgba(colors.floor, 0.7)} 0%, ${hexRgba(colors.floor, 0.3)} 20%, transparent 45%)`,
+        }}
+      />
+
+      {/* Layer 4: Textile bloom — large soft blob in the lower-middle */}
+      <div
+        className="absolute atmo-layer-textile"
+        style={{
+          left: '10%',
+          top: '35%',
+          width: '80%',
+          height: '55%',
+          background: `radial-gradient(ellipse at 50% 60%, ${hexRgba(colors.textiles, 0.55)} 0%, ${hexRgba(colors.textiles, 0.15)} 50%, transparent 75%)`,
+          filter: `blur(${mood.textileBlur}px)`,
+        }}
+      />
+
+      {/* Layer 5: Feature color — offset blob suggesting a furniture piece or accent wall */}
+      <div
+        className="absolute atmo-layer-feature"
+        style={{
+          left: `${mood.featureX - 18}%`,
+          top: `${mood.featureY - 12}%`,
+          width: '36%',
+          height: '35%',
+          background: `radial-gradient(ellipse at 50% 50%, ${hexRgba(colors.feature, 0.45)} 0%, ${hexRgba(colors.feature, 0.1)} 55%, transparent 80%)`,
+          filter: 'blur(30px)',
+        }}
+      />
+
+      {/* Layer 6: Accent pop — vivid small bloom */}
+      <div
+        className="absolute atmo-layer-accent"
+        style={{
+          left: `${50 - mood.accentSize / 2}%`,
+          top: `${mood.accentY - mood.accentSize / 2}%`,
+          width: `${mood.accentSize}%`,
+          height: `${mood.accentSize}%`,
+          background: `radial-gradient(circle at 50% 50%, ${hexRgba(colors.accents, 0.6)} 0%, ${hexRgba(colors.accents, 0.2)} 40%, transparent 70%)`,
+          filter: 'blur(15px)',
+        }}
+      />
+
+      {/* Layer 7: Trim line — subtle horizontal band suggesting molding/baseboard */}
+      <div
+        className="absolute atmo-layer-trim"
+        style={{
+          left: 0,
+          right: 0,
+          bottom: '18%',
+          height: '3%',
+          background: `linear-gradient(90deg, transparent 5%, ${hexRgba(colors.trim, 0.35)} 20%, ${hexRgba(colors.trim, 0.4)} 50%, ${hexRgba(colors.trim, 0.35)} 80%, transparent 95%)`,
+          filter: 'blur(4px)',
+        }}
+      />
+
+      {/* Layer 8: Light source — directional glow */}
+      <div
+        className="absolute inset-0 atmo-layer-light"
+        style={{
+          background: `linear-gradient(${mood.lightAngle}deg, rgba(255,255,255,0.08) 0%, transparent 50%, rgba(0,0,0,0.06) 100%)`,
+        }}
+      />
+
+      {/* Layer 9: Temperature tint */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{ backgroundColor: lightTint }}
+      />
+
+      {/* Layer 10: Subtle grain texture for depth */}
+      <div className="absolute inset-0 atmo-grain pointer-events-none" />
     </div>
   );
 }
 
-function FloatingAccent({ accent, colors }) {
-  const color = colors[accent.key] || '#888';
-  const isCircle = accent.shape === 'circle';
+function CompactAtmosphere({ colors }) {
   return (
-    <div
-      className="absolute pointer-events-none"
-      style={{
-        left: `${accent.x}%`,
-        top: `${accent.y}%`,
-        width: `${accent.w}%`,
-        height: `${accent.h}%`,
-        backgroundColor: color,
-        borderRadius: isCircle ? '50%' : '4px',
-        opacity: accent.opacity,
-        boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-        animation: 'blockReveal 500ms ease-out both',
-        animationDelay: '350ms',
-        transition: 'background-color 500ms ease-out',
-      }}
-    />
+    <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0" style={{ backgroundColor: colors.walls }} />
+      <div
+        className="absolute inset-0"
+        style={{
+          background: `
+            radial-gradient(ellipse at 50% 70%, ${hexRgba(colors.textiles, 0.5)} 0%, transparent 60%),
+            radial-gradient(ellipse at 70% 40%, ${hexRgba(colors.feature, 0.35)} 0%, transparent 50%),
+            radial-gradient(circle at 45% 65%, ${hexRgba(colors.accents, 0.45)} 0%, transparent 40%),
+            linear-gradient(0deg, ${hexRgba(colors.floor, 0.5)} 0%, transparent 35%)
+          `,
+          filter: 'blur(20px)',
+        }}
+      />
+    </div>
   );
 }
 
@@ -158,7 +203,7 @@ export default function RoomVisualizer({ bird, defaultRoom, compact = false, col
   const bestRoom = defaultRoom || getBirdHighestRatedRoom(bird);
   const [activeRoom, setActiveRoom] = useState(bestRoom);
   const colors = colorsProp || mapBirdToRoomColors(bird);
-  const layout = LAYOUTS[activeRoom] || LAYOUTS['living-room'];
+  const mood = ROOM_MOODS[activeRoom] || ROOM_MOODS['living-room'];
 
   return (
     <div>
@@ -180,26 +225,12 @@ export default function RoomVisualizer({ bird, defaultRoom, compact = false, col
           ))}
         </div>
       )}
-      <div className={`relative rounded-2xl overflow-hidden shadow-md border border-plumage-border/60 ${layout.aspect}`}>
-        {/* Grid composition */}
-        <div className={`grid ${layout.grid} gap-1 bg-white/20 h-full w-full p-1`} key={activeRoom}>
-          {layout.blocks.map((block, i) => (
-            <ColorBlock
-              key={`${activeRoom}-${i}`}
-              animKey={`${activeRoom}-${i}`}
-              className={block[0]}
-              color={colors[block[1]] || '#E5E5E5'}
-              label={compact ? '' : block[2]}
-              textureClass={SURFACE_TEXTURE[block[1]] || ''}
-              index={i}
-            />
-          ))}
-        </div>
-
-        {/* Floating accent shapes — suggest objects without being literal */}
-        {!compact && layout.accents && layout.accents.map((accent, i) => (
-          <FloatingAccent key={`accent-${activeRoom}-${i}`} accent={accent} colors={colors} />
-        ))}
+      <div className="relative rounded-2xl overflow-hidden shadow-md border border-plumage-border/60 aspect-[16/9]">
+        {compact ? (
+          <CompactAtmosphere colors={colors} />
+        ) : (
+          <AtmosphericScene colors={colors} mood={mood} animKey={activeRoom} />
+        )}
       </div>
     </div>
   );
