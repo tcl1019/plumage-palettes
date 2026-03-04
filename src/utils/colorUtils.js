@@ -105,3 +105,8 @@ export const deltaE = (lab1, lab2) => {
   const db = lab1.b - lab2.b;
   return Math.sqrt(dL * dL + da * da + db * db);
 };
+
+export const hslToWheelCoord = (h, centerX, centerY, radius) => ({
+  x: centerX + radius * Math.cos((h - 90) * Math.PI / 180),
+  y: centerY + radius * Math.sin((h - 90) * Math.PI / 180),
+});

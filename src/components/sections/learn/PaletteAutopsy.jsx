@@ -5,6 +5,7 @@ import { getUndertone, getTextColor } from '../../../utils/colorUtils';
 import { ROLE_LABELS, HARMONY_COLORS } from '../../../data/constants';
 import { getSmartBird } from '../../../utils/paletteHelpers';
 import PaletteStrip from '../../shared/PaletteStrip';
+import HarmonyWheel from '../../features/HarmonyWheel';
 import { useNav } from '../../../App';
 
 const HARMONY_EXPLAINERS = {
@@ -54,6 +55,9 @@ function AutopsyDetail({ bird, onBack }) {
         <p className="text-sm text-gray-600 mb-3">{bird.harmony?.explanation}</p>
         <div className="bg-plumage-surface-alt rounded-xl p-3">
           <p className="text-xs text-gray-500">{HARMONY_EXPLAINERS[bird.harmony?.type]}</p>
+        </div>
+        <div className="mt-4 flex justify-center">
+          <HarmonyWheel colors={bird.colors} harmonyType={bird.harmony?.type} size={240} />
         </div>
       </div>
 
