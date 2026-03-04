@@ -17,8 +17,6 @@ export default function BirdCard({ bird: rawBird, compact = false }) {
   const imageUrl = (heroBird && heroBird.image) || (birdImage && birdImage.image);
   const hasImage = !!imageUrl;
 
-  const dominantHex = bird.colors?.find(c => c.role === 'dominant')?.hex || bird.colors?.[0]?.hex || '#888';
-
   return (
     <div
       className="bg-white rounded-2xl shadow-sm border border-plumage-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group overflow-hidden"
@@ -33,7 +31,7 @@ export default function BirdCard({ bird: rawBird, compact = false }) {
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent group-hover:from-white/80 transition-all duration-300" />
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
         </div>
       )}
       <div className={hasImage && !compact ? 'p-5 -mt-4 relative' : 'p-5'}>
@@ -53,22 +51,7 @@ export default function BirdCard({ bird: rawBird, compact = false }) {
           </div>
         )}
 
-        {/* Expandable palette strip with hex labels on hover */}
-        <div className="transition-all duration-300 overflow-hidden mb-3">
-          <PaletteStrip colors={bird.colors} height="h-12" clickable={false} />
-          <div className="flex opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-0.5">
-            {(bird.colors || []).map((color, i) => {
-              const hex = typeof color === 'string' ? color : color.hex;
-              const role = typeof color === 'string' ? null : color.role;
-              const flex = role === 'dominant' ? 'flex-[6]' : role === 'secondary' ? 'flex-[3]' : 'flex-[1]';
-              return (
-                <span key={i} className={`${role ? flex : 'flex-1'} text-center text-[8px] text-gray-400 font-mono truncate px-0.5`}>
-                  {hex}
-                </span>
-              );
-            })}
-          </div>
-        </div>
+        <PaletteStrip colors={bird.colors} height="h-12" className="mb-3" clickable={false} />
 
         {!compact && (
           <>
