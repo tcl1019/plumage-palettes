@@ -10,7 +10,8 @@ export default function HarmonyWheel({ colors, harmonyType, size = 280 }) {
   const colorDotsRef = useRef([]);
 
   // Convert colors to HSL with position data
-  const colorData = colors.map(c => {
+  const colorData = (colors || []).map(c => {
+    if (!c || !c.hex) return null;
     const rgb = hexToRgb(c.hex);
     if (!rgb) return null;
     const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
