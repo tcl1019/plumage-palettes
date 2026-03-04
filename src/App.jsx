@@ -1,4 +1,33 @@
-import React, { useState, useCallback, useRef, createContext, useContext } from 'react';
+import React, { useState, useCallback, useRef, createContext, useContext, Component } from 'react';
+
+class ErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-plumage-surface">
+          <div className="text-center p-8">
+            <h2 className="text-xl font-bold text-gray-800 mb-2">Something went wrong</h2>
+            <p className="text-sm text-gray-500 mb-4">{this.state.error?.message}</p>
+            <button
+              onClick={() => { this.setState({ hasError: false, error: null }); window.location.reload(); }}
+              className="px-4 py-2 bg-plumage-primary text-white rounded-lg text-sm"
+            >
+              Reload
+            </button>
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
 import { useStudio, StudioContext } from './hooks/useStudio';
 import Navigation from './components/layout/Navigation';
 import Header from './components/layout/Header';
@@ -104,6 +133,7 @@ export default function App() {
   };
 
   return (
+    <ErrorBoundary>
     <StudioContext.Provider value={studioHook}>
       <NavContext.Provider value={navValue}>
         <div className="min-h-screen bg-plumage-surface pb-20 md:pb-0">
@@ -144,5 +174,6 @@ export default function App() {
         </div>
       </NavContext.Provider>
     </StudioContext.Provider>
+    </ErrorBoundary>
   );
 }

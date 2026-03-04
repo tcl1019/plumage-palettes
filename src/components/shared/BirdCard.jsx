@@ -17,15 +17,12 @@ export default function BirdCard({ bird: rawBird, compact = false }) {
   const imageUrl = (heroBird && heroBird.image) || (birdImage && birdImage.image);
   const hasImage = !!imageUrl;
 
-  const dominantHex = bird.colors.find(c => c.role === 'dominant')?.hex || bird.colors[0]?.hex;
+  const dominantHex = bird.colors?.find(c => c.role === 'dominant')?.hex || bird.colors?.[0]?.hex || '#888';
 
   return (
     <div
-      className="bg-white rounded-2xl shadow-sm border border-plumage-border hover:-translate-y-1 transition-all duration-300 cursor-pointer group overflow-hidden will-change-transform"
-      style={{ '--card-glow': dominantHex }}
+      className="bg-white rounded-2xl shadow-sm border border-plumage-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group overflow-hidden"
       onClick={() => navigate('palette-detail', { birdId: bird.id })}
-      onMouseEnter={(e) => e.currentTarget.style.boxShadow = `0 8px 30px -4px ${dominantHex}40`}
-      onMouseLeave={(e) => e.currentTarget.style.boxShadow = ''}
     >
       {/* Bird photo thumbnail for hero birds */}
       {hasImage && !compact && (
@@ -60,7 +57,7 @@ export default function BirdCard({ bird: rawBird, compact = false }) {
         <div className="transition-all duration-300 overflow-hidden mb-3">
           <PaletteStrip colors={bird.colors} height="h-12" clickable={false} />
           <div className="flex opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-0.5">
-            {bird.colors.map((color, i) => {
+            {(bird.colors || []).map((color, i) => {
               const hex = typeof color === 'string' ? color : color.hex;
               const role = typeof color === 'string' ? null : color.role;
               const flex = role === 'dominant' ? 'flex-[6]' : role === 'secondary' ? 'flex-[3]' : 'flex-[1]';

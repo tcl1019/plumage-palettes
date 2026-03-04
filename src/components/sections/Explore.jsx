@@ -2,7 +2,6 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { birds } from '../../data/birds';
 import { DESIGN_STYLES, MOODS } from '../../data/constants';
 import BirdCard from '../shared/BirdCard';
-import Reveal from '../shared/Reveal';
 import { useNav } from '../../App';
 
 const ROOM_NAME_MAP = {
@@ -182,9 +181,15 @@ export default function Explore() {
       {filteredBirds.length > 0 ? (
         <div className={`grid gap-4 ${viewMode === 'gallery' ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4'}`}>
           {filteredBirds.map((bird, index) => (
-            <Reveal key={bird.id} delay={Math.min(index * 40, 400)} direction="up">
+            <div
+              key={bird.id}
+              style={{
+                animation: 'fadeIn 300ms ease-out both',
+                animationDelay: `${Math.min(index * 30, 300)}ms`,
+              }}
+            >
               <BirdCard bird={bird} compact={viewMode === 'compact'} />
-            </Reveal>
+            </div>
           ))}
         </div>
       ) : (
