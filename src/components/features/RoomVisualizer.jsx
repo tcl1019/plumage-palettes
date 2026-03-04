@@ -13,44 +13,52 @@ const ROOM_OPTIONS = [
 // Each room "mood" adjusts where and how color layers sit
 const ROOM_MOODS = {
   'living-room': {
-    wallSpread: 0.55,   // wall color fills top 55%
-    lightAngle: 135,    // light from upper-left
-    warmth: 0.15,       // warm overlay intensity
-    accentY: 70,        // accent pop sits lower
-    accentSize: 18,
-    textileBlur: 50,
-    featureX: 75,       // feature blob offset
-    featureY: 35,
+    wallSpread: 0.45,
+    lightAngle: 135,
+    warmth: 0.15,
+    accentY: 72,
+    accentSize: 22,
+    textileBlur: 18,
+    featureX: 78,
+    featureY: 30,
+    featureSize: 32,
+    floorHeight: 38,
   },
   'bedroom': {
-    wallSpread: 0.60,   // more enveloping
-    lightAngle: 180,    // light from above (soft, diffuse)
+    wallSpread: 0.55,
+    lightAngle: 180,
     warmth: 0.08,
-    accentY: 60,
-    accentSize: 14,
-    textileBlur: 60,
-    featureX: 30,
-    featureY: 45,
+    accentY: 55,
+    accentSize: 18,
+    textileBlur: 25,
+    featureX: 25,
+    featureY: 40,
+    featureSize: 38,
+    floorHeight: 30,
   },
   'kitchen': {
-    wallSpread: 0.45,   // less wall, more surface
-    lightAngle: 90,     // bright side light
+    wallSpread: 0.35,
+    lightAngle: 90,
     warmth: 0.12,
-    accentY: 55,
-    accentSize: 22,
-    textileBlur: 35,
-    featureX: 65,
-    featureY: 25,
+    accentY: 50,
+    accentSize: 26,
+    textileBlur: 12,
+    featureX: 68,
+    featureY: 20,
+    featureSize: 28,
+    floorHeight: 45,
   },
   'bathroom': {
-    wallSpread: 0.50,
+    wallSpread: 0.48,
     lightAngle: 160,
-    warmth: -0.05,      // slightly cool
-    accentY: 65,
-    accentSize: 16,
-    textileBlur: 45,
-    featureX: 50,
-    featureY: 40,
+    warmth: -0.05,
+    accentY: 62,
+    accentSize: 20,
+    textileBlur: 16,
+    featureX: 45,
+    featureY: 35,
+    featureSize: 34,
+    floorHeight: 35,
   },
 };
 
@@ -78,62 +86,73 @@ function colorTemperature(hex) {
 function AtmosphericScene({ colors, mood, animKey }) {
   const wallTemp = colorTemperature(colors.walls);
   const lightTint = wallTemp === 'warm'
-    ? 'rgba(255,240,220,0.07)'
+    ? 'rgba(255,240,220,0.06)'
     : wallTemp === 'cool'
-      ? 'rgba(220,235,255,0.07)'
-      : 'rgba(245,245,240,0.05)';
+      ? 'rgba(220,235,255,0.06)'
+      : 'rgba(245,245,240,0.04)';
+
+  const floorTop = 100 - mood.floorHeight;
 
   return (
     <div className="absolute inset-0 overflow-hidden" key={animKey}>
-      {/* Layer 1: Wall color — fills the whole canvas as base */}
+      {/* Layer 1: Wall — upper zone */}
       <div
         className="absolute inset-0 atmo-layer-base"
-        style={{ backgroundColor: colors.walls }}
-      />
-
-      {/* Layer 2: Ceiling fade — lighter wash at the top */}
-      <div
-        className="absolute inset-0 atmo-layer-ceiling"
         style={{
-          background: `linear-gradient(180deg, ${hexRgba(colors.ceiling, 0.5)} 0%, transparent ${mood.wallSpread * 80}%)`,
+          background: `linear-gradient(180deg, ${hexRgba(colors.ceiling, 0.85)} 0%, ${colors.walls} ${Math.round(mood.wallSpread * 60)}%, ${colors.walls} ${floorTop - 5}%, transparent ${floorTop}%)`,
         }}
       />
 
-      {/* Layer 3: Floor wash — grounds the bottom */}
+      {/* Layer 2: Floor — distinct lower zone */}
       <div
         className="absolute inset-0 atmo-layer-floor"
         style={{
-          background: `linear-gradient(0deg, ${hexRgba(colors.floor, 0.7)} 0%, ${hexRgba(colors.floor, 0.3)} 20%, transparent 45%)`,
+          background: `linear-gradient(0deg, ${colors.floor} 0%, ${hexRgba(colors.floor, 0.9)} ${Math.round(mood.floorHeight * 0.5)}%, ${hexRgba(colors.floor, 0.4)} ${Math.round(mood.floorHeight * 0.8)}%, transparent ${mood.floorHeight}%)`,
         }}
       />
 
-      {/* Layer 4: Textile bloom — large soft blob in the lower-middle */}
+      {/* Layer 3: Trim line — visible divider between wall and floor zones */}
+      <div
+        className="absolute atmo-layer-trim"
+        style={{
+          left: 0,
+          right: 0,
+          top: `${floorTop - 2}%`,
+          height: '4%',
+          background: `linear-gradient(90deg, transparent 3%, ${hexRgba(colors.trim, 0.7)} 15%, ${colors.trim} 50%, ${hexRgba(colors.trim, 0.7)} 85%, transparent 97%)`,
+          filter: 'blur(2px)',
+        }}
+      />
+
+      {/* Layer 4: Textile — mid-zone furnishing shape */}
       <div
         className="absolute atmo-layer-textile"
         style={{
-          left: '10%',
-          top: '35%',
-          width: '80%',
-          height: '55%',
-          background: `radial-gradient(ellipse at 50% 60%, ${hexRgba(colors.textiles, 0.55)} 0%, ${hexRgba(colors.textiles, 0.15)} 50%, transparent 75%)`,
+          left: '8%',
+          top: `${floorTop - 22}%`,
+          width: '84%',
+          height: '35%',
+          borderRadius: '40%',
+          background: `radial-gradient(ellipse at 50% 55%, ${hexRgba(colors.textiles, 0.85)} 0%, ${hexRgba(colors.textiles, 0.5)} 35%, ${hexRgba(colors.textiles, 0.15)} 65%, transparent 85%)`,
           filter: `blur(${mood.textileBlur}px)`,
         }}
       />
 
-      {/* Layer 5: Feature color — offset blob suggesting a furniture piece or accent wall */}
+      {/* Layer 5: Feature — offset shape suggesting furniture or decor */}
       <div
         className="absolute atmo-layer-feature"
         style={{
-          left: `${mood.featureX - 18}%`,
-          top: `${mood.featureY - 12}%`,
-          width: '36%',
-          height: '35%',
-          background: `radial-gradient(ellipse at 50% 50%, ${hexRgba(colors.feature, 0.45)} 0%, ${hexRgba(colors.feature, 0.1)} 55%, transparent 80%)`,
-          filter: 'blur(30px)',
+          left: `${mood.featureX - mood.featureSize / 2}%`,
+          top: `${mood.featureY - mood.featureSize / 3}%`,
+          width: `${mood.featureSize}%`,
+          height: `${mood.featureSize * 0.9}%`,
+          borderRadius: '30%',
+          background: `radial-gradient(ellipse at 50% 50%, ${hexRgba(colors.feature, 0.75)} 0%, ${hexRgba(colors.feature, 0.35)} 45%, transparent 75%)`,
+          filter: 'blur(14px)',
         }}
       />
 
-      {/* Layer 6: Accent pop — vivid small bloom */}
+      {/* Layer 6: Accent pop — vivid focal point */}
       <div
         className="absolute atmo-layer-accent"
         style={{
@@ -141,39 +160,27 @@ function AtmosphericScene({ colors, mood, animKey }) {
           top: `${mood.accentY - mood.accentSize / 2}%`,
           width: `${mood.accentSize}%`,
           height: `${mood.accentSize}%`,
-          background: `radial-gradient(circle at 50% 50%, ${hexRgba(colors.accents, 0.6)} 0%, ${hexRgba(colors.accents, 0.2)} 40%, transparent 70%)`,
-          filter: 'blur(15px)',
+          borderRadius: '50%',
+          background: `radial-gradient(circle at 50% 50%, ${colors.accents} 0%, ${hexRgba(colors.accents, 0.6)} 30%, ${hexRgba(colors.accents, 0.15)} 60%, transparent 80%)`,
+          filter: 'blur(8px)',
         }}
       />
 
-      {/* Layer 7: Trim line — subtle horizontal band suggesting molding/baseboard */}
-      <div
-        className="absolute atmo-layer-trim"
-        style={{
-          left: 0,
-          right: 0,
-          bottom: '18%',
-          height: '3%',
-          background: `linear-gradient(90deg, transparent 5%, ${hexRgba(colors.trim, 0.35)} 20%, ${hexRgba(colors.trim, 0.4)} 50%, ${hexRgba(colors.trim, 0.35)} 80%, transparent 95%)`,
-          filter: 'blur(4px)',
-        }}
-      />
-
-      {/* Layer 8: Light source — directional glow */}
+      {/* Layer 7: Directional light */}
       <div
         className="absolute inset-0 atmo-layer-light"
         style={{
-          background: `linear-gradient(${mood.lightAngle}deg, rgba(255,255,255,0.08) 0%, transparent 50%, rgba(0,0,0,0.06) 100%)`,
+          background: `linear-gradient(${mood.lightAngle}deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(0,0,0,0.08) 100%)`,
         }}
       />
 
-      {/* Layer 9: Temperature tint */}
+      {/* Layer 8: Temperature tint */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ backgroundColor: lightTint }}
       />
 
-      {/* Layer 10: Subtle grain texture for depth */}
+      {/* Layer 9: Grain */}
       <div className="absolute inset-0 atmo-grain pointer-events-none" />
     </div>
   );
@@ -186,13 +193,18 @@ function CompactAtmosphere({ colors }) {
       <div
         className="absolute inset-0"
         style={{
+          background: `linear-gradient(0deg, ${colors.floor} 0%, ${hexRgba(colors.floor, 0.6)} 25%, transparent 40%)`,
+        }}
+      />
+      <div
+        className="absolute inset-0"
+        style={{
           background: `
-            radial-gradient(ellipse at 50% 70%, ${hexRgba(colors.textiles, 0.5)} 0%, transparent 60%),
-            radial-gradient(ellipse at 70% 40%, ${hexRgba(colors.feature, 0.35)} 0%, transparent 50%),
-            radial-gradient(circle at 45% 65%, ${hexRgba(colors.accents, 0.45)} 0%, transparent 40%),
-            linear-gradient(0deg, ${hexRgba(colors.floor, 0.5)} 0%, transparent 35%)
+            radial-gradient(ellipse at 50% 65%, ${hexRgba(colors.textiles, 0.8)} 0%, ${hexRgba(colors.textiles, 0.3)} 30%, transparent 55%),
+            radial-gradient(ellipse at 72% 38%, ${hexRgba(colors.feature, 0.65)} 0%, ${hexRgba(colors.feature, 0.2)} 30%, transparent 55%),
+            radial-gradient(circle at 40% 60%, ${hexRgba(colors.accents, 0.7)} 0%, ${hexRgba(colors.accents, 0.2)} 25%, transparent 45%)
           `,
-          filter: 'blur(20px)',
+          filter: 'blur(12px)',
         }}
       />
     </div>
