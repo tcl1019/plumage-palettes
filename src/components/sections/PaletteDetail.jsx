@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { ArrowLeft, Star, Sparkles, ArrowRight, Lightbulb, Palette, Home, Paintbrush, Layers, Eye, Leaf, Info, Check, Share2, FileText, Download, ExternalLink, Camera } from 'lucide-react';
 import { birds } from '../../data/birds';
 import { FLOCK_PAIRINGS } from '../../data/flockPairings';
@@ -15,6 +15,7 @@ import NatureCard from '../shared/NatureCard';
 import MaterialPairings from '../shared/MaterialPairings';
 import FeatherPattern from '../shared/FeatherPattern';
 import { StatusBadge, HarmonyBadge, SeasonBadge, RoleBadge } from '../shared/Badge';
+import Reveal from '../shared/Reveal';
 import { HERO_BIRD_MAP } from '../../data/herobirds';
 import { BIRD_IMAGE_MAP } from '../../data/birdImageMap';
 import { CONSERVATION_TEXTS } from '../../data/conservationTexts';
@@ -75,20 +76,61 @@ export default function PaletteDetail({ birdId }) {
   const photoCredit = (heroBird && heroBird.imageCredit) || (birdImage && birdImage.imageCredit);
   const hasPhoto = !!photoUrl;
 
+  // Parallax for hero image
+  const heroRef = useRef(null);
+  const imgRef = useRef(null);
+
+  useEffect(() => {
+    if (!hasPhoto || window.innerWidth < 768) return;
+    const handleScroll = () => {
+      if (!heroRef.current || !imgRef.current) return;
+      const rect = heroRef.current.getBoundingClientRect();
+      if (rect.bottom < 0) return;
+      const offset = window.scrollY * 0.3;
+      imgRef.current.style.transform = `translateY(${offset}px) scale(1.1)`;
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [hasPhoto]);
+
   return (
     <div className="section-fade-in">
       {/* === Photo Hero (hero birds) or Pattern Hero (all others) === */}
       {hasPhoto ? (
-        <div className="relative w-full overflow-hidden" style={{ minHeight: '50vh', maxHeight: '70vh' }}>
-          {/* Bird photo */}
+        <div ref={heroRef} className="relative w-full overflow-hidden" style={{ minHeight: '50vh', maxHeight: '70vh' }}>
+          {/* Bird photo with parallax */}
           <img
+            ref={imgRef}
             src={photoUrl}
             alt={bird.name}
             className="w-full h-full object-cover absolute inset-0"
+            style={{ willChange: 'transform' }}
             loading="eager"
           />
           {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/75" />
+
+          {/* Color extraction lines — SVG overlay */}
+          <svg className="absolute inset-0 z-10 pointer-events-none hidden md:block" style={{ width: '100%', height: '100%' }}>
+            {bird.colors.slice(0, 5).map((_, i) => {
+              const pos = CHIP_POSITIONS[i];
+              const x2 = pos.left || pos.right;
+              const y2 = pos.top;
+              return (
+                <line
+                  key={i}
+                  x1="50%" y1="50%"
+                  x2={x2} y2={y2}
+                  stroke="rgba(255,255,255,0.3)"
+                  strokeWidth="1"
+                  strokeDasharray="4 2"
+                  style={{
+                    animation: `extractionLine 800ms ease-out ${300 + i * 120}ms both`,
+                  }}
+                />
+              );
+            })}
+          </svg>
 
           {/* Back + actions (over image) */}
           <div className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-4 sm:px-6 lg:px-8 pt-4">
@@ -137,7 +179,7 @@ export default function PaletteDetail({ birdId }) {
             </div>
             <h1 className="font-display text-3xl md:text-5xl text-white mb-1 leading-tight">{bird.name}</h1>
             <p className="text-sm text-white/40 italic mb-3">{bird.scientific}</p>
-            <PaletteStrip colors={bird.colors} height="h-10 md:h-14" className="mb-3 shadow-lg max-w-xl" />
+            <PaletteStrip colors={bird.colors} height="h-10 md:h-14" className="mb-3 shadow-lg max-w-xl palette-shimmer" />
             {photoCredit && (
               <p className="text-[10px] text-white/25 flex items-center gap-1">
                 <Camera className="w-2.5 h-2.5" /> Photo: {photoCredit} / Unsplash
@@ -188,22 +230,27 @@ export default function PaletteDetail({ birdId }) {
 
       {/* Story pull quote (hero birds only) */}
       {hasPhoto && heroBird && heroBird.story && (
-        <div className="mb-8" style={{ animation: 'sectionSlideUp 500ms ease-out both', animationDelay: '100ms' }}>
+        <Reveal>
+        <div className="mb-8">
           <blockquote className="text-base md:text-lg text-gray-600 leading-relaxed italic border-l-4 border-plumage-primary/30 pl-4 max-w-2xl">
             {heroBird.story.length > 220 ? heroBird.story.slice(0, 220).trim() + '...' : heroBird.story}
           </blockquote>
         </div>
+        </Reveal>
       )}
 
       {/* Tagline (always shown) */}
-      <div className="mb-8" style={{ animation: 'sectionSlideUp 500ms ease-out both', animationDelay: '150ms' }}>
+      <Reveal delay={50}>
+      <div className="mb-8">
         <p className="text-base text-gray-600 leading-relaxed">
           {bird.tagline || bird.harmony.explanation}
         </p>
       </div>
+      </Reveal>
 
       {/* Room Visualizer */}
-      <div className="mb-8" style={{ animation: 'sectionSlideUp 500ms ease-out both', animationDelay: '200ms' }}>
+      <Reveal delay={100}>
+      <div className="mb-8">
         <h2 className="text-sm font-bold text-gray-600 uppercase tracking-wider mb-3 flex items-center gap-2">
           <Home className="w-4 h-4" /> See It In A Room
         </h2>
@@ -224,9 +271,11 @@ export default function PaletteDetail({ birdId }) {
           ))}
         </div>
       </div>
+      </Reveal>
 
       {/* Paint Chips */}
-      <div className="mb-8" style={{ animation: 'sectionSlideUp 500ms ease-out both', animationDelay: '300ms' }}>
+      <Reveal delay={150}>
+      <div className="mb-8">
         <h2 className="text-sm font-bold text-gray-600 uppercase tracking-wider mb-3 flex items-center gap-2">
           <Palette className="w-4 h-4" /> The Palette
         </h2>
@@ -308,6 +357,7 @@ export default function PaletteDetail({ birdId }) {
           })}
         </div>
       </div>
+      </Reveal>
 
       {/* Coordinating Neutrals */}
       <div className="bg-white rounded-2xl p-5 border border-plumage-border mb-8">
@@ -402,7 +452,7 @@ export default function PaletteDetail({ birdId }) {
         const iucn = IUCN_STATUS[bird.status] || IUCN_STATUS['Least Concern'];
         const birdSlug = bird.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
         return (
-          <div className="bg-white rounded-2xl overflow-hidden border border-plumage-border mb-8" style={{ animation: 'sectionSlideUp 500ms ease-out both', animationDelay: '500ms' }}>
+          <div className="bg-white rounded-2xl overflow-hidden border border-plumage-border mb-8">
             {/* Header bar */}
             <div className="flex items-center justify-between px-5 py-3 bg-gradient-to-r from-plumage-surface-alt to-white border-b border-plumage-border">
               <div className="flex items-center gap-2">

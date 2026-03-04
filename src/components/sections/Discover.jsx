@@ -8,6 +8,7 @@ import { MOODS } from '../../data/constants';
 import PaletteStrip from '../shared/PaletteStrip';
 import FeatherPattern from '../shared/FeatherPattern';
 import SaveButton from '../shared/SaveButton';
+import Reveal from '../shared/Reveal';
 import { useNav } from '../../App';
 import { getSmartBird } from '../../utils/paletteHelpers';
 
@@ -248,6 +249,7 @@ export default function Discover() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
         {/* Quick Actions */}
+        <Reveal>
         <div className="grid grid-cols-3 gap-3 mb-10">
           <button
             onClick={() => navigate('quiz')}
@@ -274,8 +276,10 @@ export default function Discover() {
             <p className="text-[10px] text-gray-400 mt-0.5">{birds.length} bird palettes</p>
           </button>
         </div>
+        </Reveal>
 
         {/* Browse by Room */}
+        <Reveal delay={80}>
         <div className="mb-10">
           <h2 className="text-sm font-bold text-gray-600 uppercase tracking-wider mb-4 flex items-center gap-2">
             <Home className="w-4 h-4" /> Browse by Room
@@ -294,8 +298,10 @@ export default function Discover() {
             ))}
           </div>
         </div>
+        </Reveal>
 
         {/* Browse by Mood */}
+        <Reveal delay={160}>
         <div className="mb-10">
           <h2 className="text-sm font-bold text-gray-600 uppercase tracking-wider mb-4 flex items-center gap-2">
             <Palette className="w-4 h-4" /> Browse by Mood
@@ -312,8 +318,10 @@ export default function Discover() {
             ))}
           </div>
         </div>
+        </Reveal>
 
         {/* Curated Collections */}
+        <Reveal delay={240}>
         <div className="mb-10">
           <h2 className="text-sm font-bold text-gray-600 uppercase tracking-wider mb-4 flex items-center gap-2">
             <Sparkles className="w-4 h-4" /> Curated Collections
@@ -350,8 +358,10 @@ export default function Discover() {
             })}
           </div>
         </div>
+        </Reveal>
 
         {/* Flock Pairings */}
+        <Reveal delay={320}>
         <div className="mb-10">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-sm font-bold text-gray-600 uppercase tracking-wider flex items-center gap-2">
@@ -382,6 +392,7 @@ export default function Discover() {
             })}
           </div>
         </div>
+        </Reveal>
 
         {/* Explore All CTA */}
         <div className="text-center py-4">

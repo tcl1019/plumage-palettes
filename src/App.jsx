@@ -1,4 +1,4 @@
-import React, { useState, useCallback, createContext, useContext } from 'react';
+import React, { useState, useCallback, useRef, createContext, useContext } from 'react';
 import { useStudio, StudioContext } from './hooks/useStudio';
 import Navigation from './components/layout/Navigation';
 import Header from './components/layout/Header';
@@ -21,6 +21,8 @@ export function useNav() {
   return ctx;
 }
 
+const SECTION_ORDER = { discover: 0, explore: 1, 'my-studio': 2, learn: 3 };
+
 export default function App() {
   const [activeSection, setActiveSection] = useState('discover');
   const [selectedBirdId, setSelectedBirdId] = useState(null);
@@ -31,6 +33,8 @@ export default function App() {
   const [colorMatchOpen, setColorMatchOpen] = useState(false);
   const [exploreFilters, setExploreFilters] = useState(null);
   const [previousSection, setPreviousSection] = useState(null);
+  const [transitionClass, setTransitionClass] = useState('section-fade-in');
+  const prevSectionRef = useRef('discover');
 
   const studioHook = useStudio();
 
@@ -38,13 +42,18 @@ export default function App() {
     if (section === 'palette-detail' && options.birdId) {
       setPreviousSection(activeSection);
       setSelectedBirdId(options.birdId);
+      setTransitionClass('section-zoom-in');
       setActiveSection('palette-detail');
     } else if (section === 'collection-detail' && options.collectionId) {
       setPreviousSection(activeSection);
       setSelectedCollectionId(options.collectionId);
+      setTransitionClass('section-zoom-in');
       setActiveSection('collection-detail');
     } else if (section === 'explore' && options.filters) {
       setExploreFilters(options.filters);
+      const prevOrder = SECTION_ORDER[activeSection] ?? 0;
+      const nextOrder = SECTION_ORDER[section] ?? 0;
+      setTransitionClass(nextOrder > prevOrder ? 'section-slide-right' : nextOrder < prevOrder ? 'section-slide-left' : 'section-fade-in');
       setActiveSection('explore');
     } else if (section === 'chat') {
       setChatContext(options.context || null);
@@ -54,12 +63,23 @@ export default function App() {
     } else if (section === 'color-match') {
       setColorMatchOpen(true);
     } else {
+      const prevOrder = SECTION_ORDER[activeSection] ?? 0;
+      const nextOrder = SECTION_ORDER[section] ?? 0;
+      if (nextOrder > prevOrder) {
+        setTransitionClass('section-slide-right');
+      } else if (nextOrder < prevOrder) {
+        setTransitionClass('section-slide-left');
+      } else {
+        setTransitionClass('section-fade-in');
+      }
       setActiveSection(section);
     }
+    prevSectionRef.current = activeSection;
     window.scrollTo(0, 0);
   }, [activeSection]);
 
   const goBack = useCallback(() => {
+    setTransitionClass('section-zoom-out');
     if (previousSection) {
       setActiveSection(previousSection);
       setPreviousSection(null);
@@ -89,7 +109,7 @@ export default function App() {
         <div className="min-h-screen bg-plumage-surface pb-20 md:pb-0">
           <Header />
 
-          <main className="section-fade-in" key={activeSection + (selectedBirdId || '')}>
+          <main className={transitionClass} key={activeSection + (selectedBirdId || '')}>
             {activeSection === 'discover' && <Discover />}
             {activeSection === 'explore' && <Explore />}
             {activeSection === 'palette-detail' && selectedBirdId && (

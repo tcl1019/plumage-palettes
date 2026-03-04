@@ -207,3 +207,67 @@ body {
     transparent 60%
   );
 }
+
+/* === Visual Upgrade: Nav indicator === */
+@keyframes scaleIn {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* === Visual Upgrade: Color extraction lines (PaletteDetail hero) === */
+@keyframes extractionLine {
+  0% { stroke-dashoffset: 0; opacity: 0; }
+  20% { opacity: 0.5; }
+  100% { stroke-dashoffset: 200; opacity: 0; }
+}
+
+/* === Visual Upgrade: Palette strip shimmer === */
+.palette-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.palette-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.35) 50%, transparent 100%);
+  animation: shimmer 800ms ease-out 600ms both;
+  pointer-events: none;
+}
+@keyframes shimmer {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
+/* === Visual Upgrade: Directional page transitions === */
+.section-slide-right {
+  animation: slideFromRight 300ms ease-out;
+}
+@keyframes slideFromRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.section-slide-left {
+  animation: slideFromLeft 300ms ease-out;
+}
+@keyframes slideFromLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.section-zoom-in {
+  animation: zoomIn 350ms ease-out;
+}
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.section-zoom-out {
+  animation: zoomOut 250ms ease-out;
+}
+@keyframes zoomOut {
+  from { opacity: 0; transform: scale(1.03); }
+  to { opacity: 1; transform: scale(1); }
+}
